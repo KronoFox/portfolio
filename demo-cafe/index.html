@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>木漏れ日珈琲 Komorebi Coffee | 川越</title>
+<meta name="description" content="川越の小さな自家焙煎コーヒー店。Small-batch roasted coffee in Kawagoe, Saitama.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #faf6f0;
+    --surface: #ffffff;
+    --ink: #2b241e;
+    --muted: #6f6358;
+    --accent: #7a4a2a;
+    --accent-soft: #efe3d6;
+    --line: #e4d9cc;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #1c1814; --surface: #26211c; --ink: #f1e9df; --muted: #b3a697;
+      --accent: #d9a47c; --accent-soft: #3a2f26; --line: #3a322a;
+    }
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg); color: var(--ink);
+    font-family: "Noto Sans JP", system-ui, sans-serif; line-height: 1.8;
+  }
+  a { color: inherit; }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
+
+  header {
+    position: sticky; top: 0; z-index: 10;
+    background: color-mix(in srgb, var(--bg) 88%, transparent);
+    backdrop-filter: blur(8px); border-bottom: 1px solid var(--line);
+  }
+  .nav { display: flex; align-items: center; justify-content: space-between; height: 60px; }
+  .logo { font-family: "Noto Serif JP", serif; font-weight: 600; font-size: 1.1rem; text-decoration: none; }
+  .nav ul { display: flex; gap: 22px; list-style: none; font-size: .9rem; }
+  .nav ul a { text-decoration: none; color: var(--muted); }
+  .nav ul a:hover { color: var(--accent); }
+  .lang {
+    border: 1px solid var(--line); background: var(--surface); color: var(--ink);
+    border-radius: 999px; padding: 4px 12px; font: inherit; font-size: .8rem; cursor: pointer;
+  }
+
+  .hero { padding: 96px 0 80px; text-align: center; }
+  .hero .eyebrow { color: var(--accent); letter-spacing: .2em; font-size: .8rem; }
+  .hero h1 { font-family: "Noto Serif JP", serif; font-size: clamp(2rem, 6vw, 3.4rem); font-weight: 600; margin: 12px 0 16px; line-height: 1.3; }
+  .hero p { color: var(--muted); max-width: 520px; margin: 0 auto 32px; }
+  .btn {
+    display: inline-block; background: var(--accent); color: var(--bg);
+    padding: 12px 28px; border-radius: 999px; text-decoration: none; font-weight: 500;
+  }
+  .btn.ghost { background: transparent; color: var(--accent); border: 1px solid var(--accent); margin-left: 8px; }
+
+  section { padding: 72px 0; }
+  section h2 { font-family: "Noto Serif JP", serif; font-size: 1.7rem; font-weight: 600; margin-bottom: 8px; }
+  section .sub { color: var(--muted); margin-bottom: 36px; }
+  .alt { background: var(--accent-soft); }
+
+  .about { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+  .about .art {
+    aspect-ratio: 4/3; border-radius: 16px;
+    background:
+      radial-gradient(circle at 30% 30%, #c89b73 0 18%, transparent 19%),
+      radial-gradient(circle at 70% 60%, #a8744c 0 22%, transparent 23%),
+      linear-gradient(135deg, #5a3a22, #2b1c10);
+  }
+
+  .menu { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+  .card { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 22px; }
+  .card h3 { font-size: 1rem; font-weight: 500; display: flex; justify-content: space-between; gap: 12px; }
+  .card h3 span { color: var(--accent); white-space: nowrap; }
+  .card p { color: var(--muted); font-size: .88rem; margin-top: 6px; }
+
+  .info { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+  .info dl { display: grid; grid-template-columns: 110px 1fr; gap: 10px 16px; }
+  .info dt { color: var(--muted); font-size: .9rem; }
+  .map {
+    border-radius: 14px; border: 1px solid var(--line); min-height: 240px;
+    display: grid; place-items: center; color: var(--muted); background: var(--surface);
+  }
+
+  footer { border-top: 1px solid var(--line); padding: 28px 0; color: var(--muted); font-size: .8rem; text-align: center; }
+
+  [data-lang="en"] .ja, [data-lang="ja"] .en { display: none; }
+
+  @media (max-width: 720px) {
+    .nav ul { display: none; }
+    .about, .info { grid-template-columns: 1fr; }
+    .hero { padding: 64px 0 56px; }
+    .btn.ghost { margin: 12px 0 0; }
+  }
+</style>
+</head>
+<body data-lang="ja">
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#">木漏れ日珈琲</a>
+    <ul>
+      <li><a href="#about"><span class="ja">私たちについて</span><span class="en">About</span></a></li>
+      <li><a href="#menu"><span class="ja">メニュー</span><span class="en">Menu</span></a></li>
+      <li><a href="#info"><span class="ja">アクセス</span><span class="en">Visit</span></a></li>
+    </ul>
+    <button class="lang" id="langBtn" aria-label="Switch language">EN</button>
+  </div>
+</header>
+
+<main>
+  <div class="hero wrap">
+    <div class="eyebrow">KAWAGOE · SAITAMA</div>
+    <h1>
+      <span class="ja">小江戸の路地裏で、<br>ゆっくり一杯。</span>
+      <span class="en">A slow cup,<br>in the lanes of Little Edo.</span>
+    </h1>
+    <p>
+      <span class="ja">店内で毎朝焙煎する、やさしい味わいのスペシャルティコーヒー。蔵造りの町並み散策のひと休みにどうぞ。</span>
+      <span class="en">Specialty coffee roasted in-house every morning. The perfect break while exploring Kawagoe's old warehouse district.</span>
+    </p>
+    <a class="btn" href="#menu"><span class="ja">メニューを見る</span><span class="en">See the menu</span></a>
+    <a class="btn ghost" href="#info"><span class="ja">アクセス</span><span class="en">How to find us</span></a>
+  </div>
+
+  <section id="about" class="alt">
+    <div class="wrap about">
+      <div>
+        <h2><span class="ja">私たちについて</span><span class="en">About us</span></h2>
+        <p class="sub"><span class="ja">2019年創業・席数12席の小さなお店</span><span class="en">Est. 2019 · 12 seats</span></p>
+        <p>
+          <span class="ja">産地を訪ねて選んだ豆を、小さな焙煎機で少しずつ焼いています。地元・埼玉の和菓子屋さんと作ったお菓子も人気です。</span>
+          <span class="en">We roast small batches of beans sourced directly from farms, and pair them with sweets made with a local Saitama wagashi shop.</span>
+        </p>
+      </div>
+      <div class="art" role="img" aria-label="Coffee illustration"></div>
+    </div>
+  </section>
+
+  <section id="menu">
+    <div class="wrap">
+      <h2><span class="ja">メニュー</span><span class="en">Menu</span></h2>
+      <p class="sub"><span class="ja">価格はすべて税込です</span><span class="en">All prices include tax</span></p>
+      <div class="menu">
+        <div class="card"><h3><span class="ja">本日のハンドドリップ</span><span class="en">Today's pour-over</span><span>¥550</span></h3>
+          <p><span class="ja">季節ごとに変わるシングルオリジン</span><span class="en">Seasonal single origin</span></p></div>
+        <div class="card"><h3><span class="ja">カフェラテ</span><span class="en">Café latte</span><span>¥600</span></h3>
+          <p><span class="ja">オーツミルクに変更可（+¥50）</span><span class="en">Oat milk available (+¥50)</span></p></div>
+        <div class="card"><h3><span class="ja">さつまいもラテ</span><span class="en">Sweet potato latte</span><span>¥680</span></h3>
+          <p><span class="ja">川越名物のさつまいもを使った看板メニュー</span><span class="en">Our signature, made with Kawagoe's famous sweet potato</span></p></div>
+        <div class="card"><h3><span class="ja">抹茶どら焼き</span><span class="en">Matcha dorayaki</span><span>¥380</span></h3>
+          <p><span class="ja">地元和菓子店とのコラボ</span><span class="en">Made with a local wagashi shop</span></p></div>
+        <div class="card"><h3><span class="ja">豆の販売 200g</span><span class="en">Beans to go, 200g</span><span>¥1,600〜</span></h3>
+          <p><span class="ja">お好みの挽き方で</span><span class="en">Ground to order</span></p></div>
+        <div class="card"><h3><span class="ja">モーニングセット</span><span class="en">Morning set</span><span>¥800</span></h3>
+          <p><span class="ja">トースト＋ドリンク（11時まで）</span><span class="en">Toast + drink (until 11am)</span></p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="info" class="alt">
+    <div class="wrap">
+      <h2><span class="ja">営業時間・アクセス</span><span class="en">Hours &amp; access</span></h2>
+      <p class="sub"><span class="ja">お気軽にお立ち寄りください</span><span class="en">Drop by anytime</span></p>
+      <div class="info">
+        <dl>
+          <dt><span class="ja">営業時間</span><span class="en">Hours</span></dt><dd>9:00 – 18:00</dd>
+          <dt><span class="ja">定休日</span><span class="en">Closed</span></dt><dd><span class="ja">水曜日</span><span class="en">Wednesdays</span></dd>
+          <dt><span class="ja">住所</span><span class="en">Address</span></dt><dd><span class="ja">埼玉県川越市（デモ用住所）</span><span class="en">Kawagoe, Saitama (demo address)</span></dd>
+          <dt><span class="ja">アクセス</span><span class="en">Access</span></dt><dd><span class="ja">本川越駅から徒歩10分</span><span class="en">10 min walk from Hon-Kawagoe Stn.</span></dd>
+          <dt>Instagram</dt><dd>@komorebi_demo</dd>
+        </dl>
+        <div class="map"><span class="ja">ここにGoogleマップを埋め込み</span><span class="en">Google Map embed goes here</span></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <span class="ja">※ これは架空の店舗のデモサイトです。</span>
+  <span class="en">This is a demo site for a fictional business.</span>
+</footer>
+
+<script>
+  const btn = document.getElementById('langBtn');
+  const setLang = (l) => {
+    document.body.dataset.lang = l;
+    document.documentElement.lang = l;
+    btn.textContent = l === 'ja' ? 'EN' : '日本語';
+  };
+  btn.addEventListener('click', () => setLang(document.body.dataset.lang === 'ja' ? 'en' : 'ja'));
+</script>
+</body>
+</html>
