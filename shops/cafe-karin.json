@@ -1,0 +1,33 @@
+{
+  "slug": "cafe-karin",
+  "name": "cafe果林",
+  "theme": "breeze",
+  "art": "leaf",
+  "colors": {"bg": "#f7f8f1", "ink": "#23301f", "accent": "#4f7d3a", "soft": "#e1eed5", "pop": "#f3e2a8"},
+  "instagram": "cafe_carin_matubushi",
+  "phone": "048-991-8060",
+  "area_ja": "松伏町築比地",
+  "eyebrow": "TSUIHIJI · MATSUBUSHI",
+  "h1_ja": "お庭を眺めながら、\n野菜たっぷりの定食を。",
+  "h1_en": "Garden views\nand vegetable-rich lunches.",
+  "lead_ja": "旬の野菜をたっぷり使った日替わりのワンプレート。ウッドデッキのテラス席では、ワンちゃんと一緒にどうぞ。",
+  "lead_en": "Daily one-plate lunches full of seasonal vegetables. Bring your dog to the wooden-deck terrace.",
+  "rating": "4.6", "reviews_ja": "45件", "reviews_en": "45",
+  "about_sub_ja": "眺めも、ごはんも、心がほっとする場所",
+  "about_sub_en": "A view and a meal that help you unwind",
+  "about_ja": "店内からの景色は、落ち着いて心地よいと評判です。オクラ、かぼちゃ、なす、ピーマンなど、新鮮な野菜を使ったおかずがたっぷり並びます。",
+  "about_en": "Guests love the calming view from inside. Plates are full of fresh vegetables like okra, pumpkin, eggplant and bell pepper.",
+  "menu_ja": "メニュー", "menu_en": "Menu",
+  "items": [
+    {"ja": "果林定食", "en": "Karin set meal", "dja": "人気の日替わりワンプレート", "den": "Our popular daily plate"},
+    {"ja": "日替わりランチ", "en": "Daily lunch", "dja": "旬の野菜をたっぷり", "den": "Loaded with seasonal vegetables"},
+    {"ja": "鮭のちゃんちゃん焼き定食", "en": "Salmon chan-chan yaki set", "dja": "ワンプレートで", "den": "Served on one plate"},
+    {"ja": "カレー", "en": "Curry", "dja": "売り切れ次第終了", "den": "Until sold out"}
+  ],
+  "info_sub_ja": "テラス・ウッドデッキ席はワンちゃんOK", "info_sub_en": "Dogs welcome on the terrace",
+  "address_ja": "〒343-0102 埼玉県北葛飾郡松伏町築比地136-1",
+  "address_en": "136-1 Tsuihiji, Matsubushi, Saitama 343-0102",
+  "hours_ja": "〜17:00（詳細・定休日はお店に確認して掲載）",
+  "hours_en": "Until 5 PM (full hours to be confirmed)",
+  "map_query": "cafe果林 松伏町築比地136-1"
+}

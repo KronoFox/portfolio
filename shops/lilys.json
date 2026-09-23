@@ -1,0 +1,33 @@
+{
+  "slug": "lilys",
+  "name": "CAFE&BAKE Lily's",
+  "theme": "tropical",
+  "art": "dog",
+  "colors": {"bg": "#fdf9f5", "ink": "#33302b", "accent": "#6f8f5c", "soft": "#e7efdf", "pop": "#f4c9c0"},
+  "instagram": "lilys_cafe25",
+  "phone": "070-2237-2525",
+  "area_ja": "流山市西初石",
+  "eyebrow": "DOG CAFE · NAGAREYAMA",
+  "h1_ja": "お散歩のついでに、\nワンちゃんとカフェ。",
+  "h1_en": "Stop by on your walk,\nwith your dog.",
+  "lead_ja": "ドッグラン併設のカフェ。地元の食材を使ったサンドイッチやスイーツ、ワンちゃん用の特別メニューもご用意しています。",
+  "lead_en": "A café with its own dog run. Sandwiches and sweets made with local ingredients, plus special treats for dogs.",
+  "rating": "4.7", "reviews_ja": "45件", "reviews_en": "45",
+  "about_sub_ja": "森と畑に囲まれた、静かな場所",
+  "about_sub_en": "A quiet spot beside the woods and fields",
+  "about_ja": "思いきり走ったあとは、テラスでひと休み。ワンちゃんと一緒にお食事を楽しめるカフェです。",
+  "about_en": "After a good run, relax together on the terrace. A café where you and your dog can enjoy a meal side by side.",
+  "menu_ja": "メニュー", "menu_en": "Menu",
+  "items": [
+    {"ja": "玉子サンドセット", "en": "Egg sandwich set", "dja": "地元の食材で", "den": "Made with local ingredients"},
+    {"ja": "スコーン", "en": "Scones", "dja": "手作りの焼き菓子", "den": "Freshly baked"},
+    {"ja": "シフォンケーキ", "en": "Chiffon cake", "dja": "ふんわりやさしい", "den": "Light and fluffy"},
+    {"ja": "ワンちゃん用メニュー", "en": "Dog menu", "dja": "特別メニューをいろいろ", "den": "Plenty of special treats"}
+  ],
+  "info_sub_ja": "ドッグラン併設・テラス席あり", "info_sub_en": "Dog run · terrace seating",
+  "address_ja": "〒270-0121 千葉県流山市西初石4-353-7",
+  "address_en": "4-353-7 Nishihatsuishi, Nagareyama, Chiba 270-0121",
+  "hours_ja": "お店に確認して掲載",
+  "hours_en": "To be confirmed with the shop",
+  "map_query": "CAFE&BAKE Lily's 流山市西初石4-353-7"
+}
