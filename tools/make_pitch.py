@@ -21,9 +21,12 @@ def both(ja, en, tag="span"):
 
 
 def both_br(ja, en):
-    j = "<br>".join(esc(s) for s in ja.split("\n"))
+    # Keep each Japanese line whole; on phones it shrinks to fit (see --n in BASE_CSS).
+    lines = ja.split("\n")
+    j = "<br>".join(f'<span class="l">{esc(s)}</span>' for s in lines)
     e = "<br>".join(esc(s) for s in en.split("\n"))
-    return f'<span class="ja">{j}</span><span class="en">{e}</span>'
+    n = max(len(s) for s in lines)
+    return f'<span class="ja" style="--n:{n}">{j}</span><span class="en">{e}</span>'
 
 
 # ---------------------------------------------------------------- line art
@@ -89,7 +92,9 @@ section { padding: 88px 0; }
 .map iframe { width: 100%; min-height: 300px; height: 100%; border: 0; }
 footer { padding: 32px 0; font-size: .8rem; text-align: center; opacity: .7; }
 [data-lang="en"] .ja, [data-lang="ja"] .en { display: none !important; }
+.l { white-space: nowrap; }
 @media (max-width: 760px) {
+  h1 .ja { font-size: min(1em, calc((100vw - 44px) / (var(--n) * 1.16))) !important; }
   .nav ul { display: none; }
   .info { grid-template-columns: 1fr; }
   section { padding: 64px 0; }
@@ -110,7 +115,7 @@ body { font-family: "Zen Kaku Gothic New", sans-serif; }
 header { border-bottom: 1px solid color-mix(in srgb, var(--ink) 14%, transparent); }
 .hero { display: grid; grid-template-columns: auto 1fr; gap: 64px; align-items: center; padding: 72px 0 96px; }
 .hero h1 { font-weight: 800; font-size: clamp(2.2rem, 5vw, 3.6rem); line-height: 1.5; letter-spacing: .12em; }
-.hero h1 .ja { writing-mode: vertical-rl; display: block; height: 22rem; }
+.hero h1 .ja { writing-mode: vertical-rl; display: block; font-size: .85em; }
 .hero h1 .en { line-height: 1.2; letter-spacing: 0; max-width: 9ch; display: block; }
 .hero .side { border-left: 1px solid color-mix(in srgb, var(--ink) 18%, transparent); padding-left: 48px; }
 .eyebrow { font-size: .75rem; letter-spacing: .32em; color: var(--accent); }

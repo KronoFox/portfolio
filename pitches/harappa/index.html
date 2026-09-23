@@ -38,7 +38,9 @@ section { padding: 88px 0; }
 .map iframe { width: 100%; min-height: 300px; height: 100%; border: 0; }
 footer { padding: 32px 0; font-size: .8rem; text-align: center; opacity: .7; }
 [data-lang="en"] .ja, [data-lang="ja"] .en { display: none !important; }
+.l { white-space: nowrap; }
 @media (max-width: 760px) {
+  h1 .ja { font-size: min(1em, calc((100vw - 44px) / (var(--n) * 1.16))) !important; }
   .nav ul { display: none; }
   .info { grid-template-columns: 1fr; }
   section { padding: 64px 0; }
@@ -105,7 +107,7 @@ footer { background: var(--ink); color: var(--bg); opacity: 1; }
 <div class="hero"><div class="wrap">
   <div>
     <span class="eyebrow">RIDERS&#x27; CAFE · YASHIO</span>
-    <h1><span class="ja">バイク好きが集まる、<br>家みたいなカフェ。</span><span class="en">A home-style café<br>where riders gather.</span></h1>
+    <h1><span class="ja" style="--n:10"><span class="l">バイク好きが集まる、</span><br><span class="l">家みたいなカフェ。</span></span><span class="en">A home-style café<br>where riders gather.</span></h1>
     <p><span class="ja">バイク好きのご夫婦が営む、ライダーズカフェ。昔ながらのナポリタンに、かためのプリン、ボリュームたっぷりの定食をどうぞ。</span><span class="en">A riders&#x27; café run by a motorcycle-loving couple. Classic Neapolitan spaghetti, firm old-school pudding and hearty set meals.</span></p>
     <div class="btns"><a class="btn" href="#menu"><span class="ja">メニューを見る</span><span class="en">See the menu</span></a><a class="btn ghost" href="#info"><span class="ja">アクセス</span><span class="en">Visit</span></a></div>
   </div>

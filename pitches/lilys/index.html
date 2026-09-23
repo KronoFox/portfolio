@@ -38,7 +38,9 @@ section { padding: 88px 0; }
 .map iframe { width: 100%; min-height: 300px; height: 100%; border: 0; }
 footer { padding: 32px 0; font-size: .8rem; text-align: center; opacity: .7; }
 [data-lang="en"] .ja, [data-lang="ja"] .en { display: none !important; }
+.l { white-space: nowrap; }
 @media (max-width: 760px) {
+  h1 .ja { font-size: min(1em, calc((100vw - 44px) / (var(--n) * 1.16))) !important; }
   .nav ul { display: none; }
   .info { grid-template-columns: 1fr; }
   section { padding: 64px 0; }
@@ -93,7 +95,7 @@ h2 { font-size: clamp(1.7rem, 4vw, 2.3rem); text-align: center; margin-bottom: 1
 <div class="hero"><span class="blob a"></span><span class="blob b"></span><div class="wrap">
   <div class="art-wrap"><svg class="art" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="100" cy="104" r="46"/><path d="M62 80c-16-4-26 18-18 40M138 80c16-4 26 18 18 40"/><circle cx="84" cy="98" r="4"/><circle cx="116" cy="98" r="4"/><path d="M92 116h16l-8 8z"/><path d="M100 124v8c-4 6-12 6-16 2M100 132c4 6 12 6 16 2"/></svg></div>
   <div class="eyebrow">DOG CAFE · NAGAREYAMA</div>
-  <h1><span class="ja">お散歩のついでに、<br>ワンちゃんとカフェ。</span><span class="en">Stop by on your walk,<br>with your dog.</span></h1>
+  <h1><span class="ja" style="--n:10"><span class="l">お散歩のついでに、</span><br><span class="l">ワンちゃんとカフェ。</span></span><span class="en">Stop by on your walk,<br>with your dog.</span></h1>
   <p><span class="ja">ドッグラン併設のカフェ。地元の食材を使ったサンドイッチやスイーツ、ワンちゃん用の特別メニューもご用意しています。</span><span class="en">A café with its own dog run. Sandwiches and sweets made with local ingredients, plus special treats for dogs.</span></p>
   <div class="rating"><b>★ 4.7</b> <span class="ja">Googleクチコミ 45件</span><span class="en">45 Google reviews</span></div>
   <div class="btns"><a class="btn" href="#menu"><span class="ja">メニューを見る</span><span class="en">See the menu</span></a><a class="btn ghost" href="#info"><span class="ja">アクセス</span><span class="en">Visit</span></a></div>

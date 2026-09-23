@@ -38,7 +38,9 @@ section { padding: 88px 0; }
 .map iframe { width: 100%; min-height: 300px; height: 100%; border: 0; }
 footer { padding: 32px 0; font-size: .8rem; text-align: center; opacity: .7; }
 [data-lang="en"] .ja, [data-lang="ja"] .en { display: none !important; }
+.l { white-space: nowrap; }
 @media (max-width: 760px) {
+  h1 .ja { font-size: min(1em, calc((100vw - 44px) / (var(--n) * 1.16))) !important; }
   .nav ul { display: none; }
   .info { grid-template-columns: 1fr; }
   section { padding: 64px 0; }
@@ -93,7 +95,7 @@ h2 { font-size: clamp(1.7rem, 4vw, 2.3rem); text-align: center; margin-bottom: 1
 <div class="hero"><span class="blob a"></span><span class="blob b"></span><div class="wrap">
   <div class="art-wrap"><svg class="art" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M30 130c0-44 32-70 70-70s70 26 70 70v12H30z"/><path d="M70 82l-10 26M100 74v30M130 82l10 26"/><path d="M20 152h160"/></svg></div>
   <div class="eyebrow">KIYOMINO · YOSHIKAWA</div>
-  <h1><span class="ja">金曜日だけの、<br>パン屋さん。</span><span class="en">A bakery open<br>only on Fridays.</span></h1>
+  <h1><span class="ja" style="--n:7"><span class="l">金曜日だけの、</span><br><span class="l">パン屋さん。</span></span><span class="en">A bakery open<br>only on Fridays.</span></h1>
   <p><span class="ja">クロワッサン、ドーナツ、クリームパンにカレーパン。毎週金曜日だけ開く、行列のできる小さなベーカリーです。</span><span class="en">Croissants, doughnuts, cream buns and curry buns, from a small bakery that opens only on Fridays and draws a line.</span></p>
   <div class="rating"><b>★ 4.4</b> <span class="ja">Googleクチコミ 50件</span><span class="en">50 Google reviews</span></div>
   <div class="btns"><a class="btn" href="#menu"><span class="ja">パンを見る</span><span class="en">See the breads</span></a><a class="btn ghost" href="#info"><span class="ja">アクセス</span><span class="en">Visit</span></a></div>

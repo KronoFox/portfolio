@@ -38,7 +38,9 @@ section { padding: 88px 0; }
 .map iframe { width: 100%; min-height: 300px; height: 100%; border: 0; }
 footer { padding: 32px 0; font-size: .8rem; text-align: center; opacity: .7; }
 [data-lang="en"] .ja, [data-lang="ja"] .en { display: none !important; }
+.l { white-space: nowrap; }
 @media (max-width: 760px) {
+  h1 .ja { font-size: min(1em, calc((100vw - 44px) / (var(--n) * 1.16))) !important; }
   .nav ul { display: none; }
   .info { grid-template-columns: 1fr; }
   section { padding: 64px 0; }
@@ -105,7 +107,7 @@ footer { background: var(--ink); color: var(--bg); opacity: 1; }
 <div class="hero"><div class="wrap">
   <div>
     <span class="eyebrow">TAKAHISA · YOSHIKAWA</span>
-    <h1><span class="ja">一杯のエスプレッソに、<br>こだわりを。</span><span class="en">Espresso,<br>taken seriously.</span></h1>
+    <h1><span class="ja" style="--n:11"><span class="l">一杯のエスプレッソに、</span><br><span class="l">こだわりを。</span></span><span class="en">Espresso,<br>taken seriously.</span></h1>
     <p><span class="ja">Slayerのエスプレッソマシンで淹れる、こだわりの一杯。静かで心地よいコーヒースタンドです。</span><span class="en">Carefully pulled espresso on a Slayer machine, in a quiet, welcoming coffee stand.</span></p>
     <div class="btns"><a class="btn" href="#menu"><span class="ja">メニューを見る</span><span class="en">See the menu</span></a><a class="btn ghost" href="#info"><span class="ja">アクセス</span><span class="en">Visit</span></a></div>
   </div>

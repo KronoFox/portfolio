@@ -38,7 +38,9 @@ section { padding: 88px 0; }
 .map iframe { width: 100%; min-height: 300px; height: 100%; border: 0; }
 footer { padding: 32px 0; font-size: .8rem; text-align: center; opacity: .7; }
 [data-lang="en"] .ja, [data-lang="ja"] .en { display: none !important; }
+.l { white-space: nowrap; }
 @media (max-width: 760px) {
+  h1 .ja { font-size: min(1em, calc((100vw - 44px) / (var(--n) * 1.16))) !important; }
   .nav ul { display: none; }
   .info { grid-template-columns: 1fr; }
   section { padding: 64px 0; }
@@ -51,7 +53,7 @@ body { font-family: "Zen Kaku Gothic New", sans-serif; }
 header { border-bottom: 1px solid color-mix(in srgb, var(--ink) 14%, transparent); }
 .hero { display: grid; grid-template-columns: auto 1fr; gap: 64px; align-items: center; padding: 72px 0 96px; }
 .hero h1 { font-weight: 800; font-size: clamp(2.2rem, 5vw, 3.6rem); line-height: 1.5; letter-spacing: .12em; }
-.hero h1 .ja { writing-mode: vertical-rl; display: block; height: 22rem; }
+.hero h1 .ja { writing-mode: vertical-rl; display: block; font-size: .85em; }
 .hero h1 .en { line-height: 1.2; letter-spacing: 0; max-width: 9ch; display: block; }
 .hero .side { border-left: 1px solid color-mix(in srgb, var(--ink) 18%, transparent); padding-left: 48px; }
 .eyebrow { font-size: .75rem; letter-spacing: .32em; color: var(--accent); }
@@ -96,7 +98,7 @@ footer { border-top: 1px solid color-mix(in srgb, var(--ink) 14%, transparent); 
 </div></header>
 <main>
 <div class="wrap hero">
-  <h1><span class="ja">古民家の空気と、<br>やさしいごはん。</span><span class="en">A cozy old house,<br>and food made with care.</span></h1>
+  <h1><span class="ja" style="--n:8"><span class="l">古民家の空気と、</span><br><span class="l">やさしいごはん。</span></span><span class="en">A cozy old house,<br>and food made with care.</span></h1>
   <div class="side">
     <div class="eyebrow">KAWAFUJI · YOSHIKAWA</div>
     <div class="art-wrap"><svg class="art" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="100" cy="150" rx="62" ry="12"/><path d="M58 92h84v22a42 42 0 0 1-84 0z"/><path d="M142 100h8a14 14 0 0 1 0 28h-12"/><path d="M84 78c-8-10 8-16 0-28M102 78c-8-10 8-16 0-28M120 78c-8-10 8-16 0-28"/></svg></div>

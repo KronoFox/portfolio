@@ -38,7 +38,9 @@ section { padding: 88px 0; }
 .map iframe { width: 100%; min-height: 300px; height: 100%; border: 0; }
 footer { padding: 32px 0; font-size: .8rem; text-align: center; opacity: .7; }
 [data-lang="en"] .ja, [data-lang="ja"] .en { display: none !important; }
+.l { white-space: nowrap; }
 @media (max-width: 760px) {
+  h1 .ja { font-size: min(1em, calc((100vw - 44px) / (var(--n) * 1.16))) !important; }
   .nav ul { display: none; }
   .info { grid-template-columns: 1fr; }
   section { padding: 64px 0; }
@@ -51,7 +53,7 @@ body { font-family: "Zen Kaku Gothic New", sans-serif; }
 header { border-bottom: 1px solid color-mix(in srgb, var(--ink) 14%, transparent); }
 .hero { display: grid; grid-template-columns: auto 1fr; gap: 64px; align-items: center; padding: 72px 0 96px; }
 .hero h1 { font-weight: 800; font-size: clamp(2.2rem, 5vw, 3.6rem); line-height: 1.5; letter-spacing: .12em; }
-.hero h1 .ja { writing-mode: vertical-rl; display: block; height: 22rem; }
+.hero h1 .ja { writing-mode: vertical-rl; display: block; font-size: .85em; }
 .hero h1 .en { line-height: 1.2; letter-spacing: 0; max-width: 9ch; display: block; }
 .hero .side { border-left: 1px solid color-mix(in srgb, var(--ink) 18%, transparent); padding-left: 48px; }
 .eyebrow { font-size: .75rem; letter-spacing: .32em; color: var(--accent); }
@@ -96,7 +98,7 @@ footer { border-top: 1px solid color-mix(in srgb, var(--ink) 14%, transparent); 
 </div></header>
 <main>
 <div class="wrap hero">
-  <h1><span class="ja">自家焙煎の一杯と、<br>毎日焼くお菓子。</span><span class="en">House-roasted coffee,<br>sweets made daily.</span></h1>
+  <h1><span class="ja" style="--n:9"><span class="l">自家焙煎の一杯と、</span><br><span class="l">毎日焼くお菓子。</span></span><span class="en">House-roasted coffee,<br>sweets made daily.</span></h1>
   <div class="side">
     <div class="eyebrow">SUMIYOSHI · SOKA</div>
     <div class="art-wrap"><svg class="art" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M62 96h76l-8 58H70z"/><path d="M138 108h10a12 12 0 0 1 0 24h-14"/><ellipse cx="100" cy="164" rx="52" ry="8"/><path d="M60 40h80v26H60zM100 66v18"/></svg></div>

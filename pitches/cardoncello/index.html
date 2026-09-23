@@ -38,7 +38,9 @@ section { padding: 88px 0; }
 .map iframe { width: 100%; min-height: 300px; height: 100%; border: 0; }
 footer { padding: 32px 0; font-size: .8rem; text-align: center; opacity: .7; }
 [data-lang="en"] .ja, [data-lang="ja"] .en { display: none !important; }
+.l { white-space: nowrap; }
 @media (max-width: 760px) {
+  h1 .ja { font-size: min(1em, calc((100vw - 44px) / (var(--n) * 1.16))) !important; }
   .nav ul { display: none; }
   .info { grid-template-columns: 1fr; }
   section { padding: 64px 0; }
@@ -102,7 +104,7 @@ footer { border-top: 1px solid color-mix(in srgb, var(--accent) 30%, transparent
 <div class="hero"><span class="frame"></span><div class="wrap">
   <svg class="art" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="100" cy="100" r="76"/><circle cx="100" cy="100" r="58"/><circle cx="100" cy="100" r="42"/><circle cx="100" cy="100" r="18"/><circle cx="100" cy="100" r="3"/></svg>
   <div class="eyebrow">Koshigaya · down the old road</div>
-  <h1><span class="ja">旧道の路地裏で、<br>ジャズとパスタを。</span><span class="en">Jazz and pasta,<br>down an old-town alley.</span></h1>
+  <h1><span class="ja" style="--n:9"><span class="l">旧道の路地裏で、</span><br><span class="l">ジャズとパスタを。</span></span><span class="en">Jazz and pasta,<br>down an old-town alley.</span></h1>
   <p><span class="ja">越ヶ谷の旧道から路地を入ると、ゆったりとした時間が流れる隠れ家。80年代の映画音楽とジャズを聴きながら、本日のパスタと手作りのデザートを。</span><span class="en">Step off Koshigaya&#x27;s old road into a hidden spot where time slows down. Pasta of the day and homemade desserts, with 80s film jazz playing.</span></p>
   <div class="rating"><b>★ 4.6</b> <span class="ja">Googleクチコミ 45件</span><span class="en">45 Google reviews</span></div>
   <div class="btns"><a class="btn" href="#menu"><span class="ja">メニューを見る</span><span class="en">See the menu</span></a><a class="btn ghost" href="#info"><span class="ja">アクセス</span><span class="en">Visit</span></a></div>
