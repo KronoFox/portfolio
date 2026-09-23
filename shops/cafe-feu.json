@@ -57,12 +57,12 @@
       "den": "Great with coffee"
     }
   ],
-  "info_sub_ja": "テラス席はワンちゃんOK",
-  "info_sub_en": "Dogs welcome on the terrace",
+  "info_sub_ja": "吉川美南駅から徒歩6分・駐車場あり・テラス席はワンちゃんOK",
+  "info_sub_en": "6 min walk from Yoshikawa-Minami Stn. · parking · dogs welcome on the terrace",
   "address_ja": "〒342-0038 埼玉県吉川市美南2-8-14",
   "address_en": "2-8-14 Minami, Yoshikawa, Saitama 342-0038",
-  "hours_ja": "11:00〜（詳細・定休日はお店に確認して掲載）",
-  "hours_en": "From 11 AM (full hours to be confirmed)",
+  "hours_ja": "11:00〜17:00（定休日はお店に確認して掲載）",
+  "hours_en": "11:00–17:00 (closed days to be confirmed)",
   "map_query": "cafe_feu 吉川市美南2-8-14",
   "theme": "poster",
   "art": "plate"

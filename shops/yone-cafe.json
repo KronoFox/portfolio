@@ -3,7 +3,12 @@
   "name": "Yone cafe",
   "theme": "editorial",
   "art": "river",
-  "colors": {"bg": "#f4f2ee", "ink": "#1c2433", "accent": "#36507a", "soft": "#e3e7ee"},
+  "colors": {
+    "bg": "#f4f2ee",
+    "ink": "#1c2433",
+    "accent": "#36507a",
+    "soft": "#e3e7ee"
+  },
   "instagram": "yone.cafe",
   "area_ja": "越谷市増林",
   "eyebrow": "MASHIBAYASHI · KOSHIGAYA",
@@ -11,22 +16,46 @@
   "h1_en": "Down a little path\nby the river.",
   "lead_ja": "「本当にこの道で合ってる？」と思った先に見つかる、隠れ家のようなカフェ。クロックムッシュやカレー、バスクチーズケーキをどうぞ。",
   "lead_en": "Follow the narrow riverside path and you'll find a hidden little café, with croque monsieur, curry and Basque cheesecake.",
-  "rating": "4.8", "reviews_ja": "25件", "reviews_en": "25",
+  "rating": "4.8",
+  "reviews_ja": "25件",
+  "reviews_en": "25",
   "about_sub_ja": "見つけた人だけの、とっておきの場所",
   "about_sub_en": "A secret spot for those who find it",
   "about_ja": "小さなお店のため、すぐに満席になることがあります。ご予約は承っていないので、開店直後のご来店がおすすめです。",
   "about_en": "We're small and fill up quickly. We don't take reservations, so coming right at opening is your best bet.",
-  "menu_ja": "メニュー", "menu_en": "Menu",
+  "menu_ja": "メニュー",
+  "menu_en": "Menu",
   "items": [
-    {"ja": "クロックムッシュ", "en": "Croque monsieur", "dja": "とろけるチーズの人気メニュー", "den": "A melty, cheesy favorite"},
-    {"ja": "カレー", "en": "Curry", "dja": "ランチにおすすめ", "den": "Great for lunch"},
-    {"ja": "バスクチーズケーキ", "en": "Basque cheesecake", "dja": "コーヒーと一緒に", "den": "Perfect with coffee"},
-    {"ja": "コーヒー", "en": "Coffee", "dja": "ほっとひと息", "den": "Take a quiet break"}
+    {
+      "ja": "クロックムッシュ",
+      "en": "Croque monsieur",
+      "dja": "とろけるチーズの人気メニュー",
+      "den": "A melty, cheesy favorite"
+    },
+    {
+      "ja": "カレー",
+      "en": "Curry",
+      "dja": "ランチにおすすめ",
+      "den": "Great for lunch"
+    },
+    {
+      "ja": "バスクチーズケーキ",
+      "en": "Basque cheesecake",
+      "dja": "コーヒーと一緒に",
+      "den": "Perfect with coffee"
+    },
+    {
+      "ja": "コーヒー",
+      "en": "Coffee",
+      "dja": "ほっとひと息",
+      "den": "Take a quiet break"
+    }
   ],
-  "info_sub_ja": "予約不可・開店直後がおすすめ", "info_sub_en": "No reservations · come early",
+  "info_sub_ja": "予約不可・開店直後がおすすめ",
+  "info_sub_en": "No reservations · come early",
   "address_ja": "〒343-0011 埼玉県越谷市増林543-1",
   "address_en": "543-1 Mashibayashi, Koshigaya, Saitama 343-0011",
-  "hours_ja": "11:30〜（詳細・定休日はお店に確認して掲載）",
-  "hours_en": "From 11:30 AM (full hours to be confirmed)",
+  "hours_ja": "水・金・土 11:30〜17:00／木 11:30〜16:00",
+  "hours_en": "Wed, Fri, Sat 11:30–17:00 / Thu 11:30–16:00",
   "map_query": "Yone cafe 越谷市増林543-1"
 }
