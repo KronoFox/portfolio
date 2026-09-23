@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>uminoie | 越谷市北後谷</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kaisei+Opti:wght@500;700&family=Zen+Maru+Gothic:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root { --bg: #fbf8f2; --ink: #1d3140; --accent: #2d7fa3; --soft: #d9eef5; --pop: #f7d9a8; }
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: var(--bg); color: var(--ink); line-height: 1.85; -webkit-font-smoothing: antialiased; }
+a { color: inherit; }
+img, svg { display: block; }
+.wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+.proposal { background: #fff4c2; color: #5a4a00; font: 500 .78rem/1.5 system-ui, sans-serif; text-align: center; padding: 7px 16px; }
+header { position: sticky; top: 0; z-index: 20; background: color-mix(in srgb, var(--bg) 90%, transparent); backdrop-filter: blur(10px); }
+.nav { display: flex; align-items: center; justify-content: space-between; height: 64px; gap: 12px; }
+.logo { text-decoration: none; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.nav ul { display: flex; gap: 26px; list-style: none; font-size: .88rem; }
+.nav ul a { text-decoration: none; opacity: .7; }
+.nav ul a:hover { opacity: 1; color: var(--accent); }
+.lang { border: 1.5px solid currentColor; background: transparent; color: var(--ink); border-radius: 999px; padding: 3px 13px; font: inherit; font-size: .78rem; cursor: pointer; flex: none; }
+.btn { display: inline-block; text-decoration: none; font-weight: 500; padding: 13px 30px; border-radius: 999px; background: var(--accent); color: var(--bg); transition: transform .15s; }
+.btn:hover { transform: translateY(-2px); }
+.btn.ghost { background: transparent; color: var(--accent); box-shadow: inset 0 0 0 1.5px var(--accent); }
+.btns { display: flex; gap: 12px; flex-wrap: wrap; }
+section { padding: 88px 0; }
+.note { opacity: .65; font-size: .8rem; margin-top: 28px; }
+.info { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
+.info dl { display: grid; grid-template-columns: 104px 1fr; gap: 12px 18px; }
+.info dt { opacity: .6; font-size: .88rem; }
+.map { overflow: hidden; min-height: 300px; }
+.map iframe { width: 100%; min-height: 300px; height: 100%; border: 0; }
+footer { padding: 32px 0; font-size: .8rem; text-align: center; opacity: .7; }
+[data-lang="en"] .ja, [data-lang="ja"] .en { display: none; }
+@media (max-width: 760px) {
+  .nav ul { display: none; }
+  .info { grid-template-columns: 1fr; }
+  section { padding: 64px 0; }
+}
+
+
+body { font-family: "Zen Maru Gothic", sans-serif; }
+.logo, h1, h2, .pc h3 { font-family: "Kaisei Opti", serif; font-weight: 700; }
+.logo { font-size: 1.2rem; }
+.hero { position: relative; overflow: hidden; background: linear-gradient(180deg, var(--soft) 0%, var(--bg) 100%); padding: 90px 0 190px; }
+.hero .wrap { display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; align-items: center; position: relative; z-index: 2; }
+.eyebrow { font-size: .78rem; letter-spacing: .3em; color: var(--accent); }
+.hero h1 { font-size: clamp(2.1rem, 5.6vw, 3.6rem); line-height: 1.4; margin: 12px 0 18px; }
+.hero p { max-width: 480px; opacity: .8; margin-bottom: 22px; }
+.rating { font-size: .88rem; margin-bottom: 26px; opacity: .8; }
+.rating b { color: var(--accent); font-size: 1.2rem; }
+.sun { justify-self: center; width: min(300px, 70vw); aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle at 35% 35%, var(--bg), var(--pop)); display: grid; place-items: center; color: var(--accent); }
+.sun .art { width: 62%; }
+.seas { position: absolute; left: 0; right: 0; bottom: 0; height: 170px; }
+.seas svg { position: absolute; bottom: 0; width: 200%; height: 100%; }
+.seas .s1 { color: color-mix(in srgb, var(--accent) 25%, var(--bg)); animation: drift 18s linear infinite; }
+.seas .s2 { color: color-mix(in srgb, var(--accent) 45%, var(--bg)); animation: drift 12s linear infinite reverse; height: 75%; }
+.seas .s3 { color: var(--bg); height: 45%; animation: drift 22s linear infinite; }
+@keyframes drift { to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) { .seas svg { animation: none !important; } }
+h2 { font-size: clamp(1.7rem, 4vw, 2.3rem); margin-bottom: 10px; }
+.sub { opacity: .65; margin-bottom: 40px; }
+.about .wrap { display: grid; grid-template-columns: 1fr 1.5fr; gap: 48px; }
+.about .lead { font-family: "Kaisei Opti", serif; font-size: 1.3rem; color: var(--accent); line-height: 1.6; }
+.pcs { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 26px; }
+.pc { background: #fffdf8; color: #2a2a2a; padding: 24px; border: 1px solid rgba(0,0,0,.06); box-shadow: 0 10px 30px rgba(20,60,90,.09); position: relative; transform: rotate(var(--r)); transition: transform .2s; }
+.pc:hover { transform: rotate(0) translateY(-4px); }
+.pc::after { content: ""; position: absolute; top: 14px; right: 14px; width: 38px; height: 46px; border: 2px dashed var(--accent); border-radius: 3px; opacity: .6; }
+.pc h3 { font-size: 1.05rem; margin-bottom: 6px; padding-right: 48px; }
+.pc p { font-size: .86rem; opacity: .7; }
+#menu { background: color-mix(in srgb, var(--soft) 50%, var(--bg)); }
+.map { border-radius: 20px; }
+@media (max-width: 760px) { .hero .wrap, .about .wrap { grid-template-columns: 1fr; } }
+
+</style>
+</head>
+<body data-lang="ja">
+<div class="proposal"><span class="ja">※ こちらはご提案用のサンプルページです（非公開・検索エンジン非表示）</span><span class="en">Proposal preview: not an official site, hidden from search engines</span></div>
+<header><div class="wrap nav">
+  <a class="logo" href="#">uminoie</a>
+  <ul>
+    <li><a href="#about"><span class="ja">お店について</span><span class="en">About</span></a></li>
+    <li><a href="#menu"><span class="ja">メニュー</span><span class="en">Menu</span></a></li>
+    <li><a href="#info"><span class="ja">アクセス</span><span class="en">Visit</span></a></li>
+  </ul>
+  <button class="lang" id="langBtn" aria-label="Switch language">EN</button>
+</div></header>
+<main>
+<div class="hero"><div class="wrap">
+  <div>
+    <div class="eyebrow">KITAUSHIROYA · KOSHIGAYA</div>
+    <h1><span class="ja">海辺にいるような、<br>テラスのひととき。</span><span class="en">A terrace that feels<br>like the seaside.</span></h1>
+    <p><span class="ja">まるで海の家のようなテラス席で、季節のランチと手作りスイーツを。公園帰りにも、ワンちゃんとのお散歩にも。</span><span class="en">Seasonal lunches and homemade sweets on a terrace that feels like a beach house. Perfect after the park or a walk with your dog.</span></p>
+    <div class="rating"><b>★ 4.2</b> <span class="ja">Googleクチコミ 100件以上</span><span class="en">100+ Google reviews</span></div>
+    <div class="btns"><a class="btn" href="#menu"><span class="ja">メニューを見る</span><span class="en">See the menu</span></a><a class="btn ghost" href="#info"><span class="ja">アクセス</span><span class="en">Visit</span></a></div>
+  </div>
+  <div class="sun"><svg class="art" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 90c30-24 60-24 90 0s60 24 90 0M10 120c30-24 60-24 90 0s60 24 90 0M10 150c30-24 60-24 90 0s60 24 90 0"/><circle cx="150" cy="46" r="18"/></svg></div>
+</div><div class="seas"><svg class="s1" viewBox="0 0 1440 160" preserveAspectRatio="none" aria-hidden="true"><path fill="currentColor" d="M0 60c120-40 240-40 360 0s240 40 360 0 240-40 360 0 240 40 360 0v100H0z"/></svg><svg class="s2" viewBox="0 0 1440 160" preserveAspectRatio="none" aria-hidden="true"><path fill="currentColor" d="M0 60c120-40 240-40 360 0s240 40 360 0 240-40 360 0 240 40 360 0v100H0z"/></svg><svg class="s3" viewBox="0 0 1440 160" preserveAspectRatio="none" aria-hidden="true"><path fill="currentColor" d="M0 60c120-40 240-40 360 0s240 40 360 0 240-40 360 0 240 40 360 0v100H0z"/></svg></div></div>
+<section id="about" class="about"><div class="wrap">
+  <div><h2><span class="ja">お店について</span><span class="en">About us</span></h2><p class="lead"><span class="ja">思いがけない場所で、思いがけないおいしさを</span><span class="en">An unexpected place, with unexpectedly good food</span></p></div>
+  <p><span class="ja">スタッフみんなで、ゆっくり過ごせる時間をご用意しています。カヌレやスコーン、クッキーなどはお持ち帰りも人気です。</span><span class="en">Our whole team is here to help you slow down. Canelés, scones and cookies are popular to take home, too.</span></p>
+</div></section>
+<section id="menu"><div class="wrap">
+  <h2><span class="ja">メニュー</span><span class="en">Menu</span></h2>
+  <p class="sub"><span class="ja">季節ごとのお楽しみも</span><span class="en">Seasonal treats, too</span></p>
+  <div class="pcs"><div class="pc" style="--r:-1.2deg"><h3><span class="ja">秋香るサーモンレアステーキ</span><span class="en">Autumn salmon rare steak</span></h3><p><span class="ja">ルッコラムースと旬野菜のグリル（9〜11月限定）</span><span class="en">With arugula mousse and grilled vegetables (Sep–Nov)</span></p></div><div class="pc" style="--r:0.8deg"><h3><span class="ja">葡萄とさつまいものモンブラン</span><span class="en">Grape &amp; sweet potato Mont Blanc</span></h3><p><span class="ja">秋の限定デザート</span><span class="en">Autumn-only dessert</span></p></div><div class="pc" style="--r:-0.4deg"><h3><span class="ja">南瓜のワッフル</span><span class="en">Pumpkin waffle</span></h3><p><span class="ja">秋の限定デザート</span><span class="en">Autumn-only dessert</span></p></div><div class="pc" style="--r:1.3deg"><h3><span class="ja">ちょんまげプリン</span><span class="en">Chonmage pudding</span></h3><p><span class="ja">名物のかわいいプリン</span><span class="en">Our famous, playful pudding</span></p></div><div class="pc" style="--r:-0.9deg"><h3><span class="ja">カヌレ</span><span class="en">Canelé</span></h3><p><span class="ja">お持ち帰りにも</span><span class="en">Great to take home</span></p></div><div class="pc" style="--r:0.5deg"><h3><span class="ja">ブルーベリーチーズタルト</span><span class="en">Blueberry cheese tart</span></h3><p><span class="ja">ラテと一緒に</span><span class="en">Lovely with a latte</span></p></div></div>
+  <p class="note"><span class="ja">※ 価格・内容は正式公開時にお店の情報に合わせて掲載します。</span><span class="en">Prices and items will be confirmed with the shop before launch.</span></p>
+</div></section>
+<section id="info" class="visit"><div class="wrap">
+  <h2><span class="ja">営業時間・アクセス</span><span class="en">Hours &amp; access</span></h2>
+  <p class="sub"><span class="ja">テラス席・ワンちゃんOK</span><span class="en">Terrace seating · dog-friendly</span></p>
+  <div class="info"><dl><dt><span class="ja">住所</span><span class="en">Address</span></dt><dd><span class="ja">〒343-0854 埼玉県越谷市北後谷54-2</span><span class="en">54-2 Kitaushiroya, Koshigaya, Saitama 343-0854</span></dd><dt><span class="ja">営業時間</span><span class="en">Hours</span></dt><dd><span class="ja">10:00〜（詳細・定休日はお店に確認して掲載）</span><span class="en">From 10 AM (full hours to be confirmed)</span></dd><dt><span class="ja">電話</span><span class="en">Phone</span></dt><dd><a href="tel:0489402275">048-940-2275</a></dd><dt><span class="ja">ポイント</span><span class="en">Good to know</span></dt><dd><span class="ja">テラス席・ワンちゃんOK</span><span class="en">Terrace seating · dog-friendly</span></dd></dl><div class="map"><iframe loading="lazy" title="Map" src="https://www.google.com/maps?q=uminoie%20%E8%B6%8A%E8%B0%B7%E5%B8%82%E5%8C%97%E5%BE%8C%E8%B0%B754-2&output=embed"></iframe></div></div>
+</div></section></main>
+<footer>© uminoie</footer>
+<script>
+  const btn = document.getElementById('langBtn');
+  btn.addEventListener('click', () => {
+    const l = document.body.dataset.lang === 'ja' ? 'en' : 'ja';
+    document.body.dataset.lang = l;
+    document.documentElement.lang = l;
+    btn.textContent = l === 'ja' ? 'EN' : '日本語';
+  });
+</script>
+</body>
+</html>

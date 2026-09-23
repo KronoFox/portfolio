@@ -1,0 +1,33 @@
+{
+  "slug": "cardoncello",
+  "name": "Cardoncello カルドンチェッロ",
+  "theme": "noir",
+  "art": "record",
+  "colors": {"bg": "#15110f", "ink": "#efe6d6", "accent": "#c9a45c", "soft": "#1e1814"},
+  "instagram": "cardoncello2023",
+  "area_ja": "越谷市越ヶ谷",
+  "eyebrow": "Koshigaya · down the old road",
+  "h1_ja": "旧道の路地裏で、\nジャズとパスタを。",
+  "h1_en": "Jazz and pasta,\ndown an old-town alley.",
+  "lead_ja": "越ヶ谷の旧道から路地を入ると、ゆったりとした時間が流れる隠れ家。80年代の映画音楽とジャズを聴きながら、本日のパスタと手作りのデザートを。",
+  "lead_en": "Step off Koshigaya's old road into a hidden spot where time slows down. Pasta of the day and homemade desserts, with 80s film jazz playing.",
+  "rating": "4.6", "reviews_ja": "45件", "reviews_en": "45",
+  "about_sub_ja": "音楽も、内装も、おもてなしも。",
+  "about_sub_en": "The music, the room, the welcome.",
+  "about_ja": "ひとりでも気兼ねなく過ごせる、落ち着いた空間です。ランチのパスタから、午後のアップルパイとコーヒーまで、お好きな時間にどうぞ。",
+  "about_en": "A calm space where dining alone feels just right. From pasta at lunch to apple pie and coffee in the afternoon.",
+  "menu_ja": "メニュー", "menu_en": "Menu",
+  "items": [
+    {"ja": "本日のパスタ", "en": "Pasta of the day", "dja": "人気のランチメニュー", "den": "Our popular lunch"},
+    {"ja": "パニーニ", "en": "Panini", "dja": "軽めのランチにも", "den": "For a lighter lunch"},
+    {"ja": "アップルパイ", "en": "Apple pie", "dja": "常連さんにも人気", "den": "A regulars' favorite"},
+    {"ja": "デザートプレート", "en": "Dessert platter", "dja": "少しずつ色々と", "den": "A little of everything"},
+    {"ja": "季節のケーキ", "en": "Seasonal cakes", "dja": "かぼちゃ、バナナなど", "den": "Pumpkin, banana and more"}
+  ],
+  "info_sub_ja": "おひとりさまも歓迎", "info_sub_en": "Solo diners welcome",
+  "address_ja": "〒343-0813 埼玉県越谷市越ヶ谷2-2-21 田中ビル101",
+  "address_en": "Tanaka Bldg. 101, 2-2-21 Koshigaya, Koshigaya, Saitama 343-0813",
+  "hours_ja": "11:30〜（詳細・定休日はお店に確認して掲載）",
+  "hours_en": "From 11:30 AM (full hours to be confirmed)",
+  "map_query": "カルドンチェッロ 越谷市越ヶ谷2-2-21"
+}

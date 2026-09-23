@@ -4,29 +4,70 @@
   "instagram": "lec_coffee",
   "area_ja": "川越・志多町",
   "eyebrow": "SHITAMACHI · KAWAGOE",
-  "colors": {"bg": "#f6f5ef", "accent": "#4d6b3c", "soft": "#e5ecdc", "accent_dark": "#a6c98f"},
+  "colors": {
+    "bg": "#f5f4ec",
+    "ink": "#1f2a1c",
+    "accent": "#4d6b3c",
+    "soft": "#e3ebd8"
+  },
   "h1_ja": "喧騒から少し離れて、\n抹茶とコーヒーを。",
   "h1_en": "Matcha & coffee,\na step away from the crowds.",
   "lead_ja": "丁寧に淹れるコーヒーと、評判の抹茶スイーツ。川越の人混みから少し離れた、落ち着いたカフェです。",
   "lead_en": "Carefully made coffee and much-loved matcha desserts, in a calm café just outside Kawagoe's busy streets.",
-  "rating": "4.7", "reviews_ja": "140件以上", "reviews_en": "140+",
+  "rating": "4.7",
+  "reviews_ja": "140件以上",
+  "reviews_en": "140+",
   "about_sub_ja": "テラス席もある、ゆったりとしたひととき",
   "about_sub_en": "Take it slow, with terrace seating too",
   "about_ja": "こだわりのコーヒー豆はお持ち帰り用の販売もしています。散策の合間や神社参拝のあとに、ほっとひと息つける場所です。",
   "about_en": "Our coffee beans are also available to take home. A relaxing stop after visiting the shrine or exploring town.",
-  "menu_ja": "メニュー", "menu_en": "Menu",
+  "menu_ja": "メニュー",
+  "menu_en": "Menu",
   "items": [
-    {"ja": "抹茶テリーヌ", "en": "Matcha terrine", "dja": "人気の看板スイーツ", "den": "A signature favorite"},
-    {"ja": "カスタードプリン", "en": "Custard pudding", "dja": "カフェラテとのセットが人気", "den": "Great with a café latte"},
-    {"ja": "抹茶ラテ", "en": "Matcha latte", "dja": "なめらかな口当たり", "den": "Smooth and rich"},
-    {"ja": "バスクチーズケーキ", "en": "Basque cheesecake", "dja": "コーヒーと相性抜群", "den": "Perfect with coffee"},
-    {"ja": "アフォガート", "en": "Affogato", "dja": "暑い日にどうぞ", "den": "A treat on a hot day"},
-    {"ja": "コーヒー豆の販売", "en": "Coffee beans to go", "dja": "ご自宅でも楽しめます", "den": "Enjoy at home too"}
+    {
+      "ja": "抹茶テリーヌ",
+      "en": "Matcha terrine",
+      "dja": "人気の看板スイーツ",
+      "den": "A signature favorite"
+    },
+    {
+      "ja": "カスタードプリン",
+      "en": "Custard pudding",
+      "dja": "カフェラテとのセットが人気",
+      "den": "Great with a café latte"
+    },
+    {
+      "ja": "抹茶ラテ",
+      "en": "Matcha latte",
+      "dja": "なめらかな口当たり",
+      "den": "Smooth and rich"
+    },
+    {
+      "ja": "バスクチーズケーキ",
+      "en": "Basque cheesecake",
+      "dja": "コーヒーと相性抜群",
+      "den": "Perfect with coffee"
+    },
+    {
+      "ja": "アフォガート",
+      "en": "Affogato",
+      "dja": "暑い日にどうぞ",
+      "den": "A treat on a hot day"
+    },
+    {
+      "ja": "コーヒー豆の販売",
+      "en": "Coffee beans to go",
+      "dja": "ご自宅でも楽しめます",
+      "den": "Enjoy at home too"
+    }
   ],
-  "info_sub_ja": "イートイン・テイクアウトOK", "info_sub_en": "Dine-in & takeaway",
+  "info_sub_ja": "イートイン・テイクアウトOK",
+  "info_sub_en": "Dine-in & takeaway",
   "address_ja": "〒350-0051 埼玉県川越市志多町2-1",
   "address_en": "2-1 Shitamachi, Kawagoe, Saitama 350-0051",
   "hours_ja": "11:00〜（詳細・定休日はお店に確認して掲載）",
   "hours_en": "From 11 AM (full hours to be confirmed)",
-  "map_query": "Little Edo Coffee 川越市志多町2-1"
+  "map_query": "Little Edo Coffee 川越市志多町2-1",
+  "theme": "editorial",
+  "art": "leaf"
 }

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Cardoncello カルドンチェッロ | 越谷市越ヶ谷</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500;1,600&family=Shippori+Mincho:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root { --bg: #15110f; --ink: #efe6d6; --accent: #c9a45c; --soft: #1e1814; --pop: #1e1814; }
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: var(--bg); color: var(--ink); line-height: 1.85; -webkit-font-smoothing: antialiased; }
+a { color: inherit; }
+img, svg { display: block; }
+.wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+.proposal { background: #fff4c2; color: #5a4a00; font: 500 .78rem/1.5 system-ui, sans-serif; text-align: center; padding: 7px 16px; }
+header { position: sticky; top: 0; z-index: 20; background: color-mix(in srgb, var(--bg) 90%, transparent); backdrop-filter: blur(10px); }
+.nav { display: flex; align-items: center; justify-content: space-between; height: 64px; gap: 12px; }
+.logo { text-decoration: none; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.nav ul { display: flex; gap: 26px; list-style: none; font-size: .88rem; }
+.nav ul a { text-decoration: none; opacity: .7; }
+.nav ul a:hover { opacity: 1; color: var(--accent); }
+.lang { border: 1.5px solid currentColor; background: transparent; color: var(--ink); border-radius: 999px; padding: 3px 13px; font: inherit; font-size: .78rem; cursor: pointer; flex: none; }
+.btn { display: inline-block; text-decoration: none; font-weight: 500; padding: 13px 30px; border-radius: 999px; background: var(--accent); color: var(--bg); transition: transform .15s; }
+.btn:hover { transform: translateY(-2px); }
+.btn.ghost { background: transparent; color: var(--accent); box-shadow: inset 0 0 0 1.5px var(--accent); }
+.btns { display: flex; gap: 12px; flex-wrap: wrap; }
+section { padding: 88px 0; }
+.note { opacity: .65; font-size: .8rem; margin-top: 28px; }
+.info { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
+.info dl { display: grid; grid-template-columns: 104px 1fr; gap: 12px 18px; }
+.info dt { opacity: .6; font-size: .88rem; }
+.map { overflow: hidden; min-height: 300px; }
+.map iframe { width: 100%; min-height: 300px; height: 100%; border: 0; }
+footer { padding: 32px 0; font-size: .8rem; text-align: center; opacity: .7; }
+[data-lang="en"] .ja, [data-lang="ja"] .en { display: none; }
+@media (max-width: 760px) {
+  .nav ul { display: none; }
+  .info { grid-template-columns: 1fr; }
+  section { padding: 64px 0; }
+}
+
+
+body { font-family: "Shippori Mincho", serif; }
+.logo, h1 .en, h2 .en, .eyebrow, .script { font-family: "Cormorant Garamond", serif; }
+.logo { font-style: italic; font-weight: 600; font-size: 1.45rem; color: var(--accent); }
+header { border-bottom: 1px solid color-mix(in srgb, var(--accent) 35%, transparent); }
+.hero { position: relative; text-align: center; padding: 80px 0 100px; }
+.frame { position: absolute; inset: 24px; border: 1px solid color-mix(in srgb, var(--accent) 40%, transparent); pointer-events: none; }
+.frame::after { content: ""; position: absolute; inset: 8px; border: 1px solid color-mix(in srgb, var(--accent) 20%, transparent); }
+.hero .art { width: 170px; color: var(--accent); margin: 0 auto 30px; animation: spin 14s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .hero .art { animation: none; } }
+.eyebrow { font-style: italic; color: var(--accent); letter-spacing: .3em; font-size: .95rem; }
+.hero h1 { font-weight: 600; font-size: clamp(2rem, 5.4vw, 3.4rem); line-height: 1.5; margin: 14px 0 20px; }
+.hero h1 .en { font-style: italic; font-weight: 500; line-height: 1.2; }
+.hero p { max-width: 520px; margin: 0 auto 26px; opacity: .75; }
+.rating { font-size: .88rem; opacity: .8; margin-bottom: 30px; }
+.rating b { color: var(--accent); }
+.btns { justify-content: center; }
+.btn { border-radius: 0; background: var(--accent); color: var(--bg); letter-spacing: .1em; }
+.btn.ghost { color: var(--accent); }
+h2 { text-align: center; font-weight: 600; font-size: 1.9rem; margin-bottom: 8px; }
+h2 .en { font-style: italic; font-weight: 500; font-size: 2.3rem; }
+.orn { text-align: center; color: var(--accent); letter-spacing: .6em; margin-bottom: 44px; font-size: .8rem; }
+.about { background: var(--soft); }
+.about .wrap { max-width: 720px; text-align: center; }
+.script { font-style: italic; font-size: 1.6rem; color: var(--accent); margin-bottom: 18px; line-height: 1.4; }
+.about p { opacity: .82; }
+.wine { max-width: 720px; margin: 0 auto; }
+.wine .row { padding: 18px 0; }
+.wine .top { display: flex; align-items: baseline; gap: 12px; }
+.wine h3 { font-weight: 600; font-size: 1.1rem; white-space: nowrap; }
+.wine .lead { flex: 1; border-bottom: 1px dotted color-mix(in srgb, var(--accent) 60%, transparent); transform: translateY(-5px); }
+.wine .no { font-family: "Cormorant Garamond", serif; font-style: italic; color: var(--accent); }
+.wine p { opacity: .6; font-size: .88rem; }
+.note { text-align: center; }
+.visit { background: var(--soft); }
+.map { border: 1px solid color-mix(in srgb, var(--accent) 40%, transparent); padding: 8px; }
+.map iframe { filter: grayscale(.6) contrast(1.05); }
+footer { border-top: 1px solid color-mix(in srgb, var(--accent) 30%, transparent); }
+@media (max-width: 760px) { .frame { inset: 10px; } .wine h3 { white-space: normal; } }
+
+</style>
+</head>
+<body data-lang="ja">
+<div class="proposal"><span class="ja">※ こちらはご提案用のサンプルページです（非公開・検索エンジン非表示）</span><span class="en">Proposal preview: not an official site, hidden from search engines</span></div>
+<header><div class="wrap nav">
+  <a class="logo" href="#">Cardoncello カルドンチェッロ</a>
+  <ul>
+    <li><a href="#about"><span class="ja">お店について</span><span class="en">About</span></a></li>
+    <li><a href="#menu"><span class="ja">メニュー</span><span class="en">Menu</span></a></li>
+    <li><a href="#info"><span class="ja">アクセス</span><span class="en">Visit</span></a></li>
+  </ul>
+  <button class="lang" id="langBtn" aria-label="Switch language">EN</button>
+</div></header>
+<main>
+<div class="hero"><span class="frame"></span><div class="wrap">
+  <svg class="art" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="100" cy="100" r="76"/><circle cx="100" cy="100" r="58"/><circle cx="100" cy="100" r="42"/><circle cx="100" cy="100" r="18"/><circle cx="100" cy="100" r="3"/></svg>
+  <div class="eyebrow">Koshigaya · down the old road</div>
+  <h1><span class="ja">旧道の路地裏で、<br>ジャズとパスタを。</span><span class="en">Jazz and pasta,<br>down an old-town alley.</span></h1>
+  <p><span class="ja">越ヶ谷の旧道から路地を入ると、ゆったりとした時間が流れる隠れ家。80年代の映画音楽とジャズを聴きながら、本日のパスタと手作りのデザートを。</span><span class="en">Step off Koshigaya&#x27;s old road into a hidden spot where time slows down. Pasta of the day and homemade desserts, with 80s film jazz playing.</span></p>
+  <div class="rating"><b>★ 4.6</b> <span class="ja">Googleクチコミ 45件</span><span class="en">45 Google reviews</span></div>
+  <div class="btns"><a class="btn" href="#menu"><span class="ja">メニューを見る</span><span class="en">See the menu</span></a><a class="btn ghost" href="#info"><span class="ja">アクセス</span><span class="en">Visit</span></a></div>
+</div></div>
+<section id="about" class="about"><div class="wrap">
+  <h2><span class="ja">お店について</span><span class="en">About</span></h2><p class="orn">✦ ✦ ✦</p>
+  <p class="script"><span class="ja">音楽も、内装も、おもてなしも。</span><span class="en">The music, the room, the welcome.</span></p>
+  <p><span class="ja">ひとりでも気兼ねなく過ごせる、落ち着いた空間です。ランチのパスタから、午後のアップルパイとコーヒーまで、お好きな時間にどうぞ。</span><span class="en">A calm space where dining alone feels just right. From pasta at lunch to apple pie and coffee in the afternoon.</span></p>
+</div></section>
+<section id="menu"><div class="wrap">
+  <h2><span class="ja">メニュー</span><span class="en">Menu</span></h2><p class="orn">✦ ✦ ✦</p>
+  <div class="wine"><div class="row"><div class="top"><h3><span class="ja">本日のパスタ</span><span class="en">Pasta of the day</span></h3><span class="lead"></span><span class="no">No.1</span></div><p><span class="ja">人気のランチメニュー</span><span class="en">Our popular lunch</span></p></div><div class="row"><div class="top"><h3><span class="ja">パニーニ</span><span class="en">Panini</span></h3><span class="lead"></span><span class="no">No.2</span></div><p><span class="ja">軽めのランチにも</span><span class="en">For a lighter lunch</span></p></div><div class="row"><div class="top"><h3><span class="ja">アップルパイ</span><span class="en">Apple pie</span></h3><span class="lead"></span><span class="no">No.3</span></div><p><span class="ja">常連さんにも人気</span><span class="en">A regulars&#x27; favorite</span></p></div><div class="row"><div class="top"><h3><span class="ja">デザートプレート</span><span class="en">Dessert platter</span></h3><span class="lead"></span><span class="no">No.4</span></div><p><span class="ja">少しずつ色々と</span><span class="en">A little of everything</span></p></div><div class="row"><div class="top"><h3><span class="ja">季節のケーキ</span><span class="en">Seasonal cakes</span></h3><span class="lead"></span><span class="no">No.5</span></div><p><span class="ja">かぼちゃ、バナナなど</span><span class="en">Pumpkin, banana and more</span></p></div></div>
+  <p class="note"><span class="ja">※ 価格・内容は正式公開時にお店の情報に合わせて掲載します。</span><span class="en">Prices and items will be confirmed with the shop before launch.</span></p>
+</div></section>
+<section id="info" class="visit"><div class="wrap">
+  <h2><span class="ja">営業時間・アクセス</span><span class="en">Hours &amp; Access</span></h2><p class="orn">✦ ✦ ✦</p>
+  <div class="info"><dl><dt><span class="ja">住所</span><span class="en">Address</span></dt><dd><span class="ja">〒343-0813 埼玉県越谷市越ヶ谷2-2-21 田中ビル101</span><span class="en">Tanaka Bldg. 101, 2-2-21 Koshigaya, Koshigaya, Saitama 343-0813</span></dd><dt><span class="ja">営業時間</span><span class="en">Hours</span></dt><dd><span class="ja">11:30〜（詳細・定休日はお店に確認して掲載）</span><span class="en">From 11:30 AM (full hours to be confirmed)</span></dd><dt><span class="ja">Instagram</span><span class="en">Instagram</span></dt><dd><a href="https://www.instagram.com/cardoncello2023/" target="_blank" rel="noopener">@cardoncello2023</a></dd><dt><span class="ja">ポイント</span><span class="en">Good to know</span></dt><dd><span class="ja">おひとりさまも歓迎</span><span class="en">Solo diners welcome</span></dd></dl><div class="map"><iframe loading="lazy" title="Map" src="https://www.google.com/maps?q=%E3%82%AB%E3%83%AB%E3%83%89%E3%83%B3%E3%83%81%E3%82%A7%E3%83%83%E3%83%AD%20%E8%B6%8A%E8%B0%B7%E5%B8%82%E8%B6%8A%E3%83%B6%E8%B0%B72-2-21&output=embed"></iframe></div></div>
+</div></section></main>
+<footer>© Cardoncello カルドンチェッロ</footer>
+<script>
+  const btn = document.getElementById('langBtn');
+  btn.addEventListener('click', () => {
+    const l = document.body.dataset.lang === 'ja' ? 'en' : 'ja';
+    document.body.dataset.lang = l;
+    document.documentElement.lang = l;
+    btn.textContent = l === 'ja' ? 'EN' : '日本語';
+  });
+</script>
+</body>
+</html>

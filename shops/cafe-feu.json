@@ -5,28 +5,65 @@
   "phone": "048-947-0045",
   "area_ja": "吉川市美南",
   "eyebrow": "MINAMI · YOSHIKAWA",
-  "colors": {"bg": "#f8f5f0", "accent": "#a0522d", "soft": "#f1e3d8", "accent_dark": "#e3a07a"},
+  "colors": {
+    "bg": "#fbf4ea",
+    "ink": "#2b1a12",
+    "accent": "#b5482a",
+    "soft": "#f1dcc8",
+    "pop": "#f2c14e"
+  },
   "h1_ja": "もちもちの生パスタと、\n手作りケーキ。",
   "h1_en": "Fresh pasta\nand homemade cake.",
   "lead_ja": "もちもち食感の生パスタに、シフォンケーキやバスクチーズケーキ。テラス席ではワンちゃんと一緒にどうぞ。",
   "lead_en": "Chewy fresh pasta, chiffon cake and Basque cheesecake. Dogs are welcome on the terrace.",
-  "rating": "4.4", "reviews_ja": "60件以上", "reviews_en": "60+",
+  "rating": "4.4",
+  "reviews_ja": "60件以上",
+  "reviews_en": "60+",
   "about_sub_ja": "素材の良さを引き出す料理",
   "about_sub_en": "Cooking that brings out the best in each ingredient",
   "about_ja": "おしゃれな外観が目印のカフェです。パスタ、ケーキ、コーヒーをお手頃な価格で楽しめます。テラス席はワンちゃん連れにも人気です。",
   "about_en": "Look for the stylish exterior. Enjoy pasta, cakes and coffee at friendly prices. The terrace is popular with dog owners.",
-  "menu_ja": "メニュー", "menu_en": "Menu",
+  "menu_ja": "メニュー",
+  "menu_en": "Menu",
   "items": [
-    {"ja": "パスタランチ", "en": "Pasta lunch", "dja": "2種から選べる・サラダ＆ドリンク付", "den": "Choice of two, with salad and a drink"},
-    {"ja": "生パスタ", "en": "Fresh pasta", "dja": "もちもち食感が人気", "den": "Loved for its chewy texture"},
-    {"ja": "クリームパスタ", "en": "Cream pasta", "dja": "やさしい味わい", "den": "Rich and comforting"},
-    {"ja": "トッピングシフォンケーキ", "en": "Chiffon cake with toppings", "dja": "ふわふわの手作り", "den": "Light and fluffy"},
-    {"ja": "バスクチーズケーキ", "en": "Basque cheesecake", "dja": "コーヒーと一緒に", "den": "Great with coffee"}
+    {
+      "ja": "パスタランチ",
+      "en": "Pasta lunch",
+      "dja": "2種から選べる・サラダ＆ドリンク付",
+      "den": "Choice of two, with salad and a drink"
+    },
+    {
+      "ja": "生パスタ",
+      "en": "Fresh pasta",
+      "dja": "もちもち食感が人気",
+      "den": "Loved for its chewy texture"
+    },
+    {
+      "ja": "クリームパスタ",
+      "en": "Cream pasta",
+      "dja": "やさしい味わい",
+      "den": "Rich and comforting"
+    },
+    {
+      "ja": "トッピングシフォンケーキ",
+      "en": "Chiffon cake with toppings",
+      "dja": "ふわふわの手作り",
+      "den": "Light and fluffy"
+    },
+    {
+      "ja": "バスクチーズケーキ",
+      "en": "Basque cheesecake",
+      "dja": "コーヒーと一緒に",
+      "den": "Great with coffee"
+    }
   ],
-  "info_sub_ja": "テラス席はワンちゃんOK", "info_sub_en": "Dogs welcome on the terrace",
+  "info_sub_ja": "テラス席はワンちゃんOK",
+  "info_sub_en": "Dogs welcome on the terrace",
   "address_ja": "〒342-0038 埼玉県吉川市美南2-8-14",
   "address_en": "2-8-14 Minami, Yoshikawa, Saitama 342-0038",
   "hours_ja": "11:00〜（詳細・定休日はお店に確認して掲載）",
   "hours_en": "From 11 AM (full hours to be confirmed)",
-  "map_query": "cafe_feu 吉川市美南2-8-14"
+  "map_query": "cafe_feu 吉川市美南2-8-14",
+  "theme": "poster",
+  "art": "plate"
 }

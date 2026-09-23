@@ -4,29 +4,70 @@
   "instagram": "hitoha_____",
   "area_ja": "吉川市川藤",
   "eyebrow": "KAWAFUJI · YOSHIKAWA",
-  "colors": {"bg": "#f7f3ec", "accent": "#8a5a3b", "soft": "#efe4d6", "accent_dark": "#d9a882"},
+  "colors": {
+    "bg": "#f8f2e9",
+    "ink": "#3a2a1e",
+    "accent": "#9a5b34",
+    "soft": "#efe0cc"
+  },
   "h1_ja": "古民家の空気と、\nやさしいごはん。",
   "h1_en": "A cozy old house,\nand food made with care.",
   "lead_ja": "こんがり焼いたキッシュのプレートやスコーン、コーヒー。かわいらしい空間で過ごす、ほっとするひとときを。",
   "lead_en": "Golden baked quiche plates, scones and coffee, served in a charming, cozy space.",
-  "rating": "4.4", "reviews_ja": "30件以上", "reviews_en": "30+",
+  "rating": "4.4",
+  "reviews_ja": "30件以上",
+  "reviews_en": "30+",
   "about_sub_ja": "古民家風のあたたかい空間",
   "about_sub_en": "A warm, old-house-style café",
   "about_ja": "少し足をのばしてでも訪れたくなる、落ち着いた雰囲気のカフェです。副菜もたっぷりのランチプレートと、季節のおやつをご用意しています。",
   "about_en": "A calm café worth the trip, with generous lunch plates full of side dishes and seasonal sweets.",
-  "menu_ja": "メニュー", "menu_en": "Menu",
+  "menu_ja": "メニュー",
+  "menu_en": "Menu",
   "items": [
-    {"ja": "今週のキッシュプレート", "en": "Weekly quiche plate", "dja": "副菜も充実のランチ", "den": "With plenty of side dishes"},
-    {"ja": "スコーン", "en": "Scones", "dja": "おやつにぴったり", "den": "Perfect for an afternoon treat"},
-    {"ja": "グラノーラ", "en": "Granola", "dja": "店名にもなっている看板商品", "den": "The café's namesake"},
-    {"ja": "コールドブリューコーヒー", "en": "Cold brew coffee", "dja": "すっきりとした味わい", "den": "Smooth and refreshing"},
-    {"ja": "季節のおやつ", "en": "Seasonal sweets", "dja": "栗とお芋など季節の味", "den": "Chestnut, sweet potato and more"},
-    {"ja": "パスタ", "en": "Pasta", "dja": "内容は日替わり・要確認", "den": "Changes regularly"}
+    {
+      "ja": "今週のキッシュプレート",
+      "en": "Weekly quiche plate",
+      "dja": "副菜も充実のランチ",
+      "den": "With plenty of side dishes"
+    },
+    {
+      "ja": "スコーン",
+      "en": "Scones",
+      "dja": "おやつにぴったり",
+      "den": "Perfect for an afternoon treat"
+    },
+    {
+      "ja": "グラノーラ",
+      "en": "Granola",
+      "dja": "店名にもなっている看板商品",
+      "den": "The café's namesake"
+    },
+    {
+      "ja": "コールドブリューコーヒー",
+      "en": "Cold brew coffee",
+      "dja": "すっきりとした味わい",
+      "den": "Smooth and refreshing"
+    },
+    {
+      "ja": "季節のおやつ",
+      "en": "Seasonal sweets",
+      "dja": "栗とお芋など季節の味",
+      "den": "Chestnut, sweet potato and more"
+    },
+    {
+      "ja": "パスタ",
+      "en": "Pasta",
+      "dja": "内容はお店に確認して掲載",
+      "den": "Details to be confirmed"
+    }
   ],
-  "info_sub_ja": "イートイン・テイクアウトOK", "info_sub_en": "Dine-in & takeaway",
+  "info_sub_ja": "イートイン・テイクアウトOK",
+  "info_sub_en": "Dine-in & takeaway",
   "address_ja": "〒342-0005 埼玉県吉川市川藤3867-1",
   "address_en": "3867-1 Kawafuji, Yoshikawa, Saitama 342-0005",
   "hours_ja": "12:00〜（詳細・定休日はお店に確認して掲載）",
   "hours_en": "From 12 PM (full hours to be confirmed)",
-  "map_query": "hitoha COFFEE & GRANOLA 吉川市川藤3867-1"
+  "map_query": "hitoha COFFEE & GRANOLA 吉川市川藤3867-1",
+  "theme": "editorial",
+  "art": "cup"
 }
