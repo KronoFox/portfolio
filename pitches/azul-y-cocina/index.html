@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>青と台所 Azul y cocina | 吉川市きよみ野</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f3f6f8; --surface: #ffffff; --ink: #24211c; --muted: #6b645a;
+    --accent: #2c5d8a; --accent-soft: #e0eaf2; --line: #ddd8cc; --banner: #fff4c2; --banner-ink: #5a4a00;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #181816; --surface: #23221f; --ink: #efece6; --muted: #aba699;
+      --accent: #8fb8dd; --accent-soft: #2b2a26; --line: #38362f; --banner: #3d3510; --banner-ink: #f3e3a0;
+    }
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--bg); color: var(--ink); font-family: "Noto Sans JP", system-ui, sans-serif; line-height: 1.8; }
+  a { color: inherit; }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
+  .proposal { background: var(--banner); color: var(--banner-ink); font-size: .8rem; text-align: center; padding: 6px 16px; }
+  header { position: sticky; top: 0; z-index: 10; background: color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+  .nav { display: flex; align-items: center; justify-content: space-between; height: 60px; gap: 12px; }
+  .logo { font-family: "Noto Serif JP", serif; font-weight: 600; font-size: 1.1rem; text-decoration: none; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .nav ul { display: flex; gap: 22px; list-style: none; font-size: .9rem; }
+  .nav ul a { text-decoration: none; color: var(--muted); }
+  .nav ul a:hover { color: var(--accent); }
+  .lang { border: 1px solid var(--line); background: var(--surface); color: var(--ink); border-radius: 999px; padding: 4px 12px; font: inherit; font-size: .8rem; cursor: pointer; flex: none; }
+  .hero { padding: 96px 0 80px; text-align: center; }
+  .hero .eyebrow { color: var(--accent); letter-spacing: .2em; font-size: .8rem; }
+  .hero h1 { font-family: "Noto Serif JP", serif; font-size: clamp(2rem, 6vw, 3.2rem); font-weight: 600; margin: 12px 0 16px; line-height: 1.35; }
+  .hero p { color: var(--muted); max-width: 560px; margin: 0 auto 32px; }
+  .rating { display: inline-block; margin-bottom: 28px; font-size: .9rem; color: var(--muted); }
+  .rating b { color: var(--ink); }
+  .btn { display: inline-block; background: var(--accent); color: var(--bg); padding: 12px 28px; border-radius: 999px; text-decoration: none; font-weight: 500; }
+  .btn.ghost { background: transparent; color: var(--accent); border: 1px solid var(--accent); margin-left: 8px; }
+  section { padding: 72px 0; }
+  section h2 { font-family: "Noto Serif JP", serif; font-size: 1.7rem; font-weight: 600; margin-bottom: 8px; }
+  section .sub { color: var(--muted); margin-bottom: 36px; }
+  .alt { background: var(--accent-soft); }
+  .about { max-width: 720px; }
+  .menu { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+  .card { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 22px; }
+  .card h3 { font-size: 1rem; font-weight: 500; }
+  .card p { color: var(--muted); font-size: .88rem; margin-top: 6px; }
+  .note { color: var(--muted); font-size: .8rem; margin-top: 20px; }
+  .info { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+  .info dl { display: grid; grid-template-columns: 110px 1fr; gap: 10px 16px; }
+  .info dt { color: var(--muted); font-size: .9rem; }
+  .map { border-radius: 14px; border: 1px solid var(--line); overflow: hidden; min-height: 280px; }
+  .map iframe { width: 100%; height: 100%; min-height: 280px; border: 0; display: block; }
+  footer { border-top: 1px solid var(--line); padding: 28px 0; color: var(--muted); font-size: .8rem; text-align: center; }
+  [data-lang="en"] .ja, [data-lang="ja"] .en { display: none; }
+  @media (max-width: 720px) {
+    .nav ul { display: none; }
+    .info { grid-template-columns: 1fr; }
+    .hero { padding: 64px 0 56px; }
+    .btn.ghost { margin: 12px 0 0; }
+  }
+</style>
+</head>
+<body data-lang="ja">
+<div class="proposal"><span class="ja">※ こちらはご提案用のサンプルページです（非公開・検索エンジン非表示）</span><span class="en">Proposal preview: not an official site, hidden from search engines</span></div>
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#">青と台所 Azul y cocina</a>
+    <ul>
+      <li><a href="#about"><span class="ja">お店について</span><span class="en">About</span></a></li>
+      <li><a href="#menu"><span class="ja">パン</span><span class="en">Breads</span></a></li>
+      <li><a href="#info"><span class="ja">アクセス</span><span class="en">Visit</span></a></li>
+    </ul>
+    <button class="lang" id="langBtn" aria-label="Switch language">EN</button>
+  </div>
+</header>
+<main>
+  <div class="hero wrap">
+    <div class="eyebrow">KIYOMINO · YOSHIKAWA</div>
+    <h1><span class="ja">金曜日だけの、<br>パン屋さん。</span><span class="en">A bakery open<br>only on Fridays.</span></h1>
+    <p><span class="ja">クロワッサン、ドーナツ、クリームパンにカレーパン。毎週金曜日だけ開く、行列のできる小さなベーカリーです。</span><span class="en">Croissants, doughnuts, cream buns and curry buns, from a small bakery that opens only on Fridays and draws a line.</span></p>
+    <div class="rating">★ <b>4.4</b> · <span class="ja">Googleクチコミ 50件</span><span class="en">50 Google reviews</span></div><br>
+    <a class="btn" href="#menu"><span class="ja">パンを見る</span><span class="en">See the breads</span></a>
+    <a class="btn ghost" href="#info"><span class="ja">アクセス</span><span class="en">How to find us</span></a>
+  </div>
+  <section id="about" class="alt">
+    <div class="wrap about">
+      <h2><span class="ja">お店について</span><span class="en">About</span></h2>
+      <p class="sub"><span class="ja">週に一度のお楽しみ</span><span class="en">Something to look forward to every week</span></p>
+      <p><span class="ja">パン巡りの方もわざわざ訪れる、金曜日だけのベーカリー。ショーケースに並ぶパンから、どれにしようか迷う時間もお楽しみください。</span><span class="en">A Friday-only bakery that bread lovers travel to visit. Half the fun is choosing from the display case.</span></p>
+    </div>
+  </section>
+  <section id="menu">
+    <div class="wrap">
+      <h2><span class="ja">パン</span><span class="en">Breads</span></h2>
+      <p class="sub"><span class="ja">人気のメニュー</span><span class="en">Customer favorites</span></p>
+      <div class="menu">
+<div class="card"><h3><span class="ja">クロワッサン</span><span class="en">Croissant</span></h3><p><span class="ja">定番の人気商品</span><span class="en">A bakery classic</span></p></div>
+<div class="card"><h3><span class="ja">ドーナツ</span><span class="en">Doughnuts</span></h3><p><span class="ja">おやつにぴったり</span><span class="en">A perfect snack</span></p></div>
+<div class="card"><h3><span class="ja">クリームパン</span><span class="en">Cream bun</span></h3><p><span class="ja">やさしい甘さ</span><span class="en">Gently sweet</span></p></div>
+<div class="card"><h3><span class="ja">カレーパン</span><span class="en">Curry bun</span></h3><p><span class="ja">おかずパンも充実</span><span class="en">Savory breads too</span></p></div>
+<div class="card"><h3><span class="ja">サワードウ</span><span class="en">Sourdough</span></h3><p><span class="ja">食事パンにも</span><span class="en">For your table at home</span></p></div>
+      </div>
+      <p class="note"><span class="ja">※ 価格・内容は正式公開時にお店の情報に合わせて掲載します。</span><span class="en">Prices and items will be confirmed with the shop before launch.</span></p>
+    </div>
+  </section>
+  <section id="info" class="alt">
+    <div class="wrap">
+      <h2><span class="ja">営業時間・アクセス</span><span class="en">Hours &amp; access</span></h2>
+      <p class="sub"><span class="ja">毎週金曜日のみ営業</span><span class="en">Open Fridays only</span></p>
+      <div class="info">
+        <dl>
+<dt><span class="ja">住所</span><span class="en">Address</span></dt><dd><span class="ja">〒342-0058 埼玉県吉川市きよみ野1-6-7</span><span class="en">1-6-7 Kiyomino, Yoshikawa, Saitama 342-0058</span></dd>
+<dt><span class="ja">営業時間</span><span class="en">Hours</span></dt><dd><span class="ja">金曜 11:00〜（売り切れ次第終了・詳細はお店に確認して掲載）</span><span class="en">Fridays from 11 AM, until sold out (to be confirmed)</span></dd>
+<dt><span class="ja">電話</span><span class="en">Phone</span></dt><dd><a href="tel:0489837737">048-983-7737</a></dd>
+<dt><span class="ja">X（Twitter）</span><span class="en">X (Twitter)</span></dt><dd><a href="https://x.com/azulycocina" target="_blank" rel="noopener">@azulycocina</a></dd>
+        </dl>
+        <div class="map"><iframe loading="lazy" title="Map" src="https://www.google.com/maps?q=%E9%9D%92%E3%81%A8%E5%8F%B0%E6%89%80%20%E5%90%89%E5%B7%9D%E5%B8%82%E3%81%8D%E3%82%88%E3%81%BF%E9%87%8E1-6-7&output=embed"></iframe></div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>© 青と台所 Azul y cocina</footer>
+<script>
+  const btn = document.getElementById('langBtn');
+  btn.addEventListener('click', () => {
+    const l = document.body.dataset.lang === 'ja' ? 'en' : 'ja';
+    document.body.dataset.lang = l;
+    document.documentElement.lang = l;
+    btn.textContent = l === 'ja' ? 'EN' : '日本語';
+  });
+</script>
+</body>
+</html>

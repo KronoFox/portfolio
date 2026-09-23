@@ -1,0 +1,31 @@
+{
+  "slug": "blaite",
+  "name": "BLAITE",
+  "instagram": "__blaite____",
+  "area_ja": "吉川市高久",
+  "eyebrow": "TAKAHISA · YOSHIKAWA",
+  "colors": {"bg": "#f4f3f1", "accent": "#2f3b45", "soft": "#e3e6e8", "accent_dark": "#a9bccb"},
+  "h1_ja": "一杯のエスプレッソに、\nこだわりを。",
+  "h1_en": "Espresso,\ntaken seriously.",
+  "lead_ja": "Slayerのエスプレッソマシンで淹れる、こだわりの一杯。静かで心地よいコーヒースタンドです。",
+  "lead_en": "Carefully pulled espresso on a Slayer machine, in a quiet, welcoming coffee stand.",
+  "rating": "4.6", "reviews_ja": "30件以上", "reviews_en": "30+",
+  "about_sub_ja": "県南では珍しいSlayerのマシンを使用",
+  "about_sub_en": "A rare Slayer espresso machine in southern Saitama",
+  "about_ja": "静かな空間で、ゆっくりコーヒーを味わえるお店です。お散歩ついでに、コーヒー豆のお買い物にもどうぞ。",
+  "about_en": "A quiet spot to enjoy your coffee slowly. Stop by on a walk and pick up some beans to take home.",
+  "menu_ja": "メニュー", "menu_en": "Menu",
+  "items": [
+    {"ja": "エスプレッソトニック", "en": "Espresso tonic", "dja": "爽やかな人気メニュー", "den": "A refreshing favorite"},
+    {"ja": "アイスラテ", "en": "Iced latte", "dja": "ミディアムダークのエスプレッソで", "den": "Made with medium-dark espresso"},
+    {"ja": "コーヒー豆の販売", "en": "Coffee beans to go", "dja": "エチオピアなど", "den": "Including Ethiopian beans"},
+    {"ja": "週末限定の焼き菓子", "en": "Weekend-only baked goods", "dja": "土日だけのお楽しみ", "den": "Saturdays and Sundays only"},
+    {"ja": "タコライス", "en": "Taco rice", "dja": "軽食もあります", "den": "Light meals available"}
+  ],
+  "info_sub_ja": "現金のみ・駐車場1台", "info_sub_en": "Cash only · 1 parking space",
+  "address_ja": "〒342-0035 埼玉県吉川市高久2-10-9",
+  "address_en": "2-10-9 Takahisa, Yoshikawa, Saitama 342-0035",
+  "hours_ja": "お店に確認して掲載",
+  "hours_en": "To be confirmed with the shop",
+  "map_query": "BLAITE 吉川市高久2-10-9"
+}

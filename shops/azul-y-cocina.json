@@ -1,0 +1,32 @@
+{
+  "slug": "azul-y-cocina",
+  "name": "青と台所 Azul y cocina",
+  "x": "azulycocina",
+  "phone": "048-983-7737",
+  "area_ja": "吉川市きよみ野",
+  "eyebrow": "KIYOMINO · YOSHIKAWA",
+  "colors": {"bg": "#f3f6f8", "accent": "#2c5d8a", "soft": "#e0eaf2", "accent_dark": "#8fb8dd"},
+  "h1_ja": "金曜日だけの、\nパン屋さん。",
+  "h1_en": "A bakery open\nonly on Fridays.",
+  "lead_ja": "クロワッサン、ドーナツ、クリームパンにカレーパン。毎週金曜日だけ開く、行列のできる小さなベーカリーです。",
+  "lead_en": "Croissants, doughnuts, cream buns and curry buns, from a small bakery that opens only on Fridays and draws a line.",
+  "rating": "4.4", "reviews_ja": "50件", "reviews_en": "50",
+  "about_sub_ja": "週に一度のお楽しみ",
+  "about_sub_en": "Something to look forward to every week",
+  "about_ja": "パン巡りの方もわざわざ訪れる、金曜日だけのベーカリー。ショーケースに並ぶパンから、どれにしようか迷う時間もお楽しみください。",
+  "about_en": "A Friday-only bakery that bread lovers travel to visit. Half the fun is choosing from the display case.",
+  "menu_ja": "パン", "menu_en": "Breads",
+  "items": [
+    {"ja": "クロワッサン", "en": "Croissant", "dja": "定番の人気商品", "den": "A bakery classic"},
+    {"ja": "ドーナツ", "en": "Doughnuts", "dja": "おやつにぴったり", "den": "A perfect snack"},
+    {"ja": "クリームパン", "en": "Cream bun", "dja": "やさしい甘さ", "den": "Gently sweet"},
+    {"ja": "カレーパン", "en": "Curry bun", "dja": "おかずパンも充実", "den": "Savory breads too"},
+    {"ja": "サワードウ", "en": "Sourdough", "dja": "食事パンにも", "den": "For your table at home"}
+  ],
+  "info_sub_ja": "毎週金曜日のみ営業", "info_sub_en": "Open Fridays only",
+  "address_ja": "〒342-0058 埼玉県吉川市きよみ野1-6-7",
+  "address_en": "1-6-7 Kiyomino, Yoshikawa, Saitama 342-0058",
+  "hours_ja": "金曜 11:00〜（売り切れ次第終了・詳細はお店に確認して掲載）",
+  "hours_en": "Fridays from 11 AM, until sold out (to be confirmed)",
+  "map_query": "青と台所 吉川市きよみ野1-6-7"
+}

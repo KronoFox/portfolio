@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Little Edo Coffee | 川越・志多町</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f6f5ef; --surface: #ffffff; --ink: #24211c; --muted: #6b645a;
+    --accent: #4d6b3c; --accent-soft: #e5ecdc; --line: #ddd8cc; --banner: #fff4c2; --banner-ink: #5a4a00;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #181816; --surface: #23221f; --ink: #efece6; --muted: #aba699;
+      --accent: #a6c98f; --accent-soft: #2b2a26; --line: #38362f; --banner: #3d3510; --banner-ink: #f3e3a0;
+    }
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--bg); color: var(--ink); font-family: "Noto Sans JP", system-ui, sans-serif; line-height: 1.8; }
+  a { color: inherit; }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
+  .proposal { background: var(--banner); color: var(--banner-ink); font-size: .8rem; text-align: center; padding: 6px 16px; }
+  header { position: sticky; top: 0; z-index: 10; background: color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+  .nav { display: flex; align-items: center; justify-content: space-between; height: 60px; gap: 12px; }
+  .logo { font-family: "Noto Serif JP", serif; font-weight: 600; font-size: 1.1rem; text-decoration: none; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .nav ul { display: flex; gap: 22px; list-style: none; font-size: .9rem; }
+  .nav ul a { text-decoration: none; color: var(--muted); }
+  .nav ul a:hover { color: var(--accent); }
+  .lang { border: 1px solid var(--line); background: var(--surface); color: var(--ink); border-radius: 999px; padding: 4px 12px; font: inherit; font-size: .8rem; cursor: pointer; flex: none; }
+  .hero { padding: 96px 0 80px; text-align: center; }
+  .hero .eyebrow { color: var(--accent); letter-spacing: .2em; font-size: .8rem; }
+  .hero h1 { font-family: "Noto Serif JP", serif; font-size: clamp(2rem, 6vw, 3.2rem); font-weight: 600; margin: 12px 0 16px; line-height: 1.35; }
+  .hero p { color: var(--muted); max-width: 560px; margin: 0 auto 32px; }
+  .rating { display: inline-block; margin-bottom: 28px; font-size: .9rem; color: var(--muted); }
+  .rating b { color: var(--ink); }
+  .btn { display: inline-block; background: var(--accent); color: var(--bg); padding: 12px 28px; border-radius: 999px; text-decoration: none; font-weight: 500; }
+  .btn.ghost { background: transparent; color: var(--accent); border: 1px solid var(--accent); margin-left: 8px; }
+  section { padding: 72px 0; }
+  section h2 { font-family: "Noto Serif JP", serif; font-size: 1.7rem; font-weight: 600; margin-bottom: 8px; }
+  section .sub { color: var(--muted); margin-bottom: 36px; }
+  .alt { background: var(--accent-soft); }
+  .about { max-width: 720px; }
+  .menu { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+  .card { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 22px; }
+  .card h3 { font-size: 1rem; font-weight: 500; }
+  .card p { color: var(--muted); font-size: .88rem; margin-top: 6px; }
+  .note { color: var(--muted); font-size: .8rem; margin-top: 20px; }
+  .info { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+  .info dl { display: grid; grid-template-columns: 110px 1fr; gap: 10px 16px; }
+  .info dt { color: var(--muted); font-size: .9rem; }
+  .map { border-radius: 14px; border: 1px solid var(--line); overflow: hidden; min-height: 280px; }
+  .map iframe { width: 100%; height: 100%; min-height: 280px; border: 0; display: block; }
+  footer { border-top: 1px solid var(--line); padding: 28px 0; color: var(--muted); font-size: .8rem; text-align: center; }
+  [data-lang="en"] .ja, [data-lang="ja"] .en { display: none; }
+  @media (max-width: 720px) {
+    .nav ul { display: none; }
+    .info { grid-template-columns: 1fr; }
+    .hero { padding: 64px 0 56px; }
+    .btn.ghost { margin: 12px 0 0; }
+  }
+</style>
+</head>
+<body data-lang="ja">
+<div class="proposal"><span class="ja">※ こちらはご提案用のサンプルページです（非公開・検索エンジン非表示）</span><span class="en">Proposal preview: not an official site, hidden from search engines</span></div>
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#">Little Edo Coffee</a>
+    <ul>
+      <li><a href="#about"><span class="ja">お店について</span><span class="en">About</span></a></li>
+      <li><a href="#menu"><span class="ja">メニュー</span><span class="en">Menu</span></a></li>
+      <li><a href="#info"><span class="ja">アクセス</span><span class="en">Visit</span></a></li>
+    </ul>
+    <button class="lang" id="langBtn" aria-label="Switch language">EN</button>
+  </div>
+</header>
+<main>
+  <div class="hero wrap">
+    <div class="eyebrow">SHITAMACHI · KAWAGOE</div>
+    <h1><span class="ja">喧騒から少し離れて、<br>抹茶とコーヒーを。</span><span class="en">Matcha &amp; coffee,<br>a step away from the crowds.</span></h1>
+    <p><span class="ja">丁寧に淹れるコーヒーと、評判の抹茶スイーツ。川越の人混みから少し離れた、落ち着いたカフェです。</span><span class="en">Carefully made coffee and much-loved matcha desserts, in a calm café just outside Kawagoe&#x27;s busy streets.</span></p>
+    <div class="rating">★ <b>4.7</b> · <span class="ja">Googleクチコミ 140件以上</span><span class="en">140+ Google reviews</span></div><br>
+    <a class="btn" href="#menu"><span class="ja">メニューを見る</span><span class="en">See the menu</span></a>
+    <a class="btn ghost" href="#info"><span class="ja">アクセス</span><span class="en">How to find us</span></a>
+  </div>
+  <section id="about" class="alt">
+    <div class="wrap about">
+      <h2><span class="ja">お店について</span><span class="en">About</span></h2>
+      <p class="sub"><span class="ja">テラス席もある、ゆったりとしたひととき</span><span class="en">Take it slow, with terrace seating too</span></p>
+      <p><span class="ja">こだわりのコーヒー豆はお持ち帰り用の販売もしています。散策の合間や神社参拝のあとに、ほっとひと息つける場所です。</span><span class="en">Our coffee beans are also available to take home. A relaxing stop after visiting the shrine or exploring town.</span></p>
+    </div>
+  </section>
+  <section id="menu">
+    <div class="wrap">
+      <h2><span class="ja">メニュー</span><span class="en">Menu</span></h2>
+      <p class="sub"><span class="ja">人気のメニュー</span><span class="en">Customer favorites</span></p>
+      <div class="menu">
+<div class="card"><h3><span class="ja">抹茶テリーヌ</span><span class="en">Matcha terrine</span></h3><p><span class="ja">人気の看板スイーツ</span><span class="en">A signature favorite</span></p></div>
+<div class="card"><h3><span class="ja">カスタードプリン</span><span class="en">Custard pudding</span></h3><p><span class="ja">カフェラテとのセットが人気</span><span class="en">Great with a café latte</span></p></div>
+<div class="card"><h3><span class="ja">抹茶ラテ</span><span class="en">Matcha latte</span></h3><p><span class="ja">なめらかな口当たり</span><span class="en">Smooth and rich</span></p></div>
+<div class="card"><h3><span class="ja">バスクチーズケーキ</span><span class="en">Basque cheesecake</span></h3><p><span class="ja">コーヒーと相性抜群</span><span class="en">Perfect with coffee</span></p></div>
+<div class="card"><h3><span class="ja">アフォガート</span><span class="en">Affogato</span></h3><p><span class="ja">暑い日にどうぞ</span><span class="en">A treat on a hot day</span></p></div>
+<div class="card"><h3><span class="ja">コーヒー豆の販売</span><span class="en">Coffee beans to go</span></h3><p><span class="ja">ご自宅でも楽しめます</span><span class="en">Enjoy at home too</span></p></div>
+      </div>
+      <p class="note"><span class="ja">※ 価格・内容は正式公開時にお店の情報に合わせて掲載します。</span><span class="en">Prices and items will be confirmed with the shop before launch.</span></p>
+    </div>
+  </section>
+  <section id="info" class="alt">
+    <div class="wrap">
+      <h2><span class="ja">営業時間・アクセス</span><span class="en">Hours &amp; access</span></h2>
+      <p class="sub"><span class="ja">イートイン・テイクアウトOK</span><span class="en">Dine-in &amp; takeaway</span></p>
+      <div class="info">
+        <dl>
+<dt><span class="ja">住所</span><span class="en">Address</span></dt><dd><span class="ja">〒350-0051 埼玉県川越市志多町2-1</span><span class="en">2-1 Shitamachi, Kawagoe, Saitama 350-0051</span></dd>
+<dt><span class="ja">営業時間</span><span class="en">Hours</span></dt><dd><span class="ja">11:00〜（詳細・定休日はお店に確認して掲載）</span><span class="en">From 11 AM (full hours to be confirmed)</span></dd>
+<dt><span class="ja">Instagram</span><span class="en">Instagram</span></dt><dd><a href="https://www.instagram.com/lec_coffee/" target="_blank" rel="noopener">@lec_coffee</a></dd>
+        </dl>
+        <div class="map"><iframe loading="lazy" title="Map" src="https://www.google.com/maps?q=Little%20Edo%20Coffee%20%E5%B7%9D%E8%B6%8A%E5%B8%82%E5%BF%97%E5%A4%9A%E7%94%BA2-1&output=embed"></iframe></div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>© Little Edo Coffee</footer>
+<script>
+  const btn = document.getElementById('langBtn');
+  btn.addEventListener('click', () => {
+    const l = document.body.dataset.lang === 'ja' ? 'en' : 'ja';
+    document.body.dataset.lang = l;
+    document.documentElement.lang = l;
+    btn.textContent = l === 'ja' ? 'EN' : '日本語';
+  });
+</script>
+</body>
+</html>

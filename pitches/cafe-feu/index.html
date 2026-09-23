@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>cafe_feu | 吉川市美南</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f8f5f0; --surface: #ffffff; --ink: #24211c; --muted: #6b645a;
+    --accent: #a0522d; --accent-soft: #f1e3d8; --line: #ddd8cc; --banner: #fff4c2; --banner-ink: #5a4a00;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #181816; --surface: #23221f; --ink: #efece6; --muted: #aba699;
+      --accent: #e3a07a; --accent-soft: #2b2a26; --line: #38362f; --banner: #3d3510; --banner-ink: #f3e3a0;
+    }
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--bg); color: var(--ink); font-family: "Noto Sans JP", system-ui, sans-serif; line-height: 1.8; }
+  a { color: inherit; }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
+  .proposal { background: var(--banner); color: var(--banner-ink); font-size: .8rem; text-align: center; padding: 6px 16px; }
+  header { position: sticky; top: 0; z-index: 10; background: color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+  .nav { display: flex; align-items: center; justify-content: space-between; height: 60px; gap: 12px; }
+  .logo { font-family: "Noto Serif JP", serif; font-weight: 600; font-size: 1.1rem; text-decoration: none; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .nav ul { display: flex; gap: 22px; list-style: none; font-size: .9rem; }
+  .nav ul a { text-decoration: none; color: var(--muted); }
+  .nav ul a:hover { color: var(--accent); }
+  .lang { border: 1px solid var(--line); background: var(--surface); color: var(--ink); border-radius: 999px; padding: 4px 12px; font: inherit; font-size: .8rem; cursor: pointer; flex: none; }
+  .hero { padding: 96px 0 80px; text-align: center; }
+  .hero .eyebrow { color: var(--accent); letter-spacing: .2em; font-size: .8rem; }
+  .hero h1 { font-family: "Noto Serif JP", serif; font-size: clamp(2rem, 6vw, 3.2rem); font-weight: 600; margin: 12px 0 16px; line-height: 1.35; }
+  .hero p { color: var(--muted); max-width: 560px; margin: 0 auto 32px; }
+  .rating { display: inline-block; margin-bottom: 28px; font-size: .9rem; color: var(--muted); }
+  .rating b { color: var(--ink); }
+  .btn { display: inline-block; background: var(--accent); color: var(--bg); padding: 12px 28px; border-radius: 999px; text-decoration: none; font-weight: 500; }
+  .btn.ghost { background: transparent; color: var(--accent); border: 1px solid var(--accent); margin-left: 8px; }
+  section { padding: 72px 0; }
+  section h2 { font-family: "Noto Serif JP", serif; font-size: 1.7rem; font-weight: 600; margin-bottom: 8px; }
+  section .sub { color: var(--muted); margin-bottom: 36px; }
+  .alt { background: var(--accent-soft); }
+  .about { max-width: 720px; }
+  .menu { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+  .card { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 22px; }
+  .card h3 { font-size: 1rem; font-weight: 500; }
+  .card p { color: var(--muted); font-size: .88rem; margin-top: 6px; }
+  .note { color: var(--muted); font-size: .8rem; margin-top: 20px; }
+  .info { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+  .info dl { display: grid; grid-template-columns: 110px 1fr; gap: 10px 16px; }
+  .info dt { color: var(--muted); font-size: .9rem; }
+  .map { border-radius: 14px; border: 1px solid var(--line); overflow: hidden; min-height: 280px; }
+  .map iframe { width: 100%; height: 100%; min-height: 280px; border: 0; display: block; }
+  footer { border-top: 1px solid var(--line); padding: 28px 0; color: var(--muted); font-size: .8rem; text-align: center; }
+  [data-lang="en"] .ja, [data-lang="ja"] .en { display: none; }
+  @media (max-width: 720px) {
+    .nav ul { display: none; }
+    .info { grid-template-columns: 1fr; }
+    .hero { padding: 64px 0 56px; }
+    .btn.ghost { margin: 12px 0 0; }
+  }
+</style>
+</head>
+<body data-lang="ja">
+<div class="proposal"><span class="ja">※ こちらはご提案用のサンプルページです（非公開・検索エンジン非表示）</span><span class="en">Proposal preview: not an official site, hidden from search engines</span></div>
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#">cafe_feu</a>
+    <ul>
+      <li><a href="#about"><span class="ja">お店について</span><span class="en">About</span></a></li>
+      <li><a href="#menu"><span class="ja">メニュー</span><span class="en">Menu</span></a></li>
+      <li><a href="#info"><span class="ja">アクセス</span><span class="en">Visit</span></a></li>
+    </ul>
+    <button class="lang" id="langBtn" aria-label="Switch language">EN</button>
+  </div>
+</header>
+<main>
+  <div class="hero wrap">
+    <div class="eyebrow">MINAMI · YOSHIKAWA</div>
+    <h1><span class="ja">もちもちの生パスタと、<br>手作りケーキ。</span><span class="en">Fresh pasta<br>and homemade cake.</span></h1>
+    <p><span class="ja">もちもち食感の生パスタに、シフォンケーキやバスクチーズケーキ。テラス席ではワンちゃんと一緒にどうぞ。</span><span class="en">Chewy fresh pasta, chiffon cake and Basque cheesecake. Dogs are welcome on the terrace.</span></p>
+    <div class="rating">★ <b>4.4</b> · <span class="ja">Googleクチコミ 60件以上</span><span class="en">60+ Google reviews</span></div><br>
+    <a class="btn" href="#menu"><span class="ja">メニューを見る</span><span class="en">See the menu</span></a>
+    <a class="btn ghost" href="#info"><span class="ja">アクセス</span><span class="en">How to find us</span></a>
+  </div>
+  <section id="about" class="alt">
+    <div class="wrap about">
+      <h2><span class="ja">お店について</span><span class="en">About</span></h2>
+      <p class="sub"><span class="ja">素材の良さを引き出す料理</span><span class="en">Cooking that brings out the best in each ingredient</span></p>
+      <p><span class="ja">おしゃれな外観が目印のカフェです。パスタ、ケーキ、コーヒーをお手頃な価格で楽しめます。テラス席はワンちゃん連れにも人気です。</span><span class="en">Look for the stylish exterior. Enjoy pasta, cakes and coffee at friendly prices. The terrace is popular with dog owners.</span></p>
+    </div>
+  </section>
+  <section id="menu">
+    <div class="wrap">
+      <h2><span class="ja">メニュー</span><span class="en">Menu</span></h2>
+      <p class="sub"><span class="ja">人気のメニュー</span><span class="en">Customer favorites</span></p>
+      <div class="menu">
+<div class="card"><h3><span class="ja">パスタランチ</span><span class="en">Pasta lunch</span></h3><p><span class="ja">2種から選べる・サラダ＆ドリンク付</span><span class="en">Choice of two, with salad and a drink</span></p></div>
+<div class="card"><h3><span class="ja">生パスタ</span><span class="en">Fresh pasta</span></h3><p><span class="ja">もちもち食感が人気</span><span class="en">Loved for its chewy texture</span></p></div>
+<div class="card"><h3><span class="ja">クリームパスタ</span><span class="en">Cream pasta</span></h3><p><span class="ja">やさしい味わい</span><span class="en">Rich and comforting</span></p></div>
+<div class="card"><h3><span class="ja">トッピングシフォンケーキ</span><span class="en">Chiffon cake with toppings</span></h3><p><span class="ja">ふわふわの手作り</span><span class="en">Light and fluffy</span></p></div>
+<div class="card"><h3><span class="ja">バスクチーズケーキ</span><span class="en">Basque cheesecake</span></h3><p><span class="ja">コーヒーと一緒に</span><span class="en">Great with coffee</span></p></div>
+      </div>
+      <p class="note"><span class="ja">※ 価格・内容は正式公開時にお店の情報に合わせて掲載します。</span><span class="en">Prices and items will be confirmed with the shop before launch.</span></p>
+    </div>
+  </section>
+  <section id="info" class="alt">
+    <div class="wrap">
+      <h2><span class="ja">営業時間・アクセス</span><span class="en">Hours &amp; access</span></h2>
+      <p class="sub"><span class="ja">テラス席はワンちゃんOK</span><span class="en">Dogs welcome on the terrace</span></p>
+      <div class="info">
+        <dl>
+<dt><span class="ja">住所</span><span class="en">Address</span></dt><dd><span class="ja">〒342-0038 埼玉県吉川市美南2-8-14</span><span class="en">2-8-14 Minami, Yoshikawa, Saitama 342-0038</span></dd>
+<dt><span class="ja">営業時間</span><span class="en">Hours</span></dt><dd><span class="ja">11:00〜（詳細・定休日はお店に確認して掲載）</span><span class="en">From 11 AM (full hours to be confirmed)</span></dd>
+<dt><span class="ja">電話</span><span class="en">Phone</span></dt><dd><a href="tel:0489470045">048-947-0045</a></dd>
+<dt><span class="ja">Instagram</span><span class="en">Instagram</span></dt><dd><a href="https://www.instagram.com/cafe_feu/" target="_blank" rel="noopener">@cafe_feu</a></dd>
+        </dl>
+        <div class="map"><iframe loading="lazy" title="Map" src="https://www.google.com/maps?q=cafe_feu%20%E5%90%89%E5%B7%9D%E5%B8%82%E7%BE%8E%E5%8D%972-8-14&output=embed"></iframe></div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>© cafe_feu</footer>
+<script>
+  const btn = document.getElementById('langBtn');
+  btn.addEventListener('click', () => {
+    const l = document.body.dataset.lang === 'ja' ? 'en' : 'ja';
+    document.body.dataset.lang = l;
+    document.documentElement.lang = l;
+    btn.textContent = l === 'ja' ? 'EN' : '日本語';
+  });
+</script>
+</body>
+</html>
