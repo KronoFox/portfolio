@@ -1,0 +1,32 @@
+{
+  "slug": "walnut",
+  "name": "cafe walnut",
+  "theme": "tropical",
+  "art": "cake",
+  "colors": {"bg": "#fbf6ef", "ink": "#3b2a1f", "accent": "#7a4b2a", "soft": "#efe0cc", "pop": "#e7b77a"},
+  "area_ja": "八潮市大瀬",
+  "eyebrow": "OZE · YASHIO",
+  "h1_ja": "ケーキとコーヒーで、\nほっとひと息。",
+  "h1_en": "Cake, coffee,\nand a moment to breathe.",
+  "lead_ja": "手作りのキャロットケーキやチーズケーキに、アールグレイやコーヒーを。八潮で愛される、あたたかい雰囲気のカフェです。",
+  "lead_en": "Homemade carrot cake and cheesecake with Earl Grey or coffee, at a warm café much loved in Yashio.",
+  "rating": "4.4", "reviews_ja": "100件以上", "reviews_en": "100+",
+  "about_sub_ja": "やさしいスタッフと、居心地のいい空間",
+  "about_sub_en": "Kind staff and a cozy space",
+  "about_ja": "地元の方はもちろん、海外からのお客様にも「八潮でいちばんのカフェ」と言っていただけるお店です。",
+  "about_en": "Loved by locals, and called one of the best cafés in Yashio by visitors from abroad.",
+  "menu_ja": "メニュー", "menu_en": "Menu",
+  "items": [
+    {"ja": "キャロットケーキ", "en": "Carrot cake", "dja": "ファンの多い看板ケーキ", "den": "A cake with many fans"},
+    {"ja": "チーズケーキ", "en": "Cheesecake", "dja": "定番の人気ケーキ", "den": "A popular classic"},
+    {"ja": "コーヒーケーキ", "en": "Coffee cake", "dja": "コーヒーと一緒に", "den": "Best with coffee"},
+    {"ja": "アールグレイ", "en": "Earl Grey tea", "dja": "人気のドリンク", "den": "A popular drink"},
+    {"ja": "アイスコーヒー", "en": "Iced coffee", "dja": "すっきりとした味わい", "den": "Smooth and refreshing"}
+  ],
+  "info_sub_ja": "イートイン・テイクアウトOK", "info_sub_en": "Dine-in & takeaway",
+  "address_ja": "〒340-0822 埼玉県八潮市大瀬5-10-12 キャトルコート",
+  "address_en": "Quatre Court, 5-10-12 Oze, Yashio, Saitama 340-0822",
+  "hours_ja": "12:00〜（詳細・定休日はお店に確認して掲載）",
+  "hours_en": "From 12 PM (full hours to be confirmed)",
+  "map_query": "cafe walnut 八潮市大瀬5-10-12"
+}

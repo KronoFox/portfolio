@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>cafe walnut | 八潮市大瀬</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;800&display=swap" rel="stylesheet">
+<style>
+:root { --bg: #fbf6ef; --ink: #3b2a1f; --accent: #7a4b2a; --soft: #efe0cc; --pop: #e7b77a; }
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: var(--bg); color: var(--ink); line-height: 1.85; -webkit-font-smoothing: antialiased; }
+a { color: inherit; }
+img, svg { display: block; }
+.wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+.proposal { background: #fff4c2; color: #5a4a00; font: 500 .78rem/1.5 system-ui, sans-serif; text-align: center; padding: 7px 16px; }
+header { position: sticky; top: 0; z-index: 20; background: color-mix(in srgb, var(--bg) 90%, transparent); backdrop-filter: blur(10px); }
+.nav { display: flex; align-items: center; justify-content: space-between; height: 64px; gap: 12px; }
+.logo { text-decoration: none; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.nav ul { display: flex; gap: 26px; list-style: none; font-size: .88rem; }
+.nav ul a { text-decoration: none; opacity: .7; }
+.nav ul a:hover { opacity: 1; color: var(--accent); }
+.lang { border: 1.5px solid currentColor; background: transparent; color: var(--ink); border-radius: 999px; padding: 3px 13px; font: inherit; font-size: .78rem; cursor: pointer; flex: none; }
+.btn { display: inline-block; text-decoration: none; font-weight: 500; padding: 13px 30px; border-radius: 999px; background: var(--accent); color: var(--bg); transition: transform .15s; }
+.btn:hover { transform: translateY(-2px); }
+.btn.ghost { background: transparent; color: var(--accent); box-shadow: inset 0 0 0 1.5px var(--accent); }
+.btns { display: flex; gap: 12px; flex-wrap: wrap; }
+section { padding: 88px 0; }
+.note { opacity: .65; font-size: .8rem; margin-top: 28px; }
+.info { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
+.info dl { display: grid; grid-template-columns: 104px 1fr; gap: 12px 18px; }
+.info dt { opacity: .6; font-size: .88rem; }
+.map { overflow: hidden; min-height: 300px; }
+.map iframe { width: 100%; min-height: 300px; height: 100%; border: 0; }
+footer { padding: 32px 0; font-size: .8rem; text-align: center; opacity: .7; }
+[data-lang="en"] .ja, [data-lang="ja"] .en { display: none !important; }
+@media (max-width: 760px) {
+  .nav ul { display: none; }
+  .info { grid-template-columns: 1fr; }
+  section { padding: 64px 0; }
+}
+
+
+body { font-family: "M PLUS Rounded 1c", sans-serif; }
+.logo, h1, h2 { font-weight: 800; }
+.logo { font-size: 1.2rem; color: var(--accent); }
+.hero { position: relative; overflow: hidden; background: linear-gradient(170deg, var(--soft), var(--bg) 75%); text-align: center; padding: 88px 0 150px; }
+.blob { position: absolute; border-radius: 42% 58% 60% 40% / 45% 40% 60% 55%; opacity: .5; filter: blur(2px); }
+.blob.a { width: 340px; height: 340px; background: var(--pop); top: -80px; left: -90px; }
+.blob.b { width: 260px; height: 260px; background: var(--accent); opacity: .22; bottom: 40px; right: -60px; border-radius: 60% 40% 45% 55% / 50% 60% 40% 50%; }
+.hero .wrap { position: relative; }
+.hero .art-wrap { width: 128px; height: 128px; margin: 0 auto 18px; border-radius: 50%; background: var(--bg); color: var(--accent); display: grid; place-items: center; box-shadow: 0 12px 30px color-mix(in srgb, var(--accent) 25%, transparent); }
+.hero .art { width: 70%; }
+.eyebrow { color: var(--accent); font-weight: 800; letter-spacing: .25em; font-size: .78rem; }
+.hero h1 { font-size: clamp(2.2rem, 6vw, 3.8rem); line-height: 1.3; margin: 10px 0 18px; }
+.hero p { max-width: 540px; margin: 0 auto 22px; opacity: .8; }
+.rating { display: inline-block; background: var(--bg); border-radius: 999px; padding: 6px 18px; font-size: .88rem; margin-bottom: 26px; box-shadow: 0 4px 14px rgba(0,0,0,.06); }
+.rating b { color: var(--accent); }
+.btns { justify-content: center; }
+.btn { box-shadow: 0 8px 20px color-mix(in srgb, var(--accent) 35%, transparent); }
+.wave { position: absolute; left: 0; right: 0; bottom: -1px; width: 100%; height: 90px; color: var(--bg); }
+h2 { font-size: clamp(1.7rem, 4vw, 2.3rem); text-align: center; margin-bottom: 12px; }
+.sub { text-align: center; opacity: .65; margin-bottom: 40px; }
+.about .wrap { max-width: 760px; text-align: center; }
+.about .lead { font-weight: 800; font-size: 1.2rem; color: var(--accent); margin-bottom: 12px; }
+.pills { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; }
+.pill { background: var(--bg); border-radius: 26px; padding: 22px 24px; display: flex; gap: 16px; align-items: center; box-shadow: 0 6px 24px rgba(0,0,0,.07); }
+.dot { flex: none; width: 46px; height: 46px; border-radius: 50%; background: var(--soft); color: var(--accent); display: grid; place-items: center; font-weight: 800; }
+.pill h3 { font-size: 1rem; font-weight: 800; }
+.pill p { font-size: .85rem; opacity: .7; }
+#menu { background: color-mix(in srgb, var(--soft) 55%, var(--bg)); border-radius: 48px 48px 0 0; }
+.visit .map { border-radius: 28px; }
+.visit dl { background: color-mix(in srgb, var(--soft) 55%, var(--bg)); border-radius: 28px; padding: 28px; }
+
+</style>
+</head>
+<body data-lang="ja">
+<div class="proposal"><span class="ja">※ こちらはご提案用のサンプルページです（非公開・検索エンジン非表示）</span><span class="en">Proposal preview: not an official site, hidden from search engines</span></div>
+<header><div class="wrap nav">
+  <a class="logo" href="#">cafe walnut</a>
+  <ul>
+    <li><a href="#about"><span class="ja">お店について</span><span class="en">About</span></a></li>
+    <li><a href="#menu"><span class="ja">メニュー</span><span class="en">Menu</span></a></li>
+    <li><a href="#info"><span class="ja">アクセス</span><span class="en">Visit</span></a></li>
+  </ul>
+  <button class="lang" id="langBtn" aria-label="Switch language">EN</button>
+</div></header>
+<main>
+<div class="hero"><span class="blob a"></span><span class="blob b"></span><div class="wrap">
+  <div class="art-wrap"><svg class="art" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M44 120h112v50H44z"/><path d="M44 144h112"/><path d="M44 120c10-12 22-12 28 0 6-12 22-12 28 0 6-12 22-12 28 0 6-12 22-12 28 0"/><path d="M100 104V84"/><path d="M100 84c-6-6-2-14 0-18 2 4 6 12 0 18z"/></svg></div>
+  <div class="eyebrow">OZE · YASHIO</div>
+  <h1><span class="ja">ケーキとコーヒーで、<br>ほっとひと息。</span><span class="en">Cake, coffee,<br>and a moment to breathe.</span></h1>
+  <p><span class="ja">手作りのキャロットケーキやチーズケーキに、アールグレイやコーヒーを。八潮で愛される、あたたかい雰囲気のカフェです。</span><span class="en">Homemade carrot cake and cheesecake with Earl Grey or coffee, at a warm café much loved in Yashio.</span></p>
+  <div class="rating"><b>★ 4.4</b> <span class="ja">Googleクチコミ 100件以上</span><span class="en">100+ Google reviews</span></div>
+  <div class="btns"><a class="btn" href="#menu"><span class="ja">メニューを見る</span><span class="en">See the menu</span></a><a class="btn ghost" href="#info"><span class="ja">アクセス</span><span class="en">Visit</span></a></div>
+</div><svg class="wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path fill="currentColor" d="M0 50c180-40 360-40 540 0s360 40 540 0 270-30 360-20v60H0z"/></svg></div>
+<section id="about" class="about"><div class="wrap">
+  <h2><span class="ja">お店について</span><span class="en">About us</span></h2>
+  <p class="lead"><span class="ja">やさしいスタッフと、居心地のいい空間</span><span class="en">Kind staff and a cozy space</span></p>
+  <p><span class="ja">地元の方はもちろん、海外からのお客様にも「八潮でいちばんのカフェ」と言っていただけるお店です。</span><span class="en">Loved by locals, and called one of the best cafés in Yashio by visitors from abroad.</span></p>
+</div></section>
+<section id="menu"><div class="wrap">
+  <h2><span class="ja">メニュー</span><span class="en">Menu</span></h2>
+  <p class="sub"><span class="ja">人気のメニュー</span><span class="en">Customer favorites</span></p>
+  <div class="pills"><div class="pill"><span class="dot">1</span><div><h3><span class="ja">キャロットケーキ</span><span class="en">Carrot cake</span></h3><p><span class="ja">ファンの多い看板ケーキ</span><span class="en">A cake with many fans</span></p></div></div><div class="pill"><span class="dot">2</span><div><h3><span class="ja">チーズケーキ</span><span class="en">Cheesecake</span></h3><p><span class="ja">定番の人気ケーキ</span><span class="en">A popular classic</span></p></div></div><div class="pill"><span class="dot">3</span><div><h3><span class="ja">コーヒーケーキ</span><span class="en">Coffee cake</span></h3><p><span class="ja">コーヒーと一緒に</span><span class="en">Best with coffee</span></p></div></div><div class="pill"><span class="dot">4</span><div><h3><span class="ja">アールグレイ</span><span class="en">Earl Grey tea</span></h3><p><span class="ja">人気のドリンク</span><span class="en">A popular drink</span></p></div></div><div class="pill"><span class="dot">5</span><div><h3><span class="ja">アイスコーヒー</span><span class="en">Iced coffee</span></h3><p><span class="ja">すっきりとした味わい</span><span class="en">Smooth and refreshing</span></p></div></div></div>
+  <p class="note"><span class="ja">※ 価格・内容は正式公開時にお店の情報に合わせて掲載します。</span><span class="en">Prices and items will be confirmed with the shop before launch.</span></p>
+</div></section>
+<section id="info" class="visit"><div class="wrap">
+  <h2><span class="ja">営業時間・アクセス</span><span class="en">Hours &amp; access</span></h2>
+  <p class="sub"><span class="ja">イートイン・テイクアウトOK</span><span class="en">Dine-in &amp; takeaway</span></p>
+  <div class="info"><dl><dt><span class="ja">住所</span><span class="en">Address</span></dt><dd><span class="ja">〒340-0822 埼玉県八潮市大瀬5-10-12 キャトルコート</span><span class="en">Quatre Court, 5-10-12 Oze, Yashio, Saitama 340-0822</span></dd><dt><span class="ja">営業時間</span><span class="en">Hours</span></dt><dd><span class="ja">12:00〜（詳細・定休日はお店に確認して掲載）</span><span class="en">From 12 PM (full hours to be confirmed)</span></dd><dt><span class="ja">ポイント</span><span class="en">Good to know</span></dt><dd><span class="ja">イートイン・テイクアウトOK</span><span class="en">Dine-in &amp; takeaway</span></dd></dl><div class="map"><iframe loading="lazy" title="Map" src="https://www.google.com/maps?q=cafe%20walnut%20%E5%85%AB%E6%BD%AE%E5%B8%82%E5%A4%A7%E7%80%AC5-10-12&output=embed"></iframe></div></div>
+</div></section></main>
+<footer>© cafe walnut</footer>
+<script>
+  const btn = document.getElementById('langBtn');
+  btn.addEventListener('click', () => {
+    const l = document.body.dataset.lang === 'ja' ? 'en' : 'ja';
+    document.body.dataset.lang = l;
+    document.documentElement.lang = l;
+    btn.textContent = l === 'ja' ? 'EN' : '日本語';
+  });
+</script>
+</body>
+</html>

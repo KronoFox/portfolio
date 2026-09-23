@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>トムズコーヒー | 草加市高砂</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=RocknRoll+One&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root { --bg: #f4ecdf; --ink: #2b1d14; --accent: #8c4a22; --soft: #e8d5bb; --pop: #d9a441; }
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: var(--bg); color: var(--ink); line-height: 1.85; -webkit-font-smoothing: antialiased; }
+a { color: inherit; }
+img, svg { display: block; }
+.wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+.proposal { background: #fff4c2; color: #5a4a00; font: 500 .78rem/1.5 system-ui, sans-serif; text-align: center; padding: 7px 16px; }
+header { position: sticky; top: 0; z-index: 20; background: color-mix(in srgb, var(--bg) 90%, transparent); backdrop-filter: blur(10px); }
+.nav { display: flex; align-items: center; justify-content: space-between; height: 64px; gap: 12px; }
+.logo { text-decoration: none; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.nav ul { display: flex; gap: 26px; list-style: none; font-size: .88rem; }
+.nav ul a { text-decoration: none; opacity: .7; }
+.nav ul a:hover { opacity: 1; color: var(--accent); }
+.lang { border: 1.5px solid currentColor; background: transparent; color: var(--ink); border-radius: 999px; padding: 3px 13px; font: inherit; font-size: .78rem; cursor: pointer; flex: none; }
+.btn { display: inline-block; text-decoration: none; font-weight: 500; padding: 13px 30px; border-radius: 999px; background: var(--accent); color: var(--bg); transition: transform .15s; }
+.btn:hover { transform: translateY(-2px); }
+.btn.ghost { background: transparent; color: var(--accent); box-shadow: inset 0 0 0 1.5px var(--accent); }
+.btns { display: flex; gap: 12px; flex-wrap: wrap; }
+section { padding: 88px 0; }
+.note { opacity: .65; font-size: .8rem; margin-top: 28px; }
+.info { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
+.info dl { display: grid; grid-template-columns: 104px 1fr; gap: 12px 18px; }
+.info dt { opacity: .6; font-size: .88rem; }
+.map { overflow: hidden; min-height: 300px; }
+.map iframe { width: 100%; min-height: 300px; height: 100%; border: 0; }
+footer { padding: 32px 0; font-size: .8rem; text-align: center; opacity: .7; }
+[data-lang="en"] .ja, [data-lang="ja"] .en { display: none !important; }
+@media (max-width: 760px) {
+  .nav ul { display: none; }
+  .info { grid-template-columns: 1fr; }
+  section { padding: 64px 0; }
+}
+
+
+body { font-family: "Zen Kaku Gothic New", sans-serif; }
+.logo, h1, h2, .board h3, .stamp { font-family: "RocknRoll One", sans-serif; }
+.logo { font-size: 1.15rem; color: var(--accent); }
+.stripes { height: 14px; background: linear-gradient(var(--pop) 0 33%, var(--accent) 33% 66%, var(--ink) 66%); }
+.hero { position: relative; overflow: hidden; padding: 80px 0 90px; background: radial-gradient(circle at 80% 30%, var(--soft), transparent 60%); }
+.hero .wrap { display: grid; grid-template-columns: 1.25fr 1fr; gap: 40px; align-items: center; }
+.eyebrow { display: inline-block; border: 2px solid var(--accent); color: var(--accent); border-radius: 999px; padding: 2px 16px; font-size: .78rem; font-weight: 700; letter-spacing: .15em; margin-bottom: 18px; }
+.hero h1 { font-size: clamp(2.1rem, 5.6vw, 3.8rem); line-height: 1.35; margin-bottom: 18px; color: var(--ink); }
+.hero h1 .ja { font-size: .9em; }
+.hero p { max-width: 470px; opacity: .85; margin-bottom: 22px; }
+.rating { font-size: .88rem; margin-bottom: 24px; }
+.rating b { color: var(--accent); }
+.sun { position: relative; justify-self: center; width: min(320px, 75vw); aspect-ratio: 1; border-radius: 50%;
+  background: repeating-conic-gradient(var(--pop) 0 10deg, var(--soft) 10deg 20deg); display: grid; place-items: center; }
+.sun .disc { width: 66%; aspect-ratio: 1; border-radius: 50%; background: var(--bg); border: 4px solid var(--ink); display: grid; place-items: center; color: var(--accent); }
+.sun .art { width: 66%; }
+.stamp { position: absolute; bottom: 4%; left: -4%; background: var(--accent); color: var(--bg); border-radius: 12px; padding: 8px 14px; font-size: .95rem; transform: rotate(-8deg); box-shadow: 3px 3px 0 var(--ink); }
+.btn { border-radius: 14px; box-shadow: 0 4px 0 var(--ink); }
+.btn.ghost { box-shadow: inset 0 0 0 2px var(--accent), 0 4px 0 var(--ink); background: var(--bg); }
+h2 { font-size: clamp(1.7rem, 4vw, 2.3rem); margin-bottom: 30px; text-align: center; }
+h2::after { content: ""; display: block; width: 90px; height: 8px; margin: 12px auto 0; background: linear-gradient(90deg, var(--pop) 0 33%, var(--accent) 33% 66%, var(--ink) 66%); border-radius: 4px; }
+.about { background: var(--soft); }
+.about .wrap { max-width: 760px; text-align: center; }
+.about .lead { font-weight: 700; font-size: 1.2rem; color: var(--accent); margin-bottom: 12px; }
+.board { max-width: 760px; margin: 0 auto; background: var(--ink); color: var(--bg); border-radius: 22px; padding: 38px 40px; border: 6px solid var(--accent); box-shadow: 0 0 0 4px var(--ink), 0 18px 40px rgba(0,0,0,.18); }
+.board .row { display: flex; gap: 16px; align-items: baseline; padding: 14px 0; border-bottom: 1px dashed color-mix(in srgb, var(--bg) 30%, transparent); }
+.board .row:last-child { border: 0; }
+.board h3 { font-size: 1.1rem; font-weight: 400; color: var(--pop); white-space: nowrap; }
+.board p { font-size: .88rem; opacity: .8; }
+.note { text-align: center; }
+.visit { background: color-mix(in srgb, var(--soft) 60%, var(--bg)); }
+.map { border-radius: 18px; border: 4px solid var(--ink); }
+footer { background: var(--ink); color: var(--bg); opacity: 1; }
+@media (max-width: 760px) { .hero .wrap { grid-template-columns: 1fr; } .board { padding: 26px 22px; } .board .row { flex-direction: column; gap: 2px; } .board h3 { white-space: normal; } }
+
+</style>
+</head>
+<body data-lang="ja">
+<div class="proposal"><span class="ja">※ こちらはご提案用のサンプルページです（非公開・検索エンジン非表示）</span><span class="en">Proposal preview: not an official site, hidden from search engines</span></div>
+<header><div class="wrap nav">
+  <a class="logo" href="#">トムズコーヒー</a>
+  <ul>
+    <li><a href="#about"><span class="ja">お店について</span><span class="en">About</span></a></li>
+    <li><a href="#menu"><span class="ja">メニュー</span><span class="en">Menu</span></a></li>
+    <li><a href="#info"><span class="ja">アクセス</span><span class="en">Visit</span></a></li>
+  </ul>
+  <button class="lang" id="langBtn" aria-label="Switch language">EN</button>
+</div></header>
+<main>
+<div class="stripes"></div>
+<div class="hero"><div class="wrap">
+  <div>
+    <span class="eyebrow">SOKA STATION</span>
+    <h1><span class="ja">昭和の空気ごと、<br>一杯のコーヒーを。</span><span class="en">A cup of coffee,<br>with a side of retro.</span></h1>
+    <p><span class="ja">草加駅からすぐ。お手頃なコーヒーとトースト、流れる音楽。80年代にタイムスリップしたような喫茶店です。</span><span class="en">Steps from Soka Station: affordable coffee, toast and great music, in a coffee shop that feels like the 1980s.</span></p>
+    <div class="rating"><b>★ 4.4</b> <span class="ja">Googleクチコミ 150件以上</span><span class="en">150+ Google reviews</span></div>
+    <div class="btns"><a class="btn" href="#menu"><span class="ja">メニューを見る</span><span class="en">See the menu</span></a><a class="btn ghost" href="#info"><span class="ja">アクセス</span><span class="en">Visit</span></a></div>
+  </div>
+  <div class="sun"><div class="disc"><svg class="art" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M52 170V96c-18-4-22-36 0-46 14-8 34-8 48-6 14-2 34-2 48 6 22 10 18 42 0 46v74z"/><rect x="78" y="108" width="44" height="30" rx="4"/></svg></div><span class="stamp">★ 4.4</span></div>
+</div></div>
+<section id="about" class="about"><div class="wrap">
+  <h2><span class="ja">お店について</span><span class="en">About us</span></h2>
+  <p class="lead"><span class="ja">変わらないことが、いちばんの魅力</span><span class="en">Staying the same is the whole point</span></p>
+  <p><span class="ja">ジャズやロックが流れる店内で、手早くやさしいサービスを。朝のモーニングから夜まで、ふらっと立ち寄れる街の喫茶店です。</span><span class="en">Jazz and rock on the stereo, with quick, friendly service. A neighborhood coffee shop to drop into from breakfast until evening.</span></p>
+</div></section>
+<section id="menu"><div class="wrap">
+  <h2><span class="ja">メニュー</span><span class="en">Menu</span></h2>
+  <div class="board"><div class="row"><h3><span class="ja">ブレンドコーヒー</span><span class="en">House blend coffee</span></h3><p><span class="ja">お手頃価格でおいしい一杯</span><span class="en">Great coffee, friendly prices</span></p></div><div class="row"><h3><span class="ja">トースト</span><span class="en">Toast</span></h3><p><span class="ja">喫茶店の定番</span><span class="en">The coffee-shop classic</span></p></div><div class="row"><h3><span class="ja">モーニング</span><span class="en">Morning set</span></h3><p><span class="ja">朝の一日のはじまりに</span><span class="en">Start the day right</span></p></div><div class="row"><h3><span class="ja">サンドイッチ</span><span class="en">Sandwich</span></h3><p><span class="ja">軽めのランチに</span><span class="en">A light lunch</span></p></div><div class="row"><h3><span class="ja">ホットココア</span><span class="en">Hot cocoa</span></h3><p><span class="ja">寒い日にどうぞ</span><span class="en">For chilly days</span></p></div><div class="row"><h3><span class="ja">チョコレートケーキ</span><span class="en">Chocolate cake</span></h3><p><span class="ja">コーヒーと一緒に</span><span class="en">Perfect with coffee</span></p></div></div>
+  <p class="note"><span class="ja">※ 価格・内容は正式公開時にお店の情報に合わせて掲載します。</span><span class="en">Prices and items will be confirmed with the shop before launch.</span></p>
+</div></section>
+<section id="info" class="visit"><div class="wrap">
+  <h2><span class="ja">営業時間・アクセス</span><span class="en">Hours &amp; access</span></h2>
+  <div class="info"><dl><dt><span class="ja">住所</span><span class="en">Address</span></dt><dd><span class="ja">〒340-0015 埼玉県草加市高砂2-6-13</span><span class="en">2-6-13 Takasago, Soka, Saitama 340-0015</span></dd><dt><span class="ja">営業時間</span><span class="en">Hours</span></dt><dd><span class="ja">〜21:00（詳細・定休日はお店に確認して掲載）</span><span class="en">Until 9 PM (full hours to be confirmed)</span></dd><dt><span class="ja">電話</span><span class="en">Phone</span></dt><dd><a href="tel:0489274488">048-927-4488</a></dd><dt><span class="ja">ポイント</span><span class="en">Good to know</span></dt><dd><span class="ja">喫煙可</span><span class="en">Smoking allowed</span></dd></dl><div class="map"><iframe loading="lazy" title="Map" src="https://www.google.com/maps?q=%E3%83%88%E3%83%A0%E3%82%BA%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC%20%E8%8D%89%E5%8A%A0%E5%B8%82%E9%AB%98%E7%A0%822-6-13&output=embed"></iframe></div></div>
+</div></section></main>
+<footer>© トムズコーヒー</footer>
+<script>
+  const btn = document.getElementById('langBtn');
+  btn.addEventListener('click', () => {
+    const l = document.body.dataset.lang === 'ja' ? 'en' : 'ja';
+    document.body.dataset.lang = l;
+    document.documentElement.lang = l;
+    btn.textContent = l === 'ja' ? 'EN' : '日本語';
+  });
+</script>
+</body>
+</html>

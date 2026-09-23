@@ -37,6 +37,9 @@ ART = {
     "flower": '<circle cx="100" cy="96" r="12"/><ellipse cx="100" cy="56" rx="18" ry="28"/><ellipse cx="100" cy="136" rx="18" ry="28"/><ellipse cx="60" cy="96" rx="28" ry="18"/><ellipse cx="140" cy="96" rx="28" ry="18"/><path d="M100 164v26"/>',
     "record": '<circle cx="100" cy="100" r="76"/><circle cx="100" cy="100" r="58"/><circle cx="100" cy="100" r="42"/><circle cx="100" cy="100" r="18"/><circle cx="100" cy="100" r="3"/>',
     "wave": '<path d="M10 90c30-24 60-24 90 0s60 24 90 0M10 120c30-24 60-24 90 0s60 24 90 0M10 150c30-24 60-24 90 0s60 24 90 0"/><circle cx="150" cy="46" r="18"/>',
+    "moto": '<circle cx="48" cy="140" r="26"/><circle cx="154" cy="140" r="26"/><path d="M48 140l34-40h44l28 40M82 100l-8-16h-18M126 100l14-26h18M92 100v18h40"/><path d="M100 84h26"/>',
+    "toast": '<path d="M52 170V96c-18-4-22-36 0-46 14-8 34-8 48-6 14-2 34-2 48 6 22 10 18 42 0 46v74z"/><rect x="78" y="108" width="44" height="30" rx="4"/>',
+    "cake": '<path d="M44 120h112v50H44z"/><path d="M44 144h112"/><path d="M44 120c10-12 22-12 28 0 6-12 22-12 28 0 6-12 22-12 28 0 6-12 22-12 28 0"/><path d="M100 104V84"/><path d="M100 84c-6-6-2-14 0-18 2 4 6 12 0 18z"/>',
     "river": '<path d="M60 118l40-34 40 34"/><path d="M68 112v38h64v-38"/><path d="M94 150v-20h12v20"/><circle cx="158" cy="98" r="18"/><path d="M158 116v34"/><path d="M40 150h130"/><path d="M28 168c16-7 32-7 48 0s32 7 48 0 32-7 48 0M48 184c16-7 32-7 48 0s32 7 48 0"/>',
 }
 
@@ -52,6 +55,7 @@ FONTS = {
     "poster": "Dela+Gothic+One&family=Zen+Kaku+Gothic+New:wght@400;700",
     "tropical": "M+PLUS+Rounded+1c:wght@400;500;800",
     "noir": "Cormorant+Garamond:ital,wght@0,500;1,500;1,600&family=Shippori+Mincho:wght@400;600",
+    "showa": "RocknRoll+One&family=Zen+Kaku+Gothic+New:wght@400;500;700",
     "breeze": "Kaisei+Opti:wght@500;700&family=Zen+Maru+Gothic:wght@400;500",
 }
 
@@ -458,7 +462,79 @@ h2 { font-size: clamp(1.7rem, 4vw, 2.3rem); margin-bottom: 10px; }
     return css, body
 
 
-THEMES = {"editorial": editorial, "poster": poster, "tropical": tropical, "noir": noir, "breeze": breeze}
+
+# ---- showa: 70s kissaten stripes, rounded retro type, signboard menu
+def showa(d):
+    css = """
+body { font-family: "Zen Kaku Gothic New", sans-serif; }
+.logo, h1, h2, .board h3, .stamp { font-family: "RocknRoll One", sans-serif; }
+.logo { font-size: 1.15rem; color: var(--accent); }
+.stripes { height: 14px; background: linear-gradient(var(--pop) 0 33%, var(--accent) 33% 66%, var(--ink) 66%); }
+.hero { position: relative; overflow: hidden; padding: 80px 0 90px; background: radial-gradient(circle at 80% 30%, var(--soft), transparent 60%); }
+.hero .wrap { display: grid; grid-template-columns: 1.25fr 1fr; gap: 40px; align-items: center; }
+.eyebrow { display: inline-block; border: 2px solid var(--accent); color: var(--accent); border-radius: 999px; padding: 2px 16px; font-size: .78rem; font-weight: 700; letter-spacing: .15em; margin-bottom: 18px; }
+.hero h1 { font-size: clamp(2.1rem, 5.6vw, 3.8rem); line-height: 1.35; margin-bottom: 18px; color: var(--ink); }
+.hero h1 .ja { font-size: .9em; }
+.hero p { max-width: 470px; opacity: .85; margin-bottom: 22px; }
+.rating { font-size: .88rem; margin-bottom: 24px; }
+.rating b { color: var(--accent); }
+.sun { position: relative; justify-self: center; width: min(320px, 75vw); aspect-ratio: 1; border-radius: 50%;
+  background: repeating-conic-gradient(var(--pop) 0 10deg, var(--soft) 10deg 20deg); display: grid; place-items: center; }
+.sun .disc { width: 66%; aspect-ratio: 1; border-radius: 50%; background: var(--bg); border: 4px solid var(--ink); display: grid; place-items: center; color: var(--accent); }
+.sun .art { width: 66%; }
+.stamp { position: absolute; bottom: 4%; left: -4%; background: var(--accent); color: var(--bg); border-radius: 12px; padding: 8px 14px; font-size: .95rem; transform: rotate(-8deg); box-shadow: 3px 3px 0 var(--ink); }
+.btn { border-radius: 14px; box-shadow: 0 4px 0 var(--ink); }
+.btn.ghost { box-shadow: inset 0 0 0 2px var(--accent), 0 4px 0 var(--ink); background: var(--bg); }
+h2 { font-size: clamp(1.7rem, 4vw, 2.3rem); margin-bottom: 30px; text-align: center; }
+h2::after { content: ""; display: block; width: 90px; height: 8px; margin: 12px auto 0; background: linear-gradient(90deg, var(--pop) 0 33%, var(--accent) 33% 66%, var(--ink) 66%); border-radius: 4px; }
+.about { background: var(--soft); }
+.about .wrap { max-width: 760px; text-align: center; }
+.about .lead { font-weight: 700; font-size: 1.2rem; color: var(--accent); margin-bottom: 12px; }
+.board { max-width: 760px; margin: 0 auto; background: var(--ink); color: var(--bg); border-radius: 22px; padding: 38px 40px; border: 6px solid var(--accent); box-shadow: 0 0 0 4px var(--ink), 0 18px 40px rgba(0,0,0,.18); }
+.board .row { display: flex; gap: 16px; align-items: baseline; padding: 14px 0; border-bottom: 1px dashed color-mix(in srgb, var(--bg) 30%, transparent); }
+.board .row:last-child { border: 0; }
+.board h3 { font-size: 1.1rem; font-weight: 400; color: var(--pop); white-space: nowrap; }
+.board p { font-size: .88rem; opacity: .8; }
+.note { text-align: center; }
+.visit { background: color-mix(in srgb, var(--soft) 60%, var(--bg)); }
+.map { border-radius: 18px; border: 4px solid var(--ink); }
+footer { background: var(--ink); color: var(--bg); opacity: 1; }
+@media (max-width: 760px) { .hero .wrap { grid-template-columns: 1fr; } .board { padding: 26px 22px; } .board .row { flex-direction: column; gap: 2px; } .board h3 { white-space: normal; } }
+"""
+    items = "".join(
+        f'<div class="row"><h3>{both(it["ja"], it["en"])}</h3><p>{both(it.get("dja", ""), it.get("den", ""))}</p></div>'
+        for it in menu_items(d))
+    stamp = f'<span class="stamp">★ {d["rating"]}</span>' if d.get("rating") else ""
+    body = f"""
+<div class="stripes"></div>
+<div class="hero"><div class="wrap">
+  <div>
+    <span class="eyebrow">{esc(d["eyebrow"])}</span>
+    <h1>{both_br(d["h1_ja"], d["h1_en"])}</h1>
+    <p>{both(d["lead_ja"], d["lead_en"])}</p>
+    {rating_html(d)}
+    <div class="btns"><a class="btn" href="#menu">{both(d["menu_ja"] + "を見る", "See the " + d["menu_en"].lower())}</a><a class="btn ghost" href="#info">{both("アクセス", "Visit")}</a></div>
+  </div>
+  <div class="sun"><div class="disc">{art(d["art"])}</div>{stamp}</div>
+</div></div>
+<section id="about" class="about"><div class="wrap">
+  <h2>{both("お店について", "About us")}</h2>
+  <p class="lead">{both(d["about_sub_ja"], d["about_sub_en"])}</p>
+  <p>{both(d["about_ja"], d["about_en"])}</p>
+</div></section>
+<section id="menu"><div class="wrap">
+  <h2>{both(d["menu_ja"], d["menu_en"])}</h2>
+  <div class="board">{items}</div>
+  {note()}
+</div></section>
+<section id="info" class="visit"><div class="wrap">
+  <h2>{both("営業時間・アクセス", "Hours & access")}</h2>
+  {info_html(d)}
+</div></section>"""
+    return css, body
+
+
+THEMES = {"showa": showa, "editorial": editorial, "poster": poster, "tropical": tropical, "noir": noir, "breeze": breeze}
 
 
 # ---------------------------------------------------------------- shared bits
@@ -482,7 +558,7 @@ def info_html(d):
                             ("x", "X", "https://x.com/{}"),
                             ("facebook", "Facebook", "https://www.facebook.com/{}")):
         if d.get(key):
-            rows.append(((label, label), f'<a href="{url.format(d[key])}" target="_blank" rel="noopener">{"@" if key != "facebook" else ""}{esc(d[key])}</a>'))
+            rows.append(((label, label), f'<a href="{url.format(d[key])}" target="_blank" rel="noopener">{"Facebookページ" if key == "facebook" else "@" + esc(d[key])}</a>'))
     if d.get("info_sub_ja"):
         rows.append((("ポイント", "Good to know"), both(d["info_sub_ja"], d["info_sub_en"])))
     dl = "".join(f"<dt>{both(*k)}</dt><dd>{v}</dd>" for k, v in rows)

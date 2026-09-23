@@ -1,0 +1,33 @@
+{
+  "slug": "kyowa-cafe",
+  "name": "Kyowa Cafe きょうわカフェ",
+  "theme": "breeze",
+  "art": "toast",
+  "colors": {"bg": "#fffaf1", "ink": "#2e2a22", "accent": "#c9762a", "soft": "#fdebd0", "pop": "#ffe0a3"},
+  "phone": "048-960-0502",
+  "area_ja": "草加市住吉",
+  "eyebrow": "SUMIYOSHI · SOKA",
+  "h1_ja": "朝8時から、\nしずかな朝ごはん。",
+  "h1_en": "Quiet breakfasts,\nfrom 8 AM.",
+  "lead_ja": "モーニングトーストにフレンチトースト、グリーンカレーのプレート。やさしい店主と、落ち着いた空間でどうぞ。",
+  "lead_en": "Morning toast, French toast and green curry plates, served by a kind owner in a calm, quiet space.",
+  "rating": "4.3", "reviews_ja": "100件以上", "reviews_en": "100+",
+  "about_sub_ja": "おひとりさまにも心地よい、静かなカフェ",
+  "about_sub_en": "A quiet café that's perfect on your own",
+  "about_ja": "1〜2名用のテーブルが中心の、ゆったり過ごせるお店です。朝のモーニングから、ランチ、午後のシフォンケーキまで。",
+  "about_en": "Mostly tables for one or two, so you can take your time. From breakfast through lunch to afternoon chiffon cake.",
+  "menu_ja": "メニュー", "menu_en": "Menu",
+  "items": [
+    {"ja": "モーニングトースト", "en": "Morning toast", "dja": "人気の朝ごはん", "den": "A popular breakfast"},
+    {"ja": "グリーンカレープレート", "en": "Green curry plate", "dja": "人気のランチ", "den": "A popular lunch"},
+    {"ja": "フレンチトースト", "en": "French toast", "dja": "ふんわり甘く", "den": "Soft and sweet"},
+    {"ja": "フムス", "en": "Hummus", "dja": "ちょっと珍しい一品", "den": "Something a little different"},
+    {"ja": "シフォンケーキ", "en": "Chiffon cake", "dja": "午後のお供に", "den": "An afternoon treat"}
+  ],
+  "info_sub_ja": "お支払いは現金のみ", "info_sub_en": "Cash only",
+  "address_ja": "〒340-0014 埼玉県草加市住吉1-5-21 共和住吉ビル105",
+  "address_en": "Kyowa Sumiyoshi Bldg. 105, 1-5-21 Sumiyoshi, Soka, Saitama 340-0014",
+  "hours_ja": "8:00〜（詳細・定休日はお店に確認して掲載）",
+  "hours_en": "From 8 AM (full hours to be confirmed)",
+  "map_query": "Kyowa Cafe 草加市住吉1-5-21"
+}
