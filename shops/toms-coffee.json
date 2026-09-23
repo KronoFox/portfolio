@@ -20,7 +20,7 @@
   "items": [
     {"ja": "ブレンドコーヒー", "en": "House blend coffee", "dja": "お手頃価格でおいしい一杯", "den": "Great coffee, friendly prices"},
     {"ja": "トースト", "en": "Toast", "dja": "喫茶店の定番", "den": "The coffee-shop classic"},
-    {"ja": "モーニング", "en": "Morning set", "dja": "朝の一日のはじまりに", "den": "Start the day right"},
+    {"ja": "モーニング", "en": "Morning set", "dja": "一日のはじまりに", "den": "Start the day right"},
     {"ja": "サンドイッチ", "en": "Sandwich", "dja": "軽めのランチに", "den": "A light lunch"},
     {"ja": "ホットココア", "en": "Hot cocoa", "dja": "寒い日にどうぞ", "den": "For chilly days"},
     {"ja": "チョコレートケーキ", "en": "Chocolate cake", "dja": "コーヒーと一緒に", "den": "Perfect with coffee"}
