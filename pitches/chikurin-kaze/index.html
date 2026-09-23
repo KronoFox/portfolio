@@ -51,7 +51,7 @@ body { font-family: "Zen Kaku Gothic New", sans-serif; }
 .logo, h1, h2, .num, .quote { font-family: "Shippori Mincho B1", serif; }
 .logo { font-weight: 700; font-size: 1.15rem; letter-spacing: .06em; }
 header { border-bottom: 1px solid color-mix(in srgb, var(--ink) 14%, transparent); }
-.hero { display: grid; grid-template-columns: auto 1fr; gap: 64px; align-items: center; padding: 72px 0 96px; }
+.hero { display: grid; grid-template-columns: auto 1fr; gap: 64px; align-items: center; padding: 72px 20px 96px; }
 .hero h1 { font-weight: 800; font-size: clamp(2.2rem, 5vw, 3.6rem); line-height: 1.5; letter-spacing: .12em; }
 .hero h1 .ja { writing-mode: vertical-rl; display: block; font-size: .85em; }
 .hero h1 .en { line-height: 1.2; letter-spacing: 0; max-width: 9ch; display: block; }
@@ -77,7 +77,7 @@ h2 small { font-family: "Zen Kaku Gothic New", sans-serif; font-size: .72rem; le
 .map { border-radius: 4px; }
 footer { border-top: 1px solid color-mix(in srgb, var(--ink) 14%, transparent); }
 @media (max-width: 760px) {
-  .hero { grid-template-columns: 1fr; gap: 24px; padding: 48px 0 64px; }
+  .hero { grid-template-columns: 1fr; gap: 24px; padding: 48px 20px 64px; }
   .hero h1 .ja { height: auto; writing-mode: horizontal-tb; }
   .hero .side { border: 0; padding: 0; }
   .list { grid-template-columns: 1fr; }
