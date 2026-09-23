@@ -37,7 +37,7 @@ ART = {
     "flower": '<circle cx="100" cy="96" r="12"/><ellipse cx="100" cy="56" rx="18" ry="28"/><ellipse cx="100" cy="136" rx="18" ry="28"/><ellipse cx="60" cy="96" rx="28" ry="18"/><ellipse cx="140" cy="96" rx="28" ry="18"/><path d="M100 164v26"/>',
     "record": '<circle cx="100" cy="100" r="76"/><circle cx="100" cy="100" r="58"/><circle cx="100" cy="100" r="42"/><circle cx="100" cy="100" r="18"/><circle cx="100" cy="100" r="3"/>',
     "wave": '<path d="M10 90c30-24 60-24 90 0s60 24 90 0M10 120c30-24 60-24 90 0s60 24 90 0M10 150c30-24 60-24 90 0s60 24 90 0"/><circle cx="150" cy="46" r="18"/>',
-    "river": '<path d="M20 60c40 0 40 30 80 30s40-30 80-30M20 100c40 0 40 30 80 30s40-30 80-30"/><path d="M60 170c0-30 20-40 40-40s40 10 40 40"/><circle cx="150" cy="40" r="14"/>',
+    "river": '<path d="M60 118l40-34 40 34"/><path d="M68 112v38h64v-38"/><path d="M94 150v-20h12v20"/><circle cx="158" cy="98" r="18"/><path d="M158 116v34"/><path d="M40 150h130"/><path d="M28 168c16-7 32-7 48 0s32 7 48 0 32-7 48 0M48 184c16-7 32-7 48 0s32 7 48 0"/>',
 }
 
 
@@ -82,7 +82,7 @@ section { padding: 88px 0; }
 .map { overflow: hidden; min-height: 300px; }
 .map iframe { width: 100%; min-height: 300px; height: 100%; border: 0; }
 footer { padding: 32px 0; font-size: .8rem; text-align: center; opacity: .7; }
-[data-lang="en"] .ja, [data-lang="ja"] .en { display: none; }
+[data-lang="en"] .ja, [data-lang="ja"] .en { display: none !important; }
 @media (max-width: 760px) {
   .nav ul { display: none; }
   .info { grid-template-columns: 1fr; }
