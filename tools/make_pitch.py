@@ -333,9 +333,10 @@ header { border-bottom: 1px solid color-mix(in srgb, var(--accent) 35%, transpar
 .hero { position: relative; text-align: center; padding: 80px 0 100px; }
 .frame { position: absolute; inset: 24px; border: 1px solid color-mix(in srgb, var(--accent) 40%, transparent); pointer-events: none; }
 .frame::after { content: ""; position: absolute; inset: 8px; border: 1px solid color-mix(in srgb, var(--accent) 20%, transparent); }
-.hero .art { width: 170px; color: var(--accent); margin: 0 auto 30px; animation: spin 14s linear infinite; }
+.hero .art { width: 170px; color: var(--accent); margin: 0 auto 30px; }
+.hero .art.spin { animation: spin 14s linear infinite; }
 @keyframes spin { to { transform: rotate(360deg); } }
-@media (prefers-reduced-motion: reduce) { .hero .art { animation: none; } }
+@media (prefers-reduced-motion: reduce) { .hero .art.spin { animation: none; } }
 .eyebrow { font-style: italic; color: var(--accent); letter-spacing: .3em; font-size: .95rem; }
 .hero h1 { font-weight: 600; font-size: clamp(2rem, 5.4vw, 3.4rem); line-height: 1.5; margin: 14px 0 20px; }
 .hero h1 .en { font-style: italic; font-weight: 500; line-height: 1.2; }
@@ -372,7 +373,7 @@ footer { border-top: 1px solid color-mix(in srgb, var(--accent) 30%, transparent
         for i, it in enumerate(menu_items(d)))
     body = f"""
 <div class="hero"><span class="frame"></span><div class="wrap">
-  {art(d["art"])}
+  {art(d["art"], "art spin" if d["art"] == "record" else "art")}
   <div class="eyebrow">{esc(d["eyebrow"])}</div>
   <h1>{both_br(d["h1_ja"], d["h1_en"])}</h1>
   <p>{both(d["lead_ja"], d["lead_en"])}</p>

@@ -54,9 +54,10 @@ header { border-bottom: 1px solid color-mix(in srgb, var(--accent) 35%, transpar
 .hero { position: relative; text-align: center; padding: 80px 0 100px; }
 .frame { position: absolute; inset: 24px; border: 1px solid color-mix(in srgb, var(--accent) 40%, transparent); pointer-events: none; }
 .frame::after { content: ""; position: absolute; inset: 8px; border: 1px solid color-mix(in srgb, var(--accent) 20%, transparent); }
-.hero .art { width: 170px; color: var(--accent); margin: 0 auto 30px; animation: spin 14s linear infinite; }
+.hero .art { width: 170px; color: var(--accent); margin: 0 auto 30px; }
+.hero .art.spin { animation: spin 14s linear infinite; }
 @keyframes spin { to { transform: rotate(360deg); } }
-@media (prefers-reduced-motion: reduce) { .hero .art { animation: none; } }
+@media (prefers-reduced-motion: reduce) { .hero .art.spin { animation: none; } }
 .eyebrow { font-style: italic; color: var(--accent); letter-spacing: .3em; font-size: .95rem; }
 .hero h1 { font-weight: 600; font-size: clamp(2rem, 5.4vw, 3.4rem); line-height: 1.5; margin: 14px 0 20px; }
 .hero h1 .en { font-style: italic; font-weight: 500; line-height: 1.2; }
@@ -102,7 +103,7 @@ footer { border-top: 1px solid color-mix(in srgb, var(--accent) 30%, transparent
 </div></header>
 <main>
 <div class="hero"><span class="frame"></span><div class="wrap">
-  <svg class="art" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="100" cy="100" r="76"/><circle cx="100" cy="100" r="58"/><circle cx="100" cy="100" r="42"/><circle cx="100" cy="100" r="18"/><circle cx="100" cy="100" r="3"/></svg>
+  <svg class="art spin" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="100" cy="100" r="76"/><circle cx="100" cy="100" r="58"/><circle cx="100" cy="100" r="42"/><circle cx="100" cy="100" r="18"/><circle cx="100" cy="100" r="3"/></svg>
   <div class="eyebrow">Koshigaya · down the old road</div>
   <h1><span class="ja" style="--n:9"><span class="l">旧道の路地裏で、</span><br><span class="l">ジャズとパスタを。</span></span><span class="en">Jazz and pasta,<br>down an old-town alley.</span></h1>
   <p><span class="ja">越ヶ谷の旧道から路地を入ると、ゆったりとした時間が流れる隠れ家。80年代の映画音楽とジャズを聴きながら、本日のパスタと手作りのデザートを。</span><span class="en">Step off Koshigaya&#x27;s old road into a hidden spot where time slows down. Pasta of the day and homemade desserts, with 80s film jazz playing.</span></p>
