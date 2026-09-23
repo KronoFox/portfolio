@@ -1,0 +1,33 @@
+{
+  "slug": "matilda",
+  "name": "MATILDA",
+  "theme": "editorial",
+  "art": "cake",
+  "colors": {"bg": "#f7f3f2", "ink": "#2e2226", "accent": "#8a3b55", "soft": "#efe2e4"},
+  "area_ja": "吉川市保",
+  "eyebrow": "CHEESECAKE · YOSHIKAWA",
+  "h1_ja": "小さなお店の、\nこだわりチーズケーキ。",
+  "h1_en": "Small shop,\nserious cheesecake.",
+  "lead_ja": "ゴルゴンゾーラ、ブルーベリー、ミントチョコ。ひとつひとつ丁寧に焼き上げる、チーズケーキの専門店です。",
+  "lead_en": "Gorgonzola, blueberry, mint chocolate: a cheesecake specialty shop where every cake is baked with care.",
+  "rating": "4.9", "reviews_ja": "13件", "reviews_en": "13",
+  "about_sub_ja": "見た目は小さく、味わいは大きく",
+  "about_sub_en": "Small to look at, big on flavor",
+  "about_ja": "赤ワインに合うゴルゴンゾーラなど、大人も楽しめるチーズケーキが揃います。洋梨のタルトや焼き菓子もどうぞ。",
+  "about_en": "Grown-up flavors like Gorgonzola, perfect with red wine, alongside pear tarts and baked treats.",
+  "menu_ja": "ケーキ", "menu_en": "Cakes",
+  "items": [
+    {"ja": "ゴルゴンゾーラチーズケーキ", "en": "Gorgonzola cheesecake", "dja": "赤ワインのお供に", "den": "Lovely with red wine"},
+    {"ja": "ブルーベリーチーズケーキ", "en": "Blueberry cheesecake", "dja": "人気の定番", "den": "A popular classic"},
+    {"ja": "ミントチョコチーズケーキ", "en": "Mint chocolate cheesecake", "dja": "爽やかな組み合わせ", "den": "A refreshing twist"},
+    {"ja": "ラムレーズン", "en": "Rum raisin", "dja": "大人の味わい", "den": "For grown-ups"},
+    {"ja": "洋梨のタルト", "en": "Pear tart", "dja": "季節のタルト", "den": "A fruit tart"},
+    {"ja": "マドレーヌ", "en": "Madeleine", "dja": "ちょっとした手土産に", "den": "A small gift"}
+  ],
+  "info_sub_ja": "テイクアウト専門・駐車場なし", "info_sub_en": "Takeaway only · no parking",
+  "address_ja": "〒342-0041 埼玉県吉川市保1-30-1 ロコビル",
+  "address_en": "Loco Bldg., 1-30-1 Ho, Yoshikawa, Saitama 342-0041",
+  "hours_ja": "お店に確認して掲載",
+  "hours_en": "To be confirmed with the shop",
+  "map_query": "MATILDA 吉川市保1-30-1"
+}

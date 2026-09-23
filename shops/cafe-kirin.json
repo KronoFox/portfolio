@@ -1,0 +1,33 @@
+{
+  "slug": "cafe-kirin",
+  "name": "cafe kirin",
+  "theme": "showa",
+  "art": "cup",
+  "colors": {"bg": "#fbf5e8", "ink": "#33261a", "accent": "#b86e1e", "soft": "#f3e1bf", "pop": "#e8c15a"},
+  "instagram": "cafekirin_0",
+  "area_ja": "春日部市一ノ割",
+  "eyebrow": "ICHINOWARI · KASUKABE",
+  "h1_ja": "古民家の陽だまりで、\nカレーとコーヒーを。",
+  "h1_en": "Curry and coffee\nin a sunlit old house.",
+  "lead_ja": "一ノ割駅から歩いてすぐ。古民家をリノベーションした、小さくて居心地のいい喫茶です。",
+  "lead_en": "A short walk from Ichinowari Station: a small, cozy café in a renovated old house.",
+  "rating": "4.4", "reviews_ja": "26件", "reviews_en": "26",
+  "about_sub_ja": "陽の光がたっぷり入る、静かな空間",
+  "about_sub_en": "A quiet space full of sunlight",
+  "about_ja": "かわいい看板が目印です。中庭を眺めながら、カレーやナポリタン、手作りのマフィンでゆっくりお過ごしください。",
+  "about_en": "Look for the cute sign. Relax with curry, Neapolitan spaghetti or a homemade muffin while looking out on the courtyard.",
+  "menu_ja": "メニュー", "menu_en": "Menu",
+  "items": [
+    {"ja": "ジンジャーキーマ", "en": "Ginger keema curry", "dja": "人気のカレー", "den": "A popular curry"},
+    {"ja": "バターチキンカレー", "en": "Butter chicken curry", "dja": "まろやかな味わい", "den": "Rich and mellow"},
+    {"ja": "ナポリタン", "en": "Neapolitan spaghetti", "dja": "喫茶の定番", "den": "A café classic"},
+    {"ja": "マフィン", "en": "Muffins", "dja": "手作りの焼き菓子", "den": "Freshly baked"},
+    {"ja": "コーヒー", "en": "Coffee", "dja": "ゆっくりどうぞ", "den": "Take your time"}
+  ],
+  "info_sub_ja": "一ノ割駅から徒歩圏内", "info_sub_en": "Walking distance from Ichinowari Stn.",
+  "address_ja": "〒344-0031 埼玉県春日部市一ノ割1-15-11",
+  "address_en": "1-15-11 Ichinowari, Kasukabe, Saitama 344-0031",
+  "hours_ja": "11:00〜（詳細・定休日はお店に確認して掲載）",
+  "hours_en": "From 11 AM (full hours to be confirmed)",
+  "map_query": "cafe kirin 春日部市一ノ割1-15-11"
+}

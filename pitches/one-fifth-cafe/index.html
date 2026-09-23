@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>ONE FIFTH CAFE | 春日部市中央</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Zen+Kaku+Gothic+New:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root { --bg: #f4f1ea; --ink: #1c2638; --accent: #2d4a7a; --soft: #e2e0d6; --pop: #f0b429; }
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: var(--bg); color: var(--ink); line-height: 1.85; -webkit-font-smoothing: antialiased; }
+a { color: inherit; }
+img, svg { display: block; }
+.wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+.proposal { background: #fff4c2; color: #5a4a00; font: 500 .78rem/1.5 system-ui, sans-serif; text-align: center; padding: 7px 16px; }
+header { position: sticky; top: 0; z-index: 20; background: color-mix(in srgb, var(--bg) 90%, transparent); backdrop-filter: blur(10px); }
+.nav { display: flex; align-items: center; justify-content: space-between; height: 64px; gap: 12px; }
+.logo { text-decoration: none; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.nav ul { display: flex; gap: 26px; list-style: none; font-size: .88rem; }
+.nav ul a { text-decoration: none; opacity: .7; }
+.nav ul a:hover { opacity: 1; color: var(--accent); }
+.lang { border: 1.5px solid currentColor; background: transparent; color: var(--ink); border-radius: 999px; padding: 3px 13px; font: inherit; font-size: .78rem; cursor: pointer; flex: none; }
+.btn { display: inline-block; text-decoration: none; font-weight: 500; padding: 13px 30px; border-radius: 999px; background: var(--accent); color: var(--bg); transition: transform .15s; }
+.btn:hover { transform: translateY(-2px); }
+.btn.ghost { background: transparent; color: var(--accent); box-shadow: inset 0 0 0 1.5px var(--accent); }
+.btns { display: flex; gap: 12px; flex-wrap: wrap; }
+section { padding: 88px 0; }
+.note { opacity: .65; font-size: .8rem; margin-top: 28px; }
+.info { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
+.info dl { display: grid; grid-template-columns: 104px 1fr; gap: 12px 18px; }
+.info dt { opacity: .6; font-size: .88rem; }
+.map { overflow: hidden; min-height: 300px; }
+.map iframe { width: 100%; min-height: 300px; height: 100%; border: 0; }
+footer { padding: 32px 0; font-size: .8rem; text-align: center; opacity: .7; }
+[data-lang="en"] .ja, [data-lang="ja"] .en { display: none !important; }
+.l { white-space: nowrap; }
+@media (max-width: 760px) {
+  h1 .ja { font-size: min(1em, calc((100vw - 44px) / (var(--n) * 1.16))) !important; }
+  .nav ul { display: none; }
+  .info { grid-template-columns: 1fr; }
+  section { padding: 64px 0; }
+}
+
+
+body { font-family: "Zen Kaku Gothic New", sans-serif; }
+.logo, h1, h2, .badge, .ticker, .card h3 { font-family: "Dela Gothic One", sans-serif; font-weight: 400; }
+.logo { font-size: 1.2rem; }
+header { border-bottom: 3px solid var(--ink); }
+.hero { position: relative; overflow: hidden; background: repeating-linear-gradient(-45deg, var(--soft) 0 18px, var(--bg) 18px 36px); border-bottom: 3px solid var(--ink); }
+.hero .wrap { display: grid; grid-template-columns: 1.3fr 1fr; gap: 32px; align-items: center; padding-top: 72px; padding-bottom: 80px; }
+.eyebrow { display: inline-block; background: var(--ink); color: var(--bg); font-weight: 700; font-size: .75rem; letter-spacing: .2em; padding: 4px 12px; margin-bottom: 20px; }
+.hero h1 { font-size: clamp(2.1rem, 5.4vw, 4.2rem); line-height: 1.2; margin-bottom: 22px; text-wrap: balance; }
+.hero h1 .ja { font-size: .82em; }
+.hero h1 .en { text-transform: uppercase; letter-spacing: -.01em; }
+.hero p { max-width: 480px; background: var(--bg); border: 3px solid var(--ink); padding: 16px 20px; margin-bottom: 28px; box-shadow: 6px 6px 0 var(--ink); }
+.btn { border-radius: 0; border: 3px solid var(--ink); box-shadow: 5px 5px 0 var(--ink); color: var(--bg); }
+.btn.ghost { background: var(--bg); color: var(--ink); box-shadow: 5px 5px 0 var(--ink); }
+.visual { position: relative; justify-self: center; width: min(360px, 80vw); aspect-ratio: 1; background: var(--accent); border: 3px solid var(--ink); border-radius: 50%; display: grid; place-items: center; color: var(--bg); box-shadow: 8px 8px 0 var(--ink); }
+.visual .art { width: 70%; }
+.badge { position: absolute; top: -10px; right: -10px; width: 112px; height: 112px; border-radius: 50%; background: var(--pop); color: var(--ink); border: 3px solid var(--ink); display: grid; place-items: center; text-align: center; line-height: 1.1; font-size: 1.7rem; transform: rotate(12deg); }
+.badge small { display: block; font-family: "Zen Kaku Gothic New", sans-serif; font-weight: 700; font-size: .62rem; letter-spacing: .08em; }
+.ticker { background: var(--ink); color: var(--bg); overflow: hidden; white-space: nowrap; font-size: 1.05rem; padding: 12px 0; }
+.ticker div { display: inline-block; animation: slide 28s linear infinite; }
+.ticker span { margin: 0 22px; }
+.ticker span::after { content: "✦"; margin-left: 44px; color: var(--pop); }
+@keyframes slide { to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) { .ticker div { animation: none; } }
+h2 { font-size: clamp(1.8rem, 4vw, 2.6rem); margin-bottom: 36px; }
+h2 .en { text-transform: uppercase; }
+.about { background: var(--accent); color: var(--bg); border-bottom: 3px solid var(--ink); }
+.about .wrap { display: grid; grid-template-columns: 1fr 1.4fr; gap: 48px; align-items: center; }
+.about h2 { margin: 0; }
+.about p.big { font-weight: 700; font-size: 1.15rem; margin-bottom: 12px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 22px; }
+.card { background: var(--bg); border: 3px solid var(--ink); padding: 22px; box-shadow: 6px 6px 0 var(--ink); transition: transform .15s, box-shadow .15s; }
+.card:hover { transform: translate(-3px, -3px); box-shadow: 9px 9px 0 var(--accent); }
+.card h3 { font-size: 1.15rem; margin-bottom: 6px; }
+.card p { font-size: .88rem; opacity: .75; }
+.card .tag { display: inline-block; font-size: .7rem; font-weight: 700; background: var(--pop); border: 2px solid var(--ink); padding: 0 8px; margin-bottom: 10px; }
+.visit { background: var(--soft); border-top: 3px solid var(--ink); }
+.map { border: 3px solid var(--ink); box-shadow: 6px 6px 0 var(--ink); }
+footer { background: var(--ink); color: var(--bg); opacity: 1; }
+@media (max-width: 760px) {
+  .hero .wrap, .about .wrap { grid-template-columns: 1fr; }
+  .badge { width: 92px; height: 92px; font-size: 1.4rem; }
+}
+
+</style>
+</head>
+<body data-lang="ja">
+<div class="proposal"><span class="ja">※ こちらはご提案用のサンプルページです（非公開・検索エンジン非表示）</span><span class="en">Proposal preview: not an official site, hidden from search engines</span></div>
+<header><div class="wrap nav">
+  <a class="logo" href="#">ONE FIFTH CAFE</a>
+  <ul>
+    <li><a href="#about"><span class="ja">お店について</span><span class="en">About</span></a></li>
+    <li><a href="#menu"><span class="ja">メニュー</span><span class="en">Menu</span></a></li>
+    <li><a href="#info"><span class="ja">アクセス</span><span class="en">Visit</span></a></li>
+  </ul>
+  <button class="lang" id="langBtn" aria-label="Switch language">EN</button>
+</div></header>
+<main>
+<div class="hero"><div class="wrap">
+  <div>
+    <span class="eyebrow">KASUKABE · OPEN 7 AM</span>
+    <h1><span class="ja" style="--n:8"><span class="l">朝7時から、</span><br><span class="l">厚切りトースト。</span></span><span class="en">Thick toast,<br>from 7 AM.</span></h1>
+    <p><span class="ja">出勤前やお出かけ前に、厚切りトーストのモーニング。ランチは自家製スパイスキーマカレーや、日替わりの和食膳をどうぞ。</span><span class="en">Start your day with thick-cut toast. For lunch, try our homemade spiced keema curry or the Japanese set meal.</span></p>
+    <div class="btns"><a class="btn" href="#menu"><span class="ja">メニューを見る</span><span class="en">See the menu</span></a><a class="btn ghost" href="#info"><span class="ja">アクセス</span><span class="en">Visit</span></a></div>
+  </div>
+  <div class="visual"><svg class="art" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M52 170V96c-18-4-22-36 0-46 14-8 34-8 48-6 14-2 34-2 48 6 22 10 18 42 0 46v74z"/><rect x="78" y="108" width="44" height="30" rx="4"/></svg><div class="badge"><div>★4.7<small>GOOGLE</small></div></div></div>
+</div></div>
+<div class="ticker" aria-hidden="true"><div><span><span class="ja">モーニングトースト</span><span class="en">Morning toast</span></span><span><span class="ja">自家製スパイスキーマカレー</span><span class="en">Homemade spiced keema curry</span></span><span><span class="ja">和食膳</span><span class="en">Japanese set meal</span></span><span><span class="ja">コーヒーバスクチーズケーキ</span><span class="en">Coffee Basque cheesecake</span></span><span><span class="ja">アイスコーヒー</span><span class="en">Iced coffee</span></span><span><span class="ja">モーニングトースト</span><span class="en">Morning toast</span></span><span><span class="ja">自家製スパイスキーマカレー</span><span class="en">Homemade spiced keema curry</span></span><span><span class="ja">和食膳</span><span class="en">Japanese set meal</span></span><span><span class="ja">コーヒーバスクチーズケーキ</span><span class="en">Coffee Basque cheesecake</span></span><span><span class="ja">アイスコーヒー</span><span class="en">Iced coffee</span></span></div></div>
+<section id="about" class="about"><div class="wrap">
+  <h2><span class="ja">お店について</span><span class="en">About us</span></h2>
+  <div><p class="big"><span class="ja">朝も昼も、気軽に立ち寄れる街のカフェ</span><span class="en">A neighborhood café for breakfast and lunch</span></p><p><span class="ja">サラダ付きのお手頃なランチに、自家製スイーツも。気さくな店主とのおしゃべりも楽しみのひとつです。</span><span class="en">Reasonably priced lunches with salad, plus homemade sweets, and a friendly owner who&#x27;s always up for a chat.</span></p></div>
+</div></section>
+<section id="menu"><div class="wrap">
+  <h2><span class="ja">メニュー</span><span class="en">Menu</span></h2>
+  <div class="grid"><div class="card"><span class="tag">No.1</span><h3><span class="ja">モーニングトースト</span><span class="en">Morning toast</span></h3><p><span class="ja">厚切りが自慢</span><span class="en">Thick-cut and proud of it</span></p></div><div class="card"><span class="tag">No.2</span><h3><span class="ja">自家製スパイスキーマカレー</span><span class="en">Homemade spiced keema curry</span></h3><p><span class="ja">人気のランチ</span><span class="en">A popular lunch</span></p></div><div class="card"><span class="tag">No.3</span><h3><span class="ja">和食膳</span><span class="en">Japanese set meal</span></h3><p><span class="ja">主菜と小鉢の内容は日替わり</span><span class="en">Main and sides change regularly</span></p></div><div class="card"><span class="tag">No.4</span><h3><span class="ja">コーヒーバスクチーズケーキ</span><span class="en">Coffee Basque cheesecake</span></h3><p><span class="ja">自家製スイーツ</span><span class="en">Homemade</span></p></div><div class="card"><span class="tag">No.5</span><h3><span class="ja">アイスコーヒー</span><span class="en">Iced coffee</span></h3><p><span class="ja">すっきりとした味わい</span><span class="en">Smooth and refreshing</span></p></div></div>
+  <p class="note"><span class="ja">※ 価格・内容は正式公開時にお店の情報に合わせて掲載します。</span><span class="en">Prices and items will be confirmed with the shop before launch.</span></p>
+</div></section>
+<section id="info" class="visit"><div class="wrap">
+  <h2><span class="ja">営業時間・アクセス</span><span class="en">Hours &amp; access</span></h2>
+  <div class="info"><dl><dt><span class="ja">住所</span><span class="en">Address</span></dt><dd><span class="ja">〒344-0067 埼玉県春日部市中央1-18-13 滝ビル1F</span><span class="en">Taki Bldg. 1F, 1-18-13 Chuo, Kasukabe, Saitama 344-0067</span></dd><dt><span class="ja">営業時間</span><span class="en">Hours</span></dt><dd><span class="ja">7:00〜（詳細・定休日はお店に確認して掲載）</span><span class="en">From 7 AM (full hours to be confirmed)</span></dd><dt><span class="ja">電話</span><span class="en">Phone</span></dt><dd><a href="tel:08090425434">080-9042-5434</a></dd><dt><span class="ja">Instagram</span><span class="en">Instagram</span></dt><dd><a href="https://www.instagram.com/one_fifth_cafe/" target="_blank" rel="noopener">@one_fifth_cafe</a></dd><dt><span class="ja">ポイント</span><span class="en">Good to know</span></dt><dd><span class="ja">土日の和食膳はご予約可</span><span class="en">Weekend set meals can be reserved</span></dd></dl><div class="map"><iframe loading="lazy" title="Map" src="https://www.google.com/maps?q=ONE%20FIFTH%20CAFE%20%E6%98%A5%E6%97%A5%E9%83%A8%E5%B8%82%E4%B8%AD%E5%A4%AE1-18-13&output=embed"></iframe></div></div>
+</div></section></main>
+<footer>© ONE FIFTH CAFE</footer>
+<script>
+  const btn = document.getElementById('langBtn');
+  btn.addEventListener('click', () => {
+    const l = document.body.dataset.lang === 'ja' ? 'en' : 'ja';
+    document.body.dataset.lang = l;
+    document.documentElement.lang = l;
+    btn.textContent = l === 'ja' ? 'EN' : '日本語';
+  });
+</script>
+</body>
+</html>

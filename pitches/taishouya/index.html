@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>大正屋 Boulangerie | 越谷市増林</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500;1,600&family=Shippori+Mincho:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root { --bg: #1b1f2e; --ink: #f1e9da; --accent: #d4a857; --soft: #22273a; --pop: #22273a; }
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: var(--bg); color: var(--ink); line-height: 1.85; -webkit-font-smoothing: antialiased; }
+a { color: inherit; }
+img, svg { display: block; }
+.wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+.proposal { background: #fff4c2; color: #5a4a00; font: 500 .78rem/1.5 system-ui, sans-serif; text-align: center; padding: 7px 16px; }
+header { position: sticky; top: 0; z-index: 20; background: color-mix(in srgb, var(--bg) 90%, transparent); backdrop-filter: blur(10px); }
+.nav { display: flex; align-items: center; justify-content: space-between; height: 64px; gap: 12px; }
+.logo { text-decoration: none; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.nav ul { display: flex; gap: 26px; list-style: none; font-size: .88rem; }
+.nav ul a { text-decoration: none; opacity: .7; }
+.nav ul a:hover { opacity: 1; color: var(--accent); }
+.lang { border: 1.5px solid currentColor; background: transparent; color: var(--ink); border-radius: 999px; padding: 3px 13px; font: inherit; font-size: .78rem; cursor: pointer; flex: none; }
+.btn { display: inline-block; text-decoration: none; font-weight: 500; padding: 13px 30px; border-radius: 999px; background: var(--accent); color: var(--bg); transition: transform .15s; }
+.btn:hover { transform: translateY(-2px); }
+.btn.ghost { background: transparent; color: var(--accent); box-shadow: inset 0 0 0 1.5px var(--accent); }
+.btns { display: flex; gap: 12px; flex-wrap: wrap; }
+section { padding: 88px 0; }
+.note { opacity: .65; font-size: .8rem; margin-top: 28px; }
+.info { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
+.info dl { display: grid; grid-template-columns: 104px 1fr; gap: 12px 18px; }
+.info dt { opacity: .6; font-size: .88rem; }
+.map { overflow: hidden; min-height: 300px; }
+.map iframe { width: 100%; min-height: 300px; height: 100%; border: 0; }
+footer { padding: 32px 0; font-size: .8rem; text-align: center; opacity: .7; }
+[data-lang="en"] .ja, [data-lang="ja"] .en { display: none !important; }
+.l { white-space: nowrap; }
+@media (max-width: 760px) {
+  h1 .ja { font-size: min(1em, calc((100vw - 44px) / (var(--n) * 1.16))) !important; }
+  .nav ul { display: none; }
+  .info { grid-template-columns: 1fr; }
+  section { padding: 64px 0; }
+}
+
+
+body { font-family: "Shippori Mincho", serif; }
+.logo, h1 .en, h2 .en, .eyebrow, .script { font-family: "Cormorant Garamond", serif; }
+.logo { font-style: italic; font-weight: 600; font-size: 1.45rem; color: var(--accent); }
+header { border-bottom: 1px solid color-mix(in srgb, var(--accent) 35%, transparent); }
+.hero { position: relative; text-align: center; padding: 80px 0 100px; }
+.frame { position: absolute; inset: 24px; border: 1px solid color-mix(in srgb, var(--accent) 40%, transparent); pointer-events: none; }
+.frame::after { content: ""; position: absolute; inset: 8px; border: 1px solid color-mix(in srgb, var(--accent) 20%, transparent); }
+.hero .art { width: 170px; color: var(--accent); margin: 0 auto 30px; animation: spin 14s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .hero .art { animation: none; } }
+.eyebrow { font-style: italic; color: var(--accent); letter-spacing: .3em; font-size: .95rem; }
+.hero h1 { font-weight: 600; font-size: clamp(2rem, 5.4vw, 3.4rem); line-height: 1.5; margin: 14px 0 20px; }
+.hero h1 .en { font-style: italic; font-weight: 500; line-height: 1.2; }
+.hero p { max-width: 520px; margin: 0 auto 26px; opacity: .75; }
+.rating { font-size: .88rem; opacity: .8; margin-bottom: 30px; }
+.rating b { color: var(--accent); }
+.btns { justify-content: center; }
+.btn { border-radius: 0; background: var(--accent); color: var(--bg); letter-spacing: .1em; }
+.btn.ghost { color: var(--accent); }
+h2 { text-align: center; font-weight: 600; font-size: 1.9rem; margin-bottom: 8px; }
+h2 .en { font-style: italic; font-weight: 500; font-size: 2.3rem; }
+.orn { text-align: center; color: var(--accent); letter-spacing: .6em; margin-bottom: 44px; font-size: .8rem; }
+.about { background: var(--soft); }
+.about .wrap { max-width: 720px; text-align: center; }
+.script { font-style: italic; font-size: 1.6rem; color: var(--accent); margin-bottom: 18px; line-height: 1.4; }
+.about p { opacity: .82; }
+.wine { max-width: 720px; margin: 0 auto; }
+.wine .row { padding: 18px 0; }
+.wine .top { display: flex; align-items: baseline; gap: 12px; }
+.wine h3 { font-weight: 600; font-size: 1.1rem; white-space: nowrap; }
+.wine .lead { flex: 1; border-bottom: 1px dotted color-mix(in srgb, var(--accent) 60%, transparent); transform: translateY(-5px); }
+.wine .no { font-family: "Cormorant Garamond", serif; font-style: italic; color: var(--accent); }
+.wine p { opacity: .6; font-size: .88rem; }
+.note { text-align: center; }
+.visit { background: var(--soft); }
+.map { border: 1px solid color-mix(in srgb, var(--accent) 40%, transparent); padding: 8px; }
+.map iframe { filter: grayscale(.6) contrast(1.05); }
+footer { border-top: 1px solid color-mix(in srgb, var(--accent) 30%, transparent); }
+@media (max-width: 760px) { .frame { inset: 10px; } .wine h3 { white-space: normal; } }
+
+</style>
+</head>
+<body data-lang="ja">
+<div class="proposal"><span class="ja">※ こちらはご提案用のサンプルページです（非公開・検索エンジン非表示）</span><span class="en">Proposal preview: not an official site, hidden from search engines</span></div>
+<header><div class="wrap nav">
+  <a class="logo" href="#">大正屋 Boulangerie</a>
+  <ul>
+    <li><a href="#about"><span class="ja">お店について</span><span class="en">About</span></a></li>
+    <li><a href="#menu"><span class="ja">パン</span><span class="en">Breads</span></a></li>
+    <li><a href="#info"><span class="ja">アクセス</span><span class="en">Visit</span></a></li>
+  </ul>
+  <button class="lang" id="langBtn" aria-label="Switch language">EN</button>
+</div></header>
+<main>
+<div class="hero"><span class="frame"></span><div class="wrap">
+  <svg class="art" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M30 130c0-44 32-70 70-70s70 26 70 70v12H30z"/><path d="M70 82l-10 26M100 74v30M130 82l10 26"/><path d="M20 152h160"/></svg>
+  <div class="eyebrow">Boulangerie · Koshigaya</div>
+  <h1><span class="ja" style="--n:8"><span class="l">行列の先に、</span><br><span class="l">焼きたての幸せ。</span></span><span class="en">Worth the line:<br>bread, fresh from the oven.</span></h1>
+  <p><span class="ja">名物のカレーパンに、デニッシュ、バゲット、クロワッサン。ひとつひとつ手作りのパンが並ぶ、越谷のベーカリーです。</span><span class="en">Our famous curry bread, Danish pastries, baguettes and croissants, each one made by hand, at a bakery in Koshigaya.</span></p>
+  <div class="rating"><b>★ 4.2</b> <span class="ja">Googleクチコミ 360件以上</span><span class="en">360+ Google reviews</span></div>
+  <div class="btns"><a class="btn" href="#menu"><span class="ja">パンを見る</span><span class="en">See the breads</span></a><a class="btn ghost" href="#info"><span class="ja">アクセス</span><span class="en">Visit</span></a></div>
+</div></div>
+<section id="about" class="about"><div class="wrap">
+  <h2><span class="ja">お店について</span><span class="en">About</span></h2><p class="orn">✦ ✦ ✦</p>
+  <p class="script"><span class="ja">「毎日でも食べたい」と言われるパンを</span><span class="en">Bread people say they could eat every day</span></p>
+  <p><span class="ja">外はサクッと、中はたっぷり。揚げたてのカレーパンは、カレーパンが苦手だった方にも好評です。海外からのお客様にも愛されています。</span><span class="en">Crisp outside, generously filled inside. Even people who never liked curry bread become fans, and visitors from abroad love it too.</span></p>
+</div></section>
+<section id="menu"><div class="wrap">
+  <h2><span class="ja">パン</span><span class="en">Breads</span></h2><p class="orn">✦ ✦ ✦</p>
+  <div class="wine"><div class="row"><div class="top"><h3><span class="ja">カレーパン</span><span class="en">Curry bread</span></h3><span class="lead"></span><span class="no">No.1</span></div><p><span class="ja">揚げたてが格別の看板商品</span><span class="en">Our signature, best fresh from the fryer</span></p></div><div class="row"><div class="top"><h3><span class="ja">デニッシュ</span><span class="en">Danish pastries</span></h3><span class="lead"></span><span class="no">No.2</span></div><p><span class="ja">種類豊富</span><span class="en">Lots to choose from</span></p></div><div class="row"><div class="top"><h3><span class="ja">バゲット</span><span class="en">Baguette</span></h3><span class="lead"></span><span class="no">No.3</span></div><p><span class="ja">食事のお供に</span><span class="en">For your table</span></p></div><div class="row"><div class="top"><h3><span class="ja">クロワッサン</span><span class="en">Croissant</span></h3><span class="lead"></span><span class="no">No.4</span></div><p><span class="ja">バターの香り</span><span class="en">Rich and buttery</span></p></div><div class="row"><div class="top"><h3><span class="ja">アップルパイ</span><span class="en">Apple pie</span></h3><span class="lead"></span><span class="no">No.5</span></div><p><span class="ja">人気の一品</span><span class="en">A popular favorite</span></p></div><div class="row"><div class="top"><h3><span class="ja">メロンパン</span><span class="en">Melon pan</span></h3><span class="lead"></span><span class="no">No.6</span></div><p><span class="ja">定番の人気パン</span><span class="en">A classic favorite</span></p></div></div>
+  <p class="note"><span class="ja">※ 価格・内容は正式公開時にお店の情報に合わせて掲載します。</span><span class="en">Prices and items will be confirmed with the shop before launch.</span></p>
+</div></section>
+<section id="info" class="visit"><div class="wrap">
+  <h2><span class="ja">営業時間・アクセス</span><span class="en">Hours &amp; Access</span></h2><p class="orn">✦ ✦ ✦</p>
+  <div class="info"><dl><dt><span class="ja">住所</span><span class="en">Address</span></dt><dd><span class="ja">〒343-0011 埼玉県越谷市増林5892-1</span><span class="en">5892-1 Mashibayashi, Koshigaya, Saitama 343-0011</span></dd><dt><span class="ja">営業時間</span><span class="en">Hours</span></dt><dd><span class="ja">8:00〜（詳細・定休日はお店に確認して掲載）</span><span class="en">From 8 AM (full hours to be confirmed)</span></dd><dt><span class="ja">電話</span><span class="en">Phone</span></dt><dd><a href="tel:0489726974">048-972-6974</a></dd><dt><span class="ja">Instagram</span><span class="en">Instagram</span></dt><dd><a href="https://www.instagram.com/taishouyaboulangerie/" target="_blank" rel="noopener">@taishouyaboulangerie</a></dd><dt><span class="ja">ポイント</span><span class="en">Good to know</span></dt><dd><span class="ja">テイクアウト中心</span><span class="en">Mostly takeaway</span></dd></dl><div class="map"><iframe loading="lazy" title="Map" src="https://www.google.com/maps?q=%E5%A4%A7%E6%AD%A3%E5%B1%8BBoulangerie%20%E8%B6%8A%E8%B0%B7%E5%B8%82%E5%A2%97%E6%9E%975892-1&output=embed"></iframe></div></div>
+</div></section></main>
+<footer>© 大正屋 Boulangerie</footer>
+<script>
+  const btn = document.getElementById('langBtn');
+  btn.addEventListener('click', () => {
+    const l = document.body.dataset.lang === 'ja' ? 'en' : 'ja';
+    document.body.dataset.lang = l;
+    document.documentElement.lang = l;
+    btn.textContent = l === 'ja' ? 'EN' : '日本語';
+  });
+</script>
+</body>
+</html>

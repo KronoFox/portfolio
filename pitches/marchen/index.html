@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Märchen メルヘン | 吉川市吉川</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;800&display=swap" rel="stylesheet">
+<style>
+:root { --bg: #fff9f2; --ink: #3d2a22; --accent: #c4503a; --soft: #fde3d3; --pop: #f6d27a; }
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: var(--bg); color: var(--ink); line-height: 1.85; -webkit-font-smoothing: antialiased; }
+a { color: inherit; }
+img, svg { display: block; }
+.wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+.proposal { background: #fff4c2; color: #5a4a00; font: 500 .78rem/1.5 system-ui, sans-serif; text-align: center; padding: 7px 16px; }
+header { position: sticky; top: 0; z-index: 20; background: color-mix(in srgb, var(--bg) 90%, transparent); backdrop-filter: blur(10px); }
+.nav { display: flex; align-items: center; justify-content: space-between; height: 64px; gap: 12px; }
+.logo { text-decoration: none; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.nav ul { display: flex; gap: 26px; list-style: none; font-size: .88rem; }
+.nav ul a { text-decoration: none; opacity: .7; }
+.nav ul a:hover { opacity: 1; color: var(--accent); }
+.lang { border: 1.5px solid currentColor; background: transparent; color: var(--ink); border-radius: 999px; padding: 3px 13px; font: inherit; font-size: .78rem; cursor: pointer; flex: none; }
+.btn { display: inline-block; text-decoration: none; font-weight: 500; padding: 13px 30px; border-radius: 999px; background: var(--accent); color: var(--bg); transition: transform .15s; }
+.btn:hover { transform: translateY(-2px); }
+.btn.ghost { background: transparent; color: var(--accent); box-shadow: inset 0 0 0 1.5px var(--accent); }
+.btns { display: flex; gap: 12px; flex-wrap: wrap; }
+section { padding: 88px 0; }
+.note { opacity: .65; font-size: .8rem; margin-top: 28px; }
+.info { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
+.info dl { display: grid; grid-template-columns: 104px 1fr; gap: 12px 18px; }
+.info dt { opacity: .6; font-size: .88rem; }
+.map { overflow: hidden; min-height: 300px; }
+.map iframe { width: 100%; min-height: 300px; height: 100%; border: 0; }
+footer { padding: 32px 0; font-size: .8rem; text-align: center; opacity: .7; }
+[data-lang="en"] .ja, [data-lang="ja"] .en { display: none !important; }
+.l { white-space: nowrap; }
+@media (max-width: 760px) {
+  h1 .ja { font-size: min(1em, calc((100vw - 44px) / (var(--n) * 1.16))) !important; }
+  .nav ul { display: none; }
+  .info { grid-template-columns: 1fr; }
+  section { padding: 64px 0; }
+}
+
+
+body { font-family: "M PLUS Rounded 1c", sans-serif; }
+.logo, h1, h2 { font-weight: 800; }
+.logo { font-size: 1.2rem; color: var(--accent); }
+.hero { position: relative; overflow: hidden; background: linear-gradient(170deg, var(--soft), var(--bg) 75%); text-align: center; padding: 88px 0 150px; }
+.blob { position: absolute; border-radius: 42% 58% 60% 40% / 45% 40% 60% 55%; opacity: .5; filter: blur(2px); }
+.blob.a { width: 340px; height: 340px; background: var(--pop); top: -80px; left: -90px; }
+.blob.b { width: 260px; height: 260px; background: var(--accent); opacity: .22; bottom: 40px; right: -60px; border-radius: 60% 40% 45% 55% / 50% 60% 40% 50%; }
+.hero .wrap { position: relative; }
+.hero .art-wrap { width: 128px; height: 128px; margin: 0 auto 18px; border-radius: 50%; background: var(--bg); color: var(--accent); display: grid; place-items: center; box-shadow: 0 12px 30px color-mix(in srgb, var(--accent) 25%, transparent); }
+.hero .art { width: 70%; }
+.eyebrow { color: var(--accent); font-weight: 800; letter-spacing: .25em; font-size: .78rem; }
+.hero h1 { font-size: clamp(2.2rem, 6vw, 3.8rem); line-height: 1.3; margin: 10px 0 18px; }
+.hero p { max-width: 540px; margin: 0 auto 22px; opacity: .8; }
+.rating { display: inline-block; background: var(--bg); border-radius: 999px; padding: 6px 18px; font-size: .88rem; margin-bottom: 26px; box-shadow: 0 4px 14px rgba(0,0,0,.06); }
+.rating b { color: var(--accent); }
+.btns { justify-content: center; }
+.btn { box-shadow: 0 8px 20px color-mix(in srgb, var(--accent) 35%, transparent); }
+.wave { position: absolute; left: 0; right: 0; bottom: -1px; width: 100%; height: 90px; color: var(--bg); }
+h2 { font-size: clamp(1.7rem, 4vw, 2.3rem); text-align: center; margin-bottom: 12px; }
+.sub { text-align: center; opacity: .65; margin-bottom: 40px; }
+.about .wrap { max-width: 760px; text-align: center; }
+.about .lead { font-weight: 800; font-size: 1.2rem; color: var(--accent); margin-bottom: 12px; }
+.pills { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; }
+.pill { background: var(--bg); border-radius: 26px; padding: 22px 24px; display: flex; gap: 16px; align-items: center; box-shadow: 0 6px 24px rgba(0,0,0,.07); }
+.dot { flex: none; width: 46px; height: 46px; border-radius: 50%; background: var(--soft); color: var(--accent); display: grid; place-items: center; font-weight: 800; }
+.pill h3 { font-size: 1rem; font-weight: 800; }
+.pill p { font-size: .85rem; opacity: .7; }
+#menu { background: color-mix(in srgb, var(--soft) 55%, var(--bg)); border-radius: 48px 48px 0 0; }
+.visit .map { border-radius: 28px; }
+.visit dl { background: color-mix(in srgb, var(--soft) 55%, var(--bg)); border-radius: 28px; padding: 28px; }
+
+</style>
+</head>
+<body data-lang="ja">
+<div class="proposal"><span class="ja">※ こちらはご提案用のサンプルページです（非公開・検索エンジン非表示）</span><span class="en">Proposal preview: not an official site, hidden from search engines</span></div>
+<header><div class="wrap nav">
+  <a class="logo" href="#">Märchen メルヘン</a>
+  <ul>
+    <li><a href="#about"><span class="ja">お店について</span><span class="en">About</span></a></li>
+    <li><a href="#menu"><span class="ja">パン</span><span class="en">Breads</span></a></li>
+    <li><a href="#info"><span class="ja">アクセス</span><span class="en">Visit</span></a></li>
+  </ul>
+  <button class="lang" id="langBtn" aria-label="Switch language">EN</button>
+</div></header>
+<main>
+<div class="hero"><span class="blob a"></span><span class="blob b"></span><div class="wrap">
+  <div class="art-wrap"><svg class="art" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M30 130c0-44 32-70 70-70s70 26 70 70v12H30z"/><path d="M70 82l-10 26M100 74v30M130 82l10 26"/><path d="M20 152h160"/></svg></div>
+  <div class="eyebrow">YOSHIKAWA&#x27;S HOMETOWN BAKERY</div>
+  <h1><span class="ja" style="--n:10"><span class="l">吉川で愛され続ける、</span><br><span class="l">まちのパン屋さん。</span></span><span class="en">Yoshikawa&#x27;s much-loved<br>neighborhood bakery.</span></h1>
+  <p><span class="ja">朝7時からオープン。人気のカレーパンにコッペパン、サンドイッチ、デニッシュまで、毎日迷ってしまう品揃えです。</span><span class="en">Open from 7 AM. Curry bread, koppe-pan rolls, sandwiches and Danish pastries: a selection that makes choosing hard.</span></p>
+  <div class="rating"><b>★ 4.0</b> <span class="ja">Googleクチコミ 200件以上</span><span class="en">200+ Google reviews</span></div>
+  <div class="btns"><a class="btn" href="#menu"><span class="ja">パンを見る</span><span class="en">See the breads</span></a><a class="btn ghost" href="#info"><span class="ja">アクセス</span><span class="en">Visit</span></a></div>
+</div><svg class="wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path fill="currentColor" d="M0 50c180-40 360-40 540 0s360 40 540 0 270-30 360-20v60H0z"/></svg></div>
+<section id="about" class="about"><div class="wrap">
+  <h2><span class="ja">お店について</span><span class="en">About us</span></h2>
+  <p class="lead"><span class="ja">子どもから大人まで、みんなのパン屋</span><span class="en">A bakery for all ages</span></p>
+  <p><span class="ja">吉川に根ざした老舗のベーカリーです。おかずパンから甘いパンまで、毎日の食卓とおやつに。</span><span class="en">A long-established bakery rooted in Yoshikawa, with savory and sweet breads for every meal and snack.</span></p>
+</div></section>
+<section id="menu"><div class="wrap">
+  <h2><span class="ja">パン</span><span class="en">Breads</span></h2>
+  <p class="sub"><span class="ja">人気のメニュー</span><span class="en">Customer favorites</span></p>
+  <div class="pills"><div class="pill"><span class="dot">1</span><div><h3><span class="ja">カレーパン</span><span class="en">Curry bread</span></h3><p><span class="ja">人気の定番</span><span class="en">A popular classic</span></p></div></div><div class="pill"><span class="dot">2</span><div><h3><span class="ja">コッペパン</span><span class="en">Koppe-pan rolls</span></h3><p><span class="ja">いろいろな具材で</span><span class="en">With all kinds of fillings</span></p></div></div><div class="pill"><span class="dot">3</span><div><h3><span class="ja">サンドイッチ</span><span class="en">Sandwiches</span></h3><p><span class="ja">ランチにも</span><span class="en">Great for lunch</span></p></div></div><div class="pill"><span class="dot">4</span><div><h3><span class="ja">デニッシュ</span><span class="en">Danish pastries</span></h3><p><span class="ja">種類豊富</span><span class="en">Lots to choose from</span></p></div></div><div class="pill"><span class="dot">5</span><div><h3><span class="ja">菓子パン</span><span class="en">Sweet breads</span></h3><p><span class="ja">おやつにぴったり</span><span class="en">Perfect for a snack</span></p></div></div></div>
+  <p class="note"><span class="ja">※ 価格・内容は正式公開時にお店の情報に合わせて掲載します。</span><span class="en">Prices and items will be confirmed with the shop before launch.</span></p>
+</div></section>
+<section id="info" class="visit"><div class="wrap">
+  <h2><span class="ja">営業時間・アクセス</span><span class="en">Hours &amp; access</span></h2>
+  <p class="sub"><span class="ja">定休日：水曜日（要確認）</span><span class="en">Closed Wednesdays (to be confirmed)</span></p>
+  <div class="info"><dl><dt><span class="ja">住所</span><span class="en">Address</span></dt><dd><span class="ja">〒342-0055 埼玉県吉川市吉川1-10-7</span><span class="en">1-10-7 Yoshikawa, Yoshikawa, Saitama 342-0055</span></dd><dt><span class="ja">営業時間</span><span class="en">Hours</span></dt><dd><span class="ja">7:00〜（詳細はお店に確認して掲載）</span><span class="en">From 7 AM (full hours to be confirmed)</span></dd><dt><span class="ja">電話</span><span class="en">Phone</span></dt><dd><a href="tel:0489832790">048-983-2790</a></dd><dt><span class="ja">Instagram</span><span class="en">Instagram</span></dt><dd><a href="https://www.instagram.com/marchen_86/" target="_blank" rel="noopener">@marchen_86</a></dd><dt><span class="ja">ポイント</span><span class="en">Good to know</span></dt><dd><span class="ja">定休日：水曜日（要確認）</span><span class="en">Closed Wednesdays (to be confirmed)</span></dd></dl><div class="map"><iframe loading="lazy" title="Map" src="https://www.google.com/maps?q=M%C3%A4rchen%20%E3%83%91%E3%83%B3%20%E5%90%89%E5%B7%9D%E5%B8%82%E5%90%89%E5%B7%9D1-10-7&output=embed"></iframe></div></div>
+</div></section></main>
+<footer>© Märchen メルヘン</footer>
+<script>
+  const btn = document.getElementById('langBtn');
+  btn.addEventListener('click', () => {
+    const l = document.body.dataset.lang === 'ja' ? 'en' : 'ja';
+    document.body.dataset.lang = l;
+    document.documentElement.lang = l;
+    btn.textContent = l === 'ja' ? 'EN' : '日本語';
+  });
+</script>
+</body>
+</html>
