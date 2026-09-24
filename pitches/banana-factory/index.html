@@ -142,13 +142,33 @@ footer .display { font-size: 1.4rem; }
 </style>
 </head>
 <body data-lang="ja">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="peelGrad" gradientUnits="userSpaceOnUse" x1="-10" y1="0" x2="205" y2="140">
+      <stop offset="0" stop-color="#8fb935"/><stop offset=".18" stop-color="#e6d23a"/>
+      <stop offset=".35" stop-color="#ffd83b"/><stop offset=".85" stop-color="#ffcc26"/><stop offset="1" stop-color="#e9ad16"/>
+    </linearGradient>
+    <linearGradient id="shade" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="160">
+      <stop offset="0" stop-color="#fff5b8" stop-opacity=".0"/><stop offset="1" stop-color="#c98b00" stop-opacity=".35"/>
+    </linearGradient>
+    <g id="banG">
+      <path d="M-15 10 L-25 -30 Q-14 -38 -4 -32 L2 2 Z" fill="#7a8f2c" stroke="#3a2413" stroke-width="4" stroke-linejoin="round"/>
+      <path d="M-24 -30 Q-14 -36 -5 -31" fill="none" stroke="#4a3318" stroke-width="5" stroke-linecap="round"/>
+      <path d="M0 0 C30 90 110 148 198 138 C206 137 211 144 206 150 C112 172 14 116 -15 10 C-12 4 -6 0 0 0 Z" fill="url(#peelGrad)" stroke="#3a2413" stroke-width="4" stroke-linejoin="round"/>
+      <path d="M0 0 C30 90 110 148 198 138 C206 137 211 144 206 150 C112 172 14 116 -15 10 C-12 4 -6 0 0 0 Z" fill="url(#shade)"/>
+      <path d="M-6 8 C20 96 104 150 200 144" fill="none" stroke="#c98b00" stroke-width="3" stroke-linecap="round" opacity=".7"/>
+      <path d="M4 10 C30 80 90 124 160 130" fill="none" stroke="#fff6c4" stroke-width="5" stroke-linecap="round" opacity=".7"/>
+      <path d="M200 139 C206 138 211 144 206 150 C203 151 200 150 198 147 Z" fill="#4a3318"/>
+    </g>
+  </defs>
+</svg>
 
 <div class="proposal"><span class="ja">※ ご提案用のサンプル（モックアップ）です・検索エンジン非表示</span><span class="en">Proposal mockup · hidden from search engines</span></div>
 
 <header>
   <div class="wrap nav">
     <a class="brand" href="#">
-      <span class="sticker"><svg viewBox="0 0 60 40" aria-hidden="true"><path d="M6 10c6 22 30 30 50 18-14 2-34-2-44-20z" fill="#ffd43b" stroke="#3a2413" stroke-width="3" stroke-linejoin="round"/><path d="M6 10l-2-6 5 1" fill="none" stroke="#3a2413" stroke-width="3" stroke-linecap="round"/></svg></span>
+      <span class="sticker"><svg viewBox="-30 -42 245 200" aria-hidden="true"><use href="#banG"/></svg></span>
       <span><b>BANANA FACTORY</b><small>MUKOJIMA · TOKYO</small></span>
     </a>
     <ul>
@@ -175,15 +195,14 @@ footer .display { font-size: 1.4rem; }
         </div>
       </div>
       <div class="bunch-wrap">
-        <svg class="bunch" viewBox="0 0 300 300" aria-hidden="true">
-          <g stroke="#3a2413" stroke-width="6" stroke-linejoin="round" stroke-linecap="round">
-            <path d="M150 40c-4-14 2-26 14-30l6 14c-8 4-10 10-8 18z" fill="#3d7a2e"/>
-            <path d="M156 52C90 60 40 120 48 206c4 22 26 30 36 12 6-60 30-120 78-150z" fill="#ffd43b"/>
-            <path d="M160 52c-30 50-40 130-8 200 10 20 34 16 34-6-20-60-16-130-12-190z" fill="#ffe272"/>
-            <path d="M166 50c34 30 70 90 64 176-2 22 22 30 34 10 14-80-20-160-86-190z" fill="#ffd43b"/>
-            <path d="M48 206c-2 10 2 18 10 18M152 252c2 10 12 14 20 10M230 226c0 10 8 16 16 12" fill="none"/>
-          </g>
-          <g fill="#3a2413" opacity=".22"><circle cx="96" cy="150" r="4"/><circle cx="84" cy="176" r="3"/><circle cx="170" cy="170" r="4"/><circle cx="214" cy="140" r="3"/><circle cx="224" cy="178" r="4"/></g>
+        <svg class="bunch" viewBox="0 0 320 320" aria-hidden="true">
+          <path d="M150 64 C148 40 156 22 170 10" fill="none" stroke="#3a2413" stroke-width="22" stroke-linecap="round"/>
+          <path d="M150 64 C148 40 156 22 170 10" fill="none" stroke="#6f8a2a" stroke-width="14" stroke-linecap="round"/>
+          <ellipse cx="171" cy="9" rx="9" ry="6" fill="#4a3318" stroke="#3a2413" stroke-width="3"/>
+          <use href="#banG" transform="translate(150 70) rotate(52) scale(.92)"/>
+          <use href="#banG" transform="translate(150 70) rotate(24) scale(1)"/>
+          <use href="#banG" transform="translate(146 72) rotate(-4) scale(.96)"/>
+          <ellipse cx="150" cy="66" rx="20" ry="13" fill="#6f8a2a" stroke="#3a2413" stroke-width="4"/>
         </svg>
         <div class="review-badge"><div><b>★4.4</b><small><span class="ja">クチコミ660件以上</span><span class="en">660+ reviews</span></small></div></div>
       </div>
