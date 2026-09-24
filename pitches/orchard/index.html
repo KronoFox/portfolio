@@ -58,7 +58,7 @@ section { padding: 90px 0; }
 .tabs { display: flex; flex-wrap: wrap; gap: 10px; margin: 26px 0; }
 .tabs button { border: 1px solid var(--uguisu); background: transparent; color: var(--uguisu); padding: 8px 18px; border-radius: 999px; font: 500 .92rem "Zen Kaku Gothic New"; cursor: pointer; }
 .tabs button[aria-pressed="true"] { background: var(--uguisu); color: var(--cream); }
-.result { display: grid; grid-template-columns: 260px 1fr; gap: 34px; align-items: center; background: var(--cream); padding: 30px; }
+.result { display: grid; grid-template-columns: 1fr; gap: 34px; align-items: center; background: var(--cream); padding: 30px; }
 .vase { position: relative; height: 260px; }
 .vase img { position: absolute; width: 58%; bottom: 60px; transition: transform .5s; }
 .vase img:nth-child(1) { left: 6%; transform: rotate(-14deg); } .vase img:nth-child(2) { left: 22%; bottom: 80px; } .vase img:nth-child(3) { left: 38%; transform: rotate(14deg); }
@@ -96,6 +96,7 @@ footer b { font-family: "Italiana"; font-size: 1.5rem; display: block; color: va
   .svc { grid-template-columns: 1fr 1fr; }
   .here { right: -6px; }
 }
+.hphoto{justify-self:center;width:min(400px,84vw);margin:0;background:var(--brick);padding:18px 18px 12px}.hphoto img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block}.hphoto figcaption{font-size:.7rem;text-align:center;margin-top:8px;color:#5d554d}
 </style>
 </head>
 <body data-lang="ja">
@@ -119,14 +120,7 @@ footer b { font-family: "Italiana"; font-size: 1.5rem; display: block; color: va
         <p><span class="ja">街歩きの途中でふと見つかる、珍しい花にも出会える花屋です。ギフトやウェディング、イベントの装花まで、ご相談ください。</span><span class="en">A florist you stumble upon while strolling Kuramae — with flowers you won't see everywhere. Gifts, weddings and event styling, all by consultation.</span></p>
         <div class="btns"><a class="btn" href="#choose"><span class="ja">花をえらぶ</span><span class="en">Choose flowers</span></a><a class="btn ghost" href="#visit"><span class="ja">営業日を見る</span><span class="en">Opening days</span></a></div>
       </div>
-      <div class="bldg" aria-hidden="true">
-        <div class="sign">UGUISU BLDG.</div>
-        <div class="fl three"><span class="lbl">3F</span><div class="win"><img src="tulip.svg" alt=""></div><div class="win"><img src="bouquet.svg" alt=""></div><div class="win"><img src="rose.svg" alt=""></div></div>
-        <div class="fl"><span class="lbl">2F</span><div class="win"></div><div class="win"></div><div class="win"></div></div>
-        <div class="fl"><span class="lbl">1F</span><div class="win"></div><div class="win"></div><div class="win"></div></div>
-        <div class="door"></div>
-        <span class="here">orchard ★4.8</span>
-      </div>
+      <figure class="hphoto"><img src="hero.jpg" alt=""><figcaption><span class="ja">※写真はイメージです（公開時はお店の写真に差し替えます）</span><span class="en">Sample photo — to be replaced with the shop’s own.</span></figcaption></figure>
     </div>
   </div>
 
@@ -135,7 +129,6 @@ footer b { font-family: "Italiana"; font-size: 1.5rem; display: block; color: va
       <div class="ttl"><div class="it">Choose by occasion</div><h2><span class="ja">どんな花を贈りますか？</span><span class="en">What are the flowers for?</span></h2><p><span class="ja">シーンを選ぶと、ご相談のイメージが見られます。</span><span class="en">Pick an occasion to see an idea to start from.</span></p></div>
       <div class="tabs" id="tabs"></div>
       <div class="result">
-        <div class="vase" id="vase"><img alt=""><img alt=""><img alt=""><div class="pot"></div></div>
         <div><h3 id="rTitle"></h3><div class="swatches" id="sw"></div><p id="rText"></p>
           <p class="consult"><span class="ja">→ ご予約・ご相談はInstagramのDMまたはメールで承ります。</span><span class="en">→ Reservations and consultations by Instagram DM or email.</span></p></div>
       </div>
@@ -166,7 +159,7 @@ footer b { font-family: "Italiana"; font-size: 1.5rem; display: block; color: va
     </div>
   </section>
 </main>
-<footer><b>orchard</b>© orchard flower shop · Kuramae<br><small>Flower illustrations: Noto Emoji (Apache 2.0)</small></footer>
+<footer><b>orchard</b>© orchard flower shop · Kuramae<br><small>Flower illustrations: Unsplash (sample images)</small></footer>
 
 <script>
 const $ = (s) => document.querySelector(s);
@@ -189,7 +182,6 @@ function render() {
   $('#rTitle').textContent = (ja ? o.ja + '：' + o.t[0] : o.en + ': ' + o.t[1]);
   $('#rText').textContent = ja ? o.p[0] : o.p[1];
   $('#sw').innerHTML = o.c.map(c => `<i style="background:${c}"></i>`).join('');
-  document.querySelectorAll('#vase img').forEach((im, i) => im.src = o.img[i] + '.svg');
 }
 render();
 

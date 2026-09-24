@@ -83,6 +83,7 @@ footer .dm { font-size: 1.5rem; display: block; }
   .menu { grid-template-columns: 1fr; }
   .roof { border-left-width: 43vw; border-right-width: 43vw; border-bottom-width: 26vw; }
 }
+.hphoto{justify-self:center;width:min(420px,86vw);margin:0}.hphoto img{width:100%;aspect-ratio:1;object-fit:cover;display:block;border-radius:10px;box-shadow:14px 14px 0 var(--butter)}.hphoto figcaption{font-size:.7rem;text-align:center;margin-top:14px;color:var(--muted)}
 </style>
 </head>
 <body data-lang="ja">
@@ -101,15 +102,7 @@ footer .dm { font-size: 1.5rem; display: block; }
         <p><span class="ja">スペシャルティコーヒーに、お野菜たっぷりのサンドイッチ、旬のデザートや焼き菓子。ワンちゃん連れでもどうぞ。</span><span class="en">Specialty coffee, sandwiches packed with vegetables, seasonal desserts and bakes. Dogs welcome too.</span></p>
         <div class="btns"><a class="btn" href="#halves"><span class="ja">ハーフ＆ハーフを作る</span><span class="en">Build a half & half</span></a><a class="btn ghost" href="#visit"><span class="ja">アクセス</span><span class="en">Visit</span></a></div>
       </div>
-      <div class="house">
-        <div class="roof"></div>
-        <div class="body">
-          <a class="win" href="#menu"><img src="coffee.svg" alt=""><span>COFFEE</span></a>
-          <a class="win" href="#halves"><img src="sandwich.svg" alt=""><span>SANDWICH</span></a>
-          <div class="door" aria-hidden="true"></div>
-        </div>
-        <span class="rate">★ 4.3</span>
-      </div>
+      <figure class="hphoto"><img src="hero.jpg" alt=""><figcaption><span class="ja">※写真はイメージです（公開時はお店の写真に差し替えます）</span><span class="en">Sample photo — to be replaced with the shop’s own.</span></figcaption></figure>
     </div>
   </div>
 
@@ -146,7 +139,7 @@ footer .dm { font-size: 1.5rem; display: block; }
       <div>
         <div class="kick">Visit</div>
         <h2 class="h2"><span class="ja">お店への行き方</span><span class="en">Find us</span></h2>
-        <div class="dogbar"><img src="dog.svg" alt=""><p><span class="ja">ワンちゃん連れのお客様もどうぞ。</span><span class="en">Dogs are welcome.</span></p></div>
+        <div class="dogbar"><p><span class="ja">ワンちゃん連れのお客様もどうぞ。</span><span class="en">Dogs are welcome.</span></p></div>
         <dl>
           <dt><span class="ja">住所</span><span class="en">Address</span></dt><dd><span class="ja">〒152-0034 東京都目黒区緑が丘2-4-5</span><span class="en">2-4-5 Midorigaoka, Meguro-ku, Tokyo</span></dd>
           <dt><span class="ja">営業時間</span><span class="en">Hours</span></dt><dd>11:00〜18:00</dd>
@@ -159,7 +152,7 @@ footer .dm { font-size: 1.5rem; display: block; }
     </div>
   </section>
 </main>
-<footer><span class="dm">mamocafe</span>© mamocafe · Midorigaoka<br><small>Illustrations: Noto Emoji (Apache 2.0)</small></footer>
+<footer><span class="dm">mamocafe</span>© mamocafe · Midorigaoka<br><small>Photos: Unsplash (sample images)</small></footer>
 <script>
 const $ = (s) => document.querySelector(s);
 const L = () => document.body.dataset.lang;

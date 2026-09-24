@@ -79,6 +79,7 @@ footer { background: var(--jade-d); color: rgba(247,245,238,.7); text-align: cen
   .move { grid-template-columns: 1fr; } .arrow { transform: rotate(90deg); }
 }
 @media (prefers-reduced-motion: reduce) { .steam path { animation: none; opacity: .4; } }
+.hphoto{justify-self:center;width:min(360px,80vw);margin:0}.hphoto img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block;border-radius:180px 180px 8px 8px}.hphoto figcaption{font-size:.7rem;text-align:center;margin-top:8px;color:var(--muted)}.liq{width:150px;aspect-ratio:1;border-radius:50%;background:#fff;border:3px solid var(--wood);display:grid;place-items:center;box-shadow:0 12px 24px rgba(31,42,38,.12)}.liq i{width:78%;aspect-ratio:1;border-radius:50%;background:#d8c36a;transition:background .8s;box-shadow:inset 0 6px 14px rgba(0,0,0,.15)}
 </style>
 </head>
 <body data-lang="ja">
@@ -94,17 +95,11 @@ footer { background: var(--jade-d); color: rgba(247,245,238,.7); text-align: cen
     <div class="wrap">
       <h1 class="vert"><span class="ja">お好みの一杯を、<br>いっしょに。</span><span class="en">Let's find<br>your cup, together.</span></h1>
       <div>
-        <div class="tags"><span><span class="ja">台湾茶</span><span class="en">Taiwanese tea</span></span><span><span class="ja">国産茶</span><span class="en">Japanese tea</span></span><span>★ 4.5</span></div>
+        <div class="tags"><span><span class="ja">台湾茶</span><span class="en">Taiwanese tea</span></span><span><span class="ja">国産茶</span><span class="en">Japanese tea</span></span></div>
         <p><span class="ja">毎日飲みたいお茶から極上茶まで。香りと品質にこだわった茶葉を、お好みを伺いながらご紹介します。</span><span class="en">From everyday cups to exceptional leaves — chosen for aroma and quality, and matched to what you like.</span></p>
         <div class="btns"><a class="btn" href="#finder"><span class="ja">お茶をさがす</span><span class="en">Find your tea</span></a><a class="btn ghost" href="#visit"><span class="ja">アクセス</span><span class="en">Visit</span></a></div>
       </div>
-      <svg class="teacup" viewBox="0 0 240 220" aria-hidden="true">
-        <g class="steam" fill="none" stroke="#2f6b5c" stroke-width="3" stroke-linecap="round" opacity=".6"><path d="M90 60c-10-14 10-18 0-34"/><path d="M120 56c-10-14 10-18 0-34"/><path d="M150 60c-10-14 10-18 0-34"/></g>
-        <ellipse cx="120" cy="196" rx="96" ry="14" fill="#e3e0d4"/>
-        <path d="M40 90h160c0 56-36 96-80 96S40 146 40 90z" fill="#fff" stroke="#9c6b43" stroke-width="3"/>
-        <ellipse cx="120" cy="90" rx="80" ry="14" fill="#fff" stroke="#9c6b43" stroke-width="3"/>
-        <ellipse id="liquor" cx="120" cy="92" rx="70" ry="10" fill="#d8c36a"/>
-      </svg>
+      <figure class="hphoto"><img src="hero.jpg" alt=""><figcaption><span class="ja">※写真はイメージです（公開時はお店の写真に差し替えます）</span><span class="en">Sample photo — to be replaced with the shop’s own.</span></figcaption></figure>
     </div>
   </div>
 
@@ -115,7 +110,7 @@ footer { background: var(--jade-d); color: rgba(247,245,238,.7); text-align: cen
       <div class="q"><h3><span class="ja">① 好きな香りは？</span><span class="en">① What aroma do you like?</span></h3><div class="opts" data-k="a"></div></div>
       <div class="q"><h3><span class="ja">② どんなときに飲みたい？</span><span class="en">② When will you drink it?</span></h3><div class="opts" data-k="b"></div></div>
       <div class="result">
-        <svg viewBox="0 0 200 140" aria-hidden="true"><ellipse cx="100" cy="128" rx="80" ry="10" fill="#e3e0d4"/><path d="M30 40h140c0 50-30 84-70 84S30 90 30 40z" fill="#fff" stroke="#9c6b43" stroke-width="3"/><ellipse cx="100" cy="40" rx="70" ry="12" fill="#fff" stroke="#9c6b43" stroke-width="3"/><ellipse id="liquor2" cx="100" cy="42" rx="60" ry="8" fill="#d8c36a" style="transition:fill .8s"/></svg>
+        <div class="liq" aria-hidden="true"><i id="liquor2"></i></div>
         <div><div class="origin" id="rOrigin"></div><h3 id="rName"></h3><p id="rDesc"></p></div>
       </div>
       <p class="hint"><span class="ja">※ お茶選びのヒントです。その日の茶葉は店頭でご相談ください。</span><span class="en">Just a starting point — ask in the shop about today's leaves.</span></p>
@@ -172,7 +167,7 @@ function render() { const ja = L() === 'ja';
     box.querySelectorAll('button').forEach(btn => btn.onclick = () => { st[k] = btn.dataset.v; render(); }); });
   const r = R[st.a + '-' + st.b];
   $('#rOrigin').textContent = r[0]; $('#rName').textContent = ja ? r[1] : r[2]; $('#rDesc').textContent = ja ? r[3] : r[4];
-  $('#liquor').setAttribute('fill', r[5]); $('#liquor2').setAttribute('fill', r[5]); }
+  $('#liquor2').style.background = r[5]; }
 render();
 $('#langBtn').addEventListener('click', () => { const l = L() === 'ja' ? 'en' : 'ja'; document.body.dataset.lang = l; document.documentElement.lang = l; $('#langBtn').textContent = l === 'ja' ? 'EN' : '日本語'; render(); });
 </script>

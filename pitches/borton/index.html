@@ -96,6 +96,7 @@ footer b { font-family: "Cormorant Garamond"; font-size: 1.4rem; letter-spacing:
   .hero .wrap { min-height: 0; padding-bottom: 60px; }
   .shelf { grid-template-columns: 1fr 1fr; }
 }
+.hphoto{justify-self:center;width:min(440px,86vw);margin:0}.hphoto img{width:100%;aspect-ratio:1;object-fit:cover;display:block;border-radius:50%;border:10px solid var(--milk);box-shadow:0 24px 50px rgba(45,31,26,.2)}.hphoto figcaption{font-size:.7rem;text-align:center;margin-top:12px;color:#7a6a60}
 </style>
 </head>
 <body data-lang="ja">
@@ -120,8 +121,7 @@ footer b { font-family: "Cormorant Garamond"; font-size: 1.4rem; letter-spacing:
         <p><span class="ja">国立の小さな菓子屋。ていねいに焼いたパイとタルト、焼き菓子をご用意しています。お菓子がなくなり次第、その日の営業は終了です。</span><span class="en">A small pastry shop in Kunitachi. Carefully baked pies, tarts and baked goods — we close for the day when they're gone.</span></p>
         <div class="btns"><a class="btn" href="#order"><span class="ja">ご予約について</span><span class="en">Pre-orders</span></a><a class="btn ghost" href="#visit"><span class="ja">アクセス</span><span class="en">Visit</span></a></div>
       </div>
-      <div class="pie-wrap"><div class="pie" aria-hidden="true"><div class="lattice" id="lattice"></div></div>
-        <div class="rating"><b>★ 4.2</b><small><span class="ja">Googleクチコミ 79件</span><span class="en">79 Google reviews</span></small></div></div>
+      <figure class="hphoto"><img src="hero.jpg" alt=""><figcaption><span class="ja">※写真はイメージです（公開時はお店の写真に差し替えます）</span><span class="en">Sample photo — to be replaced with the shop’s own.</span></figcaption></figure>
     </div>
   </div>
 
@@ -183,11 +183,6 @@ footer b { font-family: "Cormorant Garamond"; font-size: 1.4rem; letter-spacing:
 <script>
 const $ = (s) => document.querySelector(s);
 $('#langBtn').addEventListener('click', () => { const l = document.body.dataset.lang === 'ja' ? 'en' : 'ja'; document.body.dataset.lang = l; document.documentElement.lang = l; $('#langBtn').textContent = l === 'ja' ? 'EN' : '日本語'; renderStatus(); });
-
-// woven lattice
-const lat = $('#lattice'); const pos = [14, 32, 50, 68, 86];
-pos.forEach((p, i) => { const h = document.createElement('i'); h.className = 'h'; h.style.top = `calc(${p}% - 4.5%)`; h.style.zIndex = i % 2 ? 2 : 1; lat.appendChild(h); });
-pos.forEach((p, i) => { const v = document.createElement('i'); v.className = 'v'; v.style.left = `calc(${p}% - 4.5%)`; v.style.zIndex = i % 2 ? 1 : 2; lat.appendChild(v); });
 
 // clock ticks + deadline arc (18:00 -> 21:00 on a 12h face)
 const t = $('#ticks'); for (let i = 0; i < 12; i++) { const a = i * 30 * Math.PI / 180; const r1 = i % 3 ? 80 : 74;

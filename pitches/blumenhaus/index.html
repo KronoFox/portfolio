@@ -77,6 +77,7 @@ footer { background: var(--green); color: var(--cream); text-align: center; padd
   .svc { grid-template-columns: 1fr; }
   .bucket { width: 84px; } .bucket img { width: 56px; left: 14px; } .bucket img + img { width: 46px; left: 22px; }
 }
+.hphoto{display:grid;grid-template-columns:1.4fr 1fr;gap:10px;margin:36px auto 0;max-width:900px}.hphoto img{width:100%;height:320px;object-fit:cover;display:block;border-radius:10px 10px 0 0}.hphoto figcaption{grid-column:1/-1;font-size:.72rem;color:#5b6152;padding-bottom:8px}@media(max-width:820px){.hphoto{grid-template-columns:1fr}.hphoto img{height:220px}}
 </style>
 </head>
 <body data-lang="ja">
@@ -91,16 +92,11 @@ footer { background: var(--green); color: var(--cream); text-align: center; padd
 <main>
   <div class="hero">
     <div class="wrap">
-      <div class="one">★ 4.9 · <span class="ja">ひとりで営む、商店街の花屋</span><span class="en">A one-person shop on the shotengai</span></div>
+      <div class="one"><span class="ja">ひとりで営む、商店街の花屋</span><span class="en">A one-person shop on the shotengai</span></div>
       <h1><span class="ja">旗の台駅すぐ、<br>季節の花と緑のお店。</span><span class="en">Seasonal flowers and greenery,<br>right by Hatanodai Station.</span></h1>
       <p class="sub"><span class="ja">季節の切り花と観葉植物を並べてお待ちしています。ご自宅用の一本から、贈り物の花束まで。</span><span class="en">Seasonal cut flowers and houseplants — from a single stem for home to a bouquet for someone special.</span></p>
       <div class="btns"><a class="btn" href="#season"><span class="ja">今月の花を見る</span><span class="en">What's in season</span></a><a class="btn ghost" href="#order"><span class="ja">ご注文方法</span><span class="en">How to order</span></a></div>
-      <div class="buckets" aria-hidden="true">
-        <div class="bucket"><img src="tulip.svg" alt=""><img src="tulip.svg" alt=""><div class="pail"></div><span class="tag">TULIP</span></div>
-        <div class="bucket"><img src="sunflower.svg" alt=""><img src="sunflower.svg" alt=""><div class="pail"></div><span class="tag">SUNFLOWER</span></div>
-        <div class="bucket"><img src="plant.svg" alt=""><div class="pail"></div><span class="tag">GREEN</span></div>
-        <div class="bucket"><img src="blossom.svg" alt=""><img src="hibiscus.svg" alt=""><div class="pail"></div><span class="tag">SEASON</span></div>
-      </div>
+      <figure class="hphoto"><img src="hero.jpg" alt=""><img src="photo2.jpg" alt=""><figcaption><span class="ja">※写真はイメージです（公開時はお店の写真に差し替えます）</span><span class="en">Sample photo — to be replaced with the shop’s own.</span></figcaption></figure>
     </div>
     <div class="street"></div>
   </div>
@@ -142,7 +138,7 @@ footer { background: var(--green); color: var(--cream); text-align: center; padd
     </div>
   </section>
 </main>
-<footer>© Blumenhaus · Hatanodai, Tokyo<br><small>Flower illustrations: Noto Emoji (Apache 2.0)</small></footer>
+<footer>© Blumenhaus · Hatanodai, Tokyo<br><small>Flower illustrations: Unsplash (sample images)</small></footer>
 <script>
 const $ = (s) => document.querySelector(s);
 const L = () => document.body.dataset.lang;

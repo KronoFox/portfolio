@@ -97,6 +97,7 @@ footer { background: var(--char); color: rgba(246,241,232,.6); text-align: cente
   .breads { grid-template-columns: 1fr; }
 }
 @media (prefers-reduced-motion: reduce) { .mouth .glow, .flame, .status.open i { animation: none; } }
+.hphoto{justify-self:center;width:min(430px,88vw);margin:0}.hphoto img{width:100%;aspect-ratio:1;object-fit:cover;display:block;border-radius:50% 50% 8px 8px/60% 60% 8px 8px;box-shadow:0 0 60px rgba(232,112,42,.35)}.hphoto figcaption{font-size:.7rem;text-align:center;margin-top:10px;opacity:.7}
 </style>
 </head>
 <body data-lang="ja">
@@ -117,10 +118,7 @@ footer { background: var(--char); color: rgba(246,241,232,.6); text-align: cente
         <p><span class="ja">サワードウ、カンパーニュ、食パン。薪窯で、噛むほどにおいしいパンを焼いています。</span><span class="en">Sourdough, pain de campagne and pan loaves, baked in a wood-fired oven.</span></p>
         <div class="btns"><a class="btn" href="#hold"><span class="ja">メールでお取り置き</span><span class="en">Hold bread by email</span></a><a class="btn ghost" href="#visit"><span class="ja">営業日</span><span class="en">Opening days</span></a></div>
       </div>
-      <div class="oven" aria-hidden="true"><div class="bricks"></div>
-        <div class="mouth"><div class="glow"></div><img class="b1" src="bread.svg" alt=""><img class="b2" src="croissant.svg" alt=""></div>
-        <img class="flame" src="fire.svg" alt="">
-      </div>
+      <figure class="hphoto"><img src="hero.jpg" alt=""><figcaption><span class="ja">※写真はイメージです（公開時はお店の写真に差し替えます）</span><span class="en">Sample photo — to be replaced with the shop’s own.</span></figcaption></figure>
     </div>
   </div>
 
@@ -129,12 +127,12 @@ footer { background: var(--char); color: rgba(246,241,232,.6); text-align: cente
       <div class="kick">FROM THE WOOD-FIRED OVEN</div>
       <h2 class="h2"><span class="ja">薪窯から、焼きあがるパン</span><span class="en">Out of the wood-fired oven</span></h2>
       <div class="breads">
-        <div class="b"><img src="bread.svg" alt=""><h3><span class="ja">サワードウ</span><span class="en">Sourdough</span></h3><p><span class="ja">噛むほどに広がる、深い味わい。</span><span class="en">Deep flavor that grows with every bite.</span></p></div>
-        <div class="b"><img src="baguette.svg" alt=""><h3><span class="ja">パン・ド・カンパーニュ</span><span class="en">Pain de campagne</span></h3><p><span class="ja">食事にぴったりの田舎パン。</span><span class="en">Country bread made for meals.</span></p></div>
-        <div class="b"><img src="bread.svg" alt=""><h3><span class="ja">食パン</span><span class="en">Pan loaf</span></h3><p><span class="ja">トーストやサンドイッチに。</span><span class="en">Perfect for toast and sandwiches.</span></p></div>
-        <div class="b"><img src="croissant.svg" alt=""><h3><span class="ja">クロワッサン</span><span class="en">Croissant</span></h3><p><span class="ja">人気のひとつ。</span><span class="en">A customer favorite.</span></p></div>
+        <div class="b"><h3><span class="ja">サワードウ</span><span class="en">Sourdough</span></h3><p><span class="ja">噛むほどに広がる、深い味わい。</span><span class="en">Deep flavor that grows with every bite.</span></p></div>
+        <div class="b"><h3><span class="ja">パン・ド・カンパーニュ</span><span class="en">Pain de campagne</span></h3><p><span class="ja">食事にぴったりの田舎パン。</span><span class="en">Country bread made for meals.</span></p></div>
+        <div class="b"><h3><span class="ja">食パン</span><span class="en">Pan loaf</span></h3><p><span class="ja">トーストやサンドイッチに。</span><span class="en">Perfect for toast and sandwiches.</span></p></div>
+        <div class="b"><h3><span class="ja">クロワッサン</span><span class="en">Croissant</span></h3><p><span class="ja">人気のひとつ。</span><span class="en">A customer favorite.</span></p></div>
         <div class="b"><h3><span class="ja">オリーブのパン</span><span class="en">Olive bread</span></h3><p><span class="ja">人気のひとつ。</span><span class="en">Another favorite.</span></p></div>
-        <div class="b"><img src="fire.svg" alt=""><h3><span class="ja">薪窯のパン</span><span class="en">Wood-fired breads</span></h3><p><span class="ja">その日の焼きあがりをお楽しみに。</span><span class="en">See what comes out of the oven today.</span></p></div>
+        <div class="b"><h3><span class="ja">薪窯のパン</span><span class="en">Wood-fired breads</span></h3><p><span class="ja">その日の焼きあがりをお楽しみに。</span><span class="en">See what comes out of the oven today.</span></p></div>
       </div>
       <p style="font-size:.8rem;color:var(--ash);margin-top:16px"><span class="ja">※ 価格・内容は正式公開時にお店の情報に合わせて掲載します。</span><span class="en">Items and prices to be confirmed with the shop.</span></p>
     </div>
@@ -185,7 +183,7 @@ footer { background: var(--char); color: rgba(246,241,232,.6); text-align: cente
     </div>
   </section>
 </main>
-<footer>© パン屋イマココ · Hidaka, Saitama · Illustrations: Noto Emoji (Apache 2.0)</footer>
+<footer>© パン屋イマココ · Hidaka, Saitama · Photos: Unsplash (sample images)</footer>
 <script>
 const $ = (s) => document.querySelector(s);
 const L = () => document.body.dataset.lang;

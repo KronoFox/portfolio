@@ -105,6 +105,7 @@ footer b { font-family: "Josefin Sans"; letter-spacing: .3em; font-size: 1.3rem;
   .notes { grid-template-columns: 1fr 1fr; }
 }
 @media (prefers-reduced-motion: reduce) { .flip .in { transition: none; } }
+.hphoto{justify-self:center;width:min(400px,84vw);margin:0}.hphoto img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block;border:12px solid #fff;border-radius:200px 200px 16px 16px;box-shadow:0 30px 60px rgba(27,37,51,.18)}.hphoto figcaption{font-size:.7rem;text-align:center;margin-top:10px;color:var(--muted)}
 </style>
 </head>
 <body data-lang="ja">
@@ -128,15 +129,9 @@ footer b { font-family: "Josefin Sans"; letter-spacing: .3em; font-size: 1.3rem;
         <h1><span class="ja">浅草の路地に、<br>フィンランドの「わが家」を。</span><span class="en">A little Finnish home,<br>on a quiet Asakusa street.</span></h1>
         <p><span class="ja">シナモンロールにサーモンスープ、ブルーベリータルト。フィンランドや映画『かもめ食堂』が好きな方へ。雷門から歩いて15分、待乳山聖天のすぐそばです。</span><span class="en">Cinnamon rolls, salmon soup and blueberry tart — for anyone who loves Finland or the film Kamome Shokudo. 15 minutes' walk from Kaminarimon, right by Matsuchiyama Shoden.</span></p>
         <div class="btns"><a class="btn" href="#menu"><span class="ja">メニューを見る</span><span class="en">See the menu</span></a><a class="btn ghost" href="#visit"><span class="ja">アクセス</span><span class="en">Visit</span></a></div>
-        <p style="margin-top:18px"><span class="rate" style="position:static;display:inline-block">★ 4.8 <span class="ja">Googleクチコミ 36件</span><span class="en">36 Google reviews</span></span></p>
+        
       </div>
-      <div class="window" aria-hidden="true">
-        <div class="glass"></div>
-        <svg class="forest" viewBox="0 0 400 60" preserveAspectRatio="none"><path d="M0 60 L20 20 L40 60 L55 10 L75 60 L95 25 L115 60 L135 5 L160 60 L180 22 L200 60 L220 12 L245 60 L265 28 L285 60 L305 8 L330 60 L350 24 L370 60 L390 15 L400 60Z" fill="#2c4f3a"/></svg>
-        <div class="bar v"></div><div class="bar h"></div>
-        <div class="curtain l"></div><div class="curtain r"></div>
-        <div class="sill"><img src="coffee.svg" alt=""><img src="blueberry.svg" alt=""></div>
-      </div>
+      <figure class="hphoto"><img src="hero.jpg" alt=""><figcaption><span class="ja">※写真はイメージです（公開時はお店の写真に差し替えます）</span><span class="en">Sample photo — to be replaced with the shop’s own.</span></figcaption></figure>
     </div>
   </div>
 
@@ -180,7 +175,7 @@ footer b { font-family: "Josefin Sans"; letter-spacing: .3em; font-size: 1.3rem;
     </div>
   </section>
 </main>
-<footer><b>KOTI</b>© KOTI Finland Cafe · Asakusa, Tokyo<br><small>Coffee & blueberry illustrations: Noto Emoji (Apache 2.0)</small></footer>
+<footer><b>KOTI</b>© KOTI Finland Cafe · Asakusa, Tokyo<br><small>Coffee & blueberry illustrations: Unsplash (sample images)</small></footer>
 
 <script>
 const $ = (s) => document.querySelector(s);

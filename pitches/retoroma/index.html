@@ -83,6 +83,7 @@ footer .sign { display: inline-block; margin-bottom: 8px; font-size: 1.1rem; }
   .hero .wrap, .print .wrap.g, .mood .wrap.g, .visit .wrap.g { grid-template-columns: 1fr; }
   .facts { grid-template-columns: 1fr 1fr; }
 }
+.hphoto{justify-self:center;width:min(430px,88vw);margin:0}.hphoto img{width:100%;aspect-ratio:1;object-fit:cover;display:block;border:10px solid var(--tin);outline:2px solid var(--tin-d)}.hphoto figcaption{font-size:.7rem;text-align:center;margin-top:10px;color:#5b6166}
 </style>
 </head>
 <body data-lang="ja">
@@ -102,11 +103,7 @@ footer .sign { display: inline-block; margin-bottom: 8px; font-size: 1.1rem; }
         <p><span class="ja">昔ながらの米びつやバケツ、小さな缶。蔵前の職人さんが手作業で造る、日本製の金属雑貨を集めています。工場蔵出しや、製造終了の品も。</span><span class="en">Old-style rice bins, pails and little tins — made in Japan, by hand, by craftsmen in Kuramae. Including factory stock and discontinued pieces.</span></p>
         <div class="btns"><a class="btn" href="#print"><span class="ja">名入れ・印刷を試す</span><span class="en">Try custom printing</span></a><a class="btn alt" href="https://retoroma.theshop.jp/" target="_blank" rel="noopener"><span class="ja">オンラインショップ</span><span class="en">Online shop</span></a></div>
       </div>
-      <div class="shelf" aria-hidden="true">
-        <div class="row"><div class="can t"></div><img class="pail" src="bucket.svg" alt=""><div class="can s"></div></div>
-        <div class="row"><div class="komebitsu"></div><div class="can m"></div></div>
-        <div class="stars">★4.7<small style="font-size:.6rem"><span class="ja">クチコミ</span><span class="en">reviews</span></small></div>
-      </div>
+      <figure class="hphoto"><img src="hero.jpg" alt=""><figcaption><span class="ja">※写真はイメージです（公開時はお店の写真に差し替えます）</span><span class="en">Sample photo — to be replaced with the shop’s own.</span></figcaption></figure>
     </div>
   </div>
 
@@ -174,7 +171,7 @@ footer .sign { display: inline-block; margin-bottom: 8px; font-size: 1.1rem; }
     </div>
   </section>
 </main>
-<footer class="totan"><span class="sign">れとろま</span><br>© 蔵前れとろま · Bucket illustration: Noto Emoji (Apache 2.0)</footer>
+<footer class="totan"><span class="sign">れとろま</span><br>© 蔵前れとろま · Bucket illustration: Unsplash (sample images)</footer>
 <script>
 const $ = (s) => document.querySelector(s);
 const L = () => document.body.dataset.lang;
