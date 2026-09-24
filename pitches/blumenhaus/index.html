@@ -4,131 +4,171 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Blumenhaus ブルーメンハウス | 品川区旗の台</title>
+<title>Blumenhaus ブルーメンハウス | 旗の台</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@500;700;800&family=Zen+Kaku+Gothic+New:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,500&family=M+PLUS+Rounded+1c:wght@500;800&display=swap" rel="stylesheet">
 <style>
-:root { --bg: #f6f5ef; --ink: #1f2a22; --accent: #4e6b4b; --soft: #e4eadb; --pop: #e4eadb; }
-
+:root { --green: #2f5a3c; --green-l: #5f8a5e; --cream: #fbf7ef; --pink: #e98a9a; --butter: #f3d36b; --ink: #23291f; --stripe: #2f5a3c; }
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
-body { background: var(--bg); color: var(--ink); line-height: 1.85; -webkit-font-smoothing: antialiased; }
+body { font-family: "M PLUS Rounded 1c", sans-serif; font-weight: 500; background: var(--cream); color: var(--ink); line-height: 1.9; overflow-x: hidden; }
 a { color: inherit; }
-img, svg { display: block; }
-.wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
-.proposal { background: #fff4c2; color: #5a4a00; font: 500 .78rem/1.5 system-ui, sans-serif; text-align: center; padding: 7px 16px; }
-header { position: sticky; top: 0; z-index: 20; background: color-mix(in srgb, var(--bg) 90%, transparent); backdrop-filter: blur(10px); }
-.nav { display: flex; align-items: center; justify-content: space-between; height: 64px; gap: 12px; }
-.logo { text-decoration: none; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.nav ul { display: flex; gap: 26px; list-style: none; font-size: .88rem; }
-.nav ul a { text-decoration: none; opacity: .7; }
-.nav ul a:hover { opacity: 1; color: var(--accent); }
-.lang { border: 1.5px solid currentColor; background: transparent; color: var(--ink); border-radius: 999px; padding: 3px 13px; font: inherit; font-size: .78rem; cursor: pointer; flex: none; }
-.btn { display: inline-block; text-decoration: none; font-weight: 500; padding: 13px 30px; border-radius: 999px; background: var(--accent); color: var(--bg); transition: transform .15s; }
-.btn:hover { transform: translateY(-2px); }
-.btn.ghost { background: transparent; color: var(--accent); box-shadow: inset 0 0 0 1.5px var(--accent); }
-.btns { display: flex; gap: 12px; flex-wrap: wrap; }
-section { padding: 88px 0; }
-.note { opacity: .65; font-size: .8rem; margin-top: 28px; }
-.info { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
-.info dl { display: grid; grid-template-columns: 104px 1fr; gap: 12px 18px; }
-.info dt { opacity: .6; font-size: .88rem; }
-.map { overflow: hidden; min-height: 300px; }
-.map iframe { width: 100%; min-height: 300px; height: 100%; border: 0; }
-footer { padding: 32px 0; font-size: .8rem; text-align: center; opacity: .7; }
+.pf { font-family: "Playfair Display", serif; }
+.wrap { max-width: 1060px; margin: 0 auto; padding: 0 20px; }
 [data-lang="en"] .ja, [data-lang="ja"] .en { display: none !important; }
-.l { white-space: nowrap; }
-@media (max-width: 760px) {
-  h1 .ja { font-size: min(1em, calc((100vw - 44px) / (var(--n) * 1.16))) !important; }
+.proposal { background: var(--green); color: var(--cream); font-size: .75rem; text-align: center; padding: 6px 16px; }
+header { background: var(--cream); }
+.nav { display: flex; justify-content: space-between; align-items: center; height: 70px; }
+.logo { text-decoration: none; font-family: "Playfair Display"; font-weight: 700; font-size: 1.6rem; color: var(--green); }
+.logo small { font-family: "M PLUS Rounded 1c"; font-size: .7rem; color: var(--ink); margin-left: 8px; letter-spacing: .15em; }
+.nav ul { display: flex; gap: 22px; list-style: none; font-size: .9rem; }
+.nav ul a { text-decoration: none; }
+.lang { border: 2px solid var(--green); background: #fff; color: var(--green); border-radius: 999px; padding: 2px 14px; font: 800 .8rem "M PLUS Rounded 1c"; cursor: pointer; }
+/* awning */
+.awning { height: 70px; background: repeating-linear-gradient(90deg, var(--stripe) 0 50px, #fff 50px 100px); position: relative; }
+.awning::after { content: ""; position: absolute; left: 0; right: 0; bottom: -24px; height: 24px;
+  background: radial-gradient(circle at 25px 0, var(--stripe) 24px, transparent 25px) 0 0/100px 24px repeat-x, radial-gradient(circle at 75px 0, #fff 24px, transparent 25px) 0 0/100px 24px repeat-x; }
+.shopname { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); background: var(--cream); color: var(--green); padding: 6px 26px; border-radius: 6px; font-family: "Playfair Display"; font-weight: 700; font-size: 1.3rem; border: 3px solid var(--green); white-space: nowrap; z-index: 2; }
+/* hero */
+.hero { padding: 60px 0 0; text-align: center; }
+.hero h1 { font-weight: 800; font-size: clamp(1.7rem, 4.6vw, 2.8rem); line-height: 1.5; margin: 10px 0 12px; }
+.hero .sub { max-width: 560px; margin: 0 auto 22px; }
+.one { display: inline-block; background: var(--butter); border-radius: 999px; padding: 4px 16px; font-weight: 800; font-size: .88rem; margin-bottom: 8px; }
+.btn { display: inline-block; text-decoration: none; background: var(--green); color: #fff; padding: 12px 28px; border-radius: 999px; font-weight: 800; }
+.btn.ghost { background: #fff; color: var(--green); box-shadow: inset 0 0 0 2px var(--green); }
+.btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+.buckets { display: flex; justify-content: center; align-items: flex-end; gap: 10px; margin-top: 40px; flex-wrap: nowrap; overflow: hidden; }
+.bucket { position: relative; width: 110px; height: 190px; flex: none; }
+.bucket img { position: absolute; width: 74px; left: 18px; bottom: 60px; }
+.bucket img + img { left: 30px; bottom: 90px; width: 60px; }
+.bucket .pail { position: absolute; bottom: 0; left: 12px; right: 12px; height: 70px; background: linear-gradient(#b9c2c6, #8d989d); clip-path: polygon(0 0, 100% 0, 88% 100%, 12% 100%); }
+.bucket .tag { position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%) rotate(-4deg); background: #fff; font-size: .7rem; padding: 0 6px; border-radius: 3px; white-space: nowrap; }
+.street { height: 26px; background: #d9d2c3; }
+section { padding: 90px 0; }
+.h2 { font-weight: 800; font-size: clamp(1.6rem, 4vw, 2.3rem); }
+.pf.it { font-style: italic; font-weight: 500; color: var(--pink); font-size: 1.2rem; }
+/* month picker */
+.months { display: flex; flex-wrap: wrap; gap: 8px; margin: 22px 0; }
+.months button { width: 54px; height: 54px; border-radius: 50%; border: 2px solid var(--green); background: #fff; color: var(--green); font: 800 .9rem "M PLUS Rounded 1c"; cursor: pointer; }
+.months button[aria-pressed="true"] { background: var(--green); color: #fff; }
+.pick { display: grid; grid-template-columns: 1fr 1.2fr; gap: 30px; background: #fff; border-radius: 26px; padding: 30px; box-shadow: 0 16px 40px rgba(47,90,60,.1); align-items: center; }
+.pick .big { font-family: "Playfair Display"; font-size: clamp(3.2rem, 9vw, 5rem); color: var(--green); line-height: 1; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0; }
+.chips span { background: #fdecef; color: #a44a5a; border-radius: 999px; padding: 4px 14px; font-weight: 800; }
+.hint { font-size: .82rem; color: #6d7468; }
+/* services */
+.svc { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 30px; }
+.s { background: #fff; border-radius: 22px; padding: 24px; border: 2px dashed #cfd9c8; }
+.s h3 { font-weight: 800; font-size: 1.1rem; color: var(--green); }
+.s p { font-size: .9rem; }
+.s a { font-weight: 800; color: var(--green); }
+/* visit */
+.visit { background: var(--green); color: var(--cream); }
+.visit .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; }
+.visit dl { display: grid; grid-template-columns: 90px 1fr; gap: 10px 14px; margin-top: 16px; }
+.visit dt { opacity: .7; }
+.card { background: var(--cream); color: var(--ink); border-radius: 22px; padding: 26px; }
+.card .pf { color: var(--green); font-size: 2.4rem; line-height: 1; }
+footer { background: var(--green); color: var(--cream); text-align: center; padding: 20px 16px 30px; font-size: .8rem; border-top: 1px solid rgba(251,247,239,.2); }
+@media (max-width: 820px) {
   .nav ul { display: none; }
-  .info { grid-template-columns: 1fr; }
-  section { padding: 64px 0; }
+  .pick, .visit .wrap { grid-template-columns: 1fr; }
+  .svc { grid-template-columns: 1fr; }
+  .bucket { width: 84px; } .bucket img { width: 56px; left: 14px; } .bucket img + img { width: 46px; left: 22px; }
 }
-
-
-body { font-family: "Zen Kaku Gothic New", sans-serif; }
-.logo, h1, h2, .num, .quote { font-family: "Shippori Mincho B1", serif; }
-.logo { font-weight: 700; font-size: 1.15rem; letter-spacing: .06em; }
-header { border-bottom: 1px solid color-mix(in srgb, var(--ink) 14%, transparent); }
-.hero { display: grid; grid-template-columns: auto 1fr; gap: 64px; align-items: center; padding: 72px 20px 96px; }
-.hero h1 { font-weight: 800; font-size: clamp(2.2rem, 5vw, 3.6rem); line-height: 1.5; letter-spacing: .12em; }
-.hero h1 .ja { writing-mode: vertical-rl; display: block; font-size: .85em; }
-.hero h1 .en { line-height: 1.2; letter-spacing: 0; max-width: 9ch; display: block; }
-.hero .side { border-left: 1px solid color-mix(in srgb, var(--ink) 18%, transparent); padding-left: 48px; }
-.eyebrow { font-size: .75rem; letter-spacing: .32em; color: var(--accent); }
-.hero .art-wrap { color: var(--accent); background: var(--soft); border-radius: 50%; width: min(280px, 70vw); aspect-ratio: 1; display: grid; place-items: center; margin: 22px 0 28px; }
-.hero .art { width: 62%; }
-.hero p { max-width: 460px; opacity: .8; margin-bottom: 28px; }
-.rating { font-size: .85rem; opacity: .75; margin-bottom: 26px; }
-.rating b { font-family: "Shippori Mincho B1", serif; font-size: 1.5rem; color: var(--accent); margin-right: 4px; }
-.about { background: var(--soft); }
-.quote { font-size: clamp(1.5rem, 3.6vw, 2.3rem); font-weight: 700; line-height: 1.6; max-width: 820px; margin-bottom: 26px; }
-.quote::before { content: "— "; color: var(--accent); }
-.about p { max-width: 640px; opacity: .85; }
-h2 { font-size: 1.9rem; font-weight: 700; letter-spacing: .08em; margin-bottom: 36px; display: flex; align-items: baseline; gap: 18px; }
-h2 small { font-family: "Zen Kaku Gothic New", sans-serif; font-size: .72rem; letter-spacing: .3em; color: var(--accent); }
-.list { display: grid; grid-template-columns: 1fr 1fr; column-gap: 56px; }
-.row { display: grid; grid-template-columns: 48px 1fr; padding: 22px 0; border-top: 1px solid color-mix(in srgb, var(--ink) 15%, transparent); }
-.num { color: var(--accent); font-size: 1.1rem; }
-.row h3 { font-weight: 500; font-size: 1.05rem; }
-.row p { opacity: .65; font-size: .88rem; }
-.visit { background: var(--soft); }
-.map { border-radius: 4px; }
-footer { border-top: 1px solid color-mix(in srgb, var(--ink) 14%, transparent); }
-@media (max-width: 760px) {
-  .hero { grid-template-columns: 1fr; gap: 24px; padding: 48px 20px 64px; }
-  .hero h1 .ja { height: auto; writing-mode: horizontal-tb; }
-  .hero .side { border: 0; padding: 0; }
-  .list { grid-template-columns: 1fr; }
-}
-
 </style>
 </head>
 <body data-lang="ja">
-<div class="proposal"><span class="ja">※ こちらはご提案用のサンプルページです（非公開・検索エンジン非表示）</span><span class="en">Proposal preview: not an official site, hidden from search engines</span></div>
+<div class="proposal"><span class="ja">※ ご提案用のサンプル（モックアップ）です・検索エンジン非表示</span><span class="en">Proposal mockup · hidden from search engines</span></div>
 <header><div class="wrap nav">
-  <a class="logo" href="#">Blumenhaus ブルーメンハウス</a>
-  <ul>
-    <li><a href="#about"><span class="ja">お店について</span><span class="en">About</span></a></li>
-    <li><a href="#menu"><span class="ja">できること</span><span class="en">Services</span></a></li>
-    <li><a href="#info"><span class="ja">アクセス</span><span class="en">Visit</span></a></li>
-  </ul>
-  <button class="lang" id="langBtn" aria-label="Switch language">EN</button>
+  <a class="logo" href="#">Blumenhaus<small><span class="ja">旗の台の花屋</span><span class="en">HATANODAI FLORIST</span></small></a>
+  <ul><li><a href="#season"><span class="ja">季節の花</span><span class="en">In season</span></a></li><li><a href="#order"><span class="ja">ご注文</span><span class="en">Order</span></a></li><li><a href="#visit"><span class="ja">アクセス</span><span class="en">Visit</span></a></li></ul>
+  <button class="lang" id="langBtn">EN</button>
 </div></header>
+<div class="awning"><span class="shopname">Blumenhaus</span></div>
+
 <main>
-<div class="wrap hero">
-  <h1><span class="ja" style="--n:8"><span class="l">商店街の花屋で、</span><br><span class="l">季節の花と緑を。</span></span><span class="en">Seasonal flowers and plants<br>from a neighborhood florist.</span></h1>
-  <div class="side">
-    <div class="eyebrow">FLORIST · HATANODAI</div>
-    <div class="art-wrap"><svg class="art" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="100" cy="96" r="12"/><ellipse cx="100" cy="56" rx="18" ry="28"/><ellipse cx="100" cy="136" rx="18" ry="28"/><ellipse cx="60" cy="96" rx="28" ry="18"/><ellipse cx="140" cy="96" rx="28" ry="18"/><path d="M100 164v26"/></svg></div>
-    <p><span class="ja">季節の切り花と観葉植物を扱う、ひとりで営む小さな花屋です。東急線・旗の台駅からすぐ。</span><span class="en">A small, one-person florist with seasonal cut flowers and houseplants, right by Hatanodai Station.</span></p>
-    <div class="rating"><b>★ 4.9</b> <span class="ja">Googleクチコミ 17件</span><span class="en">17 Google reviews</span></div>
-    <div class="btns"><a class="btn" href="#menu"><span class="ja">できることを見る</span><span class="en">See the services</span></a><a class="btn ghost" href="#info"><span class="ja">アクセス</span><span class="en">Visit</span></a></div>
+  <div class="hero">
+    <div class="wrap">
+      <div class="one">★ 4.9 · <span class="ja">ひとりで営む、商店街の花屋</span><span class="en">A one-person shop on the shotengai</span></div>
+      <h1><span class="ja">旗の台駅すぐ、<br>季節の花と緑のお店。</span><span class="en">Seasonal flowers and greenery,<br>right by Hatanodai Station.</span></h1>
+      <p class="sub"><span class="ja">季節の切り花と観葉植物を並べてお待ちしています。ご自宅用の一本から、贈り物の花束まで。</span><span class="en">Seasonal cut flowers and houseplants — from a single stem for home to a bouquet for someone special.</span></p>
+      <div class="btns"><a class="btn" href="#season"><span class="ja">今月の花を見る</span><span class="en">What's in season</span></a><a class="btn ghost" href="#order"><span class="ja">ご注文方法</span><span class="en">How to order</span></a></div>
+      <div class="buckets" aria-hidden="true">
+        <div class="bucket"><img src="tulip.svg" alt=""><img src="tulip.svg" alt=""><div class="pail"></div><span class="tag">TULIP</span></div>
+        <div class="bucket"><img src="sunflower.svg" alt=""><img src="sunflower.svg" alt=""><div class="pail"></div><span class="tag">SUNFLOWER</span></div>
+        <div class="bucket"><img src="plant.svg" alt=""><div class="pail"></div><span class="tag">GREEN</span></div>
+        <div class="bucket"><img src="blossom.svg" alt=""><img src="hibiscus.svg" alt=""><div class="pail"></div><span class="tag">SEASON</span></div>
+      </div>
+    </div>
+    <div class="street"></div>
   </div>
-</div>
-<section id="about" class="about"><div class="wrap">
-  <p class="quote"><span class="ja">毎日の暮らしに、季節のひと枝を</span><span class="en">A seasonal stem for everyday life</span></p>
-  <p><span class="ja">ご自宅用の花から贈り物まで、ご予算やイメージに合わせてお作りします。お花のご依頼・お問い合わせは、お電話またはメールで承っています。</span><span class="en">From flowers for home to gifts, we arrange to suit your budget and style. Orders and inquiries by phone or email.</span></p>
-</div></section>
-<section id="menu"><div class="wrap">
-  <h2><span class="ja">できること</span><span class="en">Services</span><small>MENU</small></h2>
-  <div class="list"><div class="row"><span class="num">01</span><div><h3><span class="ja">季節の切り花</span><span class="en">Seasonal cut flowers</span></h3><p><span class="ja">1本からどうぞ</span><span class="en">From a single stem</span></p></div></div><div class="row"><span class="num">02</span><div><h3><span class="ja">花束・アレンジメント</span><span class="en">Bouquets &amp; arrangements</span></h3><p><span class="ja">ご予算・イメージに合わせて</span><span class="en">Made to your budget and style</span></p></div></div><div class="row"><span class="num">03</span><div><h3><span class="ja">観葉植物</span><span class="en">Houseplants</span></h3><p><span class="ja">お部屋に緑を</span><span class="en">Bring some green indoors</span></p></div></div><div class="row"><span class="num">04</span><div><h3><span class="ja">オンラインショップ</span><span class="en">Online shop</span></h3><p><span class="ja">BASEでもご購入いただけます</span><span class="en">Also available on our BASE shop</span></p></div></div></div>
-  <p class="note"><span class="ja">※ 価格・内容は正式公開時にお店の情報に合わせて掲載します。</span><span class="en">Prices and items will be confirmed with the shop before launch.</span></p>
-</div></section>
-<section id="info" class="visit"><div class="wrap">
-  <h2><span class="ja">営業時間・アクセス</span><span class="en">Hours &amp; access</span><small>ACCESS</small></h2>
-  <div class="info"><dl><dt><span class="ja">住所</span><span class="en">Address</span></dt><dd><span class="ja">東京都品川区旗の台（詳細住所はお店に確認して掲載）</span><span class="en">Hatanodai, Shinagawa-ku, Tokyo (exact address to be confirmed)</span></dd><dt><span class="ja">営業時間</span><span class="en">Hours</span></dt><dd><span class="ja">11:00〜19:00（定休日：木曜日）</span><span class="en">11:00–19:00 (closed Thursdays)</span></dd><dt><span class="ja">電話</span><span class="en">Phone</span></dt><dd><a href="tel:0344006587">03-4400-6587</a></dd><dt><span class="ja">Instagram</span><span class="en">Instagram</span></dt><dd><a href="https://www.instagram.com/blumenhaus.tokyo/" target="_blank" rel="noopener">@blumenhaus.tokyo</a></dd><dt><span class="ja">ポイント</span><span class="en">Good to know</span></dt><dd><span class="ja">旗の台駅すぐ・ご注文はお電話またはメールで</span><span class="en">By Hatanodai Stn. · orders by phone or email</span></dd></dl><div class="map"><iframe loading="lazy" title="Map" src="https://www.google.com/maps?q=Blumenhaus%20%E6%97%97%E3%81%AE%E5%8F%B0%20%E8%8A%B1%E5%B1%8B&output=embed"></iframe></div></div>
-</div></section></main>
-<footer>© Blumenhaus ブルーメンハウス</footer>
+
+  <section id="season">
+    <div class="wrap">
+      <div class="pf it">In season</div>
+      <h2 class="h2"><span class="ja">いま、どんな花がある？</span><span class="en">What's in season?</span></h2>
+      <div class="months" id="months"></div>
+      <div class="pick"><div class="big" id="mBig"></div><div><div class="chips" id="chips"></div><p id="mNote"></p><p class="hint"><span class="ja">※ 季節の花の一例です。入荷状況はお店にお問い合わせください。</span><span class="en">Examples only — ask the shop what's in today.</span></p></div></div>
+    </div>
+  </section>
+
+  <section id="order" style="padding-top:0">
+    <div class="wrap">
+      <div class="pf it">How to order</div>
+      <h2 class="h2"><span class="ja">ご注文・ご相談</span><span class="en">Orders & requests</span></h2>
+      <div class="svc">
+        <div class="s"><h3><span class="ja">お店で選ぶ</span><span class="en">Pick in the shop</span></h3><p><span class="ja">1本からお気軽に。お部屋に合う観葉植物もご相談ください。</span><span class="en">From a single stem — and ask about houseplants for your room.</span></p></div>
+        <div class="s"><h3><span class="ja">電話・メールで注文</span><span class="en">Order by phone or email</span></h3><p><span class="ja">花束やアレンジのご依頼は、ご予算やイメージをお知らせください。</span><span class="en">Tell us your budget and the mood for a bouquet or arrangement.</span></p><p><a href="tel:0344006587">03-4400-6587</a></p></div>
+        <div class="s"><h3><span class="ja">オンラインショップ</span><span class="en">Online shop</span></h3><p><span class="ja">BASEのショップからもご購入いただけます。</span><span class="en">Also available from our BASE shop.</span></p><p><a href="https://blumenhaus.theshop.jp/" target="_blank" rel="noopener"><span class="ja">ショップを見る →</span><span class="en">Visit the shop →</span></a></p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="visit" class="visit">
+    <div class="wrap">
+      <div>
+        <div class="pf it" style="color:var(--butter)">Visit</div>
+        <h2 class="h2"><span class="ja">お店への行き方</span><span class="en">Find us</span></h2>
+        <dl>
+          <dt><span class="ja">場所</span><span class="en">Where</span></dt><dd><span class="ja">東急線・旗の台駅すぐ、商店街の中</span><span class="en">On the shopping street, steps from Hatanodai Stn. (Tokyu)</span></dd>
+          <dt><span class="ja">営業時間</span><span class="en">Hours</span></dt><dd>11:00〜19:00</dd>
+          <dt><span class="ja">定休日</span><span class="en">Closed</span></dt><dd><span class="ja">木曜日</span><span class="en">Thursdays</span></dd>
+          <dt>Instagram</dt><dd><a href="https://www.instagram.com/blumenhaus.tokyo/" target="_blank" rel="noopener">@blumenhaus.tokyo</a></dd>
+        </dl>
+      </div>
+      <div class="card"><div class="pf">Blumen·haus</div><p><span class="ja">ドイツ語で「花の家」。毎日の暮らしに、季節のひと枝を。</span><span class="en">German for "house of flowers." A seasonal stem for everyday life.</span></p></div>
+    </div>
+  </section>
+</main>
+<footer>© Blumenhaus · Hatanodai, Tokyo<br><small>Flower illustrations: Noto Emoji (Apache 2.0)</small></footer>
 <script>
-  const btn = document.getElementById('langBtn');
-  btn.addEventListener('click', () => {
-    const l = document.body.dataset.lang === 'ja' ? 'en' : 'ja';
-    document.body.dataset.lang = l;
-    document.documentElement.lang = l;
-    btn.textContent = l === 'ja' ? 'EN' : '日本語';
-  });
+const $ = (s) => document.querySelector(s);
+const L = () => document.body.dataset.lang;
+const M = [
+  [["スイセン","チューリップ","ラナンキュラス"],["Narcissus","Tulip","Ranunculus"],"冬の終わりを告げる、明るい色。","Bright colors to see out the winter."],
+  [["ミモザ","チューリップ","スイートピー"],["Mimosa","Tulip","Sweet pea"],"黄色いミモザで春を先取り。","Yellow mimosa, an early taste of spring."],
+  [["ミモザ","ラナンキュラス","桜の枝"],["Mimosa","Ranunculus","Cherry branches"],"卒業・送別の季節の花束に。","For graduation and farewell bouquets."],
+  [["チューリップ","ラナンキュラス","スズラン"],["Tulip","Ranunculus","Lily of the valley"],"春の花がいちばん揃う季節。","Spring flowers at their fullest."],
+  [["シャクヤク","カーネーション","バラ"],["Peony","Carnation","Rose"],"母の日の贈り物にも。","Perfect for Mother's Day."],
+  [["アジサイ","スモークツリー","バラ"],["Hydrangea","Smoke tree","Rose"],"梅雨を楽しむ、しっとりした色。","Soft colors for the rainy season."],
+  [["ヒマワリ","トルコキキョウ","グリーン"],["Sunflower","Lisianthus","Greenery"],"夏の元気をお部屋に。","Summer energy for your room."],
+  [["ヒマワリ","ケイトウ","グリーン"],["Sunflower","Celosia","Greenery"],"暑い日にも長持ちする花を。","Flowers that last in the heat."],
+  [["ダリア","リンドウ","ケイトウ"],["Dahlia","Gentian","Celosia"],"秋の深い色が入ってくる頃。","Deep autumn colors arrive."],
+  [["コスモス","ダリア","実もの"],["Cosmos","Dahlia","Berries"],"実ものや枝ものも楽しい季節。","Berries and branches join the lineup."],
+  [["実もの","紅葉の枝","ダリア"],["Berries","Autumn branches","Dahlia"],"紅葉の枝で季節を飾って。","Autumn leaves for your table."],
+  [["ポインセチア","もみの木","ヒムロスギ"],["Poinsettia","Fir","Cedar"],"クリスマスとお正月の支度に。","For Christmas and New Year."],
+];
+let cur = 8;
+function render() { const ja = L() === 'ja';
+  $('#months').innerHTML = M.map((_, i) => `<button aria-pressed="${i === cur}" data-i="${i}">${ja ? (i + 1) + '月' : ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][i]}</button>`).join('');
+  document.querySelectorAll('#months button').forEach(b => b.onclick = () => { cur = +b.dataset.i; render(); });
+  $('#mBig').textContent = ja ? (cur + 1) + '月' : ['January','February','March','April','May','June','July','August','September','October','November','December'][cur];
+  $('#chips').innerHTML = (ja ? M[cur][0] : M[cur][1]).map(x => `<span>${x}</span>`).join('');
+  $('#mNote').textContent = ja ? M[cur][2] : M[cur][3]; }
+cur = new Date().getMonth(); render();
+$('#langBtn').addEventListener('click', () => { const l = L() === 'ja' ? 'en' : 'ja'; document.body.dataset.lang = l; document.documentElement.lang = l; $('#langBtn').textContent = l === 'ja' ? 'EN' : '日本語'; render(); });
 </script>
 </body>
 </html>

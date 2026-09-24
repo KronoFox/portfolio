@@ -3,7 +3,13 @@
   "name": "Specialty coffee & Food mamocafe",
   "theme": "tropical",
   "art": "cup",
-  "colors": {"bg": "#fdfaf4", "ink": "#2f2a24", "accent": "#5a7d4e", "soft": "#e6efdc", "pop": "#f3d58a"},
+  "colors": {
+    "bg": "#fdfaf4",
+    "ink": "#2f2a24",
+    "accent": "#5a7d4e",
+    "soft": "#e6efdc",
+    "pop": "#f3d58a"
+  },
   "instagram": "mamo.cafe",
   "phone": "03-6314-6919",
   "area_ja": "目黒区緑が丘",
@@ -12,23 +18,53 @@
   "h1_en": "Specialty coffee\nand veggie-packed sandwiches.",
   "lead_ja": "スペシャルティコーヒーに、お野菜たっぷりのサンドイッチ、旬のデザートや焼き菓子。自由が丘エリアの一軒家カフェです。",
   "lead_en": "Specialty coffee, sandwiches packed with vegetables, seasonal desserts and baked goods, in a house café near Jiyugaoka.",
-  "rating": "4.3", "reviews_ja": "30件以上", "reviews_en": "30+",
+  "rating": "4.3",
+  "reviews_ja": "30件以上",
+  "reviews_en": "30+",
   "about_sub_ja": "明るく落ち着いた、一軒家のカフェ",
   "about_sub_en": "A bright, calm café in a house",
   "about_ja": "ハーフサイズで選べる手作りサンドイッチや、ナポリタンなどのお食事も。ワンちゃん連れのお客様もどうぞ。",
   "about_en": "Homemade sandwiches (available as halves), plus dishes like Neapolitan spaghetti. Dog owners welcome.",
-  "menu_ja": "メニュー", "menu_en": "Menu",
+  "menu_ja": "メニュー",
+  "menu_en": "Menu",
   "items": [
-    {"ja": "スペシャルティコーヒー", "en": "Specialty coffee", "dja": "こだわりの一杯", "den": "Carefully brewed"},
-    {"ja": "たっぷりたまごサンドイッチ", "en": "Egg sandwich", "dja": "人気のサンド", "den": "A favorite"},
-    {"ja": "野菜たっぷりサンドイッチ", "en": "Vegetable sandwiches", "dja": "ハーフサイズでも", "den": "Halves available"},
-    {"ja": "ナポリタン", "en": "Neapolitan spaghetti", "dja": "お食事にも", "den": "For a proper meal"},
-    {"ja": "旬のデザート・焼き菓子", "en": "Seasonal desserts & bakes", "dja": "コーヒーのお供に", "den": "With your coffee"}
+    {
+      "ja": "スペシャルティコーヒー",
+      "en": "Specialty coffee",
+      "dja": "こだわりの一杯",
+      "den": "Carefully brewed"
+    },
+    {
+      "ja": "たっぷりたまごサンドイッチ",
+      "en": "Egg sandwich",
+      "dja": "人気のサンド",
+      "den": "A favorite"
+    },
+    {
+      "ja": "野菜たっぷりサンドイッチ",
+      "en": "Vegetable sandwiches",
+      "dja": "ハーフサイズでも",
+      "den": "Halves available"
+    },
+    {
+      "ja": "ナポリタン",
+      "en": "Neapolitan spaghetti",
+      "dja": "お食事にも",
+      "den": "For a proper meal"
+    },
+    {
+      "ja": "旬のデザート・焼き菓子",
+      "en": "Seasonal desserts & bakes",
+      "dja": "コーヒーのお供に",
+      "den": "With your coffee"
+    }
   ],
-  "info_sub_ja": "ワンちゃん連れOK", "info_sub_en": "Dog-friendly",
+  "info_sub_ja": "ワンちゃん連れOK",
+  "info_sub_en": "Dog-friendly",
   "address_ja": "〒152-0034 東京都目黒区緑が丘2-4-5",
   "address_en": "2-4-5 Midorigaoka, Meguro-ku, Tokyo 152-0034",
   "hours_ja": "11:00〜18:00（定休日：月・火）",
   "hours_en": "11:00–18:00 (closed Mon & Tue)",
-  "map_query": "mamocafe 目黒区緑が丘2-4-5"
+  "map_query": "mamocafe 目黒区緑が丘2-4-5",
+  "custom": true
 }

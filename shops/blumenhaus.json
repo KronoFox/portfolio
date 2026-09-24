@@ -3,7 +3,12 @@
   "name": "Blumenhaus ブルーメンハウス",
   "theme": "editorial",
   "art": "flower",
-  "colors": {"bg": "#f6f5ef", "ink": "#1f2a22", "accent": "#4e6b4b", "soft": "#e4eadb"},
+  "colors": {
+    "bg": "#f6f5ef",
+    "ink": "#1f2a22",
+    "accent": "#4e6b4b",
+    "soft": "#e4eadb"
+  },
   "instagram": "blumenhaus.tokyo",
   "phone": "03-4400-6587",
   "area_ja": "品川区旗の台",
@@ -12,22 +17,47 @@
   "h1_en": "Seasonal flowers and plants\nfrom a neighborhood florist.",
   "lead_ja": "季節の切り花と観葉植物を扱う、ひとりで営む小さな花屋です。東急線・旗の台駅からすぐ。",
   "lead_en": "A small, one-person florist with seasonal cut flowers and houseplants, right by Hatanodai Station.",
-  "rating": "4.9", "reviews_ja": "17件", "reviews_en": "17",
+  "rating": "4.9",
+  "reviews_ja": "17件",
+  "reviews_en": "17",
   "about_sub_ja": "毎日の暮らしに、季節のひと枝を",
   "about_sub_en": "A seasonal stem for everyday life",
   "about_ja": "ご自宅用の花から贈り物まで、ご予算やイメージに合わせてお作りします。お花のご依頼・お問い合わせは、お電話またはメールで承っています。",
   "about_en": "From flowers for home to gifts, we arrange to suit your budget and style. Orders and inquiries by phone or email.",
-  "menu_ja": "できること", "menu_en": "Services",
+  "menu_ja": "できること",
+  "menu_en": "Services",
   "items": [
-    {"ja": "季節の切り花", "en": "Seasonal cut flowers", "dja": "1本からどうぞ", "den": "From a single stem"},
-    {"ja": "花束・アレンジメント", "en": "Bouquets & arrangements", "dja": "ご予算・イメージに合わせて", "den": "Made to your budget and style"},
-    {"ja": "観葉植物", "en": "Houseplants", "dja": "お部屋に緑を", "den": "Bring some green indoors"},
-    {"ja": "オンラインショップ", "en": "Online shop", "dja": "BASEでもご購入いただけます", "den": "Also available on our BASE shop"}
+    {
+      "ja": "季節の切り花",
+      "en": "Seasonal cut flowers",
+      "dja": "1本からどうぞ",
+      "den": "From a single stem"
+    },
+    {
+      "ja": "花束・アレンジメント",
+      "en": "Bouquets & arrangements",
+      "dja": "ご予算・イメージに合わせて",
+      "den": "Made to your budget and style"
+    },
+    {
+      "ja": "観葉植物",
+      "en": "Houseplants",
+      "dja": "お部屋に緑を",
+      "den": "Bring some green indoors"
+    },
+    {
+      "ja": "オンラインショップ",
+      "en": "Online shop",
+      "dja": "BASEでもご購入いただけます",
+      "den": "Also available on our BASE shop"
+    }
   ],
-  "info_sub_ja": "旗の台駅すぐ・ご注文はお電話またはメールで", "info_sub_en": "By Hatanodai Stn. · orders by phone or email",
+  "info_sub_ja": "旗の台駅すぐ・ご注文はお電話またはメールで",
+  "info_sub_en": "By Hatanodai Stn. · orders by phone or email",
   "address_ja": "東京都品川区旗の台（詳細住所はお店に確認して掲載）",
   "address_en": "Hatanodai, Shinagawa-ku, Tokyo (exact address to be confirmed)",
   "hours_ja": "11:00〜19:00（定休日：木曜日）",
   "hours_en": "11:00–19:00 (closed Thursdays)",
-  "map_query": "Blumenhaus 旗の台 花屋"
+  "map_query": "Blumenhaus 旗の台 花屋",
+  "custom": true
 }

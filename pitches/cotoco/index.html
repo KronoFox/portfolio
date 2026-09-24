@@ -4,131 +4,177 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>ことこ茶店 | 台東区池之端</title>
+<title>ことこ茶店 | 根津・池之端</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@500;700;800&family=Zen+Kaku+Gothic+New:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500&display=swap" rel="stylesheet">
 <style>
-:root { --bg: #f4f5f0; --ink: #1e2a26; --accent: #2f6b5c; --soft: #e0ebe5; --pop: #e0ebe5; }
-
+:root { --celadon: #cfe0d4; --jade: #2f6b5c; --jade-d: #1f4a3f; --wood: #9c6b43; --paper: #f7f5ee; --ink: #1f2a26; --muted: #5d6b64; }
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
-body { background: var(--bg); color: var(--ink); line-height: 1.85; -webkit-font-smoothing: antialiased; }
+body { font-family: "Zen Kaku Gothic New", sans-serif; background: var(--paper); color: var(--ink); line-height: 1.95; overflow-x: hidden; }
 a { color: inherit; }
-img, svg { display: block; }
-.wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
-.proposal { background: #fff4c2; color: #5a4a00; font: 500 .78rem/1.5 system-ui, sans-serif; text-align: center; padding: 7px 16px; }
-header { position: sticky; top: 0; z-index: 20; background: color-mix(in srgb, var(--bg) 90%, transparent); backdrop-filter: blur(10px); }
-.nav { display: flex; align-items: center; justify-content: space-between; height: 64px; gap: 12px; }
-.logo { text-decoration: none; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.nav ul { display: flex; gap: 26px; list-style: none; font-size: .88rem; }
-.nav ul a { text-decoration: none; opacity: .7; }
-.nav ul a:hover { opacity: 1; color: var(--accent); }
-.lang { border: 1.5px solid currentColor; background: transparent; color: var(--ink); border-radius: 999px; padding: 3px 13px; font: inherit; font-size: .78rem; cursor: pointer; flex: none; }
-.btn { display: inline-block; text-decoration: none; font-weight: 500; padding: 13px 30px; border-radius: 999px; background: var(--accent); color: var(--bg); transition: transform .15s; }
-.btn:hover { transform: translateY(-2px); }
-.btn.ghost { background: transparent; color: var(--accent); box-shadow: inset 0 0 0 1.5px var(--accent); }
-.btns { display: flex; gap: 12px; flex-wrap: wrap; }
-section { padding: 88px 0; }
-.note { opacity: .65; font-size: .8rem; margin-top: 28px; }
-.info { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
-.info dl { display: grid; grid-template-columns: 104px 1fr; gap: 12px 18px; }
-.info dt { opacity: .6; font-size: .88rem; }
-.map { overflow: hidden; min-height: 300px; }
-.map iframe { width: 100%; min-height: 300px; height: 100%; border: 0; }
-footer { padding: 32px 0; font-size: .8rem; text-align: center; opacity: .7; }
+.min { font-family: "Shippori Mincho", serif; }
+.wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
 [data-lang="en"] .ja, [data-lang="ja"] .en { display: none !important; }
-.l { white-space: nowrap; }
-@media (max-width: 760px) {
-  h1 .ja { font-size: min(1em, calc((100vw - 44px) / (var(--n) * 1.16))) !important; }
+.proposal { background: var(--jade); color: var(--paper); font-size: .75rem; text-align: center; padding: 6px 16px; }
+header { position: sticky; top: 0; z-index: 20; background: rgba(247,245,238,.94); backdrop-filter: blur(8px); border-bottom: 1px solid #dde5dd; }
+.nav { display: flex; justify-content: space-between; align-items: center; height: 64px; }
+.logo { text-decoration: none; font-family: "Shippori Mincho"; font-weight: 700; font-size: 1.35rem; letter-spacing: .12em; }
+.logo small { font-family: "Zen Kaku Gothic New"; font-size: .66rem; letter-spacing: .2em; color: var(--jade); margin-left: 8px; font-weight: 500; }
+.nav ul { display: flex; gap: 24px; list-style: none; font-size: .88rem; }
+.nav ul a { text-decoration: none; }
+.lang { border: 1px solid var(--jade); background: transparent; color: var(--jade); border-radius: 999px; padding: 2px 14px; font: 500 .8rem "Zen Kaku Gothic New"; cursor: pointer; }
+/* hero: vertical title + tea leaves */
+.hero { background: linear-gradient(180deg, var(--celadon), var(--paper)); overflow: hidden; }
+.hero .wrap { display: grid; grid-template-columns: auto 1fr 1fr; gap: 40px; align-items: center; padding-top: 60px; padding-bottom: 80px; }
+.vert { writing-mode: vertical-rl; font-family: "Shippori Mincho"; font-weight: 700; font-size: clamp(1.8rem, 4vw, 2.6rem); letter-spacing: .2em; line-height: 1.7; height: 22rem; }
+.hero p { color: var(--muted); max-width: 400px; margin-bottom: 22px; }
+.tags { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 22px; }
+.tags span { border: 1px solid var(--jade); color: var(--jade); border-radius: 999px; padding: 2px 12px; font-size: .82rem; }
+.btn { display: inline-block; text-decoration: none; background: var(--jade); color: var(--paper); padding: 12px 26px; border-radius: 999px; }
+.btn.ghost { background: transparent; color: var(--jade); box-shadow: inset 0 0 0 1px var(--jade); }
+.btns { display: flex; gap: 12px; flex-wrap: wrap; }
+.teacup { justify-self: center; width: min(340px, 80vw); }
+.steam path { animation: steam 4s ease-in-out infinite; }
+.steam path:nth-child(2) { animation-delay: .8s; } .steam path:nth-child(3) { animation-delay: 1.6s; }
+@keyframes steam { 0% { opacity: 0; transform: translateY(10px); } 40% { opacity: .6; } 100% { opacity: 0; transform: translateY(-16px); } }
+#liquor { transition: fill .8s; }
+section { padding: 90px 0; }
+.h2 { font-family: "Shippori Mincho"; font-weight: 700; font-size: clamp(1.6rem, 4vw, 2.3rem); }
+.kick { color: var(--jade); letter-spacing: .3em; font-size: .78rem; }
+/* finder */
+.finder { background: #fff; }
+.q { margin: 22px 0; }
+.q h3 { font-size: 1rem; font-weight: 500; margin-bottom: 10px; }
+.opts { display: flex; flex-wrap: wrap; gap: 10px; }
+.opts button { border: 1px solid var(--jade); background: var(--paper); color: var(--jade); border-radius: 12px; padding: 10px 18px; font: 500 .95rem "Zen Kaku Gothic New"; cursor: pointer; }
+.opts button[aria-pressed="true"] { background: var(--jade); color: var(--paper); }
+.result { display: grid; grid-template-columns: 220px 1fr; gap: 30px; align-items: center; background: var(--paper); border-radius: 24px; padding: 26px; margin-top: 10px; }
+.result svg { width: 100%; }
+.result .origin { font-size: .78rem; color: var(--wood); letter-spacing: .2em; }
+.result h3 { font-family: "Shippori Mincho"; font-size: 1.6rem; }
+.result p { color: var(--muted); }
+.hint { font-size: .8rem; color: var(--muted); margin-top: 14px; }
+/* story */
+.move { display: grid; grid-template-columns: 1fr auto 1fr; gap: 20px; align-items: center; text-align: center; margin-top: 30px; }
+.stop { background: #fff; border: 1px solid #dde5dd; border-radius: 20px; padding: 22px; }
+.stop b { font-family: "Shippori Mincho"; font-size: 1.4rem; display: block; }
+.arrow { font-size: 2rem; color: var(--jade); }
+/* visit */
+.visit { background: var(--jade-d); color: var(--paper); }
+.visit .kick { color: var(--celadon); }
+.visit .wrap.g { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; margin-top: 20px; }
+.visit dl { display: grid; grid-template-columns: 96px 1fr; gap: 10px 14px; }
+.visit dt { opacity: .7; }
+.map { border-radius: 20px; overflow: hidden; min-height: 320px; }
+.map iframe { width: 100%; min-height: 320px; height: 100%; border: 0; display: block; }
+footer { background: var(--jade-d); color: rgba(247,245,238,.7); text-align: center; padding: 24px 16px 32px; font-size: .8rem; border-top: 1px solid rgba(247,245,238,.15); }
+@media (max-width: 820px) {
   .nav ul { display: none; }
-  .info { grid-template-columns: 1fr; }
-  section { padding: 64px 0; }
+  .hero .wrap { grid-template-columns: 1fr; }
+  .vert { writing-mode: horizontal-tb; height: auto; letter-spacing: .08em; }
+  .result, .visit .wrap.g { grid-template-columns: 1fr; }
+  .result svg { max-width: 200px; margin: 0 auto; }
+  .move { grid-template-columns: 1fr; } .arrow { transform: rotate(90deg); }
 }
-
-
-body { font-family: "Zen Kaku Gothic New", sans-serif; }
-.logo, h1, h2, .num, .quote { font-family: "Shippori Mincho B1", serif; }
-.logo { font-weight: 700; font-size: 1.15rem; letter-spacing: .06em; }
-header { border-bottom: 1px solid color-mix(in srgb, var(--ink) 14%, transparent); }
-.hero { display: grid; grid-template-columns: auto 1fr; gap: 64px; align-items: center; padding: 72px 20px 96px; }
-.hero h1 { font-weight: 800; font-size: clamp(2.2rem, 5vw, 3.6rem); line-height: 1.5; letter-spacing: .12em; }
-.hero h1 .ja { writing-mode: vertical-rl; display: block; font-size: .85em; }
-.hero h1 .en { line-height: 1.2; letter-spacing: 0; max-width: 9ch; display: block; }
-.hero .side { border-left: 1px solid color-mix(in srgb, var(--ink) 18%, transparent); padding-left: 48px; }
-.eyebrow { font-size: .75rem; letter-spacing: .32em; color: var(--accent); }
-.hero .art-wrap { color: var(--accent); background: var(--soft); border-radius: 50%; width: min(280px, 70vw); aspect-ratio: 1; display: grid; place-items: center; margin: 22px 0 28px; }
-.hero .art { width: 62%; }
-.hero p { max-width: 460px; opacity: .8; margin-bottom: 28px; }
-.rating { font-size: .85rem; opacity: .75; margin-bottom: 26px; }
-.rating b { font-family: "Shippori Mincho B1", serif; font-size: 1.5rem; color: var(--accent); margin-right: 4px; }
-.about { background: var(--soft); }
-.quote { font-size: clamp(1.5rem, 3.6vw, 2.3rem); font-weight: 700; line-height: 1.6; max-width: 820px; margin-bottom: 26px; }
-.quote::before { content: "— "; color: var(--accent); }
-.about p { max-width: 640px; opacity: .85; }
-h2 { font-size: 1.9rem; font-weight: 700; letter-spacing: .08em; margin-bottom: 36px; display: flex; align-items: baseline; gap: 18px; }
-h2 small { font-family: "Zen Kaku Gothic New", sans-serif; font-size: .72rem; letter-spacing: .3em; color: var(--accent); }
-.list { display: grid; grid-template-columns: 1fr 1fr; column-gap: 56px; }
-.row { display: grid; grid-template-columns: 48px 1fr; padding: 22px 0; border-top: 1px solid color-mix(in srgb, var(--ink) 15%, transparent); }
-.num { color: var(--accent); font-size: 1.1rem; }
-.row h3 { font-weight: 500; font-size: 1.05rem; }
-.row p { opacity: .65; font-size: .88rem; }
-.visit { background: var(--soft); }
-.map { border-radius: 4px; }
-footer { border-top: 1px solid color-mix(in srgb, var(--ink) 14%, transparent); }
-@media (max-width: 760px) {
-  .hero { grid-template-columns: 1fr; gap: 24px; padding: 48px 20px 64px; }
-  .hero h1 .ja { height: auto; writing-mode: horizontal-tb; }
-  .hero .side { border: 0; padding: 0; }
-  .list { grid-template-columns: 1fr; }
-}
-
+@media (prefers-reduced-motion: reduce) { .steam path { animation: none; opacity: .4; } }
 </style>
 </head>
 <body data-lang="ja">
-<div class="proposal"><span class="ja">※ こちらはご提案用のサンプルページです（非公開・検索エンジン非表示）</span><span class="en">Proposal preview: not an official site, hidden from search engines</span></div>
+<div class="proposal"><span class="ja">※ ご提案用のサンプル（モックアップ）です・検索エンジン非表示</span><span class="en">Proposal mockup · hidden from search engines</span></div>
 <header><div class="wrap nav">
-  <a class="logo" href="#">ことこ茶店</a>
-  <ul>
-    <li><a href="#about"><span class="ja">お店について</span><span class="en">About</span></a></li>
-    <li><a href="#menu"><span class="ja">メニュー</span><span class="en">Menu</span></a></li>
-    <li><a href="#info"><span class="ja">アクセス</span><span class="en">Visit</span></a></li>
-  </ul>
-  <button class="lang" id="langBtn" aria-label="Switch language">EN</button>
+  <a class="logo" href="#">ことこ茶店<small>COTOCO CHATEN</small></a>
+  <ul><li><a href="#finder"><span class="ja">お茶をさがす</span><span class="en">Find your tea</span></a></li><li><a href="#visit"><span class="ja">アクセス</span><span class="en">Visit</span></a></li></ul>
+  <button class="lang" id="langBtn">EN</button>
 </div></header>
+
 <main>
-<div class="wrap hero">
-  <h1><span class="ja" style="--n:13"><span class="l">お好みの一杯を、</span><br><span class="l">いっしょに見つけましょう。</span></span><span class="en">Let&#x27;s find the tea<br>that&#x27;s just right for you.</span></h1>
-  <div class="side">
-    <div class="eyebrow">TAIWANESE &amp; JAPANESE TEA · NEZU</div>
-    <div class="art-wrap"><svg class="art" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M100 170C40 140 40 60 100 30c60 30 60 110 0 140z"/><path d="M100 170V40M100 80l-22-16M100 110l24-18M100 138l-20-14"/></svg></div>
-    <p><span class="ja">台湾茶と国産茶の専門店。毎日飲みたいお茶から極上茶まで、香りと品質にこだわった茶葉をご紹介しています。</span><span class="en">A tea shop for Taiwanese and Japanese teas, from everyday favorites to rare leaves, chosen for aroma and quality.</span></p>
-    <div class="rating"><b>★ 4.5</b> <span class="ja">Googleクチコミ 30件以上</span><span class="en">30+ Google reviews</span></div>
-    <div class="btns"><a class="btn" href="#menu"><span class="ja">メニューを見る</span><span class="en">See the menu</span></a><a class="btn ghost" href="#info"><span class="ja">アクセス</span><span class="en">Visit</span></a></div>
+  <div class="hero">
+    <div class="wrap">
+      <h1 class="vert"><span class="ja">お好みの一杯を、<br>いっしょに。</span><span class="en">Let's find<br>your cup, together.</span></h1>
+      <div>
+        <div class="tags"><span><span class="ja">台湾茶</span><span class="en">Taiwanese tea</span></span><span><span class="ja">国産茶</span><span class="en">Japanese tea</span></span><span>★ 4.5</span></div>
+        <p><span class="ja">毎日飲みたいお茶から極上茶まで。香りと品質にこだわった茶葉を、お好みを伺いながらご紹介します。</span><span class="en">From everyday cups to exceptional leaves — chosen for aroma and quality, and matched to what you like.</span></p>
+        <div class="btns"><a class="btn" href="#finder"><span class="ja">お茶をさがす</span><span class="en">Find your tea</span></a><a class="btn ghost" href="#visit"><span class="ja">アクセス</span><span class="en">Visit</span></a></div>
+      </div>
+      <svg class="teacup" viewBox="0 0 240 220" aria-hidden="true">
+        <g class="steam" fill="none" stroke="#2f6b5c" stroke-width="3" stroke-linecap="round" opacity=".6"><path d="M90 60c-10-14 10-18 0-34"/><path d="M120 56c-10-14 10-18 0-34"/><path d="M150 60c-10-14 10-18 0-34"/></g>
+        <ellipse cx="120" cy="196" rx="96" ry="14" fill="#e3e0d4"/>
+        <path d="M40 90h160c0 56-36 96-80 96S40 146 40 90z" fill="#fff" stroke="#9c6b43" stroke-width="3"/>
+        <ellipse cx="120" cy="90" rx="80" ry="14" fill="#fff" stroke="#9c6b43" stroke-width="3"/>
+        <ellipse id="liquor" cx="120" cy="92" rx="70" ry="10" fill="#d8c36a"/>
+      </svg>
+    </div>
   </div>
-</div>
-<section id="about" class="about"><div class="wrap">
-  <p class="quote"><span class="ja">経堂から根津へ。変わらない、ほっとする空間</span><span class="en">From Kyodo to Nezu, the same calm space</span></p>
-  <p><span class="ja">お好みを伺いながら、ぴったりのお茶選びをお手伝いします。店内でゆっくり味わうのも、テイクアウトもどうぞ。茶器や茶葉は通販でもお求めいただけます。</span><span class="en">Tell us what you like and we&#x27;ll help you choose. Enjoy tea in the shop or take it away. Leaves and teaware are also available online.</span></p>
-</div></section>
-<section id="menu"><div class="wrap">
-  <h2><span class="ja">メニュー</span><span class="en">Menu</span><small>MENU</small></h2>
-  <div class="list"><div class="row"><span class="num">01</span><div><h3><span class="ja">台湾茶</span><span class="en">Taiwanese tea</span></h3><p><span class="ja">香り高い茶葉をいろいろ</span><span class="en">A range of fragrant leaves</span></p></div></div><div class="row"><span class="num">02</span><div><h3><span class="ja">国産茶</span><span class="en">Japanese tea</span></h3><p><span class="ja">日々のお茶から極上茶まで</span><span class="en">Everyday to exceptional</span></p></div></div><div class="row"><span class="num">03</span><div><h3><span class="ja">お茶のテイクアウト</span><span class="en">Tea to go</span></h3><p><span class="ja">散歩のお供に</span><span class="en">For your walk</span></p></div></div><div class="row"><span class="num">04</span><div><h3><span class="ja">茶器・茶葉の販売</span><span class="en">Teaware &amp; leaves</span></h3><p><span class="ja">通販サイトでも</span><span class="en">Online too</span></p></div></div></div>
-  <p class="note"><span class="ja">※ 価格・内容は正式公開時にお店の情報に合わせて掲載します。</span><span class="en">Prices and items will be confirmed with the shop before launch.</span></p>
-</div></section>
-<section id="info" class="visit"><div class="wrap">
-  <h2><span class="ja">営業時間・アクセス</span><span class="en">Hours &amp; access</span><small>ACCESS</small></h2>
-  <div class="info"><dl><dt><span class="ja">住所</span><span class="en">Address</span></dt><dd><span class="ja">〒110-0008 東京都台東区池之端4-16-29 1階</span><span class="en">4-16-29 Ikenohata 1F, Taito-ku, Tokyo 110-0008</span></dd><dt><span class="ja">営業時間</span><span class="en">Hours</span></dt><dd><span class="ja">11:30〜19:00（営業日はInstagramでご確認ください）</span><span class="en">11:30–19:00 (see Instagram for opening days)</span></dd><dt><span class="ja">電話</span><span class="en">Phone</span></dt><dd><a href="tel:08019035280">080-1903-5280</a></dd><dt><span class="ja">Instagram</span><span class="en">Instagram</span></dt><dd><a href="https://www.instagram.com/cotoco_chaten/" target="_blank" rel="noopener">@cotoco_chaten</a></dd><dt><span class="ja">ポイント</span><span class="en">Good to know</span></dt><dd><span class="ja">お茶選びのご相談もお気軽に</span><span class="en">Happy to help you choose</span></dd></dl><div class="map"><iframe loading="lazy" title="Map" src="https://www.google.com/maps?q=%E3%81%93%E3%81%A8%E3%81%93%E8%8C%B6%E5%BA%97%20%E5%8F%B0%E6%9D%B1%E5%8C%BA%E6%B1%A0%E4%B9%8B%E7%AB%AF4-16-29&output=embed"></iframe></div></div>
-</div></section></main>
-<footer>© ことこ茶店</footer>
+
+  <section id="finder" class="finder">
+    <div class="wrap">
+      <div class="kick">TEA FINDER</div>
+      <h2 class="h2"><span class="ja">あなたに合うお茶は？</span><span class="en">Which tea suits you?</span></h2>
+      <div class="q"><h3><span class="ja">① 好きな香りは？</span><span class="en">① What aroma do you like?</span></h3><div class="opts" data-k="a"></div></div>
+      <div class="q"><h3><span class="ja">② どんなときに飲みたい？</span><span class="en">② When will you drink it?</span></h3><div class="opts" data-k="b"></div></div>
+      <div class="result">
+        <svg viewBox="0 0 200 140" aria-hidden="true"><ellipse cx="100" cy="128" rx="80" ry="10" fill="#e3e0d4"/><path d="M30 40h140c0 50-30 84-70 84S30 90 30 40z" fill="#fff" stroke="#9c6b43" stroke-width="3"/><ellipse cx="100" cy="40" rx="70" ry="12" fill="#fff" stroke="#9c6b43" stroke-width="3"/><ellipse id="liquor2" cx="100" cy="42" rx="60" ry="8" fill="#d8c36a" style="transition:fill .8s"/></svg>
+        <div><div class="origin" id="rOrigin"></div><h3 id="rName"></h3><p id="rDesc"></p></div>
+      </div>
+      <p class="hint"><span class="ja">※ お茶選びのヒントです。その日の茶葉は店頭でご相談ください。</span><span class="en">Just a starting point — ask in the shop about today's leaves.</span></p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="kick">OUR STORY</div>
+      <h2 class="h2"><span class="ja">経堂から、根津へ。</span><span class="en">From Kyodo to Nezu.</span></h2>
+      <div class="move">
+        <div class="stop"><b><span class="ja">経堂</span><span class="en">Kyodo</span></b><span class="ja">はじまりの場所</span><span class="en">Where it began</span></div>
+        <div class="arrow">→</div>
+        <div class="stop"><b><span class="ja">根津・池之端</span><span class="en">Nezu / Ikenohata</span></b><span class="ja">変わらない、ほっとする空間のまま</span><span class="en">The same calm space, in a new home</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="visit" class="visit">
+    <div class="wrap">
+      <div class="kick">VISIT</div>
+      <h2 class="h2"><span class="ja">お店への行き方</span><span class="en">Find us</span></h2>
+      <div class="wrap g" style="padding:0">
+        <dl>
+          <dt><span class="ja">住所</span><span class="en">Address</span></dt><dd><span class="ja">〒110-0008 東京都台東区池之端4-16-29 1階</span><span class="en">4-16-29 Ikenohata 1F, Taito-ku, Tokyo</span></dd>
+          <dt><span class="ja">営業時間</span><span class="en">Hours</span></dt><dd><span class="ja">11:30〜19:00（営業日はInstagramでご確認ください）</span><span class="en">11:30–19:00 (see Instagram for opening days)</span></dd>
+          <dt><span class="ja">電話</span><span class="en">Phone</span></dt><dd><a href="tel:08019035280">080-1903-5280</a></dd>
+          <dt><span class="ja">通販</span><span class="en">Online</span></dt><dd><a href="https://cotocopo-tea.stores.jp/" target="_blank" rel="noopener"><span class="ja">茶葉・茶器のオンラインショップ →</span><span class="en">Tea & teaware online shop →</span></a></dd>
+          <dt>Instagram</dt><dd><a href="https://www.instagram.com/cotoco_chaten/" target="_blank" rel="noopener">@cotoco_chaten</a></dd>
+        </dl>
+        <div class="map"><iframe loading="lazy" title="Map" src="https://www.google.com/maps?q=%E3%81%93%E3%81%A8%E3%81%93%E8%8C%B6%E5%BA%97%20%E5%8F%B0%E6%9D%B1%E5%8C%BA%E6%B1%A0%E4%B9%8B%E7%AB%AF4-16-29&output=embed"></iframe></div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>© ことこ茶店 · Nezu / Ikenohata</footer>
 <script>
-  const btn = document.getElementById('langBtn');
-  btn.addEventListener('click', () => {
-    const l = document.body.dataset.lang === 'ja' ? 'en' : 'ja';
-    document.body.dataset.lang = l;
-    document.documentElement.lang = l;
-    btn.textContent = l === 'ja' ? 'EN' : '日本語';
-  });
+const $ = (s) => document.querySelector(s);
+const L = () => document.body.dataset.lang;
+const A = [["floral", "華やか・フルーティー", "Floral & fruity"], ["roasty", "香ばしい", "Toasty"], ["fresh", "すっきり爽やか", "Clean & fresh"]];
+const B = [["daily", "毎日ごくごく", "Every day"], ["special", "特別なひととき", "A special moment"]];
+const R = {
+  "floral-daily":   ["TAIWAN", "高山烏龍茶", "High-mountain oolong", "花のような香りの、軽やかな烏龍茶。毎日でも飲み飽きません。", "A light oolong with a flowery aroma — easy to drink every day.", "#d8c36a"],
+  "floral-special": ["TAIWAN", "東方美人", "Oriental Beauty", "蜜のような甘い香りが特徴の、特別な一杯に。", "Known for its honey-like sweetness — a cup for a special moment.", "#c98a3a"],
+  "roasty-daily":   ["JAPAN", "ほうじ茶", "Hojicha", "香ばしくやさしい味わい。食事のおともにも。", "Toasty and gentle — lovely with meals.", "#a0612e"],
+  "roasty-special": ["TAIWAN", "焙煎の効いた烏龍茶", "Roasted oolong", "しっかり焙煎した、深みのある香り。", "Deeply roasted with a rich, lingering aroma.", "#8b4a22"],
+  "fresh-daily":    ["JAPAN", "煎茶", "Sencha", "すっきりとした、日本の定番の緑茶。", "Crisp and clean — Japan's everyday green tea.", "#b6c46a"],
+  "fresh-special":  ["TAIWAN", "文山包種茶", "Wenshan Baozhong", "爽やかな香りの、軽やかな台湾茶。", "A light Taiwanese tea with a bright, fresh aroma.", "#cfd08a"],
+};
+const st = { a: "floral", b: "daily" };
+function render() { const ja = L() === 'ja';
+  document.querySelectorAll('.opts').forEach(box => { const k = box.dataset.k; const list = k === 'a' ? A : B;
+    box.innerHTML = list.map(o => `<button aria-pressed="${st[k] === o[0]}" data-v="${o[0]}">${ja ? o[1] : o[2]}</button>`).join('');
+    box.querySelectorAll('button').forEach(btn => btn.onclick = () => { st[k] = btn.dataset.v; render(); }); });
+  const r = R[st.a + '-' + st.b];
+  $('#rOrigin').textContent = r[0]; $('#rName').textContent = ja ? r[1] : r[2]; $('#rDesc').textContent = ja ? r[3] : r[4];
+  $('#liquor').setAttribute('fill', r[5]); $('#liquor2').setAttribute('fill', r[5]); }
+render();
+$('#langBtn').addEventListener('click', () => { const l = L() === 'ja' ? 'en' : 'ja'; document.body.dataset.lang = l; document.documentElement.lang = l; $('#langBtn').textContent = l === 'ja' ? 'EN' : '日本語'; render(); });
 </script>
 </body>
 </html>
