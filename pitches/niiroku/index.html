@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>古書ニイロク | 奥沢の古本屋</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Shippori+Mincho:wght@600;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Courier+Prime:wght@700&display=swap" rel="stylesheet">
+<style>
+:root { --kraft: #e7d8bd; --paper: #f5eee0; --ink: #221e1a; --red: #c0392b; --navy: #23365a; --green: #2f5d4a; --mute: #6d6356; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: "Zen Kaku Gothic New", sans-serif; background: var(--paper); color: var(--ink); line-height: 1.9; overflow-x: hidden; }
+a { color: inherit; }
+.wrap { max-width: 1060px; margin: 0 auto; padding: 0 20px; }
+.nw { white-space: nowrap; }
+[data-lang="en"] .ja, [data-lang="ja"] .en { display: none !important; }
+.proposal { background: var(--ink); color: var(--paper); font-size: .75rem; text-align: center; padding: 6px 16px; }
+header { position: sticky; top: 0; z-index: 20; background: var(--paper); border-bottom: 2px solid var(--ink); }
+.nav { display: flex; justify-content: space-between; align-items: center; height: 62px; }
+.logo { text-decoration: none; font-family: "Dela Gothic One"; font-size: 1.35rem; letter-spacing: .04em; }
+.logo span { color: var(--red); }
+.nav ul { display: flex; gap: 22px; list-style: none; font-size: .88rem; font-weight: 700; }
+.nav ul a { text-decoration: none; }
+.lang { border: 2px solid var(--ink); background: transparent; border-radius: 4px; padding: 1px 12px; font: 700 .8rem "Zen Kaku Gothic New"; cursor: pointer; }
+/* hero */
+.hero { padding: 56px 0 0; background: var(--kraft); position: relative; }
+.hero .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; align-items: center; }
+.stamp { display: inline-block; border: 3px solid var(--red); color: var(--red); font-family: "Courier Prime"; padding: 4px 12px; transform: rotate(-4deg); letter-spacing: .1em; font-size: .9rem; margin-bottom: 18px; }
+.hero h1 { font-family: "Dela Gothic One"; font-weight: 400; font-size: clamp(2.3rem, 6.5vw, 4.4rem); line-height: 1.15; }
+.hero h1 em { font-style: normal; color: var(--red); }
+.hero p { margin: 18px 0 24px; max-width: 440px; }
+.btn { display: inline-block; text-decoration: none; background: var(--ink); color: var(--paper); padding: 12px 24px; border-radius: 4px; font-weight: 700; box-shadow: 4px 4px 0 var(--red); }
+.btn.ghost { background: var(--paper); color: var(--ink); box-shadow: 4px 4px 0 var(--ink); border: 2px solid var(--ink); }
+.btns { display: flex; gap: 14px; flex-wrap: wrap; }
+/* price slip card */
+.photo { justify-self: center; position: relative; width: min(420px, 88vw); }
+.photo > img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; display: block; border: 3px solid var(--ink); box-shadow: 10px 10px 0 var(--ink); filter: sepia(.15) contrast(1.05); }
+.photo .pn { font-size: .7rem; color: var(--mute); margin-top: 16px; }
+.slip { position: absolute; left: -44px; bottom: 60px; width: min(250px, 64vw); background: var(--paper); border: 2px solid var(--ink); padding: 18px 20px; font-family: "Courier Prime"; transform: rotate(3deg); box-shadow: 8px 8px 0 rgba(34,30,26,.2); }
+.slip::before { content: ""; position: absolute; top: -10px; left: 50%; width: 60px; height: 20px; background: rgba(192,57,43,.35); transform: translateX(-50%) rotate(-3deg); }
+.slip .row { display: flex; justify-content: space-between; border-bottom: 1px dashed #b8a98e; padding: 6px 0; font-size: .9rem; }
+.slip .big { font-family: "Dela Gothic One"; font-size: 2rem; text-align: center; padding: 10px 0 2px; }
+/* shelf */
+.shelf { margin-top: 50px; background: #6b4a2e; padding: 14px 20px 0; border-bottom: 16px solid #4a321e; }
+.books { display: flex; align-items: flex-end; gap: 6px; max-width: 1060px; margin: 0 auto; overflow-x: auto; scrollbar-width: none; }
+.books button { border: 0; cursor: pointer; writing-mode: vertical-rl; font: 800 1rem "Shippori Mincho"; color: #fff; padding: 12px 6px; border-radius: 3px 3px 0 0; flex: none; width: 56px; transition: transform .2s; letter-spacing: .1em; }
+.books button:hover, .books button[aria-pressed="true"] { transform: translateY(-14px); }
+.books button small { font: 700 .62rem "Courier Prime"; letter-spacing: .1em; margin-top: 8px; opacity: .8; }
+.shelf-note { background: var(--paper); border: 2px solid var(--ink); max-width: 1020px; margin: 22px auto 0; padding: 18px 22px; display: flex; gap: 18px; align-items: center; }
+.shelf-note .sw { width: 14px; align-self: stretch; flex: none; }
+.shelf-note h3 { font-family: "Shippori Mincho"; font-size: 1.15rem; }
+.shelf-note p { font-size: .9rem; color: var(--mute); }
+section { padding: 90px 0; }
+.kick { font-family: "Courier Prime"; color: var(--red); letter-spacing: .15em; font-size: .85rem; }
+.h2 { font-family: "Dela Gothic One"; font-weight: 400; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.35; margin-bottom: 14px; }
+/* eye */
+.eye { background: linear-gradient(rgba(245,238,224,.93), rgba(245,238,224,.93)), url(shop.jpg) center/cover; }
+.eye .g { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+.eye ul { list-style: none; }
+.eye li { border-bottom: 1px solid #d4c6ab; padding: 10px 0 10px 34px; position: relative; }
+.eye li::before { content: "✓"; position: absolute; left: 4px; color: var(--red); font-weight: 700; }
+/* buy builder */
+.buy { background: var(--kraft); }
+.buy .g { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; align-items: start; }
+.opt { font-weight: 700; margin: 16px 0 8px; font-size: .9rem; }
+.ways { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.ways button { border: 2px solid var(--ink); background: var(--paper); padding: 12px 6px; border-radius: 4px; cursor: pointer; font: 700 .9rem "Zen Kaku Gothic New"; }
+.ways button[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
+.tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.tags label { border: 2px solid var(--ink); border-radius: 999px; padding: 4px 14px; cursor: pointer; font-size: .88rem; background: var(--paper); }
+.tags input { display: none; }
+.tags label:has(input:checked) { background: var(--red); border-color: var(--red); color: #fff; }
+select { font: 500 .95rem "Zen Kaku Gothic New"; padding: 8px 10px; border: 2px solid var(--ink); border-radius: 4px; background: var(--paper); }
+.card { background: var(--paper); border: 2px solid var(--ink); box-shadow: 8px 8px 0 var(--ink); }
+.card .top { background: var(--ink); color: var(--paper); padding: 8px 16px; font-family: "Courier Prime"; letter-spacing: .1em; font-size: .85rem; }
+.card pre { font-family: "Zen Kaku Gothic New"; white-space: pre-wrap; padding: 18px; font-size: .92rem; min-height: 260px; }
+.card .act { padding: 0 18px 18px; }
+/* visit */
+.visit .g { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; margin-top: 16px; }
+.visit dl { display: grid; grid-template-columns: 96px 1fr; gap: 10px 14px; }
+.visit dt { color: var(--mute); font-weight: 700; }
+.map { border: 2px solid var(--ink); min-height: 320px; }
+.map iframe { width: 100%; height: 100%; min-height: 320px; border: 0; display: block; filter: sepia(.3); }
+footer { background: var(--ink); color: #b8ad9c; text-align: center; padding: 24px 16px 32px; font-size: .78rem; }
+@media (max-width: 820px) {
+  .nav ul { display: none; }
+  .hero .wrap, .eye .g, .buy .g, .visit .g { grid-template-columns: 1fr; }
+  .photo { margin-top: 20px; } .slip { left: -8px; bottom: 40px; }
+}
+</style>
+</head>
+<body data-lang="ja">
+<div class="proposal"><span class="ja">※ ご提案用のサンプル（モックアップ）です・検索エンジン非表示</span><span class="en">Proposal mockup · hidden from search engines</span></div>
+<header><div class="wrap nav">
+  <a class="logo" href="#">古書<span>ニイロク</span></a>
+  <ul><li><a href="#shelf"><span class="ja">棚</span><span class="en">Shelves</span></a></li><li><a href="#buy"><span class="ja">買取</span><span class="en">We buy</span></a></li><li><a href="#visit"><span class="ja">アクセス</span><span class="en">Visit</span></a></li></ul>
+  <button class="lang" id="langBtn">EN</button>
+</div></header>
+
+<main>
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <div class="stamp">OPEN 2026.9.20</div>
+        <h1><span class="ja">古本、<br><em>買取</em>します！</span><span class="en">Used books —<br>we <em>buy</em> them!</span></h1>
+        <p><span class="ja">奥沢駅から徒歩1分、奥沢銀座商店街に入ってすぐの古本屋です。店頭販売はもちろん、持込・出張・宅配での買取も承ります。</span><span class="en">A used bookshop one minute from Okusawa Station, just inside the Okusawa Ginza shopping street. We sell in store and buy books by drop-off, house call or post.</span></p>
+        <div class="btns"><a class="btn" href="#buy"><span class="ja">買取の相談をする</span><span class="en">Sell your books</span></a><a class="btn ghost" href="#shelf"><span class="ja">棚を見る</span><span class="en">Browse the shelves</span></a></div>
+      </div>
+      <div class="photo"><img src="hero.jpg" alt="">
+      <div class="slip" aria-hidden="true">
+        <div class="row"><span>SHOP</span><span>古書ニイロク</span></div>
+        <div class="row"><span>OPEN</span><span>12:00–20:00</span></div>
+        <div class="row"><span>CLOSED</span><span class="ja">火曜日</span><span class="en">TUE</span></div>
+        <div class="row"><span>WALK</span><span class="ja">奥沢駅 1分</span><span class="en">1 min · Okusawa</span></div>
+        <div class="big">26</div>
+      </div>
+      <p class="pn"><span class="ja">※写真はイメージです（公開時はお店の写真に差し替えます）</span><span class="en">Sample photo — to be replaced with the shop's own.</span></p></div>
+    </div>
+    <div class="shelf" id="shelf">
+      <div class="books" id="books"></div>
+    </div>
+    <div class="wrap" style="padding-bottom:40px"><div class="shelf-note" id="shelfNote"></div></div>
+  </div>
+
+  <section class="eye">
+    <div class="wrap g">
+      <div>
+        <div class="kick">OUR EYE</div>
+        <h2 class="h2"><span class="ja">神保町の古書市場で<br>培った目利き。</span><span class="en">An eye trained at<br>the Jimbocho book markets.</span></h2>
+        <p><span class="ja">店主が世界一の本の街・神田神保町の古書市場で培った「確かな目利き」で、一冊一冊ていねいに評価します。</span><span class="en">The owner learned the trade at the book markets of Kanda-Jimbocho, and values every book one by one.</span></p>
+      </div>
+      <ul>
+        <li><span class="ja">古びて見える本も、資料的価値や希少性を見逃しません</span><span class="en">Old-looking books can still be rare or valuable</span></li>
+        <li><span class="ja">ISBN（バーコード）のない古い書籍もご相談ください</span><span class="en">Old books without an ISBN barcode are welcome</span></li>
+        <li><span class="ja">書き込みのある研究書も評価します</span><span class="en">Annotated academic books are assessed too</span></li>
+        <li><span class="ja">東京古書籍商業協同組合 加盟店</span><span class="en">Member of the Tokyo Antiquarian Booksellers' Association</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="buy" class="buy">
+    <div class="wrap g">
+      <div>
+        <div class="kick">WE BUY BOOKS</div>
+        <h2 class="h2"><span class="ja">買取のご相談、<br>メモを作ります。</span><span class="en">Selling books?<br>Start with a note.</span></h2>
+        <div class="opt"><span class="ja">① 買取方法</span><span class="en">① How</span></div>
+        <div class="ways" id="ways"></div>
+        <div class="opt"><span class="ja">② どんな本？（複数OK）</span><span class="en">② What kind? (pick any)</span></div>
+        <div class="tags" id="tags"></div>
+        <div class="opt"><span class="ja">③ だいたいの量</span><span class="en">③ Roughly how many?</span></div>
+        <select id="qty"></select>
+      </div>
+      <div class="card">
+        <div class="top">MEMO → kosho262626@gmail.com</div>
+        <pre id="memo"></pre>
+        <div class="act"><a class="btn" id="mailBtn" href="#"><span class="ja">メールで送る</span><span class="en">Send by email</span></a></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="visit" class="visit">
+    <div class="wrap">
+      <div class="kick">VISIT</div>
+      <h2 class="h2"><span class="ja">お店への行き方</span><span class="en">Find us</span></h2>
+      <div class="g">
+        <dl>
+          <dt><span class="ja">住所</span><span class="en">Address</span></dt><dd><span class="ja">〒158-0083 東京都世田谷区奥沢4-26-7 1階</span><span class="en">4-26-7 Okusawa 1F, Setagaya, Tokyo 158-0083</span></dd>
+          <dt><span class="ja">最寄駅</span><span class="en">Station</span></dt><dd><span class="ja">東急目黒線 奥沢駅 徒歩1分<br>自由が丘駅 徒歩8分</span><span class="en">1 min from Okusawa Sta. (Tokyu Meguro Line)<br>8 min from Jiyugaoka Sta.</span></dd>
+          <dt><span class="ja">営業時間</span><span class="en">Hours</span></dt><dd>12:00–20:00</dd>
+          <dt><span class="ja">定休日</span><span class="en">Closed</span></dt><dd><span class="ja">火曜日</span><span class="en">Tuesdays</span></dd>
+          <dt>TEL</dt><dd>03-6770-7037</dd>
+          <dt>Mail</dt><dd>kosho262626@gmail.com</dd>
+          <dt>Online</dt><dd><a href="https://www.kosho.or.jp/abouts/?id=12042160" target="_blank" rel="noopener"><span class="ja">日本の古本屋</span><span class="en">Nihon no Furuhon-ya</span></a> · <a href="https://www.instagram.com/kosho262626/" target="_blank" rel="noopener">Instagram</a></dd>
+        </dl>
+        <div class="map"><iframe loading="lazy" title="Map" src="https://www.google.com/maps?q=%E5%8F%A4%E6%9B%B8%E3%83%8B%E3%82%A4%E3%83%AD%E3%82%AF%20%E4%B8%96%E7%94%B0%E8%B0%B7%E5%8C%BA%E5%A5%A5%E6%B2%A24-26-7&output=embed"></iframe></div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>© 古書ニイロク · Okusawa, Setagaya · Photos: Unsplash (sample images)</footer>
+<script>
+const $ = (s) => document.querySelector(s);
+const L = () => document.body.dataset.lang;
+const shelves = [
+  { c: '#c0392b', h: 230, ja: '特撮', en: 'Tokusatsu', tag: 'KAIJU', img: 'trex', dj: 'ゴジラ・ウルトラマンを中心にした特撮コーナー。店内奥にありますが、自信のあるコーナーです。', de: 'A tokusatsu corner centered on Godzilla and Ultraman — at the back of the shop, and one we are proud of.' },
+  { c: '#23365a', h: 260, ja: '漫画', en: 'Manga', tag: 'COMICS', img: 'openbook', dj: '80年代の週刊少年サンデーなど、漫画・漫画雑誌も入荷しています。', de: 'Manga and manga magazines, including 1980s issues of Weekly Shonen Sunday.' },
+  { c: '#2f5d4a', h: 210, ja: '哲学', en: 'Philosophy', tag: 'THOUGHT', img: 'books', dj: '良書の仕入れで充実した哲学の棚。', de: 'A philosophy shelf built from some very good buys.' },
+  { c: '#8a5a2b', h: 240, ja: '雑誌', en: 'Magazines', tag: 'MAGS', img: 'magnify', dj: 'カルチャー誌などのバックナンバーも。', de: 'Back issues of culture magazines and more.' },
+  { c: '#5b3f6b', h: 200, ja: '人文', en: 'Humanities', tag: 'STUDY', img: 'books', dj: '書き込みのある研究書も、価値を見て扱います。', de: 'Academic books — even annotated ones — handled with care.' },
+  { c: '#3b3b3b', h: 250, ja: '入荷', en: 'New in', tag: 'NEW', img: 'package', dj: '新入荷は Instagram で随時お知らせしています。', de: 'New arrivals are posted on Instagram.' }
+];
+let sel = 0;
+function shelf() { const ja = L() === 'ja';
+  $('#books').innerHTML = shelves.map((s, i) => `<button style="background:${s.c};height:${s.h}px" aria-pressed="${i === sel}" data-i="${i}">${ja ? s.ja : s.en}<small>${s.tag}</small></button>`).join('');
+  $('#books').querySelectorAll('button').forEach(b => b.onclick = () => { sel = +b.dataset.i; shelf(); });
+  const s = shelves[sel]; $('#shelfNote').innerHTML = `<i class="sw" style="background:${s.c}"></i><div><h3>${ja ? s.ja : s.en}</h3><p>${ja ? s.dj : s.de}</p></div>`; }
+const ways = [['drop', '店頭持込', 'Drop-off', 'books'], ['visit', '出張買取', 'House call', 'truck'], ['post', '宅配買取', 'By post', 'package']];
+const genres = [['漫画', 'Manga'], ['特撮・怪獣', 'Tokusatsu'], ['哲学・人文', 'Philosophy'], ['雑誌', 'Magazines'], ['美術・写真', 'Art & photo'], ['古い本（ISBNなし）', 'Pre-ISBN books'], ['その他', 'Other']];
+const qtys = [['〜段ボール1箱', 'Up to 1 box'], ['段ボール2〜5箱', '2–5 boxes'], ['本棚ひとつ分', 'A full bookcase'], ['それ以上', 'More than that']];
+let way = 0; const picked = new Set([0]);
+function buy() { const ja = L() === 'ja';
+  $('#ways').innerHTML = ways.map((w, i) => `<button aria-pressed="${i === way}" data-i="${i}">${ja ? w[1] : w[2]}</button>`).join('');
+  $('#ways').querySelectorAll('button').forEach(b => b.onclick = () => { way = +b.dataset.i; buy(); });
+  $('#tags').innerHTML = genres.map((g, i) => `<label><input type="checkbox" data-i="${i}" ${picked.has(i) ? 'checked' : ''}>${ja ? g[0] : g[1]}</label>`).join('');
+  $('#tags').querySelectorAll('input').forEach(c => c.onchange = () => { c.checked ? picked.add(+c.dataset.i) : picked.delete(+c.dataset.i); memo(); });
+  const q = $('#qty').value || 0; $('#qty').innerHTML = qtys.map((o, i) => `<option value="${i}">${ja ? o[0] : o[1]}</option>`).join(''); $('#qty').value = q;
+  memo(); }
+function memo() { const ja = L() === 'ja'; const w = ways[way]; const g = [...picked].sort().map(i => ja ? genres[i][0] : genres[i][1]).join('、') || (ja ? '未選択' : '—'); const q = qtys[+$('#qty').value || 0];
+  const t = ja ? `件名：買取のご相談（${w[1]}）\n\n古書ニイロク様\n\n買取のご相談です。\n\n・方法：${w[1]}\n・ジャンル：${g}\n・量：${q[0]}\n${way === 1 ? '・ご住所（地域）：\n・ご希望日時：\n' : ''}・お名前：\n・電話番号：\n\n（写真があれば添付します）\nよろしくお願いいたします。`
+    : `Subject: Selling books (${w[2]})\n\nHello Niiroku,\n\nI'd like to sell some books.\n\n- How: ${w[2]}\n- Genres: ${g}\n- Amount: ${q[1]}\n${way === 1 ? '- Area / address:\n- Preferred date:\n' : ''}- Name:\n- Phone:\n\n(I can attach photos.)\nThank you!`;
+  $('#memo').textContent = t;
+  $('#mailBtn').href = 'mailto:kosho262626@gmail.com?subject=' + encodeURIComponent(ja ? '買取のご相談' : 'Selling books') + '&body=' + encodeURIComponent(t.split('\n\n').slice(1).join('\n\n')); }
+$('#qty').addEventListener('change', memo);
+shelf(); buy();
+$('#langBtn').addEventListener('click', () => { const l = L() === 'ja' ? 'en' : 'ja'; document.body.dataset.lang = l; document.documentElement.lang = l; $('#langBtn').textContent = l === 'ja' ? 'EN' : '日本語'; shelf(); buy(); });
+</script>
+</body>
+</html>

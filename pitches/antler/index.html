@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Antler | 高円寺の古着屋</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,700;0,6..96,900;1,6..96,500&family=Inter:wght@400;600;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root { --ink: #121212; --paper: #f4f1ea; --red: #d62d20; --mute: #6b6760; --line: #d9d4ca; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: "Zen Kaku Gothic New", sans-serif; background: var(--paper); color: var(--ink); line-height: 1.85; overflow-x: hidden; }
+a { color: inherit; }
+.wrap { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+.nw { white-space: nowrap; }
+[data-lang="en"] .ja, [data-lang="ja"] .en { display: none !important; }
+.proposal { background: var(--ink); color: var(--paper); font-size: .75rem; text-align: center; padding: 6px 16px; }
+header { position: sticky; top: 0; z-index: 20; background: var(--paper); border-bottom: 1px solid var(--ink); }
+.nav { display: flex; justify-content: space-between; align-items: center; height: 56px; }
+.logo { text-decoration: none; font-family: "Bodoni Moda"; font-weight: 900; font-size: 1.5rem; letter-spacing: .06em; }
+.nav ul { display: flex; gap: 24px; list-style: none; font: 600 .75rem "Inter"; letter-spacing: .18em; }
+.nav ul a { text-decoration: none; }
+.lang { border: 1px solid var(--ink); background: transparent; padding: 2px 12px; font: 600 .75rem "Inter"; cursor: pointer; }
+/* cover */
+.cover { position: relative; min-height: min(88vh, 820px); color: #fff; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; }
+.cover > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: contrast(1.05) saturate(.9); }
+.cover::after { content: ""; position: absolute; inset: 0; background: linear-gradient(rgba(0,0,0,.35), transparent 35%, transparent 55%, rgba(0,0,0,.65)); }
+.cover > * { position: relative; z-index: 1; }
+.mast { padding: 28px 20px 0; text-align: center; }
+.mast h1 { font-family: "Bodoni Moda"; font-weight: 900; font-size: clamp(4.2rem, 17vw, 12.5rem); line-height: .85; letter-spacing: .02em; }
+.issue { display: flex; justify-content: space-between; max-width: 1100px; margin: 10px auto 0; font: 600 .72rem "Inter"; letter-spacing: .2em; border-top: 1px solid rgba(255,255,255,.6); border-bottom: 1px solid rgba(255,255,255,.6); padding: 6px 0; }
+.lines { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; padding: 0 20px 36px; max-width: 1100px; margin: 0 auto; width: 100%; align-items: end; }
+.line { font-family: "Bodoni Moda"; font-weight: 700; font-size: clamp(1.4rem, 3.4vw, 2.3rem); line-height: 1.1; }
+.line small { display: block; font: 600 .75rem "Inter"; letter-spacing: .2em; margin-bottom: 6px; color: #ffd9d6; }
+.line.r { text-align: right; }
+.stamp { display: inline-block; background: var(--red); color: #fff; font: 800 .8rem "Inter"; letter-spacing: .15em; padding: 6px 12px; margin-top: 10px; }
+.pn { position: absolute; right: 12px; top: 50%; writing-mode: vertical-rl; font-size: .65rem; opacity: .8; z-index: 1; }
+/* ticker */
+.ticker { background: var(--ink); color: var(--paper); overflow: hidden; white-space: nowrap; padding: 12px 0; font: 700 1rem "Bodoni Moda"; font-style: italic; }
+.ticker div { display: inline-block; animation: tick 26s linear infinite; }
+.ticker span { margin: 0 26px; }
+.ticker span i { color: var(--red); font-style: normal; margin-left: 26px; }
+@keyframes tick { to { transform: translateX(-50%); } }
+section { padding: 90px 0; }
+.kick { font: 600 .72rem "Inter"; letter-spacing: .25em; color: var(--red); }
+.h2 { font-family: "Bodoni Moda"; font-weight: 900; font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.1; margin: 6px 0 16px; }
+.h2 .ja { font-family: "Zen Kaku Gothic New"; font-weight: 700; font-size: .8em; }
+/* contents */
+.contents .g { display: grid; grid-template-columns: .9fr 1.1fr; gap: 50px; align-items: start; }
+.toc { list-style: none; border-top: 2px solid var(--ink); }
+.toc li { display: grid; grid-template-columns: 56px 1fr; gap: 10px; padding: 16px 0; border-bottom: 1px solid var(--line); }
+.toc b { font-family: "Bodoni Moda"; font-size: 1.6rem; line-height: 1; color: var(--red); }
+.toc h3 { font: 800 .95rem "Inter"; letter-spacing: .08em; }
+.toc p { font-size: .88rem; color: var(--mute); }
+.feature img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; display: block; }
+.feature figcaption { font-size: .75rem; color: var(--mute); margin-top: 6px; }
+/* costume builder */
+.cost { background: #e9e4da; }
+.cost .g { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
+.fld { margin-top: 16px; }
+.fld > span { display: block; font: 600 .72rem "Inter"; letter-spacing: .2em; margin-bottom: 8px; }
+.pills { display: flex; flex-wrap: wrap; gap: 8px; }
+.pills button { border: 1px solid var(--ink); background: transparent; padding: 6px 14px; font: 500 .88rem "Zen Kaku Gothic New"; cursor: pointer; }
+.pills button[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
+.fld input { width: 100%; padding: 10px 12px; border: 1px solid var(--ink); background: var(--paper); font: 500 .95rem "Zen Kaku Gothic New"; }
+.sheet { background: #fff; border: 1px solid var(--ink); padding: 26px; position: relative; }
+.sheet h3 { font-family: "Bodoni Moda"; font-style: italic; font-weight: 500; font-size: 1.4rem; border-bottom: 1px solid var(--ink); padding-bottom: 8px; }
+.sheet pre { font-family: "Zen Kaku Gothic New"; white-space: pre-wrap; font-size: .9rem; margin: 14px 0 18px; min-height: 240px; }
+.btn { display: inline-block; text-decoration: none; background: var(--ink); color: var(--paper); padding: 12px 24px; font: 700 .9rem "Zen Kaku Gothic New"; }
+.btn.red { background: var(--red); }
+/* worldwide */
+.ww { background: var(--ink); color: var(--paper); text-align: center; }
+.ww .big { font-family: "Bodoni Moda"; font-weight: 900; font-size: clamp(2.6rem, 9vw, 6.5rem); line-height: 1; }
+.ww p { max-width: 560px; margin: 16px auto 24px; opacity: .8; }
+/* visit */
+.visit .g { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; margin-top: 16px; }
+.visit dl { display: grid; grid-template-columns: 100px 1fr; gap: 10px 14px; }
+.visit dt { font: 600 .72rem "Inter"; letter-spacing: .15em; padding-top: 5px; }
+.map { border: 1px solid var(--ink); min-height: 320px; }
+.map iframe { width: 100%; height: 100%; min-height: 320px; border: 0; display: block; filter: grayscale(1) contrast(1.1); }
+footer { border-top: 1px solid var(--ink); text-align: center; padding: 24px 16px 32px; font-size: .75rem; color: var(--mute); }
+@media (max-width: 820px) {
+  .nav ul { display: none; }
+  .lines, .contents .g, .cost .g, .visit .g { grid-template-columns: 1fr; }
+  .line.r { text-align: left; }
+}
+@media (prefers-reduced-motion: reduce) { .ticker div { animation: none; } }
+</style>
+</head>
+<body data-lang="ja">
+<div class="proposal"><span class="ja">※ ご提案用のサンプル（モックアップ）です・検索エンジン非表示</span><span class="en">Proposal mockup · hidden from search engines</span></div>
+<header><div class="wrap nav">
+  <a class="logo" href="#">Antler</a>
+  <ul><li><a href="#contents">CONTENTS</a></li><li><a href="#costume">COSTUME</a></li><li><a href="#shipping">SHIPPING</a></li><li><a href="#visit">VISIT</a></li></ul>
+  <button class="lang" id="langBtn">EN</button>
+</div></header>
+
+<main>
+  <div class="cover">
+    <img src="hero.jpg" alt="">
+    <div class="mast">
+      <h1>Antler</h1>
+      <div class="issue"><span>VINTAGE CLOTHING STORE</span><span id="issue">ISSUE —</span><span>KOENJI 2F</span></div>
+    </div>
+    <span class="pn"><span class="ja">※写真はイメージです</span><span class="en">Sample photo</span></span>
+    <div class="lines">
+      <div class="line"><small>KOENJI · TOKYO</small><span class="ja">高円寺の2階で、<br>古着と出会う。</span><span class="en">Vintage, one flight<br>up in Koenji.</span><div class="stamp">OPEN 13:00–20:00</div></div>
+      <div class="line r"><small>ALSO INSIDE</small>Worldwide shipping<br><span class="ja">衣装協力のご相談も</span><span class="en">&amp; costume loans</span></div>
+    </div>
+  </div>
+  <div class="ticker" aria-hidden="true"><div id="tick"></div></div>
+
+  <section id="contents" class="contents">
+    <div class="wrap g">
+      <div>
+        <div class="kick">CONTENTS</div>
+        <h2 class="h2">In this issue</h2>
+        <ol class="toc">
+          <li><b>01</b><div><h3>VINTAGE</h3><p><span class="ja">高円寺南の2階。選び抜いた古着が並びます。</span><span class="en">A second-floor shop of hand-picked vintage in Koenji-minami.</span></p></div></li>
+          <li><b>02</b><div><h3>BRANDS</h3><p>TODAYedition / KIDS LOVE GAITE / MIYAGIHIDETAKA / Rafu</p></div></li>
+          <li><b>03</b><div><h3>COSTUME</h3><p><span class="ja">撮影などへの衣装協力の実績あり。</span><span class="en">Clothing loaned for shoots.</span></p></div></li>
+          <li><b>04</b><div><h3>ONLINE</h3><p><span class="ja">オンラインストアから世界中へ発送。</span><span class="en">Online store with worldwide shipping.</span></p></div></li>
+        </ol>
+      </div>
+      <figure class="feature"><img src="tees.jpg" alt=""><figcaption><span class="ja">※写真はイメージです（公開時はお店の写真に差し替えます）</span><span class="en">Sample photo — to be replaced with the shop's own.</span></figcaption></figure>
+    </div>
+  </section>
+
+  <section id="costume" class="cost">
+    <div class="wrap g">
+      <div>
+        <div class="kick">COSTUME REQUESTS</div>
+        <h2 class="h2"><span class="ja">衣装協力のご相談</span><span class="en">Costume &amp; styling loans</span></h2>
+        <p style="color:var(--mute)"><span class="ja">スタイリスト・制作会社の方へ。内容を選ぶと、ご相談メールの下書きができます。</span><span class="en">For stylists and production teams — pick the details and we'll draft the request.</span></p>
+        <div class="fld"><span>PROJECT</span><div class="pills" id="pType"></div></div>
+        <div class="fld"><span>LOOK</span><div class="pills" id="pLook"></div></div>
+        <div class="fld"><span>DATE</span><input type="text" id="pDate" placeholder="例：10/15 撮影 / 10/13 リース希望"></div>
+      </div>
+      <div class="sheet">
+        <h3>Request sheet</h3>
+        <pre id="pMemo"></pre>
+        <a class="btn red" id="pMail" href="#"><span class="ja">メールで相談する</span><span class="en">Send by email</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="shipping" class="ww">
+    <div class="wrap">
+      <div class="kick">ONLINE STORE</div>
+      <div class="big">Worldwide<br>shipping.</div>
+      <p><span class="ja">高円寺まで来られない方も、オンラインストアから。海外への発送にも対応しています。</span><span class="en">Can't make it to Koenji? Shop online — we ship worldwide.</span></p>
+      <a class="btn red" href="https://antler.theshop.jp" target="_blank" rel="noopener">antler.theshop.jp →</a>
+    </div>
+  </section>
+
+  <section id="visit" class="visit">
+    <div class="wrap">
+      <div class="kick">VISIT</div>
+      <h2 class="h2">Koenji 2F</h2>
+      <div class="g">
+        <dl>
+          <dt>ADDRESS</dt><dd><span class="ja">〒166-0003 東京都杉並区高円寺南2-50-10 伊勢市ビル 2F</span><span class="en">2F, 2-50-10 Koenji-minami, Suginami, Tokyo 166-0003</span></dd>
+          <dt>HOURS</dt><dd>13:00–20:00 <small style="color:var(--mute)"><span class="ja">（定休日はお店に確認して掲載）</span><span class="en">(days off to be confirmed)</span></small></dd>
+          <dt>TEL</dt><dd>03-6454-6333</dd>
+          <dt>MAIL</dt><dd>information.antler@gmail.com</dd>
+          <dt>ONLINE</dt><dd><a href="https://antler.theshop.jp" target="_blank" rel="noopener">antler.theshop.jp</a></dd>
+          <dt>INSTAGRAM</dt><dd><a href="https://www.instagram.com/antler_koenji/" target="_blank" rel="noopener">@antler_koenji</a></dd>
+        </dl>
+        <div class="map"><iframe loading="lazy" title="Map" src="https://www.google.com/maps?q=Antler%20%E9%AB%98%E5%86%86%E5%AF%BA%E5%8D%972-50-10&output=embed"></iframe></div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>© Antler · Koenji, Tokyo · Photos: Unsplash (sample images)</footer>
+<script>
+const $ = (s) => document.querySelector(s);
+const L = () => document.body.dataset.lang;
+const jst = () => { const d = new Date(); return new Date(d.getTime() + (d.getTimezoneOffset() + 540) * 60000); };
+const n = jst(); $('#issue').textContent = `ISSUE ${n.getFullYear()}.${String(n.getMonth() + 1).padStart(2, '0')}.${String(n.getDate()).padStart(2, '0')}`;
+const brands = ['VINTAGE CLOTHING', 'TODAYedition', 'KIDS LOVE GAITE', 'MIYAGIHIDETAKA', 'Rafu', 'WORLDWIDE SHIPPING', 'KOENJI 2F'];
+$('#tick').innerHTML = [...brands, ...brands].map(b => `<span>${b}<i>✦</i></span>`).join('');
+const types = [['撮影（スチール）', 'Photo shoot'], ['MV・映像', 'Music video / film'], ['広告・CM', 'Advertising'], ['舞台・イベント', 'Stage / event'], ['その他', 'Other']];
+const looks = [['70s', '70s'], ['80s', '80s'], ['90s', '90s'], ['ワーク', 'Workwear'], ['ミリタリー', 'Military'], ['おまかせ', 'Open to ideas']];
+let ty = 0; const lk = new Set([2]);
+function cost() { const ja = L() === 'ja';
+  $('#pType').innerHTML = types.map((t, i) => `<button aria-pressed="${i === ty}" data-i="${i}">${ja ? t[0] : t[1]}</button>`).join('');
+  $('#pType').querySelectorAll('button').forEach(b => b.onclick = () => { ty = +b.dataset.i; cost(); });
+  $('#pLook').innerHTML = looks.map((t, i) => `<button aria-pressed="${lk.has(i)}" data-i="${i}">${ja ? t[0] : t[1]}</button>`).join('');
+  $('#pLook').querySelectorAll('button').forEach(b => b.onclick = () => { const i = +b.dataset.i; lk.has(i) ? lk.delete(i) : lk.add(i); cost(); });
+  memo(); }
+function memo() { const ja = L() === 'ja'; const t = types[ty]; const l = [...lk].sort().map(i => ja ? looks[i][0] : looks[i][1]).join(' / ') || '—'; const d = $('#pDate').value || (ja ? '（未定）' : '(TBD)');
+  const txt = ja ? `件名：衣装協力のご相談（${t[0]}）\n\nAntler 様\n\n衣装協力についてご相談させてください。\n\n・案件：${t[0]}\n・イメージ：${l}\n・日程：${d}\n・媒体／作品名：\n・クレジット表記：\n・会社名・お名前：\n・ご連絡先：\n\nよろしくお願いいたします。`
+    : `Subject: Costume loan request (${t[1]})\n\nHello Antler,\n\nWe'd like to ask about borrowing clothing.\n\n- Project: ${t[1]}\n- Look: ${l}\n- Dates: ${d}\n- Media / title:\n- Credit line:\n- Company & name:\n- Contact:\n\nThank you!`;
+  $('#pMemo').textContent = txt;
+  $('#pMail').href = 'mailto:information.antler@gmail.com?subject=' + encodeURIComponent(ja ? '衣装協力のご相談' : 'Costume loan request') + '&body=' + encodeURIComponent(txt.split('\n\n').slice(1).join('\n\n')); }
+$('#pDate').addEventListener('input', memo);
+cost();
+$('#langBtn').addEventListener('click', () => { const l = L() === 'ja' ? 'en' : 'ja'; document.body.dataset.lang = l; document.documentElement.lang = l; $('#langBtn').textContent = l === 'ja' ? 'EN' : '日本語'; cost(); });
+</script>
+</body>
+</html>

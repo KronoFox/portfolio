@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Take Used, Vintage & Art | 吉祥寺</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;600&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root { --orange: #d9642b; --concrete: #d6d3cd; --dark: #1c1b19; --off: #f3f1ec; --mute: #6e6a63; --denim: #34506e; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: "Zen Kaku Gothic New", sans-serif; background: var(--off); color: var(--dark); line-height: 1.85; overflow-x: hidden; }
+a { color: inherit; }
+.wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+.nw { white-space: nowrap; }
+.arc { font-family: "Archivo Black", sans-serif; }
+[data-lang="en"] .ja, [data-lang="ja"] .en { display: none !important; }
+.proposal { background: var(--dark); color: var(--off); font-size: .75rem; text-align: center; padding: 6px 16px; }
+header { position: sticky; top: 0; z-index: 20; background: var(--off); border-bottom: 3px solid var(--dark); }
+.nav { display: flex; justify-content: space-between; align-items: center; height: 62px; }
+.logo { text-decoration: none; display: flex; align-items: center; gap: 10px; }
+.logo b { background: var(--orange); color: #fff; font-family: "Archivo Black"; width: 42px; height: 42px; border-radius: 50%; display: grid; place-items: center; font-size: 1.1rem; }
+.logo span { font-family: "Archivo"; font-weight: 600; font-size: .8rem; letter-spacing: .1em; line-height: 1.3; }
+.nav ul { display: flex; gap: 22px; list-style: none; font: 600 .82rem "Archivo"; letter-spacing: .1em; }
+.nav ul a { text-decoration: none; }
+.lang { border: 2px solid var(--dark); background: transparent; padding: 1px 12px; font: 700 .8rem "Zen Kaku Gothic New"; cursor: pointer; }
+.floor { position: fixed; right: 18px; bottom: 18px; z-index: 30; background: var(--dark); color: var(--orange); font-family: "Archivo Black"; padding: 8px 14px; border-radius: 6px; font-size: 1.3rem; box-shadow: 0 6px 16px rgba(0,0,0,.25); min-width: 70px; text-align: center; }
+.floor small { display: block; font: 600 .55rem "Archivo"; color: #aaa; letter-spacing: .15em; }
+/* hero */
+.hero { padding: 60px 0 0; overflow: hidden; }
+.hero .wrap { display: grid; grid-template-columns: 1.2fr .8fr; gap: 20px; align-items: end; }
+.hero h1 { font-family: "Archivo Black"; font-size: clamp(3.2rem, 11vw, 8rem); line-height: .9; letter-spacing: -.02em; }
+.hero h1 .o { color: var(--orange); }
+.hero .sub { font: 600 1rem "Archivo"; letter-spacing: .3em; margin: 14px 0 10px; }
+.hero p { max-width: 460px; color: var(--mute); margin-bottom: 22px; }
+.btn { display: inline-block; text-decoration: none; background: var(--orange); color: #fff; padding: 12px 24px; font-weight: 700; border: 2px solid var(--dark); box-shadow: 4px 4px 0 var(--dark); }
+.btn.ghost { background: var(--off); color: var(--dark); }
+.btns { display: flex; gap: 14px; flex-wrap: wrap; }
+.visual { position: relative; justify-self: center; width: min(380px, 86vw); }
+.visual > img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; display: block; border: 3px solid var(--dark); }
+.visual .pn { font-size: .7rem; color: var(--mute); margin-top: 8px; }
+.tag { position: absolute; left: -60px; top: 40px; width: 190px; background: #f7e7c9; border: 2px solid var(--dark); border-radius: 8px 8px 8px 8px; padding: 34px 18px 20px; transform: rotate(-5deg); box-shadow: 6px 6px 0 rgba(0,0,0,.2); }
+.tag::before { content: ""; position: absolute; top: 12px; left: 50%; width: 14px; height: 14px; border-radius: 50%; border: 2px solid var(--dark); background: var(--off); transform: translateX(-50%); }
+.tag::after { content: ""; position: absolute; top: -70px; left: 50%; width: 2px; height: 84px; background: var(--dark); transform: rotate(-6deg); }
+.tag .k { font: 600 .7rem "Archivo"; letter-spacing: .15em; color: var(--mute); }
+.tag .v { font-family: "Archivo Black"; font-size: 1.3rem; margin-bottom: 6px; }
+.tag .st { display: inline-block; margin-top: 4px; padding: 2px 10px; font-weight: 700; font-size: .85rem; background: var(--dark); color: #fff; }
+.tag .st.open { background: var(--orange); }
+/* stairs */
+.stairs { height: 120px; margin-top: 40px; background: repeating-linear-gradient(180deg, var(--concrete) 0 18px, #bdb9b1 18px 20px); clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); position: relative; }
+.stairs::after { content: "B1 ↓"; position: absolute; right: 20px; bottom: 12px; font-family: "Archivo Black"; font-size: 2.4rem; color: var(--dark); opacity: .15; }
+section { padding: 90px 0; }
+.kick { font: 600 .82rem "Archivo"; letter-spacing: .3em; color: var(--orange); }
+.h2 { font-family: "Archivo Black"; font-size: clamp(1.8rem, 5vw, 3rem); line-height: 1.05; margin: 6px 0 14px; }
+.h2 .ja { font-family: "Zen Kaku Gothic New"; font-weight: 700; }
+/* rack */
+.rack-sec { background: var(--dark); color: var(--off); }
+.rail { height: 8px; background: #8a8680; border-radius: 4px; margin: 60px 0 0; }
+.rack { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.hanger { display: flex; flex-direction: column; align-items: center; cursor: pointer; background: none; border: 0; color: inherit; font: inherit; transform-origin: 50% 0; }
+.hanger:hover, .hanger[aria-pressed="true"] { animation: swing .9s ease-in-out; }
+@keyframes swing { 20% { transform: rotate(6deg); } 50% { transform: rotate(-4deg); } 80% { transform: rotate(2deg); } }
+.hook { width: 24px; height: 26px; border: 3px solid #b8b3ab; border-bottom: 0; border-radius: 12px 12px 0 0; margin-top: -8px; }
+.bar { width: 150px; height: 18px; border: 3px solid #b8b3ab; border-top: 0; clip-path: polygon(50% 0, 100% 100%, 0 100%); background: transparent; }
+.cloth { width: 210px; height: 250px; border-radius: 6px; margin-top: -2px; overflow: hidden; border: 3px solid transparent; }
+.cloth img { width: 100%; height: 100%; object-fit: cover; display: block; filter: grayscale(.35); transition: filter .4s; }
+.hanger[aria-pressed="true"] .cloth { border-color: var(--orange); }
+.hanger[aria-pressed="true"] .cloth img, .hanger:hover .cloth img { filter: none; }
+.hanger b { font-family: "Archivo Black"; font-size: 1.6rem; margin-top: 10px; }
+.rack-note { margin-top: 30px; border: 2px solid #4a4843; padding: 20px 24px; min-height: 96px; }
+/* store two */
+.two .g { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; align-items: center; }
+.gt { display: flex; gap: 14px; align-items: center; font-family: "Archivo Black"; font-size: clamp(2.2rem, 7vw, 4rem); }
+.gt i { font-style: normal; color: var(--orange); }
+.gt span { border: 3px solid var(--dark); padding: 2px 16px; }
+/* visit */
+.visit { background: var(--concrete); }
+.visit .g { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; margin-top: 16px; }
+.visit dl { display: grid; grid-template-columns: 100px 1fr; gap: 10px 14px; }
+.visit dt { font: 600 .78rem "Archivo"; letter-spacing: .12em; padding-top: 4px; }
+.map { border: 3px solid var(--dark); min-height: 320px; }
+.map iframe { width: 100%; height: 100%; min-height: 320px; border: 0; display: block; filter: grayscale(.5); }
+footer { background: var(--dark); color: #9a958d; text-align: center; padding: 24px 16px 70px; font-size: .78rem; }
+@media (max-width: 820px) {
+  .nav ul { display: none; }
+  .hero .wrap, .two .g, .visit .g { grid-template-columns: 1fr; }
+  .visual { margin-top: 40px; } .tag { left: -10px; top: 20px; }
+  .rack { grid-template-columns: 1fr; gap: 40px; }
+  .rail { display: none; }
+}
+@media (prefers-reduced-motion: reduce) { .hanger:hover, .hanger[aria-pressed="true"] { animation: none; } }
+</style>
+</head>
+<body data-lang="ja">
+<div class="proposal"><span class="ja">※ ご提案用のサンプル（モックアップ）です・検索エンジン非表示</span><span class="en">Proposal mockup · hidden from search engines</span></div>
+<header><div class="wrap nav">
+  <a class="logo" href="#"><b>Take</b><span>USED, VINTAGE<br>&amp; ART</span></a>
+  <ul><li><a href="#rack">RACK</a></li><li><a href="#give">GIVE &amp; TAKE</a></li><li><a href="#visit">VISIT</a></li></ul>
+  <button class="lang" id="langBtn">EN</button>
+</div></header>
+<div class="floor" id="floor" aria-hidden="true"><small>FLOOR</small><span id="fl">1F</span></div>
+
+<main>
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <h1>TAKE<br><span class="o">B1</span>.</h1>
+        <div class="sub">USED · VINTAGE · ART</div>
+        <p><span class="ja">吉祥寺本町、ビルの地下にある古着屋。階段を降りた先に、古着とヴィンテージ、アートが並んでいます。</span><span class="en">A basement shop in Kichijoji Honcho. Walk down the stairs to used clothing, vintage and art.</span></p>
+        <div class="btns"><a class="btn" href="https://takevintage.base.shop" target="_blank" rel="noopener">ONLINE SHOP</a><a class="btn ghost" href="#visit"><span class="ja">地下へ降りる ↓</span><span class="en">Head downstairs ↓</span></a></div>
+      </div>
+      <div class="visual"><img src="hero.jpg" alt="">
+      <div class="tag" aria-live="polite">
+        <div class="k">TODAY</div><div class="v" id="tagDay">—</div>
+        <div class="k">HOURS</div><div class="v" id="tagHours">—</div>
+        <div class="st" id="tagSt">—</div>
+      </div>
+      <p class="pn"><span class="ja">※写真はイメージです（公開時はお店の写真に差し替えます）</span><span class="en">Sample photo — to be replaced with the shop's own.</span></p></div>
+    </div>
+    <div class="stairs" aria-hidden="true"></div>
+  </div>
+
+  <section id="rack" class="rack-sec">
+    <div class="wrap">
+      <div class="kick">ON THE RACK</div>
+      <h2 class="h2"><span class="ja">三つのラック</span><span class="en">Three racks</span></h2>
+      <div class="rail"></div>
+      <div class="rack" id="rackEl"></div>
+      <div class="rack-note" id="rackNote"></div>
+    </div>
+  </section>
+
+  <section id="give" class="two">
+    <div class="wrap g">
+      <div class="gt" aria-hidden="true"><span>GIVE</span><i>&amp;</i><span>TAKE</span></div>
+      <div>
+        <div class="kick">SECOND STORE</div>
+        <h2 class="h2"><span class="ja">2号店「Give」も吉祥寺に。</span><span class="en">Our second store: Give.</span></h2>
+        <p><span class="ja">姉妹店の Give（@give_kichijoji）もあわせてどうぞ。2店舗をはしごする古着めぐりも楽しいです。</span><span class="en">Visit our sister store Give (@give_kichijoji) too — two shops, one Kichijoji crawl.</span></p>
+        <p style="margin-top:8px;font-size:.82rem;color:var(--mute)"><span class="ja">※ Give の住所・営業時間は正式公開時にお店の情報を掲載します。</span><span class="en">Give's address and hours to be confirmed with the shop.</span></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="visit" class="visit">
+    <div class="wrap">
+      <div class="kick">VISIT</div>
+      <h2 class="h2"><span class="ja">お店へ</span><span class="en">Find us</span></h2>
+      <div class="g">
+        <dl>
+          <dt>ADDRESS</dt><dd><span class="ja">〒180-0004 東京都武蔵野市吉祥寺本町2-2-10 吉田ビル B1F</span><span class="en">Yoshida Bldg. B1F, 2-2-10 Kichijoji Honcho, Musashino, Tokyo 180-0004</span></dd>
+          <dt>MON–FRI</dt><dd>13:00–20:00</dd>
+          <dt>SAT–SUN</dt><dd>12:00–20:00</dd>
+          <dt>MAIL</dt><dd>take202212@gmail.com</dd>
+          <dt>ONLINE</dt><dd><a href="https://takevintage.base.shop" target="_blank" rel="noopener">takevintage.base.shop</a></dd>
+          <dt>INSTAGRAM</dt><dd><a href="https://www.instagram.com/take_kichijoji/" target="_blank" rel="noopener">@take_kichijoji</a></dd>
+          <dt>RATING</dt><dd>★4.8 <span class="ja">（Googleマップ）</span><span class="en">(Google Maps)</span></dd>
+        </dl>
+        <div class="map"><iframe loading="lazy" title="Map" src="https://www.google.com/maps?q=Take%20Used%20Vintage%20Art%20%E5%90%89%E7%A5%A5%E5%AF%BA%E6%9C%AC%E7%94%BA2-2-10&output=embed"></iframe></div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>© Take Used, Vintage &amp; Art · Kichijoji · Photos: Unsplash (sample images)</footer>
+<script>
+const $ = (s) => document.querySelector(s);
+const L = () => document.body.dataset.lang;
+const jst = () => { const d = new Date(); return new Date(d.getTime() + (d.getTimezoneOffset() + 540) * 60000); };
+function tag() { const ja = L() === 'ja'; const n = jst(); const d = n.getDay(); const wk = d === 0 || d === 6;
+  const o = wk ? 720 : 780, m = n.getHours() * 60 + n.getMinutes(); const open = m >= o && m < 1200;
+  $('#tagDay').textContent = (ja ? ['日','月','火','水','木','金','土'][d] + '曜日' : ['SUN','MON','TUE','WED','THU','FRI','SAT'][d]);
+  $('#tagHours').textContent = wk ? '12:00–20:00' : '13:00–20:00';
+  $('#tagSt').className = 'st' + (open ? ' open' : '');
+  $('#tagSt').textContent = open ? (ja ? 'いま営業中' : 'OPEN NOW') : (m < o ? (ja ? `${wk ? 12 : 13}時から` : `OPENS ${wk ? 12 : 1}${wk ? 'PM' : 'PM'}`) : (ja ? '本日は終了' : 'CLOSED')); }
+const racks = [
+  { k: 'USED', c: '#34506e', img: 'used', ja: '毎日着られる古着。デニムやシャツなど、気軽に選べるラック。', en: 'Everyday used clothing — denim, shirts and easy pieces.' },
+  { k: 'VINTAGE', c: '#8c4a24', img: 'vintage', ja: '時間をまとったヴィンテージ。一点ものとの出会いを。', en: 'Vintage with history — one-of-a-kind finds.' },
+  { k: 'ART', c: '#5d6b4f', img: 'art', ja: '服だけじゃない、アートも。店名の「& Art」のとおり。', en: 'Not just clothes — art too, just like the name says.' }
+];
+let sel = 0;
+function rack() { const ja = L() === 'ja';
+  $('#rackEl').innerHTML = racks.map((r, i) => `<button class="hanger" aria-pressed="${i === sel}" data-i="${i}"><div class="hook"></div><div class="bar"></div><div class="cloth"><img src="${r.img}.jpg" alt=""></div><b>${r.k}</b></button>`).join('');
+  $('#rackEl').querySelectorAll('.hanger').forEach(b => b.onclick = () => { sel = +b.dataset.i; rack(); });
+  $('#rackNote').innerHTML = `<b class="arc">${racks[sel].k}</b> — ${ja ? racks[sel].ja : racks[sel].en}<br><small style="color:#9a958d">${ja ? '※ 写真はイメージです。正式公開時はお店の商品写真に差し替えます。' : 'Sample photos — to be replaced with the shop's own product shots.'}</small>`; }
+function floor() { const y = window.scrollY, h = document.body.scrollHeight - innerHeight; const f = y / h;
+  $('#fl').textContent = f < .12 ? '1F' : f < .5 ? '↓' : 'B1'; }
+addEventListener('scroll', floor, { passive: true });
+tag(); rack(); floor(); setInterval(tag, 60000);
+$('#langBtn').addEventListener('click', () => { const l = L() === 'ja' ? 'en' : 'ja'; document.body.dataset.lang = l; document.documentElement.lang = l; $('#langBtn').textContent = l === 'ja' ? 'EN' : '日本語'; tag(); rack(); });
+</script>
+</body>
+</html>
