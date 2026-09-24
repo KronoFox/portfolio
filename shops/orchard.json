@@ -3,7 +3,12 @@
   "name": "orchard flower shop",
   "theme": "noir",
   "art": "flower",
-  "colors": {"bg": "#1c1718", "ink": "#f3e9e6", "accent": "#d8a3a0", "soft": "#241e1f"},
+  "colors": {
+    "bg": "#1c1718",
+    "ink": "#f3e9e6",
+    "accent": "#d8a3a0",
+    "soft": "#241e1f"
+  },
   "instagram": "orchard_flowershop",
   "phone": "090-9283-7064",
   "area_ja": "台東区蔵前",
@@ -12,22 +17,47 @@
   "h1_en": "A small flower shop,\nthree floors above Kuramae.",
   "lead_ja": "ギフト、ウェディング、イベント装花まで。珍しい花にも出会える、蔵前の小さなフラワーショップです。",
   "lead_en": "Gifts, weddings, events and decoration. A small Kuramae florist where you'll find unusual flowers.",
-  "rating": "4.8", "reviews_ja": "6件", "reviews_en": "6",
+  "rating": "4.8",
+  "reviews_ja": "6件",
+  "reviews_en": "6",
   "about_sub_ja": "街歩きの途中で見つかる、とっておきの花",
   "about_sub_en": "A special find on your Kuramae stroll",
   "about_ja": "おしゃれな店内に、丁寧なおもてなし。ご予約・ご相談はInstagramのDMまたはメールで承っています。",
   "about_en": "A stylish shop with attentive service. Reservations and consultations via Instagram DM or email.",
-  "menu_ja": "できること", "menu_en": "Services",
+  "menu_ja": "できること",
+  "menu_en": "Services",
   "items": [
-    {"ja": "花束・ギフト", "en": "Bouquets & gifts", "dja": "大切な方への贈り物に", "den": "For someone special"},
-    {"ja": "ウェディング", "en": "Weddings", "dja": "ご相談ください", "den": "Let's talk"},
-    {"ja": "イベント・装花", "en": "Events & decoration", "dja": "空間を花で彩ります", "den": "Flowers for your space"},
-    {"ja": "季節の花", "en": "Seasonal flowers", "dja": "珍しい花材も", "den": "Including rare varieties"}
+    {
+      "ja": "花束・ギフト",
+      "en": "Bouquets & gifts",
+      "dja": "大切な方への贈り物に",
+      "den": "For someone special"
+    },
+    {
+      "ja": "ウェディング",
+      "en": "Weddings",
+      "dja": "ご相談ください",
+      "den": "Let's talk"
+    },
+    {
+      "ja": "イベント・装花",
+      "en": "Events & decoration",
+      "dja": "空間を花で彩ります",
+      "den": "Flowers for your space"
+    },
+    {
+      "ja": "季節の花",
+      "en": "Seasonal flowers",
+      "dja": "珍しい花材も",
+      "den": "Including rare varieties"
+    }
   ],
-  "info_sub_ja": "ご予約・ご相談はDMまたはメールで", "info_sub_en": "Reservations by DM or email",
+  "info_sub_ja": "ご予約・ご相談はDMまたはメールで",
+  "info_sub_en": "Reservations by DM or email",
   "address_ja": "〒111-0051 東京都台東区蔵前4-14-11 ウグイスビル302号室",
   "address_en": "Uguisu Bldg. #302, 4-14-11 Kuramae, Taito-ku, Tokyo 111-0051",
   "hours_ja": "水 13:30〜19:00／木・金 13:00〜19:00／土・日 13:00〜18:00（月・火定休・営業日はInstagramでご確認ください）",
   "hours_en": "Wed 13:30–19:00 / Thu–Fri 13:00–19:00 / Sat–Sun 13:00–18:00 (closed Mon & Tue; see Instagram)",
-  "map_query": "orchard 花屋 台東区蔵前4-14-11"
+  "map_query": "orchard 花屋 台東区蔵前4-14-11",
+  "custom": true
 }

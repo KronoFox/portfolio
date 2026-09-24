@@ -3,7 +3,13 @@
   "name": "KOTI Finland Cafe",
   "theme": "breeze",
   "art": "roll",
-  "colors": {"bg": "#f7f9fb", "ink": "#1d2b3a", "accent": "#2f5f8f", "soft": "#e1ecf5", "pop": "#f3e3c3"},
+  "colors": {
+    "bg": "#f7f9fb",
+    "ink": "#1d2b3a",
+    "accent": "#2f5f8f",
+    "soft": "#e1ecf5",
+    "pop": "#f3e3c3"
+  },
   "instagram": "koti_finland_cafe_asakusa",
   "area_ja": "台東区浅草",
   "eyebrow": "KOTI · ASAKUSA",
@@ -11,22 +17,47 @@
   "h1_en": "A Finnish pause,\non a quiet Asakusa street.",
   "lead_ja": "シナモンロールにサーモンスープ、ブルーベリータルト。フィンランドや映画『かもめ食堂』が好きな方のための、小さなカフェです。",
   "lead_en": "Cinnamon rolls, salmon soup and blueberry tart: a small café for anyone who loves Finland or the film Kamome Shokudo.",
-  "rating": "4.8", "reviews_ja": "36件", "reviews_en": "36",
+  "rating": "4.8",
+  "reviews_ja": "36件",
+  "reviews_en": "36",
   "about_sub_ja": "大人が静かに、ゆったり過ごすためのお店",
   "about_sub_en": "A calm café for grown-ups to slow down",
   "about_ja": "雷門から歩いて15分、待乳山聖天のすぐそば。観光の喧騒から少し離れて、北欧の空気を感じながらゆっくりお過ごしください。",
   "about_en": "15 minutes' walk from Kaminarimon, right by Matsuchiyama Shoden. Step away from the tourist rush and enjoy a little Nordic calm.",
-  "menu_ja": "メニュー", "menu_en": "Menu",
+  "menu_ja": "メニュー",
+  "menu_en": "Menu",
   "items": [
-    {"ja": "シナモンロール", "en": "Cinnamon roll", "dja": "コーヒーと一緒に", "den": "Perfect with coffee"},
-    {"ja": "サーモンスープセット", "en": "Salmon soup set", "dja": "サラダとパン付き", "den": "With salad and bread"},
-    {"ja": "ブルーベリータルト", "en": "Blueberry tart", "dja": "自慢のタルト", "den": "Our proud tart"},
-    {"ja": "コーヒー", "en": "Coffee", "dja": "マグでゆっくりと", "den": "Served in a mug, take your time"}
+    {
+      "ja": "シナモンロール",
+      "en": "Cinnamon roll",
+      "dja": "コーヒーと一緒に",
+      "den": "Perfect with coffee"
+    },
+    {
+      "ja": "サーモンスープセット",
+      "en": "Salmon soup set",
+      "dja": "サラダとパン付き",
+      "den": "With salad and bread"
+    },
+    {
+      "ja": "ブルーベリータルト",
+      "en": "Blueberry tart",
+      "dja": "自慢のタルト",
+      "den": "Our proud tart"
+    },
+    {
+      "ja": "コーヒー",
+      "en": "Coffee",
+      "dja": "マグでゆっくりと",
+      "den": "Served in a mug, take your time"
+    }
   ],
-  "info_sub_ja": "完全キャッシュレス・お問い合わせはメールまたはInstagramで", "info_sub_en": "Cashless only · contact by email or Instagram",
+  "info_sub_ja": "完全キャッシュレス・お問い合わせはメールまたはInstagramで",
+  "info_sub_en": "Cashless only · contact by email or Instagram",
   "address_ja": "〒111-0032 東京都台東区浅草7-6-4 矢澤ビル1F",
   "address_en": "Yazawa Bldg. 1F, 7-6-4 Asakusa, Taito-ku, Tokyo 111-0032",
   "hours_ja": "11:00〜17:00（L.O. 16:15）／定休日：木曜日",
   "hours_en": "11:00–17:00 (last order 16:15) / Closed Thursdays",
-  "map_query": "KOTI Finland Cafe 台東区浅草7-6-4"
+  "map_query": "KOTI Finland Cafe 台東区浅草7-6-4",
+  "custom": true
 }

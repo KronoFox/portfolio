@@ -4,135 +4,202 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>orchard flower shop | 台東区蔵前</title>
+<title>orchard flower shop | 蔵前</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500;1,600&family=Shippori+Mincho:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Italiana&family=Noto+Serif+JP:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500&display=swap" rel="stylesheet">
 <style>
-:root { --bg: #1c1718; --ink: #f3e9e6; --accent: #d8a3a0; --soft: #241e1f; --pop: #241e1f; }
-
+:root { --uguisu: #6b6a2a; --uguisu-l: #928c36; --blush: #e8b4b0; --blush-d: #c9837e; --cream: #f7f2ea; --brick: #d8cbb8; --ink: #2b2723; --night: #2e2c24; }
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
-body { background: var(--bg); color: var(--ink); line-height: 1.85; -webkit-font-smoothing: antialiased; }
+body { font-family: "Zen Kaku Gothic New", sans-serif; background: var(--cream); color: var(--ink); line-height: 1.9; overflow-x: hidden; }
 a { color: inherit; }
-img, svg { display: block; }
+.it { font-family: "Italiana", serif; }
 .wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
-.proposal { background: #fff4c2; color: #5a4a00; font: 500 .78rem/1.5 system-ui, sans-serif; text-align: center; padding: 7px 16px; }
-header { position: sticky; top: 0; z-index: 20; background: color-mix(in srgb, var(--bg) 90%, transparent); backdrop-filter: blur(10px); }
-.nav { display: flex; align-items: center; justify-content: space-between; height: 64px; gap: 12px; }
-.logo { text-decoration: none; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.nav ul { display: flex; gap: 26px; list-style: none; font-size: .88rem; }
-.nav ul a { text-decoration: none; opacity: .7; }
-.nav ul a:hover { opacity: 1; color: var(--accent); }
-.lang { border: 1.5px solid currentColor; background: transparent; color: var(--ink); border-radius: 999px; padding: 3px 13px; font: inherit; font-size: .78rem; cursor: pointer; flex: none; }
-.btn { display: inline-block; text-decoration: none; font-weight: 500; padding: 13px 30px; border-radius: 999px; background: var(--accent); color: var(--bg); transition: transform .15s; }
-.btn:hover { transform: translateY(-2px); }
-.btn.ghost { background: transparent; color: var(--accent); box-shadow: inset 0 0 0 1.5px var(--accent); }
-.btns { display: flex; gap: 12px; flex-wrap: wrap; }
-section { padding: 88px 0; }
-.note { opacity: .65; font-size: .8rem; margin-top: 28px; }
-.info { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
-.info dl { display: grid; grid-template-columns: 104px 1fr; gap: 12px 18px; }
-.info dt { opacity: .6; font-size: .88rem; }
-.map { overflow: hidden; min-height: 300px; }
-.map iframe { width: 100%; min-height: 300px; height: 100%; border: 0; }
-footer { padding: 32px 0; font-size: .8rem; text-align: center; opacity: .7; }
 [data-lang="en"] .ja, [data-lang="ja"] .en { display: none !important; }
-.l { white-space: nowrap; }
-@media (max-width: 760px) {
-  h1 .ja { font-size: min(1em, calc((100vw - 44px) / (var(--n) * 1.16))) !important; }
+.proposal { background: var(--uguisu); color: var(--cream); font-size: .75rem; text-align: center; padding: 6px 16px; }
+
+header { position: sticky; top: 0; z-index: 20; background: rgba(247,242,234,.94); backdrop-filter: blur(8px); border-bottom: 1px solid rgba(107,106,42,.2); }
+.nav { display: flex; justify-content: space-between; align-items: center; height: 66px; gap: 12px; }
+.logo { text-decoration: none; font-family: "Italiana"; font-size: 1.9rem; letter-spacing: .08em; }
+.logo small { font-family: "Zen Kaku Gothic New"; font-size: .66rem; letter-spacing: .25em; color: var(--uguisu); margin-left: 8px; }
+.nav ul { display: flex; gap: 26px; list-style: none; font-size: .88rem; }
+.nav ul a { text-decoration: none; }
+.lang { border: 1px solid var(--uguisu); background: transparent; color: var(--uguisu); border-radius: 999px; padding: 2px 14px; font: 500 .8rem "Zen Kaku Gothic New"; cursor: pointer; }
+
+/* hero: building facade */
+.hero .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; padding-top: 60px; padding-bottom: 80px; }
+.floor { display: inline-flex; align-items: center; gap: 12px; font-family: "Italiana"; font-size: 1.1rem; color: var(--uguisu); }
+.floor .lcd { background: var(--night); color: #ffb86b; font-family: ui-monospace, monospace; font-size: 1.3rem; padding: 2px 12px; border-radius: 6px; letter-spacing: .1em; min-width: 64px; text-align: center; }
+.hero h1 { font-family: "Noto Serif JP"; font-weight: 700; font-size: clamp(1.6rem, 4vw, 2.5rem); line-height: 1.6; margin: 16px 0 14px; }
+.hero p { color: #5d554d; max-width: 440px; margin-bottom: 24px; }
+.btn { display: inline-block; text-decoration: none; background: var(--uguisu); color: var(--cream); padding: 12px 28px; letter-spacing: .08em; }
+.btn.ghost { background: transparent; color: var(--uguisu); box-shadow: inset 0 0 0 1px var(--uguisu); }
+.btns { display: flex; gap: 12px; flex-wrap: wrap; }
+.bldg { justify-self: center; width: min(380px, 84vw); background: var(--brick); padding: 26px 26px 0; position: relative; box-shadow: 0 30px 60px rgba(43,39,35,.18);
+  background-image: linear-gradient(rgba(43,39,35,.06) 1px, transparent 1px), linear-gradient(90deg, rgba(43,39,35,.05) 1px, transparent 1px); background-size: 100% 18px, 36px 18px; }
+.bldg .sign { background: var(--uguisu); color: var(--cream); text-align: center; font-size: .75rem; letter-spacing: .3em; padding: 4px; margin-bottom: 18px; }
+.fl { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; margin-bottom: 18px; position: relative; }
+.fl .lbl { position: absolute; left: -22px; top: 50%; transform: translateY(-50%); font-family: "Italiana"; font-size: .9rem; color: #8a7f70; }
+.win { aspect-ratio: 3/4; background: #c9c1b2; border: 4px solid #f3eee6; }
+.fl.three .win { background: linear-gradient(#fff3e6, #ffe0d8); position: relative; overflow: hidden; box-shadow: 0 0 30px rgba(255,184,107,.45); }
+.fl.three .win img { position: absolute; bottom: -6%; width: 90%; left: 5%; }
+.door { height: 70px; width: 40%; margin: 0 auto; background: #8a7f70; border: 4px solid #f3eee6; border-bottom: 0; }
+.here { position: absolute; right: -16px; top: 108px; background: var(--blush-d); color: #fff; font-size: .78rem; padding: 4px 10px; border-radius: 4px; box-shadow: 0 6px 14px rgba(0,0,0,.15); }
+.here::before { content: ""; position: absolute; left: -6px; top: 50%; transform: translateY(-50%); border: 6px solid transparent; border-right-color: var(--blush-d); border-left: 0; }
+
+section { padding: 90px 0; }
+.ttl .it { color: var(--uguisu); font-size: 1.3rem; }
+.ttl h2 { font-family: "Noto Serif JP"; font-weight: 700; font-size: clamp(1.6rem, 4vw, 2.2rem); }
+.ttl p { color: #6b635a; }
+
+/* occasion chooser */
+.choose { background: #fff; }
+.tabs { display: flex; flex-wrap: wrap; gap: 10px; margin: 26px 0; }
+.tabs button { border: 1px solid var(--uguisu); background: transparent; color: var(--uguisu); padding: 8px 18px; border-radius: 999px; font: 500 .92rem "Zen Kaku Gothic New"; cursor: pointer; }
+.tabs button[aria-pressed="true"] { background: var(--uguisu); color: var(--cream); }
+.result { display: grid; grid-template-columns: 260px 1fr; gap: 34px; align-items: center; background: var(--cream); padding: 30px; }
+.vase { position: relative; height: 260px; }
+.vase img { position: absolute; width: 58%; bottom: 60px; transition: transform .5s; }
+.vase img:nth-child(1) { left: 6%; transform: rotate(-14deg); } .vase img:nth-child(2) { left: 22%; bottom: 80px; } .vase img:nth-child(3) { left: 38%; transform: rotate(14deg); }
+.vase .pot { position: absolute; bottom: 0; left: 26%; width: 48%; height: 90px; border-radius: 10px 10px 40px 40px; background: var(--uguisu-l); }
+.swatches { display: flex; gap: 10px; margin: 14px 0; }
+.swatches i { width: 40px; height: 40px; border-radius: 50%; border: 3px solid #fff; box-shadow: 0 2px 8px rgba(0,0,0,.12); }
+.result h3 { font-family: "Noto Serif JP"; font-size: 1.3rem; }
+.result p { color: #5d554d; }
+.consult { margin-top: 16px; font-size: .88rem; color: var(--uguisu); }
+
+/* services */
+.svc { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-top: 30px; }
+.s { border-top: 2px solid var(--uguisu); padding-top: 14px; }
+.s h3 { font-family: "Noto Serif JP"; font-size: 1.05rem; }
+.s p { font-size: .88rem; color: #6b635a; }
+
+/* visit */
+.visit { background: var(--night); color: var(--cream); }
+.visit .ttl .it { color: var(--blush); }
+.visit .wrap.g { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; margin-top: 26px; }
+.week { display: grid; grid-template-columns: repeat(7, 1fr); gap: 6px; margin: 10px 0 20px; }
+.week div { background: rgba(247,242,234,.08); border-radius: 8px; text-align: center; padding: 8px 2px; font-size: .78rem; }
+.week div b { display: block; font-family: "Italiana"; font-size: 1rem; }
+.week div.off { opacity: .35; text-decoration: line-through; }
+.visit dl { display: grid; grid-template-columns: 90px 1fr; gap: 10px 14px; }
+.visit dt { opacity: .6; }
+.map { border: 1px solid rgba(232,180,176,.5); padding: 8px; min-height: 320px; }
+.map iframe { width: 100%; min-height: 300px; height: 100%; border: 0; display: block; filter: sepia(.2); }
+footer { text-align: center; padding: 26px 16px; font-size: .8rem; background: var(--night); color: rgba(247,242,234,.7); border-top: 1px solid rgba(247,242,234,.1); }
+footer b { font-family: "Italiana"; font-size: 1.5rem; display: block; color: var(--cream); font-weight: 400; }
+
+@media (max-width: 820px) {
   .nav ul { display: none; }
-  .info { grid-template-columns: 1fr; }
-  section { padding: 64px 0; }
+  .hero .wrap, .visit .wrap.g, .result { grid-template-columns: 1fr; }
+  .svc { grid-template-columns: 1fr 1fr; }
+  .here { right: -6px; }
 }
-
-
-body { font-family: "Shippori Mincho", serif; }
-.logo, h1 .en, h2 .en, .eyebrow, .script { font-family: "Cormorant Garamond", serif; }
-.logo { font-style: italic; font-weight: 600; font-size: 1.45rem; color: var(--accent); }
-header { border-bottom: 1px solid color-mix(in srgb, var(--accent) 35%, transparent); }
-.hero { position: relative; text-align: center; padding: 80px 0 100px; }
-.frame { position: absolute; inset: 24px; border: 1px solid color-mix(in srgb, var(--accent) 40%, transparent); pointer-events: none; }
-.frame::after { content: ""; position: absolute; inset: 8px; border: 1px solid color-mix(in srgb, var(--accent) 20%, transparent); }
-.hero .art { width: 170px; color: var(--accent); margin: 0 auto 30px; }
-.hero .art.spin { animation: spin 14s linear infinite; }
-@keyframes spin { to { transform: rotate(360deg); } }
-@media (prefers-reduced-motion: reduce) { .hero .art.spin { animation: none; } }
-.eyebrow { font-style: italic; color: var(--accent); letter-spacing: .3em; font-size: .95rem; }
-.hero h1 { font-weight: 600; font-size: clamp(2rem, 5.4vw, 3.4rem); line-height: 1.5; margin: 14px 0 20px; }
-.hero h1 .en { font-style: italic; font-weight: 500; line-height: 1.2; }
-.hero p { max-width: 520px; margin: 0 auto 26px; opacity: .75; }
-.rating { font-size: .88rem; opacity: .8; margin-bottom: 30px; }
-.rating b { color: var(--accent); }
-.btns { justify-content: center; }
-.btn { border-radius: 0; background: var(--accent); color: var(--bg); letter-spacing: .1em; }
-.btn.ghost { color: var(--accent); }
-h2 { text-align: center; font-weight: 600; font-size: 1.9rem; margin-bottom: 8px; }
-h2 .en { font-style: italic; font-weight: 500; font-size: 2.3rem; }
-.orn { text-align: center; color: var(--accent); letter-spacing: .6em; margin-bottom: 44px; font-size: .8rem; }
-.about { background: var(--soft); }
-.about .wrap { max-width: 720px; text-align: center; }
-.script { font-style: italic; font-size: 1.6rem; color: var(--accent); margin-bottom: 18px; line-height: 1.4; }
-.about p { opacity: .82; }
-.wine { max-width: 720px; margin: 0 auto; }
-.wine .row { padding: 18px 0; }
-.wine .top { display: flex; align-items: baseline; gap: 12px; }
-.wine h3 { font-weight: 600; font-size: 1.1rem; white-space: nowrap; }
-.wine .lead { flex: 1; border-bottom: 1px dotted color-mix(in srgb, var(--accent) 60%, transparent); transform: translateY(-5px); }
-.wine .no { font-family: "Cormorant Garamond", serif; font-style: italic; color: var(--accent); }
-.wine p { opacity: .6; font-size: .88rem; }
-.note { text-align: center; }
-.visit { background: var(--soft); }
-.map { border: 1px solid color-mix(in srgb, var(--accent) 40%, transparent); padding: 8px; }
-.map iframe { filter: grayscale(.6) contrast(1.05); }
-footer { border-top: 1px solid color-mix(in srgb, var(--accent) 30%, transparent); }
-@media (max-width: 760px) { .frame { inset: 10px; } .wine h3 { white-space: normal; } }
-
 </style>
 </head>
 <body data-lang="ja">
-<div class="proposal"><span class="ja">※ こちらはご提案用のサンプルページです（非公開・検索エンジン非表示）</span><span class="en">Proposal preview: not an official site, hidden from search engines</span></div>
+<div class="proposal"><span class="ja">※ ご提案用のサンプル（モックアップ）です・検索エンジン非表示</span><span class="en">Proposal mockup · hidden from search engines</span></div>
+
 <header><div class="wrap nav">
-  <a class="logo" href="#">orchard flower shop</a>
+  <a class="logo" href="#">orchard<small>FLOWER SHOP · KURAMAE</small></a>
   <ul>
-    <li><a href="#about"><span class="ja">お店について</span><span class="en">About</span></a></li>
-    <li><a href="#menu"><span class="ja">できること</span><span class="en">Services</span></a></li>
-    <li><a href="#info"><span class="ja">アクセス</span><span class="en">Visit</span></a></li>
+    <li><a href="#choose"><span class="ja">花をえらぶ</span><span class="en">Choose flowers</span></a></li>
+    <li><a href="#visit"><span class="ja">営業日・アクセス</span><span class="en">Hours & access</span></a></li>
   </ul>
-  <button class="lang" id="langBtn" aria-label="Switch language">EN</button>
+  <button class="lang" id="langBtn">EN</button>
 </div></header>
+
 <main>
-<div class="hero"><span class="frame"></span><div class="wrap">
-  <svg class="art" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="100" cy="96" r="12"/><ellipse cx="100" cy="56" rx="18" ry="28"/><ellipse cx="100" cy="136" rx="18" ry="28"/><ellipse cx="60" cy="96" rx="28" ry="18"/><ellipse cx="140" cy="96" rx="28" ry="18"/><path d="M100 164v26"/></svg>
-  <div class="eyebrow">Florist · Kuramae</div>
-  <h1><span class="ja" style="--n:11"><span class="l">蔵前のビルの3階に、</span><br><span class="l">小さな花屋があります。</span></span><span class="en">A small flower shop,<br>three floors above Kuramae.</span></h1>
-  <p><span class="ja">ギフト、ウェディング、イベント装花まで。珍しい花にも出会える、蔵前の小さなフラワーショップです。</span><span class="en">Gifts, weddings, events and decoration. A small Kuramae florist where you&#x27;ll find unusual flowers.</span></p>
-  <div class="rating"><b>★ 4.8</b> <span class="ja">Googleクチコミ 6件</span><span class="en">6 Google reviews</span></div>
-  <div class="btns"><a class="btn" href="#menu"><span class="ja">できることを見る</span><span class="en">See the services</span></a><a class="btn ghost" href="#info"><span class="ja">アクセス</span><span class="en">Visit</span></a></div>
-</div></div>
-<section id="about" class="about"><div class="wrap">
-  <h2><span class="ja">お店について</span><span class="en">About</span></h2><p class="orn">✦ ✦ ✦</p>
-  <p class="script"><span class="ja">街歩きの途中で見つかる、とっておきの花</span><span class="en">A special find on your Kuramae stroll</span></p>
-  <p><span class="ja">おしゃれな店内に、丁寧なおもてなし。ご予約・ご相談はInstagramのDMまたはメールで承っています。</span><span class="en">A stylish shop with attentive service. Reservations and consultations via Instagram DM or email.</span></p>
-</div></section>
-<section id="menu"><div class="wrap">
-  <h2><span class="ja">できること</span><span class="en">Services</span></h2><p class="orn">✦ ✦ ✦</p>
-  <div class="wine"><div class="row"><div class="top"><h3><span class="ja">花束・ギフト</span><span class="en">Bouquets &amp; gifts</span></h3><span class="lead"></span><span class="no">No.1</span></div><p><span class="ja">大切な方への贈り物に</span><span class="en">For someone special</span></p></div><div class="row"><div class="top"><h3><span class="ja">ウェディング</span><span class="en">Weddings</span></h3><span class="lead"></span><span class="no">No.2</span></div><p><span class="ja">ご相談ください</span><span class="en">Let&#x27;s talk</span></p></div><div class="row"><div class="top"><h3><span class="ja">イベント・装花</span><span class="en">Events &amp; decoration</span></h3><span class="lead"></span><span class="no">No.3</span></div><p><span class="ja">空間を花で彩ります</span><span class="en">Flowers for your space</span></p></div><div class="row"><div class="top"><h3><span class="ja">季節の花</span><span class="en">Seasonal flowers</span></h3><span class="lead"></span><span class="no">No.4</span></div><p><span class="ja">珍しい花材も</span><span class="en">Including rare varieties</span></p></div></div>
-  <p class="note"><span class="ja">※ 価格・内容は正式公開時にお店の情報に合わせて掲載します。</span><span class="en">Prices and items will be confirmed with the shop before launch.</span></p>
-</div></section>
-<section id="info" class="visit"><div class="wrap">
-  <h2><span class="ja">営業時間・アクセス</span><span class="en">Hours &amp; Access</span></h2><p class="orn">✦ ✦ ✦</p>
-  <div class="info"><dl><dt><span class="ja">住所</span><span class="en">Address</span></dt><dd><span class="ja">〒111-0051 東京都台東区蔵前4-14-11 ウグイスビル302号室</span><span class="en">Uguisu Bldg. #302, 4-14-11 Kuramae, Taito-ku, Tokyo 111-0051</span></dd><dt><span class="ja">営業時間</span><span class="en">Hours</span></dt><dd><span class="ja">水 13:30〜19:00／木・金 13:00〜19:00／土・日 13:00〜18:00（月・火定休・営業日はInstagramでご確認ください）</span><span class="en">Wed 13:30–19:00 / Thu–Fri 13:00–19:00 / Sat–Sun 13:00–18:00 (closed Mon &amp; Tue; see Instagram)</span></dd><dt><span class="ja">電話</span><span class="en">Phone</span></dt><dd><a href="tel:09092837064">090-9283-7064</a></dd><dt><span class="ja">Instagram</span><span class="en">Instagram</span></dt><dd><a href="https://www.instagram.com/orchard_flowershop/" target="_blank" rel="noopener">@orchard_flowershop</a></dd><dt><span class="ja">ポイント</span><span class="en">Good to know</span></dt><dd><span class="ja">ご予約・ご相談はDMまたはメールで</span><span class="en">Reservations by DM or email</span></dd></dl><div class="map"><iframe loading="lazy" title="Map" src="https://www.google.com/maps?q=orchard%20%E8%8A%B1%E5%B1%8B%20%E5%8F%B0%E6%9D%B1%E5%8C%BA%E8%94%B5%E5%89%8D4-14-11&output=embed"></iframe></div></div>
-</div></section></main>
-<footer>© orchard flower shop</footer>
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <div class="floor"><span class="lcd" id="lcd">1F</span><span>Uguisu Building · Room 302</span></div>
+        <h1><span class="ja">蔵前のウグイスビル、<br>3階の小さな花屋。</span><span class="en">A little flower shop,<br>on the 3rd floor in Kuramae.</span></h1>
+        <p><span class="ja">街歩きの途中でふと見つかる、珍しい花にも出会える花屋です。ギフトやウェディング、イベントの装花まで、ご相談ください。</span><span class="en">A florist you stumble upon while strolling Kuramae — with flowers you won't see everywhere. Gifts, weddings and event styling, all by consultation.</span></p>
+        <div class="btns"><a class="btn" href="#choose"><span class="ja">花をえらぶ</span><span class="en">Choose flowers</span></a><a class="btn ghost" href="#visit"><span class="ja">営業日を見る</span><span class="en">Opening days</span></a></div>
+      </div>
+      <div class="bldg" aria-hidden="true">
+        <div class="sign">UGUISU BLDG.</div>
+        <div class="fl three"><span class="lbl">3F</span><div class="win"><img src="tulip.svg" alt=""></div><div class="win"><img src="bouquet.svg" alt=""></div><div class="win"><img src="rose.svg" alt=""></div></div>
+        <div class="fl"><span class="lbl">2F</span><div class="win"></div><div class="win"></div><div class="win"></div></div>
+        <div class="fl"><span class="lbl">1F</span><div class="win"></div><div class="win"></div><div class="win"></div></div>
+        <div class="door"></div>
+        <span class="here">orchard ★4.8</span>
+      </div>
+    </div>
+  </div>
+
+  <section id="choose" class="choose">
+    <div class="wrap">
+      <div class="ttl"><div class="it">Choose by occasion</div><h2><span class="ja">どんな花を贈りますか？</span><span class="en">What are the flowers for?</span></h2><p><span class="ja">シーンを選ぶと、ご相談のイメージが見られます。</span><span class="en">Pick an occasion to see an idea to start from.</span></p></div>
+      <div class="tabs" id="tabs"></div>
+      <div class="result">
+        <div class="vase" id="vase"><img alt=""><img alt=""><img alt=""><div class="pot"></div></div>
+        <div><h3 id="rTitle"></h3><div class="swatches" id="sw"></div><p id="rText"></p>
+          <p class="consult"><span class="ja">→ ご予約・ご相談はInstagramのDMまたはメールで承ります。</span><span class="en">→ Reservations and consultations by Instagram DM or email.</span></p></div>
+      </div>
+      <div class="svc">
+        <div class="s"><h3><span class="ja">花束・ギフト</span><span class="en">Bouquets & gifts</span></h3><p><span class="ja">大切な方への贈り物に。</span><span class="en">For someone special.</span></p></div>
+        <div class="s"><h3><span class="ja">ウェディング</span><span class="en">Weddings</span></h3><p><span class="ja">ご相談ください。</span><span class="en">Let's talk.</span></p></div>
+        <div class="s"><h3><span class="ja">イベント・装花</span><span class="en">Events & styling</span></h3><p><span class="ja">空間を花で彩ります。</span><span class="en">Flowers for your space.</span></p></div>
+        <div class="s"><h3><span class="ja">季節の花</span><span class="en">Seasonal stems</span></h3><p><span class="ja">珍しい花材にも出会えます。</span><span class="en">Including unusual varieties.</span></p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="visit" class="visit">
+    <div class="wrap">
+      <div class="ttl"><div class="it">Opening days</div><h2><span class="ja">営業日・アクセス</span><span class="en">Hours & access</span></h2></div>
+      <div class="wrap g" style="padding:0">
+        <div>
+          <div class="week" id="week"></div>
+          <dl>
+            <dt><span class="ja">住所</span><span class="en">Address</span></dt><dd><span class="ja">〒111-0051 東京都台東区蔵前4-14-11 ウグイスビル302号室</span><span class="en">Uguisu Bldg. #302, 4-14-11 Kuramae, Taito-ku, Tokyo</span></dd>
+            <dt><span class="ja">電話</span><span class="en">Phone</span></dt><dd><a href="tel:09092837064">090-9283-7064</a></dd>
+            <dt>Instagram</dt><dd><a href="https://www.instagram.com/orchard_flowershop/" target="_blank" rel="noopener">@orchard_flowershop</a></dd>
+          </dl>
+          <p style="opacity:.7;font-size:.85rem;margin-top:14px"><span class="ja">※ 最新の営業日はInstagramでお知らせしています。</span><span class="en">Latest opening days are posted on Instagram.</span></p>
+        </div>
+        <div class="map"><iframe loading="lazy" title="Map" src="https://www.google.com/maps?q=orchard%20%E8%8A%B1%E5%B1%8B%20%E5%8F%B0%E6%9D%B1%E5%8C%BA%E8%94%B5%E5%89%8D4-14-11&output=embed"></iframe></div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer><b>orchard</b>© orchard flower shop · Kuramae<br><small>Flower illustrations: Noto Emoji (Apache 2.0)</small></footer>
+
 <script>
-  const btn = document.getElementById('langBtn');
-  btn.addEventListener('click', () => {
-    const l = document.body.dataset.lang === 'ja' ? 'en' : 'ja';
-    document.body.dataset.lang = l;
-    document.documentElement.lang = l;
-    btn.textContent = l === 'ja' ? 'EN' : '日本語';
-  });
+const $ = (s) => document.querySelector(s);
+const L = () => document.body.dataset.lang;
+// elevator 1F -> 3F
+let f = 1; const lcd = $('#lcd'); const up = setInterval(() => { f++; lcd.textContent = f + 'F'; if (f >= 3) clearInterval(up); }, 700);
+
+const occ = [
+  { ja: "お誕生日", en: "Birthday", t: ["明るいビタミンカラーで", "Bright, cheerful colors"], p: ["黄色やオレンジを中心に、元気の出る花束のイメージ。", "Yellows and oranges for a bouquet that lifts the mood."], c: ["#f6c945", "#f39a4c", "#f4d9a0", "#8fae5a"], img: ["sunflower", "tulip", "sunflower"] },
+  { ja: "感謝・お礼", en: "Thank you", t: ["やさしいパステルで", "Soft pastels"], p: ["淡いピンクやクリーム色で、気持ちをそっと伝えるイメージ。", "Pale pinks and creams to say it gently."], c: ["#f3c6c3", "#f7e3d5", "#e8b4b0", "#b8c49a"], img: ["tulip", "rose", "tulip"] },
+  { ja: "ウェディング", en: "Wedding", t: ["白とグリーンで", "White and green"], p: ["白い花とグリーンを基調にした、上品なイメージ。会場に合わせてご相談ください。", "White blooms and greenery — elegant and adaptable to your venue."], c: ["#ffffff", "#f1ede4", "#a9b98a", "#6b6a2a"], img: ["rose", "bouquet", "rose"] },
+  { ja: "お店・イベント", en: "Shop & events", t: ["季節と空間に合わせて", "Made for the season and the space"], p: ["季節の花材で、空間に合わせた装花をご提案するイメージ。", "Seasonal materials arranged to suit your space."], c: ["#6b6a2a", "#c9837e", "#d8cbb8", "#2e2c24"], img: ["bouquet", "tulip", "bouquet"] },
+];
+let cur = 0;
+function render() {
+  const ja = L() === 'ja';
+  $('#tabs').innerHTML = occ.map((o, i) => `<button aria-pressed="${i === cur}" data-i="${i}">${ja ? o.ja : o.en}</button>`).join('');
+  document.querySelectorAll('#tabs button').forEach(b => b.onclick = () => { cur = +b.dataset.i; render(); });
+  const o = occ[cur];
+  $('#rTitle').textContent = (ja ? o.ja + '：' + o.t[0] : o.en + ': ' + o.t[1]);
+  $('#rText').textContent = ja ? o.p[0] : o.p[1];
+  $('#sw').innerHTML = o.c.map(c => `<i style="background:${c}"></i>`).join('');
+  document.querySelectorAll('#vase img').forEach((im, i) => im.src = o.img[i] + '.svg');
+}
+render();
+
+// week schedule
+const days = [["MON", "月", null], ["TUE", "火", null], ["WED", "水", "13:30–19"], ["THU", "木", "13–19"], ["FRI", "金", "13–19"], ["SAT", "土", "13–18"], ["SUN", "日", "13–18"]];
+function week() { const ja = L() === 'ja';
+  $('#week').innerHTML = days.map(d => `<div class="${d[2] ? '' : 'off'}"><b>${ja ? d[1] : d[0]}</b>${d[2] || (ja ? '定休' : 'closed')}</div>`).join(''); }
+week();
+
+$('#langBtn').addEventListener('click', () => { const l = L() === 'ja' ? 'en' : 'ja'; document.body.dataset.lang = l; document.documentElement.lang = l; $('#langBtn').textContent = l === 'ja' ? 'EN' : '日本語'; render(); week(); });
 </script>
 </body>
 </html>

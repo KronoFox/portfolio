@@ -4,127 +4,211 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>パンのイデリオ | 江東区東陽</title>
+<title>パンのイデリオ | 木場・東陽町</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Yomogi&family=Zen+Maru+Gothic:wght@500;700;900&family=Fraunces:opsz,wght@9..144,600;9..144,800&display=swap" rel="stylesheet">
 <style>
-:root { --bg: #fffaf3; --ink: #3a2a20; --accent: #b5652b; --soft: #fbe6cf; --pop: #f4cf7a; }
-
+:root { --wheat: #f6ead2; --crust: #b86a2c; --crust-d: #8a4b1c; --board: #26352d; --chalk: #f4f1e8; --ink: #2f2219; --butter: #f2c75c; --paper: #fffaf0; }
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
-body { background: var(--bg); color: var(--ink); line-height: 1.85; -webkit-font-smoothing: antialiased; }
+body { font-family: "Zen Maru Gothic", sans-serif; font-weight: 500; background: var(--wheat); color: var(--ink); line-height: 1.85; overflow-x: hidden; }
 a { color: inherit; }
-img, svg { display: block; }
+.chalkf { font-family: "Yomogi", cursive; }
 .wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
-.proposal { background: #fff4c2; color: #5a4a00; font: 500 .78rem/1.5 system-ui, sans-serif; text-align: center; padding: 7px 16px; }
-header { position: sticky; top: 0; z-index: 20; background: color-mix(in srgb, var(--bg) 90%, transparent); backdrop-filter: blur(10px); }
-.nav { display: flex; align-items: center; justify-content: space-between; height: 64px; gap: 12px; }
-.logo { text-decoration: none; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.nav ul { display: flex; gap: 26px; list-style: none; font-size: .88rem; }
-.nav ul a { text-decoration: none; opacity: .7; }
-.nav ul a:hover { opacity: 1; color: var(--accent); }
-.lang { border: 1.5px solid currentColor; background: transparent; color: var(--ink); border-radius: 999px; padding: 3px 13px; font: inherit; font-size: .78rem; cursor: pointer; flex: none; }
-.btn { display: inline-block; text-decoration: none; font-weight: 500; padding: 13px 30px; border-radius: 999px; background: var(--accent); color: var(--bg); transition: transform .15s; }
-.btn:hover { transform: translateY(-2px); }
-.btn.ghost { background: transparent; color: var(--accent); box-shadow: inset 0 0 0 1.5px var(--accent); }
-.btns { display: flex; gap: 12px; flex-wrap: wrap; }
-section { padding: 88px 0; }
-.note { opacity: .65; font-size: .8rem; margin-top: 28px; }
-.info { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
-.info dl { display: grid; grid-template-columns: 104px 1fr; gap: 12px 18px; }
-.info dt { opacity: .6; font-size: .88rem; }
-.map { overflow: hidden; min-height: 300px; }
-.map iframe { width: 100%; min-height: 300px; height: 100%; border: 0; }
-footer { padding: 32px 0; font-size: .8rem; text-align: center; opacity: .7; }
 [data-lang="en"] .ja, [data-lang="ja"] .en { display: none !important; }
-.l { white-space: nowrap; }
-@media (max-width: 760px) {
-  h1 .ja { font-size: min(1em, calc((100vw - 44px) / (var(--n) * 1.16))) !important; }
+.proposal { background: var(--crust-d); color: var(--wheat); font-size: .75rem; text-align: center; padding: 6px 16px; }
+
+header { position: sticky; top: 0; z-index: 20; background: rgba(246,234,210,.95); backdrop-filter: blur(8px); border-bottom: 2px solid rgba(138,75,28,.2); }
+.nav { display: flex; justify-content: space-between; align-items: center; height: 66px; gap: 12px; }
+.logo { text-decoration: none; display: flex; align-items: center; gap: 10px; }
+.logo img { width: 38px; }
+.logo b { font-weight: 900; font-size: 1.15rem; }
+.logo small { display: block; font-family: "Fraunces"; font-size: .72rem; letter-spacing: .2em; color: var(--crust); line-height: 1; }
+.nav ul { display: flex; gap: 24px; list-style: none; font-weight: 700; font-size: .9rem; }
+.nav ul a { text-decoration: none; }
+.lang { border: 2px solid var(--crust); background: var(--paper); color: var(--crust); border-radius: 999px; padding: 2px 14px; font: 700 .8rem "Zen Maru Gothic"; cursor: pointer; }
+
+/* hero */
+.hero { padding: 60px 0 80px; position: relative; overflow: hidden; }
+.hero .wrap { display: grid; grid-template-columns: 1.1fr 1fr; gap: 30px; align-items: center; }
+.count { font-family: "Fraunces"; font-weight: 800; color: var(--crust); line-height: .85; font-size: clamp(6rem, 18vw, 11rem); }
+.count sup { font-size: .28em; vertical-align: top; margin-left: 6px; }
+.hero h1 { font-weight: 900; font-size: clamp(1.5rem, 3.8vw, 2.3rem); line-height: 1.45; margin: 12px 0 14px; }
+.hero p { max-width: 460px; margin-bottom: 24px; }
+.btn { display: inline-block; text-decoration: none; background: var(--crust); color: var(--paper); padding: 12px 26px; border-radius: 999px; font-weight: 900; }
+.btn.ghost { background: transparent; color: var(--crust); box-shadow: inset 0 0 0 2px var(--crust); }
+.btns { display: flex; gap: 12px; flex-wrap: wrap; }
+.basket { position: relative; justify-self: center; width: min(420px, 86vw); aspect-ratio: 1; }
+.basket .round { position: absolute; inset: 8%; border-radius: 50%; background: radial-gradient(circle at 40% 35%, #fff4dc, #f1d7a6); box-shadow: inset 0 0 0 10px rgba(184,106,44,.12); }
+.basket img { position: absolute; filter: drop-shadow(0 10px 12px rgba(138,75,28,.25)); }
+.basket .c1 { width: 58%; left: 12%; top: 18%; transform: rotate(-12deg); }
+.basket .c2 { width: 46%; right: 6%; bottom: 14%; transform: rotate(10deg); }
+.steam { position: absolute; top: 4%; left: 40%; width: 24%; opacity: .5; animation: rise 3s ease-in-out infinite; }
+@keyframes rise { 50% { transform: translateY(-8px); opacity: .25; } }
+
+/* chalkboard lineup */
+.board-sec { padding: 40px 0 90px; }
+.board { background: var(--board); color: var(--chalk); border-radius: 12px; padding: 40px 38px; border: 14px solid #8a5a33; box-shadow: 0 24px 50px rgba(47,34,25,.3);
+  background-image: radial-gradient(rgba(255,255,255,.035) 1px, transparent 1.5px); background-size: 6px 6px; }
+.board h2 { font-family: "Yomogi"; font-size: clamp(1.8rem, 4.4vw, 2.6rem); line-height: 1.3; }
+.board .sub { font-family: "Yomogi"; opacity: .8; margin-bottom: 26px; }
+.board ul { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 6px 40px; }
+.board li { font-family: "Yomogi"; font-size: 1.25rem; padding: 10px 0; border-bottom: 1px dashed rgba(244,241,232,.3); display: flex; gap: 10px; align-items: baseline; flex-wrap: wrap; }
+.board li b { font-weight: 400; }
+.board li .star { color: var(--butter); }
+.board li small { width: 100%; font-size: .95rem; opacity: .75; }
+.board .foot { font-family: "Yomogi"; margin-top: 22px; opacity: .8; font-size: .95rem; }
+
+/* pre-order builder */
+.order { background: var(--paper); padding: 90px 0; }
+.order .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
+.order h2 { font-weight: 900; font-size: clamp(1.6rem, 4vw, 2.3rem); line-height: 1.4; }
+.order .lead { margin: 10px 0 20px; }
+.pick { display: grid; gap: 10px; }
+.row { display: grid; grid-template-columns: 1fr auto; align-items: center; background: var(--wheat); border-radius: 14px; padding: 10px 14px; }
+.row b { font-weight: 700; }
+.qty { display: flex; align-items: center; gap: 10px; }
+.qty button { width: 34px; height: 34px; border-radius: 50%; border: 2px solid var(--crust); background: var(--paper); color: var(--crust); font: 900 1.1rem "Zen Maru Gothic"; cursor: pointer; }
+.qty span { min-width: 20px; text-align: center; font-weight: 900; }
+.mail { background: #fff; border-radius: 16px; box-shadow: 0 20px 40px rgba(47,34,25,.12); overflow: hidden; border: 1px solid #ecdcc0; position: sticky; top: 90px; }
+.mail .bar { background: var(--crust); color: var(--paper); padding: 10px 18px; font-weight: 700; font-size: .85rem; display: flex; justify-content: space-between; }
+.mail .hdr { padding: 12px 18px; border-bottom: 1px solid #f0e4cf; font-size: .88rem; }
+.mail .hdr div { display: grid; grid-template-columns: 56px 1fr; }
+.mail .hdr span:first-child { color: #9a8670; }
+.mail pre { font-family: "Zen Maru Gothic"; white-space: pre-wrap; padding: 16px 18px; font-size: .92rem; min-height: 240px; }
+.demo { font-size: .8rem; color: #8a7760; padding: 0 18px 16px; }
+
+/* visit */
+.visit { padding: 90px 0; }
+.visit .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; }
+.visit h2 { font-weight: 900; font-size: clamp(1.6rem, 4vw, 2.2rem); margin-bottom: 14px; }
+.visit dl { display: grid; grid-template-columns: 96px 1fr; gap: 10px 14px; }
+.visit dt { color: #8a7760; }
+.tag { display: inline-block; background: var(--butter); border-radius: 6px; padding: 0 8px; font-weight: 900; font-size: .85rem; }
+.map { border-radius: 24px; overflow: hidden; border: 6px solid var(--paper); box-shadow: 0 16px 34px rgba(47,34,25,.15); min-height: 340px; }
+.map iframe { width: 100%; min-height: 340px; height: 100%; border: 0; display: block; }
+footer { background: var(--board); color: var(--chalk); text-align: center; padding: 28px 16px; font-size: .8rem; }
+footer .chalkf { font-size: 1.4rem; }
+
+@media (max-width: 820px) {
   .nav ul { display: none; }
-  .info { grid-template-columns: 1fr; }
-  section { padding: 64px 0; }
+  .hero .wrap, .order .wrap, .visit .wrap { grid-template-columns: 1fr; }
+  .board { padding: 28px 20px; border-width: 10px; }
+  .board ul { grid-template-columns: 1fr; }
+  .mail { position: static; }
 }
-
-
-body { font-family: "M PLUS Rounded 1c", sans-serif; }
-.logo, h1, h2 { font-weight: 800; }
-.logo { font-size: 1.2rem; color: var(--accent); }
-.hero { position: relative; overflow: hidden; background: linear-gradient(170deg, var(--soft), var(--bg) 75%); text-align: center; padding: 88px 0 150px; }
-.blob { position: absolute; border-radius: 42% 58% 60% 40% / 45% 40% 60% 55%; opacity: .5; filter: blur(2px); }
-.blob.a { width: 340px; height: 340px; background: var(--pop); top: -80px; left: -90px; }
-.blob.b { width: 260px; height: 260px; background: var(--accent); opacity: .22; bottom: 40px; right: -60px; border-radius: 60% 40% 45% 55% / 50% 60% 40% 50%; }
-.hero .wrap { position: relative; }
-.hero .art-wrap { width: 128px; height: 128px; margin: 0 auto 18px; border-radius: 50%; background: var(--bg); color: var(--accent); display: grid; place-items: center; box-shadow: 0 12px 30px color-mix(in srgb, var(--accent) 25%, transparent); }
-.hero .art { width: 70%; }
-.eyebrow { color: var(--accent); font-weight: 800; letter-spacing: .25em; font-size: .78rem; }
-.hero h1 { font-size: clamp(2.2rem, 6vw, 3.8rem); line-height: 1.3; margin: 10px 0 18px; }
-.hero p { max-width: 540px; margin: 0 auto 22px; opacity: .8; }
-.rating { display: inline-block; background: var(--bg); border-radius: 999px; padding: 6px 18px; font-size: .88rem; margin-bottom: 26px; box-shadow: 0 4px 14px rgba(0,0,0,.06); }
-.rating b { color: var(--accent); }
-.btns { justify-content: center; }
-.btn { box-shadow: 0 8px 20px color-mix(in srgb, var(--accent) 35%, transparent); }
-.wave { position: absolute; left: 0; right: 0; bottom: -1px; width: 100%; height: 90px; color: var(--bg); }
-h2 { font-size: clamp(1.7rem, 4vw, 2.3rem); text-align: center; margin-bottom: 12px; }
-.sub { text-align: center; opacity: .65; margin-bottom: 40px; }
-.about .wrap { max-width: 760px; text-align: center; }
-.about .lead { font-weight: 800; font-size: 1.2rem; color: var(--accent); margin-bottom: 12px; }
-.pills { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; }
-.pill { background: var(--bg); border-radius: 26px; padding: 22px 24px; display: flex; gap: 16px; align-items: center; box-shadow: 0 6px 24px rgba(0,0,0,.07); }
-.dot { flex: none; width: 46px; height: 46px; border-radius: 50%; background: var(--soft); color: var(--accent); display: grid; place-items: center; font-weight: 800; }
-.pill h3 { font-size: 1rem; font-weight: 800; }
-.pill p { font-size: .85rem; opacity: .7; }
-#menu { background: color-mix(in srgb, var(--soft) 55%, var(--bg)); border-radius: 48px 48px 0 0; }
-.visit .map { border-radius: 28px; }
-.visit dl { background: color-mix(in srgb, var(--soft) 55%, var(--bg)); border-radius: 28px; padding: 28px; }
-
+@media (prefers-reduced-motion: reduce) { .steam { animation: none; } }
 </style>
 </head>
 <body data-lang="ja">
-<div class="proposal"><span class="ja">※ こちらはご提案用のサンプルページです（非公開・検索エンジン非表示）</span><span class="en">Proposal preview: not an official site, hidden from search engines</span></div>
+<div class="proposal"><span class="ja">※ ご提案用のサンプル（モックアップ）です・検索エンジン非表示</span><span class="en">Proposal mockup · hidden from search engines</span></div>
+
 <header><div class="wrap nav">
-  <a class="logo" href="#">パンのイデリオ</a>
+  <a class="logo" href="#"><img src="croissant.svg" alt=""><span><small>PAN NO IDERIO</small><b>パンのイデリオ</b></span></a>
   <ul>
-    <li><a href="#about"><span class="ja">お店について</span><span class="en">About</span></a></li>
-    <li><a href="#menu"><span class="ja">パン</span><span class="en">Breads</span></a></li>
-    <li><a href="#info"><span class="ja">アクセス</span><span class="en">Visit</span></a></li>
+    <li><a href="#board"><span class="ja">今朝のパン</span><span class="en">Today's bread</span></a></li>
+    <li><a href="#order"><span class="ja">ご予約</span><span class="en">Pre-order</span></a></li>
+    <li><a href="#visit"><span class="ja">アクセス</span><span class="en">Visit</span></a></li>
   </ul>
-  <button class="lang" id="langBtn" aria-label="Switch language">EN</button>
+  <button class="lang" id="langBtn">EN</button>
 </div></header>
+
 <main>
-<div class="hero"><span class="blob a"></span><span class="blob b"></span><div class="wrap">
-  <div class="art-wrap"><svg class="art" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M30 130c0-44 32-70 70-70s70 26 70 70v12H30z"/><path d="M70 82l-10 26M100 74v30M130 82l10 26"/><path d="M20 152h160"/></svg></div>
-  <div class="eyebrow">BAKERY · KIBA / TOYOCHO</div>
-  <h1><span class="ja" style="--n:9"><span class="l">毎朝焼きあがる、</span><br><span class="l">約70種類のパン。</span></span><span class="en">About 70 kinds of bread,<br>baked every morning.</span></h1>
-  <p><span class="ja">名物の「飲むクリームパン」に、トリュフ卵サンド、カレーパン、くるみパン。木場駅から歩いてすぐの、小さなパン屋さんです。</span><span class="en">Our famous &#x27;drinkable&#x27; cream bun, truffle egg sandwich, curry bread and walnut bread, a short walk from Kiba Station.</span></p>
-  <div class="rating"><b>★ 3.9</b> <span class="ja">Googleクチコミ 60件以上</span><span class="en">60+ Google reviews</span></div>
-  <div class="btns"><a class="btn" href="#menu"><span class="ja">パンを見る</span><span class="en">See the breads</span></a><a class="btn ghost" href="#info"><span class="ja">アクセス</span><span class="en">Visit</span></a></div>
-</div><svg class="wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path fill="currentColor" d="M0 50c180-40 360-40 540 0s360 40 540 0 270-30 360-20v60H0z"/></svg></div>
-<section id="about" class="about"><div class="wrap">
-  <h2><span class="ja">お店について</span><span class="en">About us</span></h2>
-  <p class="lead"><span class="ja">オーナーシェフが焼く、まちのベーカリー</span><span class="en">A neighborhood bakery run by its owner-chef</span></p>
-  <p><span class="ja">大門通りから一本入ったところにある、小さなお店です。パンは売り切れ次第終了。ご予約はメールで承っています。</span><span class="en">A small shop just off Daimon-dori. We close when the bread sells out, and pre-orders are welcome by email.</span></p>
-</div></section>
-<section id="menu"><div class="wrap">
-  <h2><span class="ja">パン</span><span class="en">Breads</span></h2>
-  <p class="sub"><span class="ja">人気のメニュー</span><span class="en">Customer favorites</span></p>
-  <div class="pills"><div class="pill"><span class="dot">1</span><div><h3><span class="ja">飲むクリームパン</span><span class="en">Drinkable cream bun</span></h3><p><span class="ja">とろとろのクリームが人気</span><span class="en">Loved for its silky cream</span></p></div></div><div class="pill"><span class="dot">2</span><div><h3><span class="ja">トリュフ卵サンド</span><span class="en">Truffle egg sandwich</span></h3><p><span class="ja">香り豊かなサンド</span><span class="en">Rich and fragrant</span></p></div></div><div class="pill"><span class="dot">3</span><div><h3><span class="ja">カレーパン</span><span class="en">Curry bread</span></h3><p><span class="ja">人気のおかずパン</span><span class="en">A popular savory bread</span></p></div></div><div class="pill"><span class="dot">4</span><div><h3><span class="ja">くるみパン</span><span class="en">Walnut bread</span></h3><p><span class="ja">食事パンにも</span><span class="en">Great with meals</span></p></div></div><div class="pill"><span class="dot">5</span><div><h3><span class="ja">ミニチーズパン</span><span class="en">Mini cheese bread</span></h3><p><span class="ja">ちょっとつまみたい時に</span><span class="en">A perfect snack</span></p></div></div><div class="pill"><span class="dot">6</span><div><h3><span class="ja">プルドポーク</span><span class="en">Pulled pork bread</span></h3><p><span class="ja">ボリュームたっぷり</span><span class="en">Hearty and filling</span></p></div></div></div>
-  <p class="note"><span class="ja">※ 価格・内容は正式公開時にお店の情報に合わせて掲載します。</span><span class="en">Prices and items will be confirmed with the shop before launch.</span></p>
-</div></section>
-<section id="info" class="visit"><div class="wrap">
-  <h2><span class="ja">営業時間・アクセス</span><span class="en">Hours &amp; access</span></h2>
-  <p class="sub"><span class="ja">木場駅A1出口から徒歩4分・ご予約はメールで</span><span class="en">4 min from Kiba Stn. Exit A1 · pre-order by email</span></p>
-  <div class="info"><dl><dt><span class="ja">住所</span><span class="en">Address</span></dt><dd><span class="ja">〒135-0016 東京都江東区東陽3-18-7 高橋ビル1階</span><span class="en">Takahashi Bldg. 1F, 3-18-7 Toyo, Koto-ku, Tokyo 135-0016</span></dd><dt><span class="ja">営業時間</span><span class="en">Hours</span></dt><dd><span class="ja">10:00〜19:00（売り切れ次第終了）／定休日：月・火</span><span class="en">10:00–19:00 (until sold out) / Closed Mon &amp; Tue</span></dd><dt><span class="ja">Instagram</span><span class="en">Instagram</span></dt><dd><a href="https://www.instagram.com/iderio_official/" target="_blank" rel="noopener">@iderio_official</a></dd><dt><span class="ja">ポイント</span><span class="en">Good to know</span></dt><dd><span class="ja">木場駅A1出口から徒歩4分・ご予約はメールで</span><span class="en">4 min from Kiba Stn. Exit A1 · pre-order by email</span></dd></dl><div class="map"><iframe loading="lazy" title="Map" src="https://www.google.com/maps?q=%E3%83%91%E3%83%B3%E3%81%AE%E3%82%A4%E3%83%87%E3%83%AA%E3%82%AA%20%E6%B1%9F%E6%9D%B1%E5%8C%BA%E6%9D%B1%E9%99%BD3-18-7&output=embed"></iframe></div></div>
-</div></section></main>
-<footer>© パンのイデリオ</footer>
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <div class="count"><span id="cnt">0</span><sup><span class="ja">種類</span><span class="en">kinds</span></sup></div>
+        <h1><span class="ja">毎朝、約70種類のパンが<br>焼きあがります。</span><span class="en">About 70 kinds of bread,<br>baked every morning.</span></h1>
+        <p><span class="ja">木場駅から歩いて4分。名物の「飲むクリームパン」から食事パンまで、小さな売り場いっぱいに並べてお待ちしています。</span><span class="en">4 minutes from Kiba Station. From our famous "drinkable" cream bun to everyday loaves, all packed into one small shop.</span></p>
+        <div class="btns"><a class="btn" href="#board"><span class="ja">今朝のパンを見る</span><span class="en">Today's bread</span></a><a class="btn ghost" href="#order"><span class="ja">メールで予約</span><span class="en">Pre-order by email</span></a></div>
+      </div>
+      <div class="basket" aria-hidden="true">
+        <div class="round"></div>
+        <svg class="steam" viewBox="0 0 60 60" fill="none" stroke="#b86a2c" stroke-width="3" stroke-linecap="round"><path d="M15 55c-8-10 8-14 0-26s8-16 0-26M30 55c-8-10 8-14 0-26s8-16 0-26M45 55c-8-10 8-14 0-26s8-16 0-26"/></svg>
+        <img class="c1" src="croissant.svg" alt=""><img class="c2" src="bread.svg" alt="">
+      </div>
+    </div>
+  </div>
+
+  <section id="board" class="board-sec">
+    <div class="wrap">
+      <div class="board">
+        <h2><span class="ja">今朝のおすすめ</span><span class="en">This morning's picks</span></h2>
+        <p class="sub"><span class="ja">★はクチコミでも人気のパン</span><span class="en">★ = reviewer favorites</span></p>
+        <ul id="boardList"></ul>
+        <p class="foot"><span class="ja">※ パンは売り切れ次第終了です。価格・内容は正式公開時にお店の情報に合わせて掲載します。</span><span class="en">We close when the bread sells out. Items and prices to be confirmed with the shop.</span></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="order" class="order">
+    <div class="wrap">
+      <div>
+        <h2><span class="ja">ご予約はメールで。<br>かんたんに作れます。</span><span class="en">Pre-order by email —<br>we'll write it for you.</span></h2>
+        <p class="lead"><span class="ja">パンと個数を選ぶと、右側にご予約メールの文面ができあがります。</span><span class="en">Pick your bread and quantities — the order email writes itself on the right.</span></p>
+        <div class="pick" id="pick"></div>
+      </div>
+      <div class="mail">
+        <div class="bar"><span><span class="ja">新規メール</span><span class="en">New email</span></span><span>✉</span></div>
+        <div class="hdr"><div><span><span class="ja">宛先</span><span class="en">To</span></span><span>iderio.bakery2025@gmail.com</span></div><div><span><span class="ja">件名</span><span class="en">Subj.</span></span><span><span class="ja">パンのご予約</span><span class="en">Bread pre-order</span></span></div></div>
+        <pre id="mailBody"></pre>
+        <p class="demo"><span class="ja">※ サンプルのため、実際には送信されません。公開時は「メールアプリで開く」ボタンを付けられます。</span><span class="en">Demo only — nothing is sent. The live site can open this in your mail app.</span></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="visit" class="visit">
+    <div class="wrap">
+      <div>
+        <h2><span class="ja">お店への行き方</span><span class="en">Find us</span></h2>
+        <dl>
+          <dt><span class="ja">住所</span><span class="en">Address</span></dt><dd><span class="ja">〒135-0016 東京都江東区東陽3-18-7 高橋ビル1階</span><span class="en">Takahashi Bldg. 1F, 3-18-7 Toyo, Koto-ku, Tokyo</span></dd>
+          <dt><span class="ja">アクセス</span><span class="en">Access</span></dt><dd><span class="ja">東西線 木場駅A1出口から徒歩4分</span><span class="en">4 min from Kiba Stn. (Tozai Line) Exit A1</span></dd>
+          <dt><span class="ja">営業時間</span><span class="en">Hours</span></dt><dd>10:00〜19:00 <span class="tag"><span class="ja">売り切れ次第終了</span><span class="en">until sold out</span></span></dd>
+          <dt><span class="ja">定休日</span><span class="en">Closed</span></dt><dd><span class="ja">月曜・火曜（臨時休業あり）</span><span class="en">Mon & Tue (occasional extra closures)</span></dd>
+          <dt><span class="ja">お問い合わせ</span><span class="en">Contact</span></dt><dd><span class="ja">メールにて（DMは対応しておりません）</span><span class="en">By email (no Instagram DMs)</span><br><a href="https://www.instagram.com/iderio_official/" target="_blank" rel="noopener">@iderio_official</a></dd>
+        </dl>
+      </div>
+      <div class="map"><iframe loading="lazy" title="Map" src="https://www.google.com/maps?q=%E3%83%91%E3%83%B3%E3%81%AE%E3%82%A4%E3%83%87%E3%83%AA%E3%82%AA%20%E6%B1%9F%E6%9D%B1%E5%8C%BA%E6%9D%B1%E9%99%BD3-18-7&output=embed"></iframe></div>
+    </div>
+  </section>
+</main>
+<footer><div class="chalkf">パンのイデリオ</div>© Pan no Iderio · Kiba / Toyocho<br><small>Bread illustrations: Noto Emoji (Apache 2.0)</small></footer>
+
 <script>
-  const btn = document.getElementById('langBtn');
-  btn.addEventListener('click', () => {
-    const l = document.body.dataset.lang === 'ja' ? 'en' : 'ja';
-    document.body.dataset.lang = l;
-    document.documentElement.lang = l;
-    btn.textContent = l === 'ja' ? 'EN' : '日本語';
-  });
+const $ = (s) => document.querySelector(s);
+const L = () => document.body.dataset.lang;
+const breads = [
+  ["飲むクリームパン", "Drinkable cream bun", "とろとろのクリームが名物", "Famous for its silky cream", true],
+  ["トリュフ卵サンド", "Truffle egg sandwich", "香り豊かなサンド", "Rich and fragrant", false],
+  ["カレーパン", "Curry bread", "人気のおかずパン", "A popular savory bread", true],
+  ["くるみパン", "Walnut bread", "食事のおともに", "Great with meals", false],
+  ["ミニチーズパン", "Mini cheese bread", "ちょっとつまみたい時に", "A perfect snack", false],
+  ["プルドポーク", "Pulled pork bread", "ボリュームたっぷり", "Hearty and filling", false],
+];
+$('#boardList').innerHTML = breads.map(b => `<li>${b[4] ? '<span class="star">★</span>' : ''}<b><span class="ja">${b[0]}</span><span class="en">${b[1]}</span></b><small><span class="ja">${b[2]}</span><span class="en">${b[3]}</span></small></li>`).join('');
+
+// pre-order builder
+const q = breads.map(() => 0); q[0] = 2; q[1] = 1;
+function renderPick() {
+  $('#pick').innerHTML = breads.map((b, i) => `<div class="row"><b><span class="ja">${b[0]}</span><span class="en">${b[1]}</span></b>
+    <div class="qty"><button data-i="${i}" data-d="-1" aria-label="minus">−</button><span>${q[i]}</span><button data-i="${i}" data-d="1" aria-label="plus">＋</button></div></div>`).join('');
+  document.querySelectorAll('.qty button').forEach(btn => btn.onclick = () => { const i = +btn.dataset.i; q[i] = Math.max(0, Math.min(20, q[i] + +btn.dataset.d)); renderPick(); renderMail(); });
+}
+function renderMail() {
+  const ja = L() === 'ja';
+  const lines = breads.map((b, i) => q[i] ? `・${ja ? b[0] : b[1]} × ${q[i]}` : null).filter(Boolean);
+  $('#mailBody').textContent = ja
+    ? `パンのイデリオ様\n\nパンの予約をお願いいたします。\n\n${lines.length ? lines.join('\n') : '（パンを選んでください）'}\n\nお名前：\n電話番号：\nお受け取り希望日時：\n\nよろしくお願いいたします。`
+    : `Hello Pan no Iderio,\n\nI'd like to pre-order:\n\n${lines.length ? lines.join('\n') : '(choose some bread)'}\n\nName:\nPhone:\nPick-up date & time:\n\nThank you!`;
+}
+renderPick(); renderMail();
+
+// count up to 70
+const cnt = $('#cnt'); let n = 0; const t = setInterval(() => { n += 2; cnt.textContent = n; if (n >= 70) { clearInterval(t); cnt.textContent = '70'; } }, 25);
+
+$('#langBtn').addEventListener('click', () => { const l = L() === 'ja' ? 'en' : 'ja'; document.body.dataset.lang = l; document.documentElement.lang = l; $('#langBtn').textContent = l === 'ja' ? 'EN' : '日本語'; renderPick(); renderMail(); });
 </script>
 </body>
 </html>

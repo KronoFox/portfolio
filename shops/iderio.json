@@ -3,7 +3,13 @@
   "name": "パンのイデリオ",
   "theme": "tropical",
   "art": "bread",
-  "colors": {"bg": "#fffaf3", "ink": "#3a2a20", "accent": "#b5652b", "soft": "#fbe6cf", "pop": "#f4cf7a"},
+  "colors": {
+    "bg": "#fffaf3",
+    "ink": "#3a2a20",
+    "accent": "#b5652b",
+    "soft": "#fbe6cf",
+    "pop": "#f4cf7a"
+  },
   "instagram": "iderio_official",
   "area_ja": "江東区東陽",
   "eyebrow": "BAKERY · KIBA / TOYOCHO",
@@ -11,24 +17,59 @@
   "h1_en": "About 70 kinds of bread,\nbaked every morning.",
   "lead_ja": "名物の「飲むクリームパン」に、トリュフ卵サンド、カレーパン、くるみパン。木場駅から歩いてすぐの、小さなパン屋さんです。",
   "lead_en": "Our famous 'drinkable' cream bun, truffle egg sandwich, curry bread and walnut bread, a short walk from Kiba Station.",
-  "rating": "3.9", "reviews_ja": "60件以上", "reviews_en": "60+",
+  "rating": "3.9",
+  "reviews_ja": "60件以上",
+  "reviews_en": "60+",
   "about_sub_ja": "オーナーシェフが焼く、まちのベーカリー",
   "about_sub_en": "A neighborhood bakery run by its owner-chef",
   "about_ja": "大門通りから一本入ったところにある、小さなお店です。パンは売り切れ次第終了。ご予約はメールで承っています。",
   "about_en": "A small shop just off Daimon-dori. We close when the bread sells out, and pre-orders are welcome by email.",
-  "menu_ja": "パン", "menu_en": "Breads",
+  "menu_ja": "パン",
+  "menu_en": "Breads",
   "items": [
-    {"ja": "飲むクリームパン", "en": "Drinkable cream bun", "dja": "とろとろのクリームが人気", "den": "Loved for its silky cream"},
-    {"ja": "トリュフ卵サンド", "en": "Truffle egg sandwich", "dja": "香り豊かなサンド", "den": "Rich and fragrant"},
-    {"ja": "カレーパン", "en": "Curry bread", "dja": "人気のおかずパン", "den": "A popular savory bread"},
-    {"ja": "くるみパン", "en": "Walnut bread", "dja": "食事パンにも", "den": "Great with meals"},
-    {"ja": "ミニチーズパン", "en": "Mini cheese bread", "dja": "ちょっとつまみたい時に", "den": "A perfect snack"},
-    {"ja": "プルドポーク", "en": "Pulled pork bread", "dja": "ボリュームたっぷり", "den": "Hearty and filling"}
+    {
+      "ja": "飲むクリームパン",
+      "en": "Drinkable cream bun",
+      "dja": "とろとろのクリームが人気",
+      "den": "Loved for its silky cream"
+    },
+    {
+      "ja": "トリュフ卵サンド",
+      "en": "Truffle egg sandwich",
+      "dja": "香り豊かなサンド",
+      "den": "Rich and fragrant"
+    },
+    {
+      "ja": "カレーパン",
+      "en": "Curry bread",
+      "dja": "人気のおかずパン",
+      "den": "A popular savory bread"
+    },
+    {
+      "ja": "くるみパン",
+      "en": "Walnut bread",
+      "dja": "食事パンにも",
+      "den": "Great with meals"
+    },
+    {
+      "ja": "ミニチーズパン",
+      "en": "Mini cheese bread",
+      "dja": "ちょっとつまみたい時に",
+      "den": "A perfect snack"
+    },
+    {
+      "ja": "プルドポーク",
+      "en": "Pulled pork bread",
+      "dja": "ボリュームたっぷり",
+      "den": "Hearty and filling"
+    }
   ],
-  "info_sub_ja": "木場駅A1出口から徒歩4分・ご予約はメールで", "info_sub_en": "4 min from Kiba Stn. Exit A1 · pre-order by email",
+  "info_sub_ja": "木場駅A1出口から徒歩4分・ご予約はメールで",
+  "info_sub_en": "4 min from Kiba Stn. Exit A1 · pre-order by email",
   "address_ja": "〒135-0016 東京都江東区東陽3-18-7 高橋ビル1階",
   "address_en": "Takahashi Bldg. 1F, 3-18-7 Toyo, Koto-ku, Tokyo 135-0016",
   "hours_ja": "10:00〜19:00（売り切れ次第終了）／定休日：月・火",
   "hours_en": "10:00–19:00 (until sold out) / Closed Mon & Tue",
-  "map_query": "パンのイデリオ 江東区東陽3-18-7"
+  "map_query": "パンのイデリオ 江東区東陽3-18-7",
+  "custom": true
 }
