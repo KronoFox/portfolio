@@ -34,19 +34,21 @@ header { position: sticky; top: 0; z-index: 20; background: rgba(251,245,234,.94
 .hero .wrap { display: grid; grid-template-columns: 1fr 1fr; min-height: 560px; align-items: center; gap: 30px; }
 .copy { padding: 60px 0; position: relative; z-index: 2; }
 .copy .kicker { font-family: "Cormorant Garamond"; font-style: italic; font-size: 1.2rem; color: var(--berry); }
-.copy h1 { font-family: "Shippori Mincho B1"; font-weight: 700; font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.5; margin: 10px 0 18px; }
+.nw { white-space: nowrap; }
+.copy h1 { font-family: "Shippori Mincho B1"; font-weight: 700; font-size: clamp(1.5rem, 3.6vw, 2.6rem); line-height: 1.5; margin: 10px 0 18px; }
 .copy p { max-width: 440px; margin-bottom: 26px; color: #4b3a33; }
 .btn { display: inline-block; text-decoration: none; padding: 12px 28px; background: var(--berry); color: var(--cream); letter-spacing: .08em; border-radius: 2px; }
 .btn.ghost { background: transparent; color: var(--berry); box-shadow: inset 0 0 0 1px var(--berry); }
 .btns { display: flex; gap: 12px; flex-wrap: wrap; }
-.pie { position: relative; justify-self: center; width: min(440px, 86vw); aspect-ratio: 1; border-radius: 50%;
+.pie-wrap { position: relative; justify-self: center; }
+.pie { position: relative; width: min(440px, 86vw); aspect-ratio: 1; border-radius: 50%;
   background: radial-gradient(circle, var(--berry-l) 0 58%, var(--berry) 70%);
   box-shadow: 0 0 0 18px var(--crust), 0 0 0 22px var(--crust-d), 0 30px 60px rgba(122,31,53,.25); overflow: hidden; }
 .lattice { position: absolute; inset: 0; border-radius: 50%; }
 .lattice i { position: absolute; background: linear-gradient(180deg, #e8b774, var(--crust) 50%, var(--crust-d)); border-radius: 8px; box-shadow: 0 3px 6px rgba(45,31,26,.25); }
 .lattice .h { left: -5%; right: -5%; height: 9%; }
 .lattice .v { top: -5%; bottom: -5%; width: 9%; background: linear-gradient(90deg, #e8b774, var(--crust) 50%, var(--crust-d)); }
-.rating { position: absolute; right: 4%; bottom: 8%; z-index: 3; background: var(--milk); border: 1px solid var(--berry); padding: 10px 16px; text-align: center; transform: rotate(-4deg); box-shadow: 0 8px 20px rgba(0,0,0,.08); }
+.rating { position: absolute; right: -10px; bottom: 2%; z-index: 3; background: var(--milk); border: 1px solid var(--berry); padding: 10px 16px; text-align: center; transform: rotate(-4deg); box-shadow: 0 8px 20px rgba(0,0,0,.08); }
 .rating b { font-family: "Cormorant Garamond"; font-size: 1.8rem; color: var(--berry); display: block; line-height: 1; }
 .rating small { font-size: .7rem; }
 
@@ -114,11 +116,11 @@ footer b { font-family: "Cormorant Garamond"; font-size: 1.4rem; letter-spacing:
     <div class="wrap">
       <div class="copy">
         <div class="kicker">Kunitachi · since the first bite</div>
-        <h1><span class="ja">さくっと崩れる生地と、<br>季節の果物。</span><span class="en">Flaky crust,<br>and fruit of the season.</span></h1>
+        <h1><span class="ja"><span class="nw">さくっと崩れる生地と、</span><br><span class="nw">季節の果物。</span></span><span class="en">Flaky crust,<br>and fruit of the season.</span></h1>
         <p><span class="ja">国立の小さな菓子屋。ていねいに焼いたパイとタルト、焼き菓子をご用意しています。お菓子がなくなり次第、その日の営業は終了です。</span><span class="en">A small pastry shop in Kunitachi. Carefully baked pies, tarts and baked goods — we close for the day when they're gone.</span></p>
         <div class="btns"><a class="btn" href="#order"><span class="ja">ご予約について</span><span class="en">Pre-orders</span></a><a class="btn ghost" href="#visit"><span class="ja">アクセス</span><span class="en">Visit</span></a></div>
       </div>
-      <div class="pie" aria-hidden="true"><div class="lattice" id="lattice"></div>
+      <div class="pie-wrap"><div class="pie" aria-hidden="true"><div class="lattice" id="lattice"></div></div>
         <div class="rating"><b>★ 4.2</b><small><span class="ja">Googleクチコミ 79件</span><span class="en">79 Google reviews</span></small></div></div>
     </div>
   </div>
