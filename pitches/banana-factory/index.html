@@ -28,7 +28,7 @@ header { position: sticky; top: 0; z-index: 30; background: var(--yellow); borde
 .nav { display: flex; align-items: center; justify-content: space-between; height: 66px; gap: 12px; }
 .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
 .sticker { width: 46px; height: 46px; border-radius: 50%; background: var(--paper); border: 3px solid var(--brown); display: grid; place-items: center; transform: rotate(-12deg); flex: none; }
-.sticker svg { width: 30px; }
+
 .brand b { font-family: "Dela Gothic One"; font-weight: 400; font-size: 1.05rem; line-height: 1; }
 .brand small { display: block; font-size: .62rem; letter-spacing: .18em; font-weight: 700; }
 .nav ul { display: flex; gap: 22px; list-style: none; font-weight: 700; font-size: .9rem; }
@@ -50,7 +50,11 @@ header { position: sticky; top: 0; z-index: 30; background: var(--yellow); borde
 .btn.alt { background: var(--paper); color: var(--brown); }
 .btns { display: flex; flex-wrap: wrap; gap: 12px; }
 .bunch-wrap { position: relative; justify-self: center; width: min(430px, 88vw); }
-.bunch { width: 100%; animation: sway 5s ease-in-out infinite; transform-origin: 55% 12%; filter: drop-shadow(8px 10px 0 rgba(58,36,19,.18)); }
+.bunch { position: relative; width: 100%; aspect-ratio: 1; animation: sway 5s ease-in-out infinite; transform-origin: 30% 20%; filter: drop-shadow(10px 12px 0 rgba(58,36,19,.2)); }
+.bunch img { position: absolute; width: 72%; }
+.bunch .b1 { left: 2%; top: 4%; transform: rotate(-28deg); }
+.bunch .b2 { left: 16%; top: 14%; transform: rotate(-6deg); }
+.bunch .b3 { left: 28%; top: 26%; transform: rotate(16deg); }
 @keyframes sway { 50% { transform: rotate(-4deg); } }
 .review-badge { position: absolute; left: 0; bottom: 0; width: 120px; height: 120px; border-radius: 50%; background: var(--red); color: var(--paper);
   display: grid; place-items: center; text-align: center; border: 4px solid var(--brown); transform: rotate(-10deg); line-height: 1.05; }
@@ -142,33 +146,13 @@ footer .display { font-size: 1.4rem; }
 </style>
 </head>
 <body data-lang="ja">
-<svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <defs>
-    <linearGradient id="peelGrad" gradientUnits="userSpaceOnUse" x1="-30" y1="0" x2="200" y2="185">
-      <stop offset="0" stop-color="#8fb935"/><stop offset=".18" stop-color="#e6d23a"/>
-      <stop offset=".35" stop-color="#ffd83b"/><stop offset=".85" stop-color="#ffcc26"/><stop offset="1" stop-color="#e9ad16"/>
-    </linearGradient>
-    <linearGradient id="shade" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="60" y2="200">
-      <stop offset="0" stop-color="#fff5b8" stop-opacity=".0"/><stop offset="1" stop-color="#c98b00" stop-opacity=".35"/>
-    </linearGradient>
-    <g id="banG">
-      <path d="M-30 5 L-24 -34 Q-12 -42 -2 -36 L0 0 Z" fill="#7a8f2c" stroke="#3a2413" stroke-width="4" stroke-linejoin="round"/>
-      <path d="M-24 -34 Q-12 -41 -3 -36" fill="none" stroke="#4a3318" stroke-width="6" stroke-linecap="round"/>
-      <path d="M0 0 C-5 90 70 170 190 175 C198 176 206 181 200 187 C40 215 -60 120 -30 5 C-24 -1 -10 -3 0 0 Z" fill="url(#peelGrad)" stroke="#3a2413" stroke-width="4" stroke-linejoin="round"/>
-      <path d="M0 0 C-5 90 70 170 190 175 C198 176 206 181 200 187 C40 215 -60 120 -30 5 C-24 -1 -10 -3 0 0 Z" fill="url(#shade)"/>
-      <path d="M-15 8 C-20 105 60 190 196 182" fill="none" stroke="#c98b00" stroke-width="3" stroke-linecap="round" opacity=".6"/>
-      <path d="M6 16 C4 92 70 158 168 166" fill="none" stroke="#fff6c4" stroke-width="7" stroke-linecap="round" opacity=".65"/>
-      <path d="M190 175 C198 176 206 181 200 187 C196 188 192 186 190 182 Z" fill="#4a3318"/>
-    </g>
-  </defs>
-</svg>
 
 <div class="proposal"><span class="ja">※ ご提案用のサンプル（モックアップ）です・検索エンジン非表示</span><span class="en">Proposal mockup · hidden from search engines</span></div>
 
 <header>
   <div class="wrap nav">
     <a class="brand" href="#">
-      <span class="sticker"><svg viewBox="-40 -48 255 245" aria-hidden="true"><use href="#banG"/></svg></span>
+      <span class="sticker"><img src="banana.svg" alt="" style="width:32px"></span>
       <span><b>BANANA FACTORY</b><small>MUKOJIMA · TOKYO</small></span>
     </a>
     <ul>
@@ -195,15 +179,10 @@ footer .display { font-size: 1.4rem; }
         </div>
       </div>
       <div class="bunch-wrap">
-        <svg class="bunch" viewBox="0 0 340 320" aria-hidden="true">
-          <path d="M92 70 C84 46 88 24 102 10" fill="none" stroke="#3a2413" stroke-width="24" stroke-linecap="round"/>
-          <path d="M92 70 C84 46 88 24 102 10" fill="none" stroke="#6f8a2a" stroke-width="15" stroke-linecap="round"/>
-          <ellipse cx="103" cy="9" rx="10" ry="7" fill="#4a3318" stroke="#3a2413" stroke-width="3"/>
-          <use href="#banG" transform="translate(96 80) rotate(-58) scale(.9)"/>
-          <use href="#banG" transform="translate(94 82) rotate(-34) scale(1)"/>
-          <use href="#banG" transform="translate(90 84) rotate(-10) scale(.95)"/>
-          <ellipse cx="92" cy="76" rx="22" ry="14" fill="#6f8a2a" stroke="#3a2413" stroke-width="4"/>
-        </svg>
+        <div class="bunch" role="img" aria-label="Bananas">
+          <!-- Banana illustration: Noto Emoji © Google, Apache License 2.0 -->
+          <img src="banana.svg" alt="" class="b1"><img src="banana.svg" alt="" class="b2"><img src="banana.svg" alt="" class="b3">
+        </div>
         <div class="review-badge"><div><b>★4.4</b><small><span class="ja">クチコミ660件以上</span><span class="en">660+ reviews</span></small></div></div>
       </div>
     </div>
