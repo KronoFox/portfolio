@@ -5,6 +5,7 @@
 """
 import io, json, subprocess, sys, urllib.parse
 from PIL import Image, ImageDraw
+sys.stdout.reconfigure(encoding="utf-8")
 
 
 
