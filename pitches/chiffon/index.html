@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>ちょこっとほけんしつ café chiffon</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@400;500&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root { --sky: #3f7fc4; --sky-soft: #e4eff9; --paper: #fbfcfe; --rule: #cfe0f1; --ink: #1d2a3a; --mute: #5c6b7c; --mint: #3e9b7e; --lemon: #f3d65b; }
+:focus-visible { outline: 3px solid var(--sky); outline-offset: 3px; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: "Zen Kaku Gothic New", sans-serif; background: var(--paper); color: var(--ink); line-height: 1.9; overflow-x: hidden; }
+a { color: inherit; }
+.wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
+.nw { white-space: nowrap; }
+.maru { font-family: "Kiwi Maru", serif; }
+[data-lang="en"] .ja, [data-lang="ja"] .en { display: none !important; }
+.proposal { background: var(--ink); color: var(--paper); font-size: .75rem; text-align: center; padding: 6px 16px; }
+header { position: sticky; top: 0; z-index: 20; background: rgba(251,252,254,.95); backdrop-filter: blur(6px); border-bottom: 2px solid var(--sky); }
+.nav { display: flex; justify-content: space-between; align-items: center; height: 60px; }
+.logo { text-decoration: none; font-family: "Kiwi Maru"; font-size: 1.05rem; line-height: 1.3; }
+.logo b { display: block; font-size: 1.3rem; color: var(--sky); font-weight: 500; }
+.nav ul { display: flex; gap: 22px; list-style: none; font-size: .88rem; }
+.nav ul a { text-decoration: none; }
+.lang { border: 2px solid var(--sky); background: transparent; color: var(--sky); border-radius: 999px; padding: 1px 12px; font: 700 .78rem "Zen Kaku Gothic New"; cursor: pointer; }
+/* newsletter masthead */
+.dayori { padding: 40px 0 70px; background: repeating-linear-gradient(var(--paper) 0 35px, var(--rule) 35px 36px); }
+.mast { display: flex; justify-content: space-between; align-items: flex-end; border-bottom: 3px double var(--sky); padding-bottom: 10px; gap: 12px; flex-wrap: wrap; }
+.mast h1 { font-family: "Kiwi Maru"; font-weight: 500; font-size: clamp(1.9rem, 5.4vw, 3.2rem); line-height: 1.25; color: var(--sky); }
+.mast .issue { font-size: .82rem; color: var(--mute); text-align: right; }
+.lead { display: grid; grid-template-columns: 1.1fr .9fr; gap: 36px; margin-top: 28px; align-items: start; }
+.lead h2 { font-family: "Kiwi Maru"; font-weight: 500; font-size: clamp(1.4rem, 3.4vw, 2rem); line-height: 1.55; text-wrap: balance; }
+.lead h2 mark { background: linear-gradient(transparent 60%, var(--lemon) 60%); color: inherit; }
+.lead p { color: var(--mute); margin: 14px 0 20px; max-width: 460px; }
+.status { display: inline-flex; gap: 10px; align-items: center; background: #fff; border: 2px solid var(--rule); border-radius: 999px; padding: 6px 16px; font-weight: 700; margin-bottom: 18px; }
+.status i { width: 10px; height: 10px; border-radius: 50%; background: #a9b4c0; }
+.status.open i { background: var(--mint); box-shadow: 0 0 0 4px rgba(62,155,126,.18); }
+.btn { display: inline-block; text-decoration: none; background: var(--sky); color: #fff; padding: 11px 24px; border-radius: 999px; font-weight: 700; }
+.btn.ghost { background: #fff; color: var(--sky); box-shadow: inset 0 0 0 2px var(--sky); }
+.btns { display: flex; gap: 12px; flex-wrap: wrap; }
+.photo { background: #fff; padding: 12px 12px 36px; box-shadow: 0 10px 26px rgba(29,42,58,.12); transform: rotate(1.5deg); position: relative; }
+.photo img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; }
+.photo figcaption { position: absolute; left: 0; right: 0; bottom: 8px; text-align: center; font-size: .72rem; color: var(--mute); }
+.photo::before { content: ""; position: absolute; top: -12px; left: 50%; width: 90px; height: 24px; background: rgba(243,214,91,.7); transform: translateX(-50%) rotate(-3deg); }
+section { padding: 80px 0; }
+.kick { font-family: "Kiwi Maru"; color: var(--sky); font-size: 1rem; display: inline-block; border: 2px solid var(--sky); border-radius: 6px; padding: 0 10px; }
+.h2 { font-family: "Kiwi Maru"; font-weight: 500; font-size: clamp(1.5rem, 3.6vw, 2.1rem); line-height: 1.5; margin: 12px 0 16px; text-wrap: balance; }
+/* helper */
+.help { background: var(--sky-soft); }
+.help .g { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; align-items: start; }
+.opts { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.opts button { text-align: left; background: #fff; border: 2px solid var(--rule); border-radius: 14px; padding: 14px 16px; cursor: pointer; font: 700 .95rem "Zen Kaku Gothic New"; color: var(--ink); }
+.opts button small { display: block; font-weight: 400; font-size: .78rem; color: var(--mute); }
+.opts button[aria-pressed="true"] { border-color: var(--sky); background: var(--sky); color: #fff; }
+.opts button[aria-pressed="true"] small { color: #dcebfa; }
+.card { background: #fff; border-radius: 16px; padding: 24px; border: 2px dashed var(--sky); }
+.card h3 { font-family: "Kiwi Maru"; font-weight: 500; font-size: 1.25rem; color: var(--sky); margin-bottom: 8px; }
+.card ul { list-style: none; }
+.card li { padding: 8px 0 8px 22px; border-bottom: 1px solid var(--rule); position: relative; font-size: .93rem; }
+.card li::before { content: "✓"; position: absolute; left: 2px; color: var(--mint); font-weight: 700; }
+/* menu */
+.menu .g { display: grid; grid-template-columns: .9fr 1.1fr; gap: 40px; align-items: center; }
+.menu img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 50%; display: block; border: 8px solid var(--sky-soft); }
+.items { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.it { background: #fff; border: 2px solid var(--rule); border-radius: 14px; padding: 16px; }
+.it b { display: block; font-family: "Kiwi Maru"; font-weight: 500; font-size: 1.05rem; }
+.it span { font-size: .84rem; color: var(--mute); }
+/* for everyone */
+.everyone { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 16px; }
+.ev { border-top: 3px solid var(--sky); padding-top: 12px; }
+.ev h3 { font-family: "Kiwi Maru"; font-weight: 500; font-size: 1.1rem; }
+.ev p { font-size: .9rem; color: var(--mute); }
+/* visit */
+.visit { background: var(--sky-soft); }
+.visit .g { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; margin-top: 16px; }
+.visit dl { display: grid; grid-template-columns: 100px 1fr; gap: 10px 14px; }
+.visit dt { color: var(--mute); font-weight: 700; font-size: .9rem; }
+.visit .rate { font-size: .8rem; color: var(--mute); margin-top: 14px; }
+.map { border-radius: 16px; overflow: hidden; min-height: 320px; border: 2px solid var(--rule); }
+.map iframe { width: 100%; height: 100%; min-height: 320px; border: 0; display: block; }
+footer { background: var(--ink); color: #b9c6d4; text-align: center; padding: 24px 16px 32px; font-size: .78rem; }
+@media (max-width: 820px) {
+  .nav ul { display: none; }
+  .lead, .help .g, .menu .g, .visit .g { grid-template-columns: 1fr; }
+  .everyone { grid-template-columns: 1fr; }
+  .mast .issue { text-align: left; }
+}
+@media (max-width: 460px) { .opts, .items { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body data-lang="ja">
+<div class="proposal"><span class="ja">※ ご提案用のサンプル（モックアップ）です・検索エンジン非表示</span><span class="en">Proposal mockup · hidden from search engines</span></div>
+<header><div class="wrap nav">
+  <a class="logo" href="#"><span class="ja">ちょこっとほけんしつ</span><span class="en">Chokotto Hokenshitsu</span><b>café chiffon</b></a>
+  <ul><li><a href="#help"><span class="ja">きょうのご用件</span><span class="en">Why you're here</span></a></li><li><a href="#menu"><span class="ja">メニュー</span><span class="en">Menu</span></a></li><li><a href="#visit"><span class="ja">アクセス</span><span class="en">Visit</span></a></li></ul>
+  <button class="lang" id="langBtn">EN</button>
+</div></header>
+
+<main>
+  <div class="dayori">
+    <div class="wrap">
+      <div class="mast">
+        <h1><span class="ja">ほけんだより</span><span class="en">The Nurse's Office News</span></h1>
+        <div class="issue"><span id="issue"></span><br><span class="ja">発行：ちょこっとほけんしつ café chiffon</span><span class="en">From café chiffon, Oyama</span></div>
+      </div>
+      <div class="lead">
+        <div>
+          <h2><span class="ja">看護師さんのいる、<br><mark>まちのほけんしつ</mark>カフェ。</span><span class="en">A neighborhood café<br>with a <mark>nurse's office</mark> inside.</span></h2>
+          <div class="status" id="status"><i></i><span id="stText"></span></div>
+          <p><span class="ja">医療者ママたちがつくったカフェです。焼きたてピザやパスタ、ケーキでひと休みしながら、血圧測定や健康・育児のご相談もどうぞ。小上がり席と遊具があるので、お子さま連れでもゆっくり過ごせます。</span><span class="en">A café started by mothers who work in healthcare. Have pizza, pasta or cake — and check your blood pressure or ask about health and parenting while you're here. With a raised seating area and indoor play equipment, kids are welcome too.</span></p>
+          <div class="btns"><a class="btn" href="#help"><span class="ja">きょうのご用件は？</span><span class="en">What brings you in?</span></a><a class="btn ghost" href="https://lin.ee/D6Yank4" target="_blank" rel="noopener"><span class="ja">公式LINE</span><span class="en">LINE</span></a></div>
+        </div>
+        <figure class="photo"><img src="hero.jpg" alt=""><figcaption><span class="ja">※写真はイメージです（公開時はお店の写真に差し替えます）</span><span class="en">Sample photo — to be replaced with the café's own.</span></figcaption></figure>
+      </div>
+    </div>
+  </div>
+
+  <section id="help" class="help">
+    <div class="wrap g">
+      <div>
+        <div class="kick"><span class="ja">きょうのご用件</span><span class="en">Today's visit</span></div>
+        <h2 class="h2"><span class="ja">どんなご用で<br>いらっしゃいますか？</span><span class="en">What brings<br>you in today?</span></h2>
+        <div class="opts" id="opts"></div>
+      </div>
+      <div class="card" aria-live="polite"><h3 id="cTitle"></h3><ul id="cList"></ul></div>
+    </div>
+  </section>
+
+  <section id="menu" class="menu">
+    <div class="wrap g">
+      <figure><img src="cake.jpg" alt=""><figcaption style="font-size:.72rem;color:var(--mute);text-align:center;margin-top:8px"><span class="ja">※写真はイメージです</span><span class="en">Sample photo</span></figcaption></figure>
+      <div>
+        <div class="kick"><span class="ja">こんだて</span><span class="en">Menu</span></div>
+        <h2 class="h2"><span class="ja">ランチメニューは、<br>営業時間中いつでも。</span><span class="en">Lunch is served<br>all day long.</span></h2>
+        <div class="items">
+          <div class="it"><b><span class="ja">焼きたてピザ</span><span class="en">Fresh-baked pizza</span></b><span><span class="ja">クワトロフォルマッジなど</span><span class="en">Quattro formaggi and more</span></span></div>
+          <div class="it"><b><span class="ja">パスタセット</span><span class="en">Pasta set</span></b><span><span class="ja">パスタ・ドリンク・ミニスイーツ</span><span class="en">Pasta, drink & mini dessert</span></span></div>
+          <div class="it"><b><span class="ja">シフォンセット</span><span class="en">Chiffon set</span></b><span><span class="ja">ケーキとコーヒー・紅茶</span><span class="en">Cake with coffee or tea</span></span></div>
+          <div class="it"><b><span class="ja">季節のケーキ</span><span class="en">Seasonal cake</span></b><span><span class="ja">桃のショートケーキなど</span><span class="en">Such as peach shortcake</span></span></div>
+        </div>
+        <p style="font-size:.8rem;color:var(--mute);margin-top:12px"><span class="ja">※ 価格・内容は正式公開時にお店の情報を掲載します。</span><span class="en">Prices to be confirmed with the café.</span></p>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="kick"><span class="ja">どなたでも</span><span class="en">Everyone welcome</span></div>
+      <h2 class="h2"><span class="ja">地域の方が、気軽に立ち寄れる場所に。</span><span class="en">A place anyone in the neighborhood can drop into.</span></h2>
+      <div class="everyone">
+        <div class="ev"><h3><span class="ja">お子さま連れ</span><span class="en">Families</span></h3><p><span class="ja">小上がり席と、うんてい・ブランコ・すべり台。</span><span class="en">Raised seating plus monkey bars, a swing and a slide.</span></p></div>
+        <div class="ev"><h3><span class="ja">通院のあいまに</span><span class="en">Between appointments</span></h3><p><span class="ja">日大病院から徒歩5分。診察の待ち時間や通院帰りのひと休みに。</span><span class="en">Five minutes from Nihon University Hospital — for waiting time or after a visit.</span></p></div>
+        <div class="ev"><h3><span class="ja">お仕事・学生さんも</span><span class="en">Workers & students</span></h3><p><span class="ja">高齢の方も学生さんも、お仕事合間のランチも大歓迎。</span><span class="en">Seniors, students and working lunches all welcome.</span></p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="visit" class="visit">
+    <div class="wrap">
+      <div class="kick"><span class="ja">アクセス</span><span class="en">Visit</span></div>
+      <h2 class="h2"><span class="ja">大山西町・日大病院入口交差点そば</span><span class="en">Near the Nihon University Hospital entrance</span></h2>
+      <div class="g">
+        <div>
+          <dl>
+            <dt><span class="ja">住所</span><span class="en">Address</span></dt><dd><span class="ja">〒173-0033 東京都板橋区大山西町58-13 ハイツ大山101</span><span class="en">Heights Oyama 101, 58-13 Oyama-nishicho, Itabashi, Tokyo 173-0033</span></dd>
+            <dt><span class="ja">火〜金</span><span class="en">Tue–Fri</span></dt><dd>10:00–16:00</dd>
+            <dt><span class="ja">土</span><span class="en">Sat</span></dt><dd>9:00–15:00</dd>
+            <dt><span class="ja">定休日</span><span class="en">Closed</span></dt><dd><span class="ja">日・月</span><span class="en">Sun & Mon</span></dd>
+            <dt>TEL</dt><dd>090-3430-7555</dd>
+            <dt>Mail</dt><dd>chokotto.hokenshitsu@gmail.com</dd>
+            <dt>Instagram</dt><dd><a href="https://www.instagram.com/chiffon8562/" target="_blank" rel="noopener">@chiffon8562</a></dd>
+          </dl>
+          <p class="rate"><span class="ja">Googleマップ ★4.9</span><span class="en">Google Maps ★4.9</span></p>
+        </div>
+        <div class="map"><iframe loading="lazy" title="Map" src="https://www.google.com/maps?q=%E3%81%A1%E3%82%87%E3%81%93%E3%81%A3%E3%81%A8%E3%81%BB%E3%81%91%E3%82%93%E3%81%97%E3%81%A4cafe%20chiffon%20%E6%9D%BF%E6%A9%8B%E5%8C%BA%E5%A4%A7%E5%B1%B1%E8%A5%BF%E7%94%BA58-13&output=embed"></iframe></div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>© ちょこっとほけんしつ café chiffon · Itabashi, Tokyo · Photos: Unsplash (sample images)</footer>
+<script>
+const $ = (s) => document.querySelector(s);
+const L = () => document.body.dataset.lang;
+const jst = () => { const d = new Date(); return new Date(d.getTime() + (d.getTimezoneOffset() + 540) * 60000); };
+const hrs = { 2: [600, 960], 3: [600, 960], 4: [600, 960], 5: [600, 960], 6: [540, 900] };
+function status() { const ja = L() === 'ja'; const n = jst(); const d = n.getDay(), m = n.getHours() * 60 + n.getMinutes(); const h = hrs[d];
+  let t, open = false; const f = x => `${Math.floor(x / 60)}:${String(x % 60).padStart(2, '0')}`;
+  if (h && m >= h[0] && m < h[1]) { open = true; t = ja ? `いま営業中（〜${f(h[1])}）` : `Open now (until ${f(h[1])})`; }
+  else if (h && m < h[0]) t = ja ? `本日 ${f(h[0])} から` : `Opens today at ${f(h[0])}`;
+  else { let a = 1; while (!hrs[(d + a) % 7]) a++; const nd = (d + a) % 7; const nm = ja ? ['日','月','火','水','木','金','土'][nd] + '曜' : ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'][nd];
+    t = ja ? `次の営業は ${a === 1 ? '明日' : nm} ${f(hrs[nd][0])}〜` : `Next open: ${a === 1 ? 'tomorrow' : nm} ${f(hrs[nd][0])}`; }
+  $('#status').className = 'status' + (open ? ' open' : ''); $('#stText').textContent = t;
+  $('#issue').textContent = ja ? `${n.getFullYear()}年 ${n.getMonth() + 1}月号` : `Issue: ${n.toLocaleString('en', { month: 'long' })} ${n.getFullYear()}`; }
+const opts = [
+  ['子連れでランチ', 'Lunch with kids', '小上がり・遊具あり', 'Play area inside',
+    ['小上がり席と、うんてい・ブランコ・すべり台があります', 'ランチメニューは営業時間内いつでも', '席のご予約はInstagramのDM・公式LINE・お電話で', '混雑時はご予約に対応できないことがあります'],
+    ['Raised seating, monkey bars, a swing and a slide', 'Lunch is served all day', 'Book a table via Instagram DM, LINE or phone', 'Bookings may not be possible when busy']],
+  ['健康・育児の相談', 'Health or parenting advice', '看護師・保健師がいます', 'Nurses on hand',
+    ['オーナーは看護師・保健師・思春期保健相談士', '健康相談・育児相談・発達のお話もどうぞ', 'お茶を飲みながら、気軽に話せます'],
+    ['The owners include a nurse, a public health nurse and an adolescent health counselor', 'Ask about health, parenting or development', 'Talk it over casually, with a cup of tea']],
+  ['血圧をはかりたい', 'Check my blood pressure', '店内で測定できます', 'In the café',
+    ['店内で血圧測定ができます', '通院の前後にも立ち寄りやすい、日大病院から徒歩5分', '健康相談もあわせてどうぞ'],
+    ['You can measure your blood pressure here', 'Five minutes from Nihon University Hospital', 'Health questions are welcome too']],
+  ['貸切・イベント', 'Private hire / events', '貸切プランあり', 'Private plans',
+    ['貸切プランがあります（内容はハイライト「メニュー.貸切プラン」）', 'イベント情報は公式LINEで随時配信', 'ご相談はメール・お電話でも受け付けます'],
+    ['Private hire plans are available', 'Event news goes out on LINE', 'Ask by email or phone']]
+];
+let oi = 0;
+function help() { const ja = L() === 'ja';
+  $('#opts').innerHTML = opts.map((o, i) => `<button aria-pressed="${i === oi}" data-i="${i}">${ja ? o[0] : o[1]}<small>${ja ? o[2] : o[3]}</small></button>`).join('');
+  $('#opts').querySelectorAll('button').forEach(b => b.onclick = () => { oi = +b.dataset.i; help(); });
+  const o = opts[oi]; $('#cTitle').textContent = ja ? o[0] : o[1]; $('#cList').innerHTML = (ja ? o[4] : o[5]).map(x => `<li>${x}</li>`).join(''); }
+status(); help(); setInterval(status, 60000);
+$('#langBtn').addEventListener('click', () => { const l = L() === 'ja' ? 'en' : 'ja'; document.body.dataset.lang = l; document.documentElement.lang = l; $('#langBtn').textContent = l === 'ja' ? 'EN' : '日本語'; status(); help(); });
+</script>
+</body>
+</html>
