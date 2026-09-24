@@ -1,0 +1,32 @@
+{
+  "slug": "termoli",
+  "name": "TRATTORIA Termoli",
+  "theme": "editorial",
+  "art": "plate",
+  "colors": {"bg": "#f7f3ec", "ink": "#2a221c", "accent": "#9c3d2a", "soft": "#eee2d4"},
+  "phone": "048-983-3939",
+  "area_ja": "吉川市中央",
+  "eyebrow": "TRATTORIA · YOSHIKAWA",
+  "h1_ja": "小さなお店で、\n本格イタリアンを。",
+  "h1_en": "Authentic Italian,\nin a small, quiet room.",
+  "lead_ja": "おまかせ前菜の盛り合わせに、パルミジャーノのリゾット、アルデンテのパスタ。落ち着いた空間で、丁寧に仕上げた一皿をどうぞ。",
+  "lead_en": "Chef's antipasto platter, Parmigiano risotto and perfectly al dente pasta, each plate made with care in a calm room.",
+  "rating": "4.5", "reviews_ja": "58件", "reviews_en": "58",
+  "about_sub_ja": "カウンター5席とテーブル3卓の、ちいさなトラットリア",
+  "about_sub_en": "A tiny trattoria: 5 counter seats and 3 tables",
+  "about_ja": "心配りの行き届いたおもてなしで、静かに食事を楽しめるお店です。ランチは前菜・メイン・プチデザート・ドリンクのセットでご用意しています。",
+  "about_en": "Thoughtful hospitality and a quiet room. Lunch is a set with antipasto, main, a small dessert and a drink.",
+  "menu_ja": "メニュー", "menu_en": "Menu",
+  "items": [
+    {"ja": "おまかせ前菜盛り合わせ", "en": "Chef's antipasto platter", "dja": "人気の一皿", "den": "A popular favorite"},
+    {"ja": "パルミジャーノチーズのリゾット", "en": "Parmigiano risotto", "dja": "人気のメイン", "den": "A popular main"},
+    {"ja": "パスタ", "en": "Pasta", "dja": "麺の食感と味付けが評判", "den": "Loved for texture and seasoning"},
+    {"ja": "ランチセット", "en": "Lunch set", "dja": "前菜・メイン・プチデザート・ドリンク", "den": "Antipasto, main, small dessert, drink"}
+  ],
+  "info_sub_ja": "目の前にバス停あり・吉川駅から徒歩約20分", "info_sub_en": "Bus stop right outside · ~20 min walk from Yoshikawa Stn.",
+  "address_ja": "〒342-0061 埼玉県吉川市中央2-20-16",
+  "address_en": "2-20-16 Chuo, Yoshikawa, Saitama 342-0061",
+  "hours_ja": "11:30〜（詳細・定休日はお店に確認して掲載）",
+  "hours_en": "From 11:30 AM (full hours to be confirmed)",
+  "map_query": "TRATTORIA Termoli 吉川市中央2-20-16"
+}

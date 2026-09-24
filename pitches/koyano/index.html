@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>レストラン コヤノ | 吉川市栄町</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=RocknRoll+One&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root { --bg: #fbf4e6; --ink: #3a2416; --accent: #a8431f; --soft: #f2dcb9; --pop: #e3b448; }
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: var(--bg); color: var(--ink); line-height: 1.85; -webkit-font-smoothing: antialiased; }
+a { color: inherit; }
+img, svg { display: block; }
+.wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+.proposal { background: #fff4c2; color: #5a4a00; font: 500 .78rem/1.5 system-ui, sans-serif; text-align: center; padding: 7px 16px; }
+header { position: sticky; top: 0; z-index: 20; background: color-mix(in srgb, var(--bg) 90%, transparent); backdrop-filter: blur(10px); }
+.nav { display: flex; align-items: center; justify-content: space-between; height: 64px; gap: 12px; }
+.logo { text-decoration: none; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.nav ul { display: flex; gap: 26px; list-style: none; font-size: .88rem; }
+.nav ul a { text-decoration: none; opacity: .7; }
+.nav ul a:hover { opacity: 1; color: var(--accent); }
+.lang { border: 1.5px solid currentColor; background: transparent; color: var(--ink); border-radius: 999px; padding: 3px 13px; font: inherit; font-size: .78rem; cursor: pointer; flex: none; }
+.btn { display: inline-block; text-decoration: none; font-weight: 500; padding: 13px 30px; border-radius: 999px; background: var(--accent); color: var(--bg); transition: transform .15s; }
+.btn:hover { transform: translateY(-2px); }
+.btn.ghost { background: transparent; color: var(--accent); box-shadow: inset 0 0 0 1.5px var(--accent); }
+.btns { display: flex; gap: 12px; flex-wrap: wrap; }
+section { padding: 88px 0; }
+.note { opacity: .65; font-size: .8rem; margin-top: 28px; }
+.info { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
+.info dl { display: grid; grid-template-columns: 104px 1fr; gap: 12px 18px; }
+.info dt { opacity: .6; font-size: .88rem; }
+.map { overflow: hidden; min-height: 300px; }
+.map iframe { width: 100%; min-height: 300px; height: 100%; border: 0; }
+footer { padding: 32px 0; font-size: .8rem; text-align: center; opacity: .7; }
+[data-lang="en"] .ja, [data-lang="ja"] .en { display: none !important; }
+.l { white-space: nowrap; }
+@media (max-width: 760px) {
+  h1 .ja { font-size: min(1em, calc((100vw - 44px) / (var(--n) * 1.16))) !important; }
+  .nav ul { display: none; }
+  .info { grid-template-columns: 1fr; }
+  section { padding: 64px 0; }
+}
+
+
+body { font-family: "Zen Kaku Gothic New", sans-serif; }
+.logo, h1, h2, .board h3, .stamp { font-family: "RocknRoll One", sans-serif; }
+.logo { font-size: 1.15rem; color: var(--accent); }
+.stripes { height: 14px; background: linear-gradient(var(--pop) 0 33%, var(--accent) 33% 66%, var(--ink) 66%); }
+.hero { position: relative; overflow: hidden; padding: 80px 0 90px; background: radial-gradient(circle at 80% 30%, var(--soft), transparent 60%); }
+.hero .wrap { display: grid; grid-template-columns: 1.25fr 1fr; gap: 40px; align-items: center; }
+.eyebrow { display: inline-block; border: 2px solid var(--accent); color: var(--accent); border-radius: 999px; padding: 2px 16px; font-size: .78rem; font-weight: 700; letter-spacing: .15em; margin-bottom: 18px; }
+.hero h1 { font-size: clamp(2.1rem, 5.6vw, 3.8rem); line-height: 1.35; margin-bottom: 18px; color: var(--ink); }
+.hero h1 .ja { font-size: .9em; }
+.hero p { max-width: 470px; opacity: .85; margin-bottom: 22px; }
+.rating { font-size: .88rem; margin-bottom: 24px; }
+.rating b { color: var(--accent); }
+.sun { position: relative; justify-self: center; width: min(320px, 75vw); aspect-ratio: 1; border-radius: 50%;
+  background: repeating-conic-gradient(var(--pop) 0 10deg, var(--soft) 10deg 20deg); display: grid; place-items: center; }
+.sun .disc { width: 66%; aspect-ratio: 1; border-radius: 50%; background: var(--bg); border: 4px solid var(--ink); display: grid; place-items: center; color: var(--accent); }
+.sun .art { width: 66%; }
+.stamp { position: absolute; bottom: 4%; left: -4%; background: var(--accent); color: var(--bg); border-radius: 12px; padding: 8px 14px; font-size: .95rem; transform: rotate(-8deg); box-shadow: 3px 3px 0 var(--ink); }
+.btn { border-radius: 14px; box-shadow: 0 4px 0 var(--ink); }
+.btn.ghost { box-shadow: inset 0 0 0 2px var(--accent), 0 4px 0 var(--ink); background: var(--bg); }
+h2 { font-size: clamp(1.7rem, 4vw, 2.3rem); margin-bottom: 30px; text-align: center; }
+h2::after { content: ""; display: block; width: 90px; height: 8px; margin: 12px auto 0; background: linear-gradient(90deg, var(--pop) 0 33%, var(--accent) 33% 66%, var(--ink) 66%); border-radius: 4px; }
+.about { background: var(--soft); }
+.about .wrap { max-width: 760px; text-align: center; }
+.about .lead { font-weight: 700; font-size: 1.2rem; color: var(--accent); margin-bottom: 12px; }
+.board { max-width: 760px; margin: 0 auto; background: var(--ink); color: var(--bg); border-radius: 22px; padding: 38px 40px; border: 6px solid var(--accent); box-shadow: 0 0 0 4px var(--ink), 0 18px 40px rgba(0,0,0,.18); }
+.board .row { display: flex; gap: 16px; align-items: baseline; padding: 14px 0; border-bottom: 1px dashed color-mix(in srgb, var(--bg) 30%, transparent); }
+.board .row:last-child { border: 0; }
+.board h3 { font-size: 1.1rem; font-weight: 400; color: var(--pop); white-space: nowrap; }
+.board p { font-size: .88rem; opacity: .8; }
+.note { text-align: center; }
+.visit { background: color-mix(in srgb, var(--soft) 60%, var(--bg)); }
+.map { border-radius: 18px; border: 4px solid var(--ink); }
+footer { background: var(--ink); color: var(--bg); opacity: 1; }
+@media (max-width: 760px) { .hero .wrap { grid-template-columns: 1fr; } .board { padding: 26px 22px; } .board .row { flex-direction: column; gap: 2px; } .board h3 { white-space: normal; } }
+
+</style>
+</head>
+<body data-lang="ja">
+<div class="proposal"><span class="ja">※ こちらはご提案用のサンプルページです（非公開・検索エンジン非表示）</span><span class="en">Proposal preview: not an official site, hidden from search engines</span></div>
+<header><div class="wrap nav">
+  <a class="logo" href="#">レストラン コヤノ</a>
+  <ul>
+    <li><a href="#about"><span class="ja">お店について</span><span class="en">About</span></a></li>
+    <li><a href="#menu"><span class="ja">メニュー</span><span class="en">Menu</span></a></li>
+    <li><a href="#info"><span class="ja">アクセス</span><span class="en">Visit</span></a></li>
+  </ul>
+  <button class="lang" id="langBtn" aria-label="Switch language">EN</button>
+</div></header>
+<main>
+<div class="stripes"></div>
+<div class="hero"><div class="wrap">
+  <div>
+    <span class="eyebrow">YOSHOKU · YOSHIKAWA</span>
+    <h1><span class="ja" style="--n:9"><span class="l">カリッと香ばしい、</span><br><span class="l">おこげの洋食。</span></span><span class="en">Western-style classics,<br>with a crispy twist.</span></h1>
+    <p><span class="ja">名物の「オムレツおこげ」や「おこげハンバーグ」、手作りコロッケ。お手頃価格でおいしい、吉川の洋食レストランです。</span><span class="en">Our famous omelette with crispy rice, crispy-rice hamburg steak and homemade croquettes, at friendly prices.</span></p>
+    <div class="rating"><b>★ 4.3</b> <span class="ja">Googleクチコミ 160件以上</span><span class="en">160+ Google reviews</span></div>
+    <div class="btns"><a class="btn" href="#menu"><span class="ja">メニューを見る</span><span class="en">See the menu</span></a><a class="btn ghost" href="#info"><span class="ja">アクセス</span><span class="en">Visit</span></a></div>
+  </div>
+  <div class="sun"><div class="disc"><svg class="art" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="100" cy="104" r="64"/><circle cx="100" cy="104" r="44"/><path d="M100 104c0-8 12-8 12 0s-20 14-22 0 26-24 34-4-18 38-40 20"/><path d="M26 50v40M20 50v18a6 6 0 0 0 12 0V50M174 50c-10 10-10 30 0 40v70"/></svg></div><span class="stamp">★ 4.3</span></div>
+</div></div>
+<section id="about" class="about"><div class="wrap">
+  <h2><span class="ja">お店について</span><span class="en">About us</span></h2>
+  <p class="lead"><span class="ja">カウンターと大きな窓のある、落ち着いた店内</span><span class="en">A calm room with a counter and big windows</span></p>
+  <p><span class="ja">2階席もあり、ゆったりお食事を楽しめます。ランチにはスープ付き。食後はプリンもどうぞ。</span><span class="en">Plenty of room, including upstairs seating. Lunch comes with soup, and don&#x27;t skip the pudding.</span></p>
+</div></section>
+<section id="menu"><div class="wrap">
+  <h2><span class="ja">メニュー</span><span class="en">Menu</span></h2>
+  <div class="board"><div class="row"><h3><span class="ja">オムレツおこげ</span><span class="en">Omelette with crispy rice</span></h3><p><span class="ja">名物の人気メニュー</span><span class="en">Our famous favorite</span></p></div><div class="row"><h3><span class="ja">おこげハンバーグ</span><span class="en">Hamburg steak with crispy rice</span></h3><p><span class="ja">香ばしさが自慢</span><span class="en">Crispy and savory</span></p></div><div class="row"><h3><span class="ja">手作りコロッケ</span><span class="en">Homemade croquettes</span></h3><p><span class="ja">揚げたてを</span><span class="en">Fried to order</span></p></div><div class="row"><h3><span class="ja">オムライス</span><span class="en">Omurice</span></h3><p><span class="ja">洋食の定番</span><span class="en">A yoshoku classic</span></p></div><div class="row"><h3><span class="ja">ロコモコ</span><span class="en">Loco moco</span></h3><p><span class="ja">ボリュームたっぷり</span><span class="en">Hearty and filling</span></p></div><div class="row"><h3><span class="ja">プリン</span><span class="en">Custard pudding</span></h3><p><span class="ja">食後のお楽しみ</span><span class="en">The perfect finish</span></p></div></div>
+  <p class="note"><span class="ja">※ 価格・内容は正式公開時にお店の情報に合わせて掲載します。</span><span class="en">Prices and items will be confirmed with the shop before launch.</span></p>
+</div></section>
+<section id="info" class="visit"><div class="wrap">
+  <h2><span class="ja">営業時間・アクセス</span><span class="en">Hours &amp; access</span></h2>
+  <div class="info"><dl><dt><span class="ja">住所</span><span class="en">Address</span></dt><dd><span class="ja">〒342-0050 埼玉県吉川市栄町1463-7</span><span class="en">1463-7 Sakaecho, Yoshikawa, Saitama 342-0050</span></dd><dt><span class="ja">営業時間</span><span class="en">Hours</span></dt><dd><span class="ja">11:00〜（詳細はお店に確認して掲載）</span><span class="en">From 11 AM (full hours to be confirmed)</span></dd><dt><span class="ja">電話</span><span class="en">Phone</span></dt><dd><a href="tel:0489826167">048-982-6167</a></dd><dt><span class="ja">Facebook</span><span class="en">Facebook</span></dt><dd><a href="https://www.facebook.com/RestauranntKoyano" target="_blank" rel="noopener">Facebookページ</a></dd><dt><span class="ja">ポイント</span><span class="en">Good to know</span></dt><dd><span class="ja">定休日：木曜日（要確認）・テイクアウトあり</span><span class="en">Closed Thursdays (to be confirmed) · takeaway</span></dd></dl><div class="map"><iframe loading="lazy" title="Map" src="https://www.google.com/maps?q=%E3%83%AC%E3%82%B9%E3%83%88%E3%83%A9%E3%83%B3%20%E3%82%B3%E3%83%A4%E3%83%8E%20%E5%90%89%E5%B7%9D%E5%B8%82%E6%A0%84%E7%94%BA1463-7&output=embed"></iframe></div></div>
+</div></section></main>
+<footer>© レストラン コヤノ</footer>
+<script>
+  const btn = document.getElementById('langBtn');
+  btn.addEventListener('click', () => {
+    const l = document.body.dataset.lang === 'ja' ? 'en' : 'ja';
+    document.body.dataset.lang = l;
+    document.documentElement.lang = l;
+    btn.textContent = l === 'ja' ? 'EN' : '日本語';
+  });
+</script>
+</body>
+</html>

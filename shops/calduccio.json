@@ -1,0 +1,33 @@
+{
+  "slug": "calduccio",
+  "name": "Osteria Calduccio",
+  "theme": "noir",
+  "art": "wine",
+  "colors": {"bg": "#1a1214", "ink": "#f1e6dc", "accent": "#c79a5b", "soft": "#231a1c"},
+  "phone": "048-940-7250",
+  "area_ja": "吉川市高富",
+  "eyebrow": "Southern Italian · Wine bar",
+  "h1_ja": "ワインと南イタリア、\n夜の吉川で。",
+  "h1_en": "Southern Italian and wine,\nfor a Yoshikawa evening.",
+  "lead_ja": "素材の味を引き出す創作料理と、豊富なお酒。落ち着いた空間で、つい長居したくなるオステリアです。",
+  "lead_en": "Creative dishes that let the ingredients shine, and a wide range of drinks. An osteria where you'll want to linger.",
+  "rating": "4.6", "reviews_ja": "70件以上", "reviews_en": "70+",
+  "about_sub_ja": "見た目も、味わいも楽しい一皿を",
+  "about_sub_en": "Plates that delight the eye and the palate",
+  "about_ja": "一品一品ていねいに仕上げた料理を、豊富なメニューからお選びいただけます。週末は満席になることが多いので、ご予約がおすすめです。",
+  "about_en": "Every dish is carefully made, from a wide menu. Weekends fill up fast, so reservations are recommended.",
+  "menu_ja": "メニュー", "menu_en": "Menu",
+  "items": [
+    {"ja": "オードブル盛り合わせ（二人前）", "en": "Hors d'oeuvre platter for two", "dja": "人気の一皿", "den": "A popular favorite"},
+    {"ja": "おつまみ盛り合わせ", "en": "Small bites platter", "dja": "ワインのお供に", "den": "Perfect with wine"},
+    {"ja": "シャルキュトリー", "en": "Charcuterie", "dja": "お酒と一緒に", "den": "Made for sharing"},
+    {"ja": "砂肝のソテー", "en": "Sautéed gizzards", "dja": "常連さんにも人気", "den": "A regulars' favorite"},
+    {"ja": "ワイン・お酒", "en": "Wine & drinks", "dja": "豊富な品揃え", "den": "A wide selection"}
+  ],
+  "info_sub_ja": "週末はご予約がおすすめ", "info_sub_en": "Reservations recommended on weekends",
+  "address_ja": "〒342-0036 埼玉県吉川市高富1-5-4 1F",
+  "address_en": "1-5-4 Takatomi 1F, Yoshikawa, Saitama 342-0036",
+  "hours_ja": "17:30〜（詳細・定休日はお店に確認して掲載）",
+  "hours_en": "From 5:30 PM (full hours to be confirmed)",
+  "map_query": "Osteria Calduccio 吉川市高富1-5-4"
+}
