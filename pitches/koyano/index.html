@@ -31,7 +31,8 @@ header { background: var(--red); color: var(--cream); position: sticky; top: 0; 
 .hero { background: repeating-linear-gradient(90deg, #f6e8cc 0 40px, var(--cream) 40px 80px); border-bottom: 6px double var(--red); }
 .hero .wrap { display: grid; grid-template-columns: 1fr 1.1fr; gap: 30px; align-items: center; padding-top: 60px; padding-bottom: 70px; }
 .since { display: inline-block; background: var(--mustard); color: var(--ink); font-weight: 700; padding: 2px 14px; border-radius: 4px; font-size: .85rem; }
-.hero h1 { font-family: "Kaisei Decol"; font-size: clamp(1.9rem, 5vw, 3.2rem); line-height: 1.45; margin: 14px 0; color: var(--red-d); }
+.nw { white-space: nowrap; }
+.hero h1 { font-family: "Kaisei Decol"; font-size: clamp(1.4rem, 3.6vw, 2.6rem); line-height: 1.45; margin: 14px 0; color: var(--red-d); }
 .hero p { max-width: 430px; margin-bottom: 22px; }
 .btn { display: inline-block; text-decoration: none; background: var(--red); color: var(--cream); padding: 12px 26px; border-radius: 8px; font-weight: 700; box-shadow: 0 4px 0 var(--red-d); }
 .btn.ghost { background: var(--cream); color: var(--red); box-shadow: inset 0 0 0 2px var(--red), 0 4px 0 var(--red-d); }
@@ -40,7 +41,10 @@ header { background: var(--red); color: var(--cream); position: sticky; top: 0; 
 .board { position: absolute; inset: 14% 0 0; background: linear-gradient(135deg, #8a5a36, var(--wood)); border-radius: 50%; box-shadow: 0 24px 40px rgba(45,29,20,.3); }
 .iron { position: absolute; inset: 20% 7% 7%; background: radial-gradient(circle at 40% 35%, #3a3531, var(--iron) 60%); border-radius: 50%; box-shadow: inset 0 0 0 10px #2a2623; }
 .okoge { position: absolute; inset: 32% 22% 20%; border-radius: 50%; background: radial-gradient(circle, #f6d77a 0 40%, #d99a3a 55%, #9b5a1f 72%, #6e3a13 80%, transparent 81%); }
-.plate img { position: absolute; width: 36%; left: 32%; top: 34%; transform: rotate(-8deg); }
+.omelette { position: absolute; left: 30%; top: 38%; width: 40%; height: 30%; border-radius: 50%; transform: rotate(-8deg);
+  background: radial-gradient(ellipse at 40% 35%, #fff6c8 0 12%, #ffd95a 30%, #f2b72e 70%, #d9901c 100%); box-shadow: 0 6px 12px rgba(0,0,0,.35); }
+.omelette i { position: absolute; left: 12%; right: 12%; top: 40%; height: 22%; border-radius: 40%;
+  background: repeating-linear-gradient(100deg, #6b2a12 0 10px, #8a3a1a 10px 18px); opacity: .9; }
 .sizzle circle { fill: #fff; animation: pop 1.2s ease-in-out infinite; }
 @keyframes pop { 0%,100% { opacity: 0; transform: scale(.4); } 50% { opacity: .8; transform: scale(1); } }
 .steam { position: absolute; left: 30%; top: 0; width: 40%; }
@@ -100,14 +104,14 @@ footer .lob { font-size: 1.6rem; color: var(--mustard); display: block; }
     <div class="wrap">
       <div>
         <span class="since"><span class="ja">吉川・栄町の洋食屋</span><span class="en">Yoshoku in Sakaecho, Yoshikawa</span></span>
-        <h1><span class="ja">ジュッと香ばしい、<br>名物「おこげ」の洋食。</span><span class="en">Sizzling, toasty —<br>our famous "okoge" plates.</span></h1>
+        <h1><span class="ja"><span class="nw">ジュッと香ばしい、</span><br><span class="nw">名物「おこげ」の洋食。</span></span><span class="en">Sizzling, toasty —<br>our famous "okoge" plates.</span></h1>
         <p><span class="ja">カリッと焼けたおこげに、ふわふわのオムレツ。おこげハンバーグに手作りコロッケ。お手頃価格で、しっかりおいしい洋食をどうぞ。</span><span class="en">Crispy rice under a fluffy omelette, crispy-rice hamburg steak, homemade croquettes — hearty Western-style classics at friendly prices.</span></p>
         <div class="btns"><a class="btn" href="#menu"><span class="ja">メニューブックを開く</span><span class="en">Open the menu</span></a><a class="btn ghost" href="#visit"><span class="ja">アクセス</span><span class="en">Visit</span></a></div>
       </div>
       <div class="plate" aria-hidden="true">
         <svg class="steam" viewBox="0 0 120 60" fill="none" stroke="#b3342a" stroke-width="3" stroke-linecap="round" opacity=".5"><path d="M30 58c-8-10 8-14 0-26s8-16 0-26"/><path d="M60 58c-8-10 8-14 0-26s8-16 0-26"/><path d="M90 58c-8-10 8-14 0-26s8-16 0-26"/></svg>
         <div class="board"></div><div class="iron"></div><div class="okoge"></div>
-        <img src="egg.svg" alt="">
+        <div class="omelette"><i></i></div>
         <svg class="sizzle" viewBox="0 0 460 354" style="position:absolute;inset:0;width:100%;height:100%"><circle cx="120" cy="230" r="4"/><circle cx="340" cy="220" r="3" style="animation-delay:.3s"/><circle cx="150" cy="290" r="3" style="animation-delay:.6s"/><circle cx="310" cy="290" r="4" style="animation-delay:.9s"/><circle cx="230" cy="310" r="3" style="animation-delay:.45s"/></svg>
         <span class="jyu">ジュッ！</span>
         <span class="stars">★ 4.3 · <span class="ja">クチコミ160件以上</span><span class="en">160+ reviews</span></span>
@@ -154,7 +158,7 @@ footer .lob { font-size: 1.6rem; color: var(--mustard); display: block; }
     </div>
   </section>
 </main>
-<footer><span class="lob">Restaurant Koyano</span>© レストラン コヤノ · Yoshikawa<br><small>Egg illustration: Noto Emoji (Apache 2.0)</small></footer>
+<footer><span class="lob">Restaurant Koyano</span>© レストラン コヤノ · Yoshikawa<br><small></small></footer>
 <script>
 const $ = (s) => document.querySelector(s);
 const L = () => document.body.dataset.lang;
