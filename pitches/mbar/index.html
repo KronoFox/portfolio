@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>赤羽 スナック M bar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root { --plum: #22102a; --plum2: #331a3d; --neon: #ff5aa8; --cream: #f6ecf1; --mute: #bba7c2; --gold: #e6c27a; }
+:focus-visible { outline: 3px solid var(--neon); outline-offset: 3px; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: "Zen Kaku Gothic New", sans-serif; background: var(--plum); color: var(--cream); line-height: 1.9; overflow-x: hidden; }
+a { color: inherit; }
+.wrap { max-width: 1020px; margin: 0 auto; padding: 0 20px; }
+.nw { white-space: nowrap; }
+.maru { font-family: "Hachi Maru Pop", cursive; }
+[data-lang="en"] .ja, [data-lang="ja"] .en { display: none !important; }
+.proposal { background: #0f0713; color: var(--mute); font-size: .75rem; text-align: center; padding: 6px 16px; }
+header { position: sticky; top: 0; z-index: 20; background: rgba(34,16,42,.94); backdrop-filter: blur(6px); border-bottom: 1px solid rgba(246,236,241,.1); }
+.nav { display: flex; justify-content: space-between; align-items: center; height: 58px; }
+.logo { text-decoration: none; font-family: "Hachi Maru Pop"; font-size: 1.2rem; }
+.nav ul { display: flex; gap: 22px; list-style: none; font-size: .86rem; }
+.nav ul a { text-decoration: none; opacity: .85; }
+.lang { border: 1px solid var(--mute); background: transparent; color: var(--cream); border-radius: 999px; padding: 2px 14px; font: 700 .78rem "Zen Kaku Gothic New"; cursor: pointer; }
+/* hero */
+.hero { padding: 50px 0 70px; }
+.hero .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 44px; align-items: center; }
+.sign { display: inline-block; font-family: "Hachi Maru Pop"; font-size: clamp(2.8rem, 8vw, 4.6rem); line-height: 1.1; color: #fff; text-shadow: 0 0 6px var(--neon), 0 0 18px var(--neon), 0 0 40px rgba(255,90,168,.6); animation: flick 6s infinite; }
+@keyframes flick { 0%, 92%, 100% { opacity: 1; } 93% { opacity: .55; } 94% { opacity: 1; } 96% { opacity: .7; } }
+.sub { font-size: .9rem; letter-spacing: .2em; color: var(--mute); margin-top: 6px; }
+.hero h1 { font-weight: 700; font-size: clamp(1.3rem, 3vw, 1.8rem); line-height: 1.6; margin: 20px 0 12px; text-wrap: balance; }
+.hero p { color: var(--mute); max-width: 440px; margin-bottom: 22px; }
+.status { display: inline-flex; gap: 10px; align-items: center; border: 1px solid rgba(246,236,241,.25); border-radius: 999px; padding: 6px 16px; font-weight: 700; margin-bottom: 20px; font-size: .92rem; }
+.status i { width: 10px; height: 10px; border-radius: 50%; background: #6c5b72; }
+.status.open i { background: var(--neon); box-shadow: 0 0 10px var(--neon); }
+.btn { display: inline-block; text-decoration: none; background: var(--neon); color: #22102a; padding: 12px 26px; border-radius: 999px; font-weight: 700; }
+.btn.ghost { background: transparent; color: var(--cream); box-shadow: inset 0 0 0 1px rgba(246,236,241,.45); }
+.btns { display: flex; gap: 12px; flex-wrap: wrap; }
+.photo { position: relative; justify-self: center; width: min(420px, 88vw); }
+.photo img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; display: block; border-radius: 24px; }
+.photo figcaption { font-size: .7rem; color: var(--mute); text-align: center; margin-top: 8px; }
+.card { position: absolute; left: -26px; bottom: 50px; background: var(--cream); color: var(--plum); border-radius: 16px; padding: 14px 18px; box-shadow: 0 16px 30px rgba(0,0,0,.35); max-width: 220px; }
+.card b { font-family: "Hachi Maru Pop"; font-size: 1.05rem; display: block; }
+.card span { font-size: .8rem; }
+section { padding: 80px 0; }
+.kick { font-family: "Hachi Maru Pop"; color: var(--neon); font-size: 1rem; }
+.h2 { font-weight: 700; font-size: clamp(1.4rem, 3.4vw, 2rem); line-height: 1.5; margin: 6px 0 16px; text-wrap: balance; }
+/* first timer */
+.faq { background: var(--plum2); }
+.faq .g { display: grid; grid-template-columns: .8fr 1.2fr; gap: 40px; align-items: start; }
+details { border-bottom: 1px solid rgba(246,236,241,.15); padding: 14px 0; }
+summary { cursor: pointer; font-weight: 700; list-style: none; display: flex; justify-content: space-between; gap: 12px; }
+summary::after { content: "+"; color: var(--neon); font-size: 1.3rem; line-height: 1; }
+details[open] summary::after { content: "−"; }
+details p { color: var(--mute); margin-top: 8px; font-size: .94rem; }
+/* feel */
+.feel .g { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 10px; }
+.f { border: 1px solid rgba(246,236,241,.15); border-radius: 18px; padding: 22px; }
+.f h3 { font-family: "Hachi Maru Pop"; font-weight: 400; color: var(--gold); font-size: 1.1rem; margin-bottom: 6px; }
+.f p { color: var(--mute); font-size: .9rem; }
+/* visit */
+.visit { background: #1a0c20; }
+.visit .g { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; margin-top: 10px; }
+.visit dl { display: grid; grid-template-columns: 90px 1fr; gap: 10px 14px; }
+.visit dt { color: var(--mute); font-size: .88rem; }
+.visit .rate { font-size: .78rem; color: var(--mute); margin-top: 14px; }
+.map { border-radius: 18px; overflow: hidden; min-height: 300px; }
+.map iframe { width: 100%; height: 100%; min-height: 300px; border: 0; display: block; filter: invert(.9) hue-rotate(200deg) saturate(.6); }
+footer { text-align: center; padding: 24px 16px 32px; font-size: .75rem; color: var(--mute); }
+@media (max-width: 820px) {
+  .nav ul { display: none; }
+  .hero .wrap, .faq .g, .visit .g { grid-template-columns: 1fr; }
+  .feel .g { grid-template-columns: 1fr; }
+  .card { left: 8px; }
+}
+@media (prefers-reduced-motion: reduce) { .sign { animation: none; } }
+</style>
+</head>
+<body data-lang="ja">
+<div class="proposal"><span class="ja">※ ご提案用のサンプル（モックアップ）です・検索エンジン非表示</span><span class="en">Proposal mockup · hidden from search engines</span></div>
+<header><div class="wrap nav">
+  <a class="logo" href="#">M bar</a>
+  <ul><li><a href="#first"><span class="ja">はじめての方へ</span><span class="en">First visit</span></a></li><li><a href="#visit"><span class="ja">アクセス</span><span class="en">Visit</span></a></li></ul>
+  <button class="lang" id="langBtn">EN</button>
+</div></header>
+
+<main>
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <div class="sign">M bar</div>
+        <div class="sub">AKABANE · SNACK</div>
+        <h1><span class="ja">赤羽の、落ち着いたスナック。<br><span class="nw">お一人様も、女性も安心。</span></span><span class="en">A calm little snack bar in Akabane.<br>Solo guests and women welcome.</span></h1>
+        <div class="status" id="status"><i></i><span id="stText"></span></div>
+        <p><span class="ja">カウンターでゆったりお酒、カラオケ、おしゃべり。女性店主がていねいにおもてなしします。仕事帰りのひと息にも、2軒目にもどうぞ。</span><span class="en">Drinks at the counter, karaoke and good conversation, hosted by the owner-mama. Perfect after work or as your second stop.</span></p>
+        <div class="btns"><a class="btn" href="https://www.instagram.com/nan.a0212/" target="_blank" rel="noopener"><span class="ja">DMで予約する</span><span class="en">Book via Instagram DM</span></a><a class="btn ghost" href="tel:08098657590">080-9865-7590</a></div>
+      </div>
+      <figure class="photo">
+        <img src="hero.jpg" alt="">
+        <div class="card"><b><span class="ja">ようこそ、M barへ</span><span class="en">Welcome to M bar</span></b><span class="ja">はじめてでも、自然と馴染める空間です。</span><span class="en">Even first-timers feel at home.</span></div>
+        <figcaption><span class="ja">※写真はイメージです（公開時はお店の写真に差し替えます）</span><span class="en">Sample photo — to be replaced with the bar’s own.</span></figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <section id="first" class="faq">
+    <div class="wrap g">
+      <div>
+        <div class="kick">first time?</div>
+        <h2 class="h2"><span class="ja">はじめてのスナック、<br>こんなこと気になりませんか？</span><span class="en">First time at a snack bar?<br>Here's what people ask.</span></h2>
+      </div>
+      <div>
+        <details open><summary><span class="ja">一人で行っても大丈夫？</span><span class="en">Can I come alone?</span></summary><p><span class="ja">もちろんです。お一人様も、女性のお客様も安心してお過ごしいただけるお店です。</span><span class="en">Absolutely — solo guests and women are very welcome.</span></p></details>
+        <details><summary><span class="ja">何時からやっていますか？</span><span class="en">What are the hours?</span></summary><p><span class="ja">20:00からラストまで。日曜日はお休みです。</span><span class="en">From 20:00 until late. Closed Sundays.</span></p></details>
+        <details><summary><span class="ja">予約はできますか？</span><span class="en">Can I book?</span></summary><p><span class="ja">InstagramのDMで承っています。団体・貸切のご相談もお気軽にどうぞ。</span><span class="en">Yes, by Instagram DM. Groups and private hire can be arranged.</span></p></details>
+        <details><summary><span class="ja">料金は？</span><span class="en">How much is it?</span></summary><p><span class="ja">0時まではゆっくりお得に楽しめるシステムです。詳しい料金は正式公開時にお店の情報を掲載します。</span><span class="en">There's a good-value system until midnight — exact prices to be added with the bar.</span></p></details>
+        <details><summary><span class="ja">カラオケはありますか？</span><span class="en">Is there karaoke?</span></summary><p><span class="ja">あります。店内で楽しめるナイトゲームもご用意しています。</span><span class="en">Yes — plus some bar games to play at night.</span></p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="feel">
+    <div class="wrap">
+      <div class="kick">in the bar</div>
+      <h2 class="h2"><span class="ja">M barで過ごす夜</span><span class="en">A night at M bar</span></h2>
+      <div class="g">
+        <div class="f"><h3><span class="ja">カウンター</span><span class="en">The counter</span></h3><p><span class="ja">カウンター越しの会話が楽しい。テーブル席もあり、グループでも。</span><span class="en">Chat across the counter — tables available for groups too.</span></p></div>
+        <div class="f"><h3><span class="ja">カラオケ</span><span class="en">Karaoke</span></h3><p><span class="ja">一曲歌って、すっきり。</span><span class="en">Sing one and feel lighter.</span></p></div>
+        <div class="f"><h3><span class="ja">イベント</span><span class="en">Events</span></h3><p><span class="ja">季節のイベントやナイトゲームを随時開催。最新情報はInstagramで。</span><span class="en">Seasonal events and bar games — follow along on Instagram.</span></p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="visit" class="visit">
+    <div class="wrap">
+      <div class="kick">access</div>
+      <h2 class="h2"><span class="ja">赤羽駅東口から徒歩5分</span><span class="en">5 minutes from Akabane Station (East exit)</span></h2>
+      <div class="g">
+        <div>
+          <dl>
+            <dt><span class="ja">住所</span><span class="en">Address</span></dt><dd><span class="ja">東京都北区赤羽2-20-1 4F</span><span class="en">4F, 2-20-1 Akabane, Kita-ku, Tokyo</span></dd>
+            <dt><span class="ja">営業時間</span><span class="en">Hours</span></dt><dd>20:00〜LAST</dd>
+            <dt><span class="ja">定休日</span><span class="en">Closed</span></dt><dd><span class="ja">日曜日</span><span class="en">Sundays</span></dd>
+            <dt>TEL</dt><dd>080-9865-7590</dd>
+            <dt>Instagram</dt><dd><a href="https://www.instagram.com/nan.a0212/" target="_blank" rel="noopener">@nan.a0212</a></dd>
+          </dl>
+          <p class="rate"><span class="ja">Googleマップ ★4.9</span><span class="en">Google Maps ★4.9</span></p>
+        </div>
+        <div class="map"><iframe loading="lazy" title="Map" src="https://www.google.com/maps?q=%E8%B5%A4%E7%BE%BD%20%E3%82%B9%E3%83%8A%E3%83%83%E3%82%AF%20M%20bar%20%E8%B5%A4%E7%BE%BD2-20-1&output=embed"></iframe></div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>© 赤羽 スナック M bar · Photos: Unsplash (sample images)</footer>
+<script>
+const $ = (s) => document.querySelector(s);
+const L = () => document.body.dataset.lang;
+const jst = () => { const d = new Date(); return new Date(d.getTime() + (d.getTimezoneOffset() + 540) * 60000); };
+function status() { const ja = L() === 'ja'; const n = jst(); const d = n.getDay(), h = n.getHours(); let t, open = false;
+  const lateNight = h < 5 && d !== 1; // after midnight Sat→Sun still counts as Saturday night
+  if ((d !== 0 && h >= 20) || lateNight) { open = true; t = ja ? '今夜も営業中（20:00〜LAST）' : 'Open tonight (20:00 till late)'; }
+  else if (d === 0) t = ja ? '本日（日曜）はお休みです' : 'Closed today (Sunday)';
+  else t = ja ? '今夜 20:00 からオープン' : 'Opens tonight at 20:00';
+  $('#status').className = 'status' + (open ? ' open' : ''); $('#stText').textContent = t; }
+status(); setInterval(status, 60000);
+$('#langBtn').addEventListener('click', () => { const l = L() === 'ja' ? 'en' : 'ja'; document.body.dataset.lang = l; document.documentElement.lang = l; $('#langBtn').textContent = l === 'ja' ? 'EN' : '日本語'; status(); });
+</script>
+</body>
+</html>
