@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>KOTI Finland Cafe | 台東区浅草</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kaisei+Opti:wght@500;700&family=Zen+Maru+Gothic:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root { --bg: #f7f9fb; --ink: #1d2b3a; --accent: #2f5f8f; --soft: #e1ecf5; --pop: #f3e3c3; }
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: var(--bg); color: var(--ink); line-height: 1.85; -webkit-font-smoothing: antialiased; }
+a { color: inherit; }
+img, svg { display: block; }
+.wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+.proposal { background: #fff4c2; color: #5a4a00; font: 500 .78rem/1.5 system-ui, sans-serif; text-align: center; padding: 7px 16px; }
+header { position: sticky; top: 0; z-index: 20; background: color-mix(in srgb, var(--bg) 90%, transparent); backdrop-filter: blur(10px); }
+.nav { display: flex; align-items: center; justify-content: space-between; height: 64px; gap: 12px; }
+.logo { text-decoration: none; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.nav ul { display: flex; gap: 26px; list-style: none; font-size: .88rem; }
+.nav ul a { text-decoration: none; opacity: .7; }
+.nav ul a:hover { opacity: 1; color: var(--accent); }
+.lang { border: 1.5px solid currentColor; background: transparent; color: var(--ink); border-radius: 999px; padding: 3px 13px; font: inherit; font-size: .78rem; cursor: pointer; flex: none; }
+.btn { display: inline-block; text-decoration: none; font-weight: 500; padding: 13px 30px; border-radius: 999px; background: var(--accent); color: var(--bg); transition: transform .15s; }
+.btn:hover { transform: translateY(-2px); }
+.btn.ghost { background: transparent; color: var(--accent); box-shadow: inset 0 0 0 1.5px var(--accent); }
+.btns { display: flex; gap: 12px; flex-wrap: wrap; }
+section { padding: 88px 0; }
+.note { opacity: .65; font-size: .8rem; margin-top: 28px; }
+.info { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
+.info dl { display: grid; grid-template-columns: 104px 1fr; gap: 12px 18px; }
+.info dt { opacity: .6; font-size: .88rem; }
+.map { overflow: hidden; min-height: 300px; }
+.map iframe { width: 100%; min-height: 300px; height: 100%; border: 0; }
+footer { padding: 32px 0; font-size: .8rem; text-align: center; opacity: .7; }
+[data-lang="en"] .ja, [data-lang="ja"] .en { display: none !important; }
+.l { white-space: nowrap; }
+@media (max-width: 760px) {
+  h1 .ja { font-size: min(1em, calc((100vw - 44px) / (var(--n) * 1.16))) !important; }
+  .nav ul { display: none; }
+  .info { grid-template-columns: 1fr; }
+  section { padding: 64px 0; }
+}
+
+
+body { font-family: "Zen Maru Gothic", sans-serif; }
+.logo, h1, h2, .pc h3 { font-family: "Kaisei Opti", serif; font-weight: 700; }
+.logo { font-size: 1.2rem; }
+.hero { position: relative; overflow: hidden; background: linear-gradient(180deg, var(--soft) 0%, var(--bg) 100%); padding: 90px 0 190px; }
+.hero .wrap { display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; align-items: center; position: relative; z-index: 2; }
+.eyebrow { font-size: .78rem; letter-spacing: .3em; color: var(--accent); }
+.hero h1 { font-size: clamp(2.1rem, 5.6vw, 3.6rem); line-height: 1.4; margin: 12px 0 18px; }
+.hero p { max-width: 480px; opacity: .8; margin-bottom: 22px; }
+.rating { font-size: .88rem; margin-bottom: 26px; opacity: .8; }
+.rating b { color: var(--accent); font-size: 1.2rem; }
+.sun { justify-self: center; width: min(300px, 70vw); aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle at 35% 35%, var(--bg), var(--pop)); display: grid; place-items: center; color: var(--accent); }
+.sun .art { width: 62%; }
+.seas { position: absolute; left: 0; right: 0; bottom: 0; height: 170px; }
+.seas svg { position: absolute; bottom: 0; width: 200%; height: 100%; }
+.seas .s1 { color: color-mix(in srgb, var(--accent) 25%, var(--bg)); animation: drift 18s linear infinite; }
+.seas .s2 { color: color-mix(in srgb, var(--accent) 45%, var(--bg)); animation: drift 12s linear infinite reverse; height: 75%; }
+.seas .s3 { color: var(--bg); height: 45%; animation: drift 22s linear infinite; }
+@keyframes drift { to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) { .seas svg { animation: none !important; } }
+h2 { font-size: clamp(1.7rem, 4vw, 2.3rem); margin-bottom: 10px; }
+.sub { opacity: .65; margin-bottom: 40px; }
+.about .wrap { display: grid; grid-template-columns: 1fr 1.5fr; gap: 48px; }
+.about .lead { font-family: "Kaisei Opti", serif; font-size: 1.3rem; color: var(--accent); line-height: 1.6; }
+.pcs { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 26px; }
+.pc { background: #fffdf8; color: #2a2a2a; padding: 24px; border: 1px solid rgba(0,0,0,.06); box-shadow: 0 10px 30px rgba(20,60,90,.09); position: relative; transform: rotate(var(--r)); transition: transform .2s; }
+.pc:hover { transform: rotate(0) translateY(-4px); }
+.pc::after { content: ""; position: absolute; top: 14px; right: 14px; width: 38px; height: 46px; border: 2px dashed var(--accent); border-radius: 3px; opacity: .6; }
+.pc h3 { font-size: 1.05rem; margin-bottom: 6px; padding-right: 48px; }
+.pc p { font-size: .86rem; opacity: .7; }
+#menu { background: color-mix(in srgb, var(--soft) 50%, var(--bg)); }
+.map { border-radius: 20px; }
+@media (max-width: 760px) { .hero .wrap, .about .wrap { grid-template-columns: 1fr; } }
+
+</style>
+</head>
+<body data-lang="ja">
+<div class="proposal"><span class="ja">※ こちらはご提案用のサンプルページです（非公開・検索エンジン非表示）</span><span class="en">Proposal preview: not an official site, hidden from search engines</span></div>
+<header><div class="wrap nav">
+  <a class="logo" href="#">KOTI Finland Cafe</a>
+  <ul>
+    <li><a href="#about"><span class="ja">お店について</span><span class="en">About</span></a></li>
+    <li><a href="#menu"><span class="ja">メニュー</span><span class="en">Menu</span></a></li>
+    <li><a href="#info"><span class="ja">アクセス</span><span class="en">Visit</span></a></li>
+  </ul>
+  <button class="lang" id="langBtn" aria-label="Switch language">EN</button>
+</div></header>
+<main>
+<div class="hero"><div class="wrap">
+  <div>
+    <div class="eyebrow">KOTI · ASAKUSA</div>
+    <h1><span class="ja" style="--n:8"><span class="l">浅草の路地で、</span><br><span class="l">北欧のひと休み。</span></span><span class="en">A Finnish pause,<br>on a quiet Asakusa street.</span></h1>
+    <p><span class="ja">シナモンロールにサーモンスープ、ブルーベリータルト。フィンランドや映画『かもめ食堂』が好きな方のための、小さなカフェです。</span><span class="en">Cinnamon rolls, salmon soup and blueberry tart: a small café for anyone who loves Finland or the film Kamome Shokudo.</span></p>
+    <div class="rating"><b>★ 4.8</b> <span class="ja">Googleクチコミ 36件</span><span class="en">36 Google reviews</span></div>
+    <div class="btns"><a class="btn" href="#menu"><span class="ja">メニューを見る</span><span class="en">See the menu</span></a><a class="btn ghost" href="#info"><span class="ja">アクセス</span><span class="en">Visit</span></a></div>
+  </div>
+  <div class="sun"><svg class="art" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="100" cy="104" r="62"/><path d="M100 104c0-8 12-8 12 0 0 16-28 16-28 0 0-24 44-24 44 0 0 32-60 32-60 0 0-40 76-40 76 0"/></svg></div>
+</div><div class="seas"><svg class="s1" viewBox="0 0 1440 160" preserveAspectRatio="none" aria-hidden="true"><path fill="currentColor" d="M0 60c120-40 240-40 360 0s240 40 360 0 240-40 360 0 240 40 360 0v100H0z"/></svg><svg class="s2" viewBox="0 0 1440 160" preserveAspectRatio="none" aria-hidden="true"><path fill="currentColor" d="M0 60c120-40 240-40 360 0s240 40 360 0 240-40 360 0 240 40 360 0v100H0z"/></svg><svg class="s3" viewBox="0 0 1440 160" preserveAspectRatio="none" aria-hidden="true"><path fill="currentColor" d="M0 60c120-40 240-40 360 0s240 40 360 0 240-40 360 0 240 40 360 0v100H0z"/></svg></div></div>
+<section id="about" class="about"><div class="wrap">
+  <div><h2><span class="ja">お店について</span><span class="en">About us</span></h2><p class="lead"><span class="ja">大人が静かに、ゆったり過ごすためのお店</span><span class="en">A calm café for grown-ups to slow down</span></p></div>
+  <p><span class="ja">雷門から歩いて15分、待乳山聖天のすぐそば。観光の喧騒から少し離れて、北欧の空気を感じながらゆっくりお過ごしください。</span><span class="en">15 minutes&#x27; walk from Kaminarimon, right by Matsuchiyama Shoden. Step away from the tourist rush and enjoy a little Nordic calm.</span></p>
+</div></section>
+<section id="menu"><div class="wrap">
+  <h2><span class="ja">メニュー</span><span class="en">Menu</span></h2>
+  <p class="sub"><span class="ja">季節ごとのお楽しみも</span><span class="en">Seasonal treats, too</span></p>
+  <div class="pcs"><div class="pc" style="--r:-1.2deg"><h3><span class="ja">シナモンロール</span><span class="en">Cinnamon roll</span></h3><p><span class="ja">コーヒーと一緒に</span><span class="en">Perfect with coffee</span></p></div><div class="pc" style="--r:0.8deg"><h3><span class="ja">サーモンスープセット</span><span class="en">Salmon soup set</span></h3><p><span class="ja">サラダとパン付き</span><span class="en">With salad and bread</span></p></div><div class="pc" style="--r:-0.4deg"><h3><span class="ja">ブルーベリータルト</span><span class="en">Blueberry tart</span></h3><p><span class="ja">自慢のタルト</span><span class="en">Our proud tart</span></p></div><div class="pc" style="--r:1.3deg"><h3><span class="ja">コーヒー</span><span class="en">Coffee</span></h3><p><span class="ja">マグでゆっくりと</span><span class="en">Served in a mug, take your time</span></p></div></div>
+  <p class="note"><span class="ja">※ 価格・内容は正式公開時にお店の情報に合わせて掲載します。</span><span class="en">Prices and items will be confirmed with the shop before launch.</span></p>
+</div></section>
+<section id="info" class="visit"><div class="wrap">
+  <h2><span class="ja">営業時間・アクセス</span><span class="en">Hours &amp; access</span></h2>
+  <p class="sub"><span class="ja">完全キャッシュレス・お問い合わせはメールまたはInstagramで</span><span class="en">Cashless only · contact by email or Instagram</span></p>
+  <div class="info"><dl><dt><span class="ja">住所</span><span class="en">Address</span></dt><dd><span class="ja">〒111-0032 東京都台東区浅草7-6-4 矢澤ビル1F</span><span class="en">Yazawa Bldg. 1F, 7-6-4 Asakusa, Taito-ku, Tokyo 111-0032</span></dd><dt><span class="ja">営業時間</span><span class="en">Hours</span></dt><dd><span class="ja">11:00〜17:00（L.O. 16:15）／定休日：木曜日</span><span class="en">11:00–17:00 (last order 16:15) / Closed Thursdays</span></dd><dt><span class="ja">Instagram</span><span class="en">Instagram</span></dt><dd><a href="https://www.instagram.com/koti_finland_cafe_asakusa/" target="_blank" rel="noopener">@koti_finland_cafe_asakusa</a></dd><dt><span class="ja">ポイント</span><span class="en">Good to know</span></dt><dd><span class="ja">完全キャッシュレス・お問い合わせはメールまたはInstagramで</span><span class="en">Cashless only · contact by email or Instagram</span></dd></dl><div class="map"><iframe loading="lazy" title="Map" src="https://www.google.com/maps?q=KOTI%20Finland%20Cafe%20%E5%8F%B0%E6%9D%B1%E5%8C%BA%E6%B5%85%E8%8D%897-6-4&output=embed"></iframe></div></div>
+</div></section></main>
+<footer>© KOTI Finland Cafe</footer>
+<script>
+  const btn = document.getElementById('langBtn');
+  btn.addEventListener('click', () => {
+    const l = document.body.dataset.lang === 'ja' ? 'en' : 'ja';
+    document.body.dataset.lang = l;
+    document.documentElement.lang = l;
+    btn.textContent = l === 'ja' ? 'EN' : '日本語';
+  });
+</script>
+</body>
+</html>

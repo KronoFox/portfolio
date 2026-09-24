@@ -1,0 +1,33 @@
+{
+  "slug": "hako-no-cafe",
+  "name": "Hako no Cafe there,there",
+  "theme": "editorial",
+  "art": "cup",
+  "colors": {"bg": "#f5f1ea", "ink": "#2b2420", "accent": "#7a5a43", "soft": "#e9e0d3"},
+  "instagram": "therethere_coffee",
+  "phone": "080-9836-4363",
+  "area_ja": "羽村市緑ヶ丘",
+  "eyebrow": "KISSA · HAMURA",
+  "h1_ja": "時間を気にせず、\nじぶんの時間を。",
+  "h1_en": "No time limits.\nJust your own time.",
+  "lead_ja": "じっくり淹れた深煎り珈琲に、陶器で焼いたプリン、こだわりの米粉のケーキ。開店から閉店まで、ゆっくりどうぞ。",
+  "lead_en": "Slowly brewed dark-roast coffee, pudding baked in ceramic, and rice-flour cakes. Stay from opening to closing if you like.",
+  "rating": "4.2", "reviews_ja": "30件以上", "reviews_en": "30+",
+  "about_sub_ja": "時間制限のない、ちいさな喫茶",
+  "about_sub_en": "A small café with no time limits",
+  "about_ja": "アンティークの雑貨やお花、占いなど、季節ごとの催し物も開いています。最新の営業カレンダーはInstagramでお知らせしています。",
+  "about_en": "We host pop-ups and events throughout the year, from antiques and flowers to fortune-telling. See Instagram for our latest calendar.",
+  "menu_ja": "メニュー", "menu_en": "Menu",
+  "items": [
+    {"ja": "深煎り珈琲", "en": "Dark-roast coffee", "dja": "じっくり淹れる一杯", "den": "Slowly brewed"},
+    {"ja": "喫茶店プリン", "en": "Café pudding", "dja": "陶器で焼いた、なめらかで固めのプリン", "den": "Baked in ceramic: smooth and firm"},
+    {"ja": "米粉のケーキ", "en": "Rice-flour cakes", "dja": "こだわりの手作り", "den": "Made with care"},
+    {"ja": "バタートースト", "en": "Butter toast", "dja": "喫茶の定番", "den": "A café classic"}
+  ],
+  "info_sub_ja": "駐車場1台（斜向かい煉瓦造りの一軒家敷地内No.1）", "info_sub_en": "1 parking space (No.1, brick house diagonally opposite)",
+  "address_ja": "〒205-0003 東京都羽村市緑ヶ丘1-5-21 トリオビル1階",
+  "address_en": "Trio Bldg. 1F, 1-5-21 Midorigaoka, Hamura, Tokyo 205-0003",
+  "hours_ja": "火〜金 13:00〜17:00／土 14:00〜18:00（定休日：月・日・祝）",
+  "hours_en": "Tue–Fri 13:00–17:00 / Sat 14:00–18:00 (closed Mon, Sun & holidays)",
+  "map_query": "Hako no Cafe 羽村市緑ヶ丘1-5-21"
+}
