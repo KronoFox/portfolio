@@ -184,7 +184,7 @@ let sel = 0;
 function rack() { const ja = L() === 'ja';
   $('#rackEl').innerHTML = racks.map((r, i) => `<button class="hanger" aria-pressed="${i === sel}" data-i="${i}"><div class="hook"></div><div class="bar"></div><div class="cloth"><img src="${r.img}.jpg" alt=""></div><b>${r.k}</b></button>`).join('');
   $('#rackEl').querySelectorAll('.hanger').forEach(b => b.onclick = () => { sel = +b.dataset.i; rack(); });
-  $('#rackNote').innerHTML = `<b class="arc">${racks[sel].k}</b> — ${ja ? racks[sel].ja : racks[sel].en}<br><small style="color:#9a958d">${ja ? '※ 写真はイメージです。正式公開時はお店の商品写真に差し替えます。' : 'Sample photos — to be replaced with the shop's own product shots.'}</small>`; }
+  $('#rackNote').innerHTML = `<b class="arc">${racks[sel].k}</b> — ${ja ? racks[sel].ja : racks[sel].en}<br><small style="color:#9a958d">${ja ? '※ 写真はイメージです。正式公開時はお店の商品写真に差し替えます。' : 'Sample photos — to be replaced with the shop’s own product shots.'}</small>`; }
 function floor() { const y = window.scrollY, h = document.body.scrollHeight - innerHeight; const f = y / h;
   $('#fl').textContent = f < .12 ? '1F' : f < .5 ? '↓' : 'B1'; }
 addEventListener('scroll', floor, { passive: true });
