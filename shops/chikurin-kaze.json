@@ -3,7 +3,12 @@
   "name": "竹林カフェ 風",
   "theme": "editorial",
   "art": "bamboo",
-  "colors": {"bg": "#f3f5ee", "ink": "#1f2a1d", "accent": "#5b7a2e", "soft": "#e2ead3"},
+  "colors": {
+    "bg": "#f3f5ee",
+    "ink": "#1f2a1d",
+    "accent": "#5b7a2e",
+    "soft": "#e2ead3"
+  },
   "instagram": "tikurincafekaze20210320",
   "phone": "070-5012-5817",
   "area_ja": "松伏町築比地",
@@ -12,24 +17,58 @@
   "h1_en": "Honey toast\nin a bamboo breeze.",
   "lead_ja": "竹林の中のハンモックやチェアでひと休み。自家養蜂のはちみつを使ったトーストやアイスが人気の、小さなカフェです。",
   "lead_en": "Rest in a hammock among the bamboo. A little café loved for toast and ice cream made with honey from its own hives.",
-  "rating": "4.6", "reviews_ja": "200件以上", "reviews_en": "200+",
+  "rating": "4.6",
+  "reviews_ja": "200件以上",
+  "reviews_en": "200+",
   "about_sub_ja": "カフェと、養蜂と、竹林と。",
   "about_sub_en": "A café, a bamboo grove, and our own bees.",
   "about_ja": "江戸川サイクリングロードからも立ち寄りやすく、サイクルラックもご用意。自家製のはちみつはお持ち帰りもできます。",
   "about_en": "An easy stop from the Edogawa cycling road, with bike racks. Our own honey is available to take home.",
-  "menu_ja": "メニュー", "menu_en": "Menu",
+  "menu_ja": "メニュー",
+  "menu_en": "Menu",
   "items": [
-    {"ja": "はちみつトースト", "en": "Honey toast", "dja": "自家養蜂のはちみつで", "den": "Made with our own honey"},
-    {"ja": "はちみつアイス", "en": "Honey ice cream", "dja": "花の香りが広がる", "den": "Full of floral flavor"},
-    {"ja": "シフォンケーキ", "en": "Chiffon cake", "dja": "ブルーベリーなど", "den": "Blueberry and more"},
-    {"ja": "おにぎり", "en": "Onigiri", "dja": "サイクリングの補給にも", "den": "Great fuel for the ride"},
-    {"ja": "パフェ", "en": "Parfait", "dja": "甘いものが欲しい時に", "den": "For a sweet tooth"},
-    {"ja": "コーヒー", "en": "Coffee", "dja": "ホット・アイス", "den": "Hot or iced"}
+    {
+      "ja": "はちみつトースト",
+      "en": "Honey toast",
+      "dja": "自家養蜂のはちみつで",
+      "den": "Made with our own honey"
+    },
+    {
+      "ja": "はちみつアイス",
+      "en": "Honey ice cream",
+      "dja": "花の香りが広がる",
+      "den": "Full of floral flavor"
+    },
+    {
+      "ja": "シフォンケーキ",
+      "en": "Chiffon cake",
+      "dja": "ブルーベリーなど",
+      "den": "Blueberry and more"
+    },
+    {
+      "ja": "おにぎり",
+      "en": "Onigiri",
+      "dja": "サイクリングの補給にも",
+      "den": "Great fuel for the ride"
+    },
+    {
+      "ja": "パフェ",
+      "en": "Parfait",
+      "dja": "甘いものが欲しい時に",
+      "den": "For a sweet tooth"
+    },
+    {
+      "ja": "コーヒー",
+      "en": "Coffee",
+      "dja": "ホット・アイス",
+      "den": "Hot or iced"
+    }
   ],
-  "info_sub_ja": "サイクルラックあり・はちみつ販売", "info_sub_en": "Bike racks · honey for sale",
+  "info_sub_ja": "サイクルラックあり・はちみつ販売",
+  "info_sub_en": "Bike racks · honey for sale",
   "address_ja": "〒343-0102 埼玉県北葛飾郡松伏町築比地1426",
   "address_en": "1426 Tsuihiji, Matsubushi, Saitama 343-0102",
-  "hours_ja": "〜15:00（詳細・定休日はお店に確認して掲載）",
-  "hours_en": "Until 3 PM (full hours to be confirmed)",
+  "hours_ja": "金・土・日・祝 8:30〜15:00",
+  "hours_en": "Fri, Sat, Sun & holidays 8:30–15:00",
   "map_query": "竹林カフェ 風 松伏町築比地1426"
 }

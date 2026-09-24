@@ -65,8 +65,8 @@
   "info_sub_en": "Dine-in & takeaway",
   "address_ja": "〒350-0051 埼玉県川越市志多町2-1",
   "address_en": "2-1 Shitamachi, Kawagoe, Saitama 350-0051",
-  "hours_ja": "11:00〜（詳細・定休日はお店に確認して掲載）",
-  "hours_en": "From 11 AM (full hours to be confirmed)",
+  "hours_ja": "11:00〜17:30（定休日：水曜日）",
+  "hours_en": "11:00–17:30 (closed Wednesdays)",
   "map_query": "Little Edo Coffee 川越市志多町2-1",
   "theme": "editorial",
   "art": "leaf"

@@ -3,7 +3,13 @@
   "name": "OHANA",
   "theme": "tropical",
   "art": "flower",
-  "colors": {"bg": "#fffaf3", "ink": "#3b2a24", "accent": "#e0674f", "soft": "#ffe1cf", "pop": "#7fd1c7"},
+  "colors": {
+    "bg": "#fffaf3",
+    "ink": "#3b2a24",
+    "accent": "#e0674f",
+    "soft": "#ffe1cf",
+    "pop": "#7fd1c7"
+  },
   "instagram": "ohana.0917",
   "phone": "048-954-9088",
   "area_ja": "三郷市早稲田",
@@ -12,23 +18,52 @@
   "h1_en": "Hawaiian vibes,\nand your dog is welcome too.",
   "lead_ja": "ロコモコやシュリンプ＆アボカドトースト、丁寧に淹れるラテ。ワンちゃん用メニューもある、明るく落ち着いたハワイアンカフェです。",
   "lead_en": "Loco moco, shrimp & avocado toast and carefully made lattes, in a bright, relaxed Hawaiian café with a menu for dogs, too.",
-  "rating": "4.4", "reviews_ja": "30件", "reviews_en": "30",
+  "rating": "4.4",
+  "reviews_ja": "30件",
+  "reviews_en": "30",
   "about_sub_ja": "みんなが落ち着ける、あたたかな空間を",
   "about_sub_en": "A warm, relaxing space for everyone",
   "about_ja": "カウンター、テーブル、ソファ席のある明るい店内。ワンちゃんと一緒に食事ができ、写真撮影スペースもご用意しています。",
   "about_en": "A bright space with counter, table and sofa seating. Dine with your dog, and enjoy our photo spot.",
-  "menu_ja": "メニュー", "menu_en": "Menu",
+  "menu_ja": "メニュー",
+  "menu_en": "Menu",
   "items": [
-    {"ja": "ロコモコ", "en": "Loco moco", "dja": "ハワイアンの定番", "den": "A Hawaiian classic"},
-    {"ja": "シュリンプ＆アボカドトースト", "en": "Shrimp & avocado toast", "dja": "人気のランチメニュー", "den": "A lunch favorite"},
-    {"ja": "モーニングセット", "en": "Morning set", "dja": "一日のはじまりに", "den": "Start your day right"},
-    {"ja": "カフェラテ", "en": "Café latte", "dja": "丁寧に淹れる一杯", "den": "Made with care"},
-    {"ja": "ワンちゃん用メニュー", "en": "Menu for dogs", "dja": "一緒に楽しめます", "den": "So your dog can join in"}
+    {
+      "ja": "ロコモコ",
+      "en": "Loco moco",
+      "dja": "ハワイアンの定番",
+      "den": "A Hawaiian classic"
+    },
+    {
+      "ja": "シュリンプ＆アボカドトースト",
+      "en": "Shrimp & avocado toast",
+      "dja": "人気のランチメニュー",
+      "den": "A lunch favorite"
+    },
+    {
+      "ja": "モーニングセット",
+      "en": "Morning set",
+      "dja": "一日のはじまりに",
+      "den": "Start your day right"
+    },
+    {
+      "ja": "カフェラテ",
+      "en": "Café latte",
+      "dja": "丁寧に淹れる一杯",
+      "den": "Made with care"
+    },
+    {
+      "ja": "ワンちゃん用メニュー",
+      "en": "Menu for dogs",
+      "dja": "一緒に楽しめます",
+      "den": "So your dog can join in"
+    }
   ],
-  "info_sub_ja": "ワンちゃん同伴OK・ご予約がおすすめ", "info_sub_en": "Dog-friendly · reservations recommended",
+  "info_sub_ja": "ワンちゃん同伴OK・ご予約がおすすめ",
+  "info_sub_en": "Dog-friendly · reservations recommended",
   "address_ja": "〒341-0018 埼玉県三郷市早稲田2-2-1",
   "address_en": "2-2-1 Waseda, Misato, Saitama 341-0018",
-  "hours_ja": "〜16:00（詳細・定休日はお店に確認して掲載）",
-  "hours_en": "Until 4 PM (full hours to be confirmed)",
+  "hours_ja": "9:00〜16:00（L.O. 15:15・定休日はお店に確認して掲載）",
+  "hours_en": "9:00–16:00 (last order 15:15; closed days to be confirmed)",
   "map_query": "OHANA カフェ 三郷市早稲田2-2-1"
 }
