@@ -51,10 +51,7 @@ header { position: sticky; top: 0; z-index: 30; background: var(--yellow); borde
 .btns { display: flex; flex-wrap: wrap; gap: 12px; }
 .bunch-wrap { position: relative; justify-self: center; width: min(430px, 88vw); }
 .bunch { position: relative; width: 100%; aspect-ratio: 1; animation: sway 5s ease-in-out infinite; transform-origin: 30% 20%; filter: drop-shadow(10px 12px 0 rgba(58,36,19,.2)); }
-.bunch img { position: absolute; width: 72%; }
-.bunch .b1 { left: 2%; top: 4%; transform: rotate(-28deg); }
-.bunch .b2 { left: 16%; top: 14%; transform: rotate(-6deg); }
-.bunch .b3 { left: 28%; top: 26%; transform: rotate(16deg); }
+.bunch img { position: absolute; width: 92%; left: 4%; top: 4%; transform: rotate(-8deg); }
 @keyframes sway { 50% { transform: rotate(-4deg); } }
 .review-badge { position: absolute; left: 0; bottom: 0; width: 120px; height: 120px; border-radius: 50%; background: var(--red); color: var(--paper);
   display: grid; place-items: center; text-align: center; border: 4px solid var(--brown); transform: rotate(-10deg); line-height: 1.05; }
@@ -181,7 +178,7 @@ footer .display { font-size: 1.4rem; }
       <div class="bunch-wrap">
         <div class="bunch" role="img" aria-label="Bananas">
           <!-- Banana illustration: Noto Emoji © Google, Apache License 2.0 -->
-          <img src="banana.svg" alt="" class="b1"><img src="banana.svg" alt="" class="b2"><img src="banana.svg" alt="" class="b3">
+          <img src="banana.svg" alt="" class="b1">
         </div>
         <div class="review-badge"><div><b>★4.4</b><small><span class="ja">クチコミ660件以上</span><span class="en">660+ reviews</span></small></div></div>
       </div>
