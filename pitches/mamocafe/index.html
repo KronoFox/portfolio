@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Specialty coffee &amp; Food mamocafe | 目黒区緑が丘</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;800&display=swap" rel="stylesheet">
+<style>
+:root { --bg: #fdfaf4; --ink: #2f2a24; --accent: #5a7d4e; --soft: #e6efdc; --pop: #f3d58a; }
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: var(--bg); color: var(--ink); line-height: 1.85; -webkit-font-smoothing: antialiased; }
+a { color: inherit; }
+img, svg { display: block; }
+.wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+.proposal { background: #fff4c2; color: #5a4a00; font: 500 .78rem/1.5 system-ui, sans-serif; text-align: center; padding: 7px 16px; }
+header { position: sticky; top: 0; z-index: 20; background: color-mix(in srgb, var(--bg) 90%, transparent); backdrop-filter: blur(10px); }
+.nav { display: flex; align-items: center; justify-content: space-between; height: 64px; gap: 12px; }
+.logo { text-decoration: none; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.nav ul { display: flex; gap: 26px; list-style: none; font-size: .88rem; }
+.nav ul a { text-decoration: none; opacity: .7; }
+.nav ul a:hover { opacity: 1; color: var(--accent); }
+.lang { border: 1.5px solid currentColor; background: transparent; color: var(--ink); border-radius: 999px; padding: 3px 13px; font: inherit; font-size: .78rem; cursor: pointer; flex: none; }
+.btn { display: inline-block; text-decoration: none; font-weight: 500; padding: 13px 30px; border-radius: 999px; background: var(--accent); color: var(--bg); transition: transform .15s; }
+.btn:hover { transform: translateY(-2px); }
+.btn.ghost { background: transparent; color: var(--accent); box-shadow: inset 0 0 0 1.5px var(--accent); }
+.btns { display: flex; gap: 12px; flex-wrap: wrap; }
+section { padding: 88px 0; }
+.note { opacity: .65; font-size: .8rem; margin-top: 28px; }
+.info { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
+.info dl { display: grid; grid-template-columns: 104px 1fr; gap: 12px 18px; }
+.info dt { opacity: .6; font-size: .88rem; }
+.map { overflow: hidden; min-height: 300px; }
+.map iframe { width: 100%; min-height: 300px; height: 100%; border: 0; }
+footer { padding: 32px 0; font-size: .8rem; text-align: center; opacity: .7; }
+[data-lang="en"] .ja, [data-lang="ja"] .en { display: none !important; }
+.l { white-space: nowrap; }
+@media (max-width: 760px) {
+  h1 .ja { font-size: min(1em, calc((100vw - 44px) / (var(--n) * 1.16))) !important; }
+  .nav ul { display: none; }
+  .info { grid-template-columns: 1fr; }
+  section { padding: 64px 0; }
+}
+
+
+body { font-family: "M PLUS Rounded 1c", sans-serif; }
+.logo, h1, h2 { font-weight: 800; }
+.logo { font-size: 1.2rem; color: var(--accent); }
+.hero { position: relative; overflow: hidden; background: linear-gradient(170deg, var(--soft), var(--bg) 75%); text-align: center; padding: 88px 0 150px; }
+.blob { position: absolute; border-radius: 42% 58% 60% 40% / 45% 40% 60% 55%; opacity: .5; filter: blur(2px); }
+.blob.a { width: 340px; height: 340px; background: var(--pop); top: -80px; left: -90px; }
+.blob.b { width: 260px; height: 260px; background: var(--accent); opacity: .22; bottom: 40px; right: -60px; border-radius: 60% 40% 45% 55% / 50% 60% 40% 50%; }
+.hero .wrap { position: relative; }
+.hero .art-wrap { width: 128px; height: 128px; margin: 0 auto 18px; border-radius: 50%; background: var(--bg); color: var(--accent); display: grid; place-items: center; box-shadow: 0 12px 30px color-mix(in srgb, var(--accent) 25%, transparent); }
+.hero .art { width: 70%; }
+.eyebrow { color: var(--accent); font-weight: 800; letter-spacing: .25em; font-size: .78rem; }
+.hero h1 { font-size: clamp(2.2rem, 6vw, 3.8rem); line-height: 1.3; margin: 10px 0 18px; }
+.hero p { max-width: 540px; margin: 0 auto 22px; opacity: .8; }
+.rating { display: inline-block; background: var(--bg); border-radius: 999px; padding: 6px 18px; font-size: .88rem; margin-bottom: 26px; box-shadow: 0 4px 14px rgba(0,0,0,.06); }
+.rating b { color: var(--accent); }
+.btns { justify-content: center; }
+.btn { box-shadow: 0 8px 20px color-mix(in srgb, var(--accent) 35%, transparent); }
+.wave { position: absolute; left: 0; right: 0; bottom: -1px; width: 100%; height: 90px; color: var(--bg); }
+h2 { font-size: clamp(1.7rem, 4vw, 2.3rem); text-align: center; margin-bottom: 12px; }
+.sub { text-align: center; opacity: .65; margin-bottom: 40px; }
+.about .wrap { max-width: 760px; text-align: center; }
+.about .lead { font-weight: 800; font-size: 1.2rem; color: var(--accent); margin-bottom: 12px; }
+.pills { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; }
+.pill { background: var(--bg); border-radius: 26px; padding: 22px 24px; display: flex; gap: 16px; align-items: center; box-shadow: 0 6px 24px rgba(0,0,0,.07); }
+.dot { flex: none; width: 46px; height: 46px; border-radius: 50%; background: var(--soft); color: var(--accent); display: grid; place-items: center; font-weight: 800; }
+.pill h3 { font-size: 1rem; font-weight: 800; }
+.pill p { font-size: .85rem; opacity: .7; }
+#menu { background: color-mix(in srgb, var(--soft) 55%, var(--bg)); border-radius: 48px 48px 0 0; }
+.visit .map { border-radius: 28px; }
+.visit dl { background: color-mix(in srgb, var(--soft) 55%, var(--bg)); border-radius: 28px; padding: 28px; }
+
+</style>
+</head>
+<body data-lang="ja">
+<div class="proposal"><span class="ja">※ こちらはご提案用のサンプルページです（非公開・検索エンジン非表示）</span><span class="en">Proposal preview: not an official site, hidden from search engines</span></div>
+<header><div class="wrap nav">
+  <a class="logo" href="#">Specialty coffee &amp; Food mamocafe</a>
+  <ul>
+    <li><a href="#about"><span class="ja">お店について</span><span class="en">About</span></a></li>
+    <li><a href="#menu"><span class="ja">メニュー</span><span class="en">Menu</span></a></li>
+    <li><a href="#info"><span class="ja">アクセス</span><span class="en">Visit</span></a></li>
+  </ul>
+  <button class="lang" id="langBtn" aria-label="Switch language">EN</button>
+</div></header>
+<main>
+<div class="hero"><span class="blob a"></span><span class="blob b"></span><div class="wrap">
+  <div class="art-wrap"><svg class="art" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="100" cy="150" rx="62" ry="12"/><path d="M58 92h84v22a42 42 0 0 1-84 0z"/><path d="M142 100h8a14 14 0 0 1 0 28h-12"/><path d="M84 78c-8-10 8-16 0-28M102 78c-8-10 8-16 0-28M120 78c-8-10 8-16 0-28"/></svg></div>
+  <div class="eyebrow">JIYUGAOKA · MIDORIGAOKA</div>
+  <h1><span class="ja" style="--n:13"><span class="l">スペシャルティコーヒーと、</span><br><span class="l">野菜たっぷりサンド。</span></span><span class="en">Specialty coffee<br>and veggie-packed sandwiches.</span></h1>
+  <p><span class="ja">スペシャルティコーヒーに、お野菜たっぷりのサンドイッチ、旬のデザートや焼き菓子。自由が丘エリアの一軒家カフェです。</span><span class="en">Specialty coffee, sandwiches packed with vegetables, seasonal desserts and baked goods, in a house café near Jiyugaoka.</span></p>
+  <div class="rating"><b>★ 4.3</b> <span class="ja">Googleクチコミ 30件以上</span><span class="en">30+ Google reviews</span></div>
+  <div class="btns"><a class="btn" href="#menu"><span class="ja">メニューを見る</span><span class="en">See the menu</span></a><a class="btn ghost" href="#info"><span class="ja">アクセス</span><span class="en">Visit</span></a></div>
+</div><svg class="wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path fill="currentColor" d="M0 50c180-40 360-40 540 0s360 40 540 0 270-30 360-20v60H0z"/></svg></div>
+<section id="about" class="about"><div class="wrap">
+  <h2><span class="ja">お店について</span><span class="en">About us</span></h2>
+  <p class="lead"><span class="ja">明るく落ち着いた、一軒家のカフェ</span><span class="en">A bright, calm café in a house</span></p>
+  <p><span class="ja">ハーフサイズで選べる手作りサンドイッチや、ナポリタンなどのお食事も。ワンちゃん連れのお客様もどうぞ。</span><span class="en">Homemade sandwiches (available as halves), plus dishes like Neapolitan spaghetti. Dog owners welcome.</span></p>
+</div></section>
+<section id="menu"><div class="wrap">
+  <h2><span class="ja">メニュー</span><span class="en">Menu</span></h2>
+  <p class="sub"><span class="ja">人気のメニュー</span><span class="en">Customer favorites</span></p>
+  <div class="pills"><div class="pill"><span class="dot">1</span><div><h3><span class="ja">スペシャルティコーヒー</span><span class="en">Specialty coffee</span></h3><p><span class="ja">こだわりの一杯</span><span class="en">Carefully brewed</span></p></div></div><div class="pill"><span class="dot">2</span><div><h3><span class="ja">たっぷりたまごサンドイッチ</span><span class="en">Egg sandwich</span></h3><p><span class="ja">人気のサンド</span><span class="en">A favorite</span></p></div></div><div class="pill"><span class="dot">3</span><div><h3><span class="ja">野菜たっぷりサンドイッチ</span><span class="en">Vegetable sandwiches</span></h3><p><span class="ja">ハーフサイズでも</span><span class="en">Halves available</span></p></div></div><div class="pill"><span class="dot">4</span><div><h3><span class="ja">ナポリタン</span><span class="en">Neapolitan spaghetti</span></h3><p><span class="ja">お食事にも</span><span class="en">For a proper meal</span></p></div></div><div class="pill"><span class="dot">5</span><div><h3><span class="ja">旬のデザート・焼き菓子</span><span class="en">Seasonal desserts &amp; bakes</span></h3><p><span class="ja">コーヒーのお供に</span><span class="en">With your coffee</span></p></div></div></div>
+  <p class="note"><span class="ja">※ 価格・内容は正式公開時にお店の情報に合わせて掲載します。</span><span class="en">Prices and items will be confirmed with the shop before launch.</span></p>
+</div></section>
+<section id="info" class="visit"><div class="wrap">
+  <h2><span class="ja">営業時間・アクセス</span><span class="en">Hours &amp; access</span></h2>
+  <p class="sub"><span class="ja">ワンちゃん連れOK</span><span class="en">Dog-friendly</span></p>
+  <div class="info"><dl><dt><span class="ja">住所</span><span class="en">Address</span></dt><dd><span class="ja">〒152-0034 東京都目黒区緑が丘2-4-5</span><span class="en">2-4-5 Midorigaoka, Meguro-ku, Tokyo 152-0034</span></dd><dt><span class="ja">営業時間</span><span class="en">Hours</span></dt><dd><span class="ja">11:00〜18:00（定休日：月・火）</span><span class="en">11:00–18:00 (closed Mon &amp; Tue)</span></dd><dt><span class="ja">電話</span><span class="en">Phone</span></dt><dd><a href="tel:0363146919">03-6314-6919</a></dd><dt><span class="ja">Instagram</span><span class="en">Instagram</span></dt><dd><a href="https://www.instagram.com/mamo.cafe/" target="_blank" rel="noopener">@mamo.cafe</a></dd><dt><span class="ja">ポイント</span><span class="en">Good to know</span></dt><dd><span class="ja">ワンちゃん連れOK</span><span class="en">Dog-friendly</span></dd></dl><div class="map"><iframe loading="lazy" title="Map" src="https://www.google.com/maps?q=mamocafe%20%E7%9B%AE%E9%BB%92%E5%8C%BA%E7%B7%91%E3%81%8C%E4%B8%982-4-5&output=embed"></iframe></div></div>
+</div></section></main>
+<footer>© Specialty coffee &amp; Food mamocafe</footer>
+<script>
+  const btn = document.getElementById('langBtn');
+  btn.addEventListener('click', () => {
+    const l = document.body.dataset.lang === 'ja' ? 'en' : 'ja';
+    document.body.dataset.lang = l;
+    document.documentElement.lang = l;
+    btn.textContent = l === 'ja' ? 'EN' : '日本語';
+  });
+</script>
+</body>
+</html>

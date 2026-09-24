@@ -1,0 +1,33 @@
+{
+  "slug": "evol",
+  "name": "(e)vol MEGURO",
+  "theme": "breeze",
+  "art": "flower",
+  "colors": {"bg": "#faf8f6", "ink": "#262322", "accent": "#8a6a5c", "soft": "#efe7e1", "pop": "#e9d3c7"},
+  "instagram": "evol.flowers",
+  "phone": "03-4288-8193",
+  "area_ja": "目黒区下目黒",
+  "eyebrow": "FLORIST · MEGURO-DORI",
+  "h1_ja": "目黒通りの、\nつい入りたくなる花屋。",
+  "h1_en": "The Meguro-dori florist\nyou can't walk past.",
+  "lead_ja": "季節の花と、花瓶やオブジェ。目黒通り沿いの、美しい花屋です。",
+  "lead_en": "Seasonal flowers, vases and objects, in a beautiful florist on Meguro-dori.",
+  "rating": "4.3", "reviews_ja": "12件", "reviews_en": "12",
+  "about_sub_ja": "とにかく美しいお店で、ついつい入りたくなる",
+  "about_sub_en": "So beautiful you'll want to step inside",
+  "about_ja": "ご近所の方に「いちばんよく使う花屋」と言っていただけるお店です。ご注文はInstagramのDM、LINE公式アカウント、BASEのオンラインショップ、お電話で承ります。",
+  "about_en": "Locals call us the florist they use most. Order via Instagram DM, our LINE account, our BASE online shop or by phone.",
+  "menu_ja": "できること", "menu_en": "Services",
+  "items": [
+    {"ja": "季節の花", "en": "Seasonal flowers", "dja": "店頭でお選びください", "den": "Choose in store"},
+    {"ja": "花束・ギフト", "en": "Bouquets & gifts", "dja": "各種オーダー承ります", "den": "Custom orders welcome"},
+    {"ja": "花瓶・オブジェ", "en": "Vases & objects", "dja": "花と合わせて", "den": "To go with your flowers"},
+    {"ja": "オンラインショップ", "en": "Online shop", "dja": "BASEでもご購入いただけます", "den": "Also on BASE"}
+  ],
+  "info_sub_ja": "目黒通り沿い・ご注文はDM／LINE／電話で", "info_sub_en": "On Meguro-dori · order by DM, LINE or phone",
+  "address_ja": "〒153-0064 東京都目黒区下目黒4-10-29 東洋マンション1F",
+  "address_en": "Toyo Mansion 1F, 4-10-29 Shimomeguro, Meguro-ku, Tokyo 153-0064",
+  "hours_ja": "11:00〜19:00",
+  "hours_en": "11:00–19:00",
+  "map_query": "(e)vol 目黒区下目黒4-10-29"
+}

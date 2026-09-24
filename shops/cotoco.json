@@ -1,0 +1,33 @@
+{
+  "slug": "cotoco",
+  "name": "ことこ茶店",
+  "theme": "editorial",
+  "art": "leaf",
+  "colors": {"bg": "#f4f5f0", "ink": "#1e2a26", "accent": "#2f6b5c", "soft": "#e0ebe5"},
+  "instagram": "cotoco_chaten",
+  "phone": "080-1903-5280",
+  "area_ja": "台東区池之端",
+  "eyebrow": "TAIWANESE & JAPANESE TEA · NEZU",
+  "h1_ja": "お好みの一杯を、\nいっしょに見つけましょう。",
+  "h1_en": "Let's find the tea\nthat's just right for you.",
+  "lead_ja": "台湾茶と国産茶の専門店。毎日飲みたいお茶から極上茶まで、香りと品質にこだわった茶葉をご紹介しています。",
+  "lead_en": "A tea shop for Taiwanese and Japanese teas, from everyday favorites to rare leaves, chosen for aroma and quality.",
+  "rating": "4.5", "reviews_ja": "30件以上", "reviews_en": "30+",
+  "about_sub_ja": "経堂から根津へ。変わらない、ほっとする空間",
+  "about_sub_en": "From Kyodo to Nezu, the same calm space",
+  "about_ja": "お好みを伺いながら、ぴったりのお茶選びをお手伝いします。店内でゆっくり味わうのも、テイクアウトもどうぞ。茶器や茶葉は通販でもお求めいただけます。",
+  "about_en": "Tell us what you like and we'll help you choose. Enjoy tea in the shop or take it away. Leaves and teaware are also available online.",
+  "menu_ja": "メニュー", "menu_en": "Menu",
+  "items": [
+    {"ja": "台湾茶", "en": "Taiwanese tea", "dja": "香り高い茶葉をいろいろ", "den": "A range of fragrant leaves"},
+    {"ja": "国産茶", "en": "Japanese tea", "dja": "日々のお茶から極上茶まで", "den": "Everyday to exceptional"},
+    {"ja": "お茶のテイクアウト", "en": "Tea to go", "dja": "散歩のお供に", "den": "For your walk"},
+    {"ja": "茶器・茶葉の販売", "en": "Teaware & leaves", "dja": "通販サイトでも", "den": "Online too"}
+  ],
+  "info_sub_ja": "お茶選びのご相談もお気軽に", "info_sub_en": "Happy to help you choose",
+  "address_ja": "〒110-0008 東京都台東区池之端4-16-29 1階",
+  "address_en": "4-16-29 Ikenohata 1F, Taito-ku, Tokyo 110-0008",
+  "hours_ja": "11:30〜19:00（営業日はInstagramでご確認ください）",
+  "hours_en": "11:30–19:00 (see Instagram for opening days)",
+  "map_query": "ことこ茶店 台東区池之端4-16-29"
+}
