@@ -628,6 +628,9 @@ def render(d):
 if __name__ == "__main__":
     for arg in sys.argv[1:]:
         data = json.loads(Path(arg).read_text(encoding="utf-8"))
+        if data.get("custom"):
+            print(f"skip {data['slug']} (hand-built)")
+            continue
         out = ROOT / "pitches" / data["slug"] / "index.html"
         out.parent.mkdir(parents=True, exist_ok=True)
         out.write_text(render(data), encoding="utf-8")
