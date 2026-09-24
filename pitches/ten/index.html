@@ -7,8 +7,9 @@
 <title>日本茶専門スタンド ヽTEN | 下北沢</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@500;800&family=Inter+Tight:wght@500;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@500;800&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
+:focus-visible { outline: 3px solid #5c7a3a; outline-offset: 3px; }
 :root { --matcha: #5c7a3a; --deep: #1e2a17; --paper: #f4f3ec; --ink: #1c1c19; --mute: #74766b; --line: #d9d9cc; }
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
@@ -22,7 +23,7 @@ header { position: sticky; top: 0; z-index: 20; background: rgba(244,243,236,.93
 .nav { display: flex; justify-content: space-between; align-items: center; height: 60px; }
 .logo { text-decoration: none; font-family: "Shippori Mincho B1"; font-weight: 800; font-size: 1.4rem; }
 .logo b { color: var(--matcha); }
-.nav ul { display: flex; gap: 24px; list-style: none; font: 500 .8rem "Inter Tight"; letter-spacing: .15em; }
+.nav ul { display: flex; gap: 24px; list-style: none; font: 500 .8rem "Bricolage Grotesque", sans-serif; letter-spacing: .15em; }
 .nav ul a { text-decoration: none; }
 .lang { border: 1px solid var(--ink); background: transparent; border-radius: 999px; padding: 2px 14px; font: 700 .78rem "Zen Kaku Gothic New"; cursor: pointer; }
 /* hero */
@@ -30,7 +31,7 @@ header { position: sticky; top: 0; z-index: 20; background: rgba(244,243,236,.93
 .hero .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 0; min-height: min(82vh, 760px); align-items: stretch; }
 .copy { padding: 70px 40px 60px 0; display: flex; flex-direction: column; justify-content: center; position: relative; }
 .mark { position: absolute; left: -30px; top: 10px; font-family: "Shippori Mincho B1"; font-weight: 800; font-size: clamp(14rem, 30vw, 24rem); line-height: 1; color: var(--matcha); opacity: .12; pointer-events: none; }
-.tag { font: 800 .8rem "Inter Tight"; letter-spacing: .3em; color: var(--matcha); }
+.tag { font: 800 .8rem "Bricolage Grotesque", sans-serif; letter-spacing: .3em; color: var(--matcha); }
 .hero h1 { font-family: "Shippori Mincho B1"; font-weight: 800; font-size: clamp(2.1rem, 5vw, 3.5rem); line-height: 1.45; margin: 14px 0 18px; position: relative; }
 .hero h1 .c { color: var(--matcha); }
 .hero p { color: var(--mute); max-width: 420px; margin-bottom: 22px; }
@@ -43,10 +44,10 @@ header { position: sticky; top: 0; z-index: 20; background: rgba(244,243,236,.93
 .pic { position: relative; }
 .pic img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .pic .pn { position: absolute; left: 12px; bottom: 10px; font-size: .68rem; color: #fff; opacity: .8; }
-.motto { background: var(--deep); color: var(--paper); font: 800 clamp(1.2rem, 3vw, 1.8rem) "Inter Tight"; letter-spacing: .08em; padding: 18px 20px; text-align: center; }
+.motto { background: var(--deep); color: var(--paper); font: 800 clamp(1.2rem, 3vw, 1.8rem) "Bricolage Grotesque", sans-serif; letter-spacing: .08em; padding: 18px 20px; text-align: center; }
 .motto span { color: #a7c47c; }
 section { padding: 90px 0; }
-.kick { font: 800 .72rem "Inter Tight"; letter-spacing: .3em; color: var(--matcha); }
+.kick { font: 800 .72rem "Bricolage Grotesque", sans-serif; letter-spacing: .3em; color: var(--matcha); }
 .h2 { font-family: "Shippori Mincho B1"; font-weight: 800; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.45; margin: 8px 0 16px; }
 /* menu */
 .menu .g { display: grid; grid-template-columns: 1.1fr .9fr; gap: 50px; align-items: start; }
@@ -54,7 +55,7 @@ section { padding: 90px 0; }
 .it { display: grid; grid-template-columns: 1fr auto; gap: 10px; padding: 16px 0; border-bottom: 1px solid var(--line); }
 .it h3 { font-family: "Shippori Mincho B1"; font-size: 1.1rem; }
 .it p { font-size: .85rem; color: var(--mute); }
-.it .badge { align-self: center; font: 800 .65rem "Inter Tight"; letter-spacing: .15em; border: 1px solid var(--matcha); color: var(--matcha); border-radius: 999px; padding: 2px 10px; }
+.it .badge { align-self: center; font: 800 .65rem "Bricolage Grotesque", sans-serif; letter-spacing: .15em; border: 1px solid var(--matcha); color: var(--matcha); border-radius: 999px; padding: 2px 10px; }
 .menu figure img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; display: block; border-radius: 4px; }
 /* pause */
 .pause { background: var(--deep); color: var(--paper); }
@@ -68,7 +69,7 @@ section { padding: 90px 0; }
 .circle.breathe .fill { animation: breathe 8s ease-in-out infinite; }
 @keyframes breathe { 0%, 100% { transform: scale(.55); } 50% { transform: scale(1); } }
 .circle .t { position: relative; text-align: center; }
-.circle .t b { display: block; font: 800 3rem "Inter Tight"; line-height: 1; }
+.circle .t b { display: block; font: 800 3rem "Bricolage Grotesque", sans-serif; line-height: 1; }
 .circle .t span { font-size: .85rem; opacity: .85; }
 /* leaves */
 .leaves .g { display: grid; grid-template-columns: .9fr 1.1fr; gap: 50px; align-items: center; }
@@ -77,7 +78,7 @@ section { padding: 90px 0; }
 .visit { background: #e8e8dc; }
 .visit .g { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; margin-top: 16px; }
 .visit dl { display: grid; grid-template-columns: 100px 1fr; gap: 10px 14px; }
-.visit dt { font: 800 .7rem "Inter Tight"; letter-spacing: .15em; padding-top: 5px; }
+.visit dt { font: 800 .7rem "Bricolage Grotesque", sans-serif; letter-spacing: .15em; padding-top: 5px; }
 .map { min-height: 320px; border-radius: 4px; overflow: hidden; }
 .map iframe { width: 100%; height: 100%; min-height: 320px; border: 0; display: block; filter: grayscale(.4); }
 footer { background: var(--deep); color: rgba(244,243,236,.6); text-align: center; padding: 24px 16px 32px; font-size: .78rem; }
