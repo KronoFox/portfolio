@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>菓子屋 BORTON | 国立</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Shippori+Mincho+B1:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root { --cream: #fbf5ea; --crust: #d9a45b; --crust-d: #b07a36; --berry: #7a1f35; --berry-l: #a8354f; --ink: #2d1f1a; --milk: #fffdf8; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: "Zen Kaku Gothic New", sans-serif; background: var(--cream); color: var(--ink); line-height: 1.9; overflow-x: hidden; }
+a { color: inherit; }
+.serif { font-family: "Shippori Mincho B1", serif; }
+.latin { font-family: "Cormorant Garamond", serif; }
+.wrap { max-width: 1060px; margin: 0 auto; padding: 0 20px; }
+[data-lang="en"] .ja, [data-lang="ja"] .en { display: none !important; }
+.proposal { background: var(--berry); color: var(--cream); font-size: .75rem; text-align: center; padding: 6px 16px; }
+
+header { position: sticky; top: 0; z-index: 20; background: rgba(251,245,234,.94); backdrop-filter: blur(8px); border-bottom: 1px solid rgba(122,31,53,.18); }
+.nav { display: flex; justify-content: space-between; align-items: center; height: 66px; gap: 12px; }
+.logo { text-decoration: none; line-height: 1; }
+.logo small { display: block; font-size: .66rem; letter-spacing: .3em; color: var(--berry); margin-bottom: 4px; }
+.logo b { font-family: "Cormorant Garamond"; font-weight: 600; font-size: 1.7rem; letter-spacing: .12em; }
+.nav ul { display: flex; gap: 26px; list-style: none; font-size: .88rem; }
+.nav ul a { text-decoration: none; }
+.lang { border: 1px solid var(--berry); background: transparent; color: var(--berry); border-radius: 999px; padding: 2px 14px; font: 500 .8rem "Zen Kaku Gothic New"; cursor: pointer; }
+
+/* hero with woven lattice crust */
+.hero { position: relative; overflow: hidden; }
+.hero .wrap { display: grid; grid-template-columns: 1fr 1fr; min-height: 560px; align-items: center; gap: 30px; }
+.copy { padding: 60px 0; position: relative; z-index: 2; }
+.copy .kicker { font-family: "Cormorant Garamond"; font-style: italic; font-size: 1.2rem; color: var(--berry); }
+.copy h1 { font-family: "Shippori Mincho B1"; font-weight: 700; font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.5; margin: 10px 0 18px; }
+.copy p { max-width: 440px; margin-bottom: 26px; color: #4b3a33; }
+.btn { display: inline-block; text-decoration: none; padding: 12px 28px; background: var(--berry); color: var(--cream); letter-spacing: .08em; border-radius: 2px; }
+.btn.ghost { background: transparent; color: var(--berry); box-shadow: inset 0 0 0 1px var(--berry); }
+.btns { display: flex; gap: 12px; flex-wrap: wrap; }
+.pie { position: relative; justify-self: center; width: min(440px, 86vw); aspect-ratio: 1; border-radius: 50%;
+  background: radial-gradient(circle, var(--berry-l) 0 58%, var(--berry) 70%);
+  box-shadow: 0 0 0 18px var(--crust), 0 0 0 22px var(--crust-d), 0 30px 60px rgba(122,31,53,.25); overflow: hidden; }
+.lattice { position: absolute; inset: 0; border-radius: 50%; }
+.lattice i { position: absolute; background: linear-gradient(180deg, #e8b774, var(--crust) 50%, var(--crust-d)); border-radius: 8px; box-shadow: 0 3px 6px rgba(45,31,26,.25); }
+.lattice .h { left: -5%; right: -5%; height: 9%; }
+.lattice .v { top: -5%; bottom: -5%; width: 9%; background: linear-gradient(90deg, #e8b774, var(--crust) 50%, var(--crust-d)); }
+.rating { position: absolute; right: 4%; bottom: 8%; z-index: 3; background: var(--milk); border: 1px solid var(--berry); padding: 10px 16px; text-align: center; transform: rotate(-4deg); box-shadow: 0 8px 20px rgba(0,0,0,.08); }
+.rating b { font-family: "Cormorant Garamond"; font-size: 1.8rem; color: var(--berry); display: block; line-height: 1; }
+.rating small { font-size: .7rem; }
+
+section { padding: 90px 0; }
+.title { text-align: center; margin-bottom: 44px; }
+.title .latin { font-style: italic; font-size: 1.15rem; color: var(--berry); }
+.title h2 { font-family: "Shippori Mincho B1"; font-weight: 700; font-size: clamp(1.7rem, 4vw, 2.3rem); }
+
+/* showcase: pastry case */
+.case { background: var(--milk); border-top: 1px solid rgba(122,31,53,.15); border-bottom: 1px solid rgba(122,31,53,.15); }
+.shelf { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
+.p { text-align: center; }
+.plate { aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle, #fff 0 55%, #f1e6d6 56% 62%, #fff 63%); display: grid; place-items: center; box-shadow: 0 14px 30px rgba(45,31,26,.08); margin-bottom: 16px; }
+.plate svg { width: 62%; }
+.p h3 { font-family: "Shippori Mincho B1"; font-size: 1.1rem; }
+.p p { font-size: .86rem; color: #6a5750; }
+.note { text-align: center; font-size: .8rem; color: #7a6a62; margin-top: 30px; }
+
+/* pre-order clock */
+.order .wrap { display: grid; grid-template-columns: 1fr 1.1fr; gap: 50px; align-items: center; }
+.clock { width: min(320px, 76vw); justify-self: center; }
+.clock .face { fill: var(--milk); stroke: var(--berry); stroke-width: 3; }
+.clock .deadline { fill: none; stroke: var(--crust); stroke-width: 14; }
+.status { font-family: "Shippori Mincho B1"; font-size: 1.35rem; font-weight: 700; margin: 8px 0 6px; }
+.status.ok { color: #3f6b3a; } .status.late { color: var(--berry); }
+.flow { margin-top: 22px; display: grid; gap: 12px; }
+.flow div { display: grid; grid-template-columns: 44px 1fr; gap: 14px; align-items: start; }
+.flow b { width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--berry); color: var(--berry); display: grid; place-items: center; font-family: "Cormorant Garamond"; font-size: 1.3rem; }
+
+/* visit */
+.visit { background: var(--berry); color: var(--cream); }
+.visit .title .latin { color: #f3c6d0; }
+.visit .wrap.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; }
+.visit dl { display: grid; grid-template-columns: 100px 1fr; gap: 12px 14px; }
+.visit dt { opacity: .7; font-size: .9rem; }
+.map { border: 10px solid var(--crust); min-height: 320px; }
+.map iframe { width: 100%; min-height: 300px; height: 100%; border: 0; display: block; }
+footer { text-align: center; padding: 26px 16px; font-size: .8rem; }
+footer b { font-family: "Cormorant Garamond"; font-size: 1.4rem; letter-spacing: .15em; display: block; }
+
+@media (max-width: 820px) {
+  .nav ul { display: none; }
+  .hero .wrap, .order .wrap, .visit .wrap.grid { grid-template-columns: 1fr; }
+  .copy { padding: 44px 0 10px; }
+  .hero .wrap { min-height: 0; padding-bottom: 60px; }
+  .shelf { grid-template-columns: 1fr 1fr; }
+}
+</style>
+</head>
+<body data-lang="ja">
+<div class="proposal"><span class="ja">※ ご提案用のサンプル（モックアップ）です・検索エンジン非表示</span><span class="en">Proposal mockup · hidden from search engines</span></div>
+
+<header><div class="wrap nav">
+  <a class="logo" href="#"><small><span class="ja">菓子屋</span><span class="en">PÂTISSERIE</span></small><b>BORTON</b></a>
+  <ul>
+    <li><a href="#case"><span class="ja">お菓子</span><span class="en">Sweets</span></a></li>
+    <li><a href="#order"><span class="ja">ご予約</span><span class="en">Pre-order</span></a></li>
+    <li><a href="#visit"><span class="ja">アクセス</span><span class="en">Visit</span></a></li>
+  </ul>
+  <button class="lang" id="langBtn">EN</button>
+</div></header>
+
+<main>
+  <div class="hero">
+    <div class="wrap">
+      <div class="copy">
+        <div class="kicker">Kunitachi · since the first bite</div>
+        <h1><span class="ja">さくっと崩れる生地と、<br>季節の果物。</span><span class="en">Flaky crust,<br>and fruit of the season.</span></h1>
+        <p><span class="ja">国立の小さな菓子屋。ていねいに焼いたパイとタルト、焼き菓子をご用意しています。お菓子がなくなり次第、その日の営業は終了です。</span><span class="en">A small pastry shop in Kunitachi. Carefully baked pies, tarts and baked goods — we close for the day when they're gone.</span></p>
+        <div class="btns"><a class="btn" href="#order"><span class="ja">ご予約について</span><span class="en">Pre-orders</span></a><a class="btn ghost" href="#visit"><span class="ja">アクセス</span><span class="en">Visit</span></a></div>
+      </div>
+      <div class="pie" aria-hidden="true"><div class="lattice" id="lattice"></div>
+        <div class="rating"><b>★ 4.2</b><small><span class="ja">Googleクチコミ 79件</span><span class="en">79 Google reviews</span></small></div></div>
+    </div>
+  </div>
+
+  <section id="case" class="case">
+    <div class="wrap">
+      <div class="title"><div class="latin">In the case today</div><h2><span class="ja">ショーケースから</span><span class="en">From the pastry case</span></h2></div>
+      <div class="shelf">
+        <div class="p"><div class="plate"><svg viewBox="0 0 100 70"><path d="M8 50h84l-6 12H14z" fill="#d9a45b" stroke="#b07a36" stroke-width="2"/><path d="M10 50c4-18 22-30 40-30s36 12 40 30z" fill="#7a1f35"/><path d="M18 42h64M26 34h48M50 22v28M34 26v24M66 26v24" stroke="#e8b774" stroke-width="4" stroke-linecap="round"/></svg></div>
+          <h3><span class="ja">果物のパイ</span><span class="en">Fruit pie</span></h3><p><span class="ja">さくさくの生地と果物の相性が評判。</span><span class="en">Flaky pastry and fruit — a reviewer favorite.</span></p></div>
+        <div class="p"><div class="plate"><svg viewBox="0 0 100 70"><path d="M10 44h80l-8 16H18z" fill="#d9a45b" stroke="#b07a36" stroke-width="2"/><ellipse cx="50" cy="44" rx="40" ry="8" fill="#f6e3b8"/><circle cx="34" cy="40" r="6" fill="#a8354f"/><circle cx="50" cy="38" r="6" fill="#7a1f35"/><circle cx="66" cy="40" r="6" fill="#a8354f"/><circle cx="42" cy="46" r="5" fill="#3f6b3a"/><circle cx="58" cy="46" r="5" fill="#e8b774"/></svg></div>
+          <h3><span class="ja">タルト</span><span class="en">Tarts</span></h3><p><span class="ja">季節ごとの表情で。</span><span class="en">Changing with the seasons.</span></p></div>
+        <div class="p"><div class="plate"><svg viewBox="0 0 100 70"><rect x="16" y="30" width="30" height="22" rx="4" fill="#d9a45b"/><rect x="54" y="26" width="30" height="26" rx="4" fill="#b07a36"/><path d="M22 36h18M60 34h18" stroke="#fbf5ea" stroke-width="3" stroke-linecap="round"/></svg></div>
+          <h3><span class="ja">焼き菓子</span><span class="en">Baked goods</span></h3><p><span class="ja">手土産にもどうぞ。</span><span class="en">Lovely as a gift.</span></p></div>
+        <div class="p"><div class="plate"><svg viewBox="0 0 100 70"><path d="M36 20h28l-4 36H40z" fill="#fff" stroke="#7a1f35" stroke-width="2"/><path d="M38 34h24l-2 20H40z" fill="#a8354f"/><circle cx="50" cy="18" r="7" fill="#7a1f35"/></svg></div>
+          <h3><span class="ja">デザート</span><span class="en">Desserts</span></h3><p><span class="ja">ご予約で承ります。</span><span class="en">Available by pre-order.</span></p></div>
+      </div>
+      <p class="note"><span class="ja">※ 現在カフェ営業はお休みし、テイクアウトのみの営業です。価格・内容は正式公開時にお店の情報に合わせて掲載します。</span><span class="en">Takeaway only for now (café seating paused). Items and prices to be confirmed with the shop.</span></p>
+    </div>
+  </section>
+
+  <section id="order" class="order">
+    <div class="wrap">
+      <svg class="clock" viewBox="0 0 200 200" aria-hidden="true">
+        <circle class="face" cx="100" cy="100" r="90"/>
+        <path class="deadline" id="arc" d=""/>
+        <g id="ticks"></g>
+        <line id="hh" x1="100" y1="100" x2="100" y2="58" stroke="#2d1f1a" stroke-width="6" stroke-linecap="round"/>
+        <line id="mh" x1="100" y1="100" x2="100" y2="36" stroke="#2d1f1a" stroke-width="3.5" stroke-linecap="round"/>
+        <circle cx="100" cy="100" r="6" fill="#7a1f35"/>
+        <text x="100" y="150" text-anchor="middle" font-family="Cormorant Garamond" font-size="16" fill="#7a1f35">21:00</text>
+      </svg>
+      <div>
+        <div class="title" style="text-align:left;margin-bottom:10px"><div class="latin">Pre-order</div><h2><span class="ja">前日21時までのご予約で</span><span class="en">Order by 9 PM the day before</span></h2></div>
+        <p><span class="ja">焼き菓子やデザートは、ご来店前日の21時までにご連絡いただければご用意いたします。</span><span class="en">Let us know by 9 PM the day before, and we'll have your baked goods and desserts ready.</span></p>
+        <p class="status" id="status"></p>
+        <div class="flow">
+          <div><b>1</b><p><span class="ja">前日21時までに、ご希望の品と受け取り時間をご連絡ください。</span><span class="en">Tell us what you'd like and when you'll pick up, by 9 PM the day before.</span></p></div>
+          <div><b>2</b><p><span class="ja">当日、11時以降にお店でお受け取りください。</span><span class="en">Pick up at the shop from 11 AM on the day.</span></p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="visit" class="visit">
+    <div class="wrap"><div class="title"><div class="latin">Visit us</div><h2><span class="ja">お店のこと</span><span class="en">Find us</span></h2></div></div>
+    <div class="wrap grid">
+      <dl>
+        <dt><span class="ja">住所</span><span class="en">Address</span></dt><dd><span class="ja">〒186-0005 東京都国立市西2-9-74</span><span class="en">2-9-74 Nishi, Kunitachi, Tokyo 186-0005</span></dd>
+        <dt><span class="ja">営業時間</span><span class="en">Hours</span></dt><dd><span class="ja">11:00〜17:00（完売次第終了）</span><span class="en">11:00–17:00 (until sold out)</span></dd>
+        <dt><span class="ja">スタイル</span><span class="en">Style</span></dt><dd><span class="ja">テイクアウトのみ（カフェ営業は休止中）</span><span class="en">Takeaway only (café paused)</span></dd>
+        <dt>Instagram</dt><dd><a href="https://www.instagram.com/kashiyaborton/" target="_blank" rel="noopener">@kashiyaborton</a></dd>
+      </dl>
+      <div class="map"><iframe loading="lazy" title="Map" src="https://www.google.com/maps?q=BORTON%20%E5%9B%BD%E7%AB%8B%E5%B8%82%E8%A5%BF2-9-74&output=embed"></iframe></div>
+    </div>
+    <footer><b>BORTON</b>© 菓子屋 BORTON · Kunitachi</footer>
+  </section>
+</main>
+
+<script>
+const $ = (s) => document.querySelector(s);
+$('#langBtn').addEventListener('click', () => { const l = document.body.dataset.lang === 'ja' ? 'en' : 'ja'; document.body.dataset.lang = l; document.documentElement.lang = l; $('#langBtn').textContent = l === 'ja' ? 'EN' : '日本語'; renderStatus(); });
+
+// woven lattice
+const lat = $('#lattice'); const pos = [14, 32, 50, 68, 86];
+pos.forEach((p, i) => { const h = document.createElement('i'); h.className = 'h'; h.style.top = `calc(${p}% - 4.5%)`; h.style.zIndex = i % 2 ? 2 : 1; lat.appendChild(h); });
+pos.forEach((p, i) => { const v = document.createElement('i'); v.className = 'v'; v.style.left = `calc(${p}% - 4.5%)`; v.style.zIndex = i % 2 ? 1 : 2; lat.appendChild(v); });
+
+// clock ticks + deadline arc (18:00 -> 21:00 on a 12h face)
+const t = $('#ticks'); for (let i = 0; i < 12; i++) { const a = i * 30 * Math.PI / 180; const r1 = i % 3 ? 80 : 74;
+  t.insertAdjacentHTML('beforeend', `<line x1="${100 + Math.sin(a) * r1}" y1="${100 - Math.cos(a) * r1}" x2="${100 + Math.sin(a) * 86}" y2="${100 - Math.cos(a) * 86}" stroke="#7a1f35" stroke-width="${i % 3 ? 2 : 4}"/>`); }
+const arcPt = (h) => { const a = (h % 12) * 30 * Math.PI / 180; return [100 + Math.sin(a) * 66, 100 - Math.cos(a) * 66]; };
+const [x1, y1] = arcPt(18), [x2, y2] = arcPt(21);
+$('#arc').setAttribute('d', `M${x1} ${y1} A66 66 0 0 1 ${x2} ${y2}`);
+
+// live Japan time
+function jstNow() { const d = new Date(); return new Date(d.getTime() + (d.getTimezoneOffset() + 540) * 60000); }
+function renderStatus() {
+  const n = jstNow(), h = n.getHours(), m = n.getMinutes();
+  $('#hh').setAttribute('transform', `rotate(${(h % 12) * 30 + m / 2} 100 100)`);
+  $('#mh').setAttribute('transform', `rotate(${m * 6} 100 100)`);
+  const ok = h < 21; const el = $('#status'); el.className = 'status ' + (ok ? 'ok' : 'late');
+  const ja = document.body.dataset.lang === 'ja';
+  const left = ok ? (20 - h) * 60 + (60 - m) : 0;
+  el.textContent = ok
+    ? (ja ? `いまなら、明日のお受け取り分に間に合います（締切まであと${Math.floor(left / 60)}時間${left % 60}分）` : `You can still order for tomorrow — ${Math.floor(left / 60)}h ${left % 60}m until the cutoff.`)
+    : (ja ? '本日の締切（21時）を過ぎました。明後日のお受け取り分から承ります。' : "Today's 9 PM cutoff has passed — orders now are for the day after tomorrow.");
+}
+renderStatus(); setInterval(renderStatus, 30000);
+</script>
+</body>
+</html>

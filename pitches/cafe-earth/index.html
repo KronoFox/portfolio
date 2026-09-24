@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Cafe earth カフェアース | 江古田</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root { --kraft: #e9dcc3; --kraft2: #dccaa8; --soil: #5a3e2b; --ink: #2f261f; --leaf: #5f7f3a; --leaf2: #8fae5a; --sky: #f6efe0; --sun: #f0b44c; --paper: #fbf6ec; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: "Zen Kaku Gothic New", sans-serif; color: var(--ink); background: var(--sky); line-height: 1.9; overflow-x: hidden; }
+a { color: inherit; }
+.hand { font-family: "Klee One", cursive; font-weight: 600; }
+.wrap { max-width: 1060px; margin: 0 auto; padding: 0 20px; }
+[data-lang="en"] .ja, [data-lang="ja"] .en { display: none !important; }
+.proposal { background: var(--soil); color: var(--kraft); font-size: .75rem; text-align: center; padding: 6px 16px; }
+
+header { position: sticky; top: 0; z-index: 20; background: rgba(246,239,224,.92); backdrop-filter: blur(8px); border-bottom: 1px dashed rgba(90,62,43,.35); }
+.nav { display: flex; justify-content: space-between; align-items: center; height: 64px; gap: 12px; }
+.logo { text-decoration: none; display: flex; align-items: center; gap: 10px; }
+.logo .globe { width: 36px; height: 36px; }
+.logo b { font-family: "Klee One"; font-size: 1.3rem; font-weight: 600; }
+.logo small { display: block; font-size: .65rem; letter-spacing: .2em; color: var(--soil); margin-top: -4px; }
+.nav ul { display: flex; gap: 24px; list-style: none; font-size: .9rem; }
+.nav ul a { text-decoration: none; }
+.lang { border: 1.5px solid var(--soil); background: var(--paper); color: var(--soil); border-radius: 999px; padding: 2px 14px; font: 500 .8rem "Zen Kaku Gothic New"; cursor: pointer; }
+
+/* hero: rice terraces */
+.hero { position: relative; overflow: hidden; padding: 70px 0 0; }
+.hero .copy { position: relative; z-index: 2; max-width: 620px; }
+.hero .eyebrow { font-size: .8rem; letter-spacing: .25em; color: var(--leaf); font-weight: 700; }
+.hero h1 { font-family: "Klee One"; font-weight: 600; font-size: clamp(2rem, 5.6vw, 3.4rem); line-height: 1.45; margin: 12px 0 16px; }
+.hero h1 em { font-style: normal; background: linear-gradient(transparent 62%, rgba(240,180,76,.55) 62%); }
+.hero p { max-width: 520px; color: #4d4036; margin-bottom: 26px; }
+.btn { display: inline-block; text-decoration: none; background: var(--leaf); color: var(--paper); padding: 12px 26px; border-radius: 999px; font-weight: 700; }
+.btn.ghost { background: transparent; color: var(--soil); border: 1.5px solid var(--soil); }
+.btns { display: flex; gap: 12px; flex-wrap: wrap; }
+.sun { position: absolute; right: 8%; top: 40px; width: 150px; height: 150px; border-radius: 50%; background: radial-gradient(circle at 40% 40%, #ffd98a, var(--sun)); box-shadow: 0 0 0 18px rgba(240,180,76,.18), 0 0 0 40px rgba(240,180,76,.08); }
+.terraces { display: block; width: 100%; height: 260px; margin-top: 30px; }
+.stars { position: absolute; right: 8%; top: 210px; z-index: 2; background: var(--paper); border: 1.5px dashed var(--soil); border-radius: 14px; padding: 8px 16px; font-family: "Klee One"; font-weight: 600; transform: rotate(3deg); }
+
+/* story: field to plate */
+.story { background: var(--leaf); color: var(--paper); padding: 80px 0; }
+.story h2, .menu h2, .dogs h2, .visit h2 { font-family: "Klee One"; font-weight: 600; font-size: clamp(1.7rem, 4vw, 2.4rem); line-height: 1.4; margin-bottom: 10px; }
+.story .sub { opacity: .85; margin-bottom: 36px; }
+.steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; counter-reset: s; }
+.step { background: rgba(251,246,236,.1); border: 1.5px dashed rgba(251,246,236,.5); border-radius: 18px; padding: 20px; position: relative; }
+.step::before { counter-increment: s; content: "0" counter(s); font-family: "Klee One"; font-size: 2.2rem; color: #ffd98a; display: block; line-height: 1; margin-bottom: 8px; }
+.step svg { width: 54px; height: 44px; margin-bottom: 6px; }
+.step h3 { font-size: 1.05rem; font-weight: 700; }
+.step p { font-size: .88rem; opacity: .88; }
+.years { margin-top: 36px; display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; }
+.years b { font-family: "Klee One"; font-size: clamp(3rem, 9vw, 5rem); color: #ffd98a; line-height: 1; }
+
+/* menu: kraft card */
+.menu { padding: 84px 0; }
+.card { background: var(--kraft); border-radius: 6px; padding: 38px 36px; position: relative; box-shadow: 0 18px 40px rgba(90,62,43,.15);
+  background-image: repeating-linear-gradient(0deg, rgba(90,62,43,.035) 0 2px, transparent 2px 5px), repeating-linear-gradient(90deg, rgba(90,62,43,.03) 0 1px, transparent 1px 7px); }
+.card::before { content: ""; position: absolute; top: -14px; left: 50%; width: 120px; height: 28px; transform: translateX(-50%) rotate(-2deg); background: rgba(143,174,90,.55); }
+.menu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 44px; margin-top: 20px; }
+.m { display: flex; gap: 12px; align-items: baseline; padding: 12px 0; border-bottom: 1.5px dashed rgba(90,62,43,.3); }
+.m h3 { font-family: "Klee One"; font-weight: 600; font-size: 1.15rem; white-space: nowrap; }
+.m .dots { flex: 1; }
+.m .tag { font-size: .72rem; background: var(--leaf); color: var(--paper); border-radius: 999px; padding: 0 10px; white-space: nowrap; }
+.m p { width: 100%; font-size: .86rem; color: #5b4c40; }
+.m { flex-wrap: wrap; }
+.note { font-size: .78rem; color: #6b5b4e; margin-top: 18px; }
+
+/* dogs */
+.dogs { background: var(--paper); padding: 80px 0; position: relative; overflow: hidden; }
+.dogs .wrap { display: grid; grid-template-columns: 1.2fr 1fr; gap: 30px; align-items: center; }
+.paws { position: absolute; inset: 0; pointer-events: none; }
+.paw { position: absolute; width: 26px; opacity: 0; animation: pawin .5s forwards; color: var(--soil); }
+@keyframes pawin { to { opacity: .22; } }
+.badges { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+.badges span { border: 1.5px solid var(--soil); border-radius: 999px; padding: 4px 14px; font-size: .88rem; background: var(--sky); }
+.dogpic { width: 100%; max-width: 320px; justify-self: center; }
+
+/* visit */
+.visit { padding: 80px 0; }
+.visit .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; }
+.visit dl { display: grid; grid-template-columns: 96px 1fr; gap: 10px 14px; margin-top: 16px; }
+.visit dt { color: #7a6a5c; font-size: .9rem; }
+.map { border-radius: 20px; overflow: hidden; border: 1.5px solid var(--soil); min-height: 320px; }
+.map iframe { width: 100%; min-height: 320px; height: 100%; border: 0; display: block; }
+footer { background: var(--soil); color: var(--kraft); text-align: center; padding: 26px 16px; font-size: .85rem; }
+footer .hand { font-size: 1.3rem; }
+
+@media (max-width: 820px) {
+  .nav ul { display: none; }
+  .steps { grid-template-columns: 1fr 1fr; }
+  .menu-grid, .dogs .wrap, .visit .wrap { grid-template-columns: 1fr; }
+  .sun { width: 90px; height: 90px; right: 6%; top: 20px; }
+  .stars { position: static; display: inline-block; margin: 0 0 0 20px; }
+  .card { padding: 30px 20px; }
+  .m h3 { white-space: normal; }
+}
+@media (prefers-reduced-motion: reduce) { .paw { animation: none; opacity: .22; } }
+</style>
+</head>
+<body data-lang="ja">
+<div class="proposal"><span class="ja">※ ご提案用のサンプル（モックアップ）です・検索エンジン非表示</span><span class="en">Proposal mockup · hidden from search engines</span></div>
+
+<header><div class="wrap nav">
+  <a class="logo" href="#">
+    <svg class="globe" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="17" fill="#8fae5a" stroke="#5a3e2b" stroke-width="2"/><path d="M8 16c6-2 8 4 14 2s6-8 12-6M6 26c8-3 12 3 20 0" fill="none" stroke="#5a3e2b" stroke-width="2" stroke-linecap="round"/></svg>
+    <span><b>Cafe earth</b><small>EKODA · TOKYO</small></span>
+  </a>
+  <ul>
+    <li><a href="#story"><span class="ja">お米のこと</span><span class="en">Our rice</span></a></li>
+    <li><a href="#menu"><span class="ja">メニュー</span><span class="en">Menu</span></a></li>
+    <li><a href="#dogs"><span class="ja">ワンちゃん</span><span class="en">Dogs</span></a></li>
+    <li><a href="#visit"><span class="ja">アクセス</span><span class="en">Visit</span></a></li>
+  </ul>
+  <button class="lang" id="langBtn">EN</button>
+</div></header>
+
+<main>
+  <div class="hero">
+    <div class="sun" aria-hidden="true"></div>
+    <div class="wrap copy">
+      <div class="eyebrow">EKODA · ASAHIGAOKA</div>
+      <h1><span class="ja">青森の田んぼから、<br><em>江古田のテーブル</em>へ。</span><span class="en">From an Aomori rice field<br>to <em>your table in Ekoda</em>.</span></h1>
+      <p><span class="ja">20年以上、無農薬で育てられた青森のお米を使った、からだにやさしいごはん。江古田駅南口から歩いて2〜3分の、ワンちゃんと一緒に過ごせるカフェです。</span><span class="en">Gentle, wholesome food made with rice grown pesticide-free for over 20 years in Aomori — a dog-friendly café 2–3 minutes from Ekoda Station's south exit.</span></p>
+      <div class="btns"><a class="btn" href="#menu"><span class="ja">メニューを見る</span><span class="en">See the menu</span></a><a class="btn ghost" href="#visit"><span class="ja">アクセス</span><span class="en">Visit</span></a></div>
+    </div>
+    <div class="stars">★ 4.6 <span class="ja">Googleクチコミ 50件</span><span class="en">50 Google reviews</span></div>
+    <svg class="terraces" viewBox="0 0 1440 260" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0 120 C240 60 480 60 720 110 S1200 170 1440 90 V260 H0Z" fill="#b9cf86"/>
+      <path d="M0 160 C260 110 520 120 760 160 S1180 200 1440 140 V260 H0Z" fill="#8fae5a"/>
+      <path d="M0 200 C280 160 560 175 820 200 S1200 230 1440 190 V260 H0Z" fill="#5f7f3a"/>
+      <g stroke="#e9f0cf" stroke-width="2" opacity=".5" fill="none"><path d="M0 138 C240 88 480 88 720 136 S1200 190 1440 112"/><path d="M0 178 C260 130 520 140 760 178 S1180 216 1440 160"/></g>
+
+    </svg>
+  </div>
+
+  <section id="story" class="story">
+    <div class="wrap">
+      <h2><span class="ja">田んぼからテーブルまで</span><span class="en">From field to table</span></h2>
+      <p class="sub"><span class="ja">毎日のごはんが、からだにやさしいものでありますように。</span><span class="en">Everyday food that's kind to your body.</span></p>
+      <div class="steps">
+        <div class="step"><svg viewBox="0 0 54 44" fill="none" stroke="#fbf6ec" stroke-width="2.5" stroke-linecap="round"><path d="M4 38h46M12 38c0-10 2-18 6-24M22 38c0-12 3-20 8-26M34 38c0-10 3-16 7-20"/><path d="M18 14c-3-2-4-6-2-9 3 2 4 6 2 9zM30 12c-3-3-3-7 0-9 2 3 2 7 0 9z"/></svg>
+          <h3><span class="ja">青森の田んぼ</span><span class="en">Aomori rice fields</span></h3><p><span class="ja">青森で育てられたお米。</span><span class="en">Rice grown in Aomori.</span></p></div>
+        <div class="step"><svg viewBox="0 0 54 44" fill="none" stroke="#fbf6ec" stroke-width="2.5" stroke-linecap="round"><circle cx="27" cy="22" r="16"/><path d="M15 34L39 10"/></svg>
+          <h3><span class="ja">20年以上の無農薬</span><span class="en">20+ years pesticide-free</span></h3><p><span class="ja">長年、農薬を使わずに栽培。</span><span class="en">Grown without pesticides for decades.</span></p></div>
+        <div class="step"><svg viewBox="0 0 54 44" fill="none" stroke="#fbf6ec" stroke-width="2.5" stroke-linecap="round"><path d="M8 20h38c0 12-8 20-19 20S8 32 8 20z"/><path d="M14 20c2-6 8-10 13-10s11 4 13 10"/></svg>
+          <h3><span class="ja">江古田のキッチン</span><span class="en">Our Ekoda kitchen</span></h3><p><span class="ja">ていねいに、手づくりで。</span><span class="en">Made carefully, by hand.</span></p></div>
+        <div class="step"><svg viewBox="0 0 54 44" fill="none" stroke="#fbf6ec" stroke-width="2.5" stroke-linecap="round"><ellipse cx="27" cy="30" rx="22" ry="8"/><path d="M14 28c4-8 22-8 26 0"/><path d="M40 6v14M44 6v14M42 6v24"/></svg>
+          <h3><span class="ja">あなたのテーブルへ</span><span class="en">To your table</span></h3><p><span class="ja">店内でも、テイクアウトでも。</span><span class="en">Eat in or take away.</span></p></div>
+      </div>
+      <div class="years"><b id="yrs">0</b><span class="ja">年以上、農薬を使わずに育ててきたお米です。</span><span class="en">years and counting of pesticide-free rice.</span></div>
+    </div>
+  </section>
+
+  <section id="menu" class="menu">
+    <div class="wrap">
+      <div class="card">
+        <h2><span class="ja">きょうのメニュー</span><span class="en">Today's menu</span></h2>
+        <div class="menu-grid">
+          <div class="m"><h3><span class="ja">特製ドライカレー</span><span class="en">House dry curry</span></h3><span class="dots"></span><span class="tag"><span class="ja">人気</span><span class="en">Popular</span></span><p><span class="ja">無農薬米といっしょに。</span><span class="en">With our pesticide-free rice.</span></p></div>
+          <div class="m"><h3><span class="ja">おからハンバーグ</span><span class="en">Okara hamburg steak</span></h3><span class="dots"></span><p><span class="ja">「とてもおいしい」とクチコミでも評判。</span><span class="en">A reviewer favorite.</span></p></div>
+          <div class="m"><h3><span class="ja">オムライス</span><span class="en">Omurice</span></h3><span class="dots"></span><p><span class="ja">やさしい味わいのオムライス。</span><span class="en">Soft and comforting.</span></p></div>
+          <div class="m"><h3><span class="ja">ナポリタン</span><span class="en">Neapolitan spaghetti</span></h3><span class="dots"></span><p><span class="ja">喫茶の定番。</span><span class="en">A café classic.</span></p></div>
+          <div class="m"><h3><span class="ja">あずきバターアイストースト</span><span class="en">Azuki-butter ice toast</span></h3><span class="dots"></span><span class="tag"><span class="ja">おやつ</span><span class="en">Sweet</span></span><p><span class="ja">あずき・バター・アイスの三重奏。</span><span class="en">Red bean, butter and ice cream.</span></p></div>
+          <div class="m"><h3><span class="ja">ハンドドリップ珈琲・有機紅茶</span><span class="en">Hand-drip coffee & organic tea</span></h3><span class="dots"></span><p><span class="ja">しっかりとした味わいの珈琲と、オーガニックの紅茶。</span><span class="en">Strong, satisfying coffee and organic black tea.</span></p></div>
+        </div>
+        <p class="note"><span class="ja">※ 価格・内容は正式公開時にお店の情報に合わせて掲載します。テイクアウト・デリバリーもご利用いただけます。</span><span class="en">Prices and items to be confirmed with the shop. Takeaway and delivery available.</span></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="dogs" class="dogs">
+    <div class="paws" id="paws" aria-hidden="true"></div>
+    <div class="wrap">
+      <div>
+        <h2><span class="ja">ワンちゃんも、<br>いっしょにどうぞ。</span><span class="en">Bring your dog,<br>too.</span></h2>
+        <p><span class="ja">ワンちゃんと一緒に入店OK。外のテラス席もあります。店内は禁煙で、小さなお子さま連れにもやさしいカフェです。</span><span class="en">Dogs are welcome inside, and we have an outdoor terrace. Non-smoking and friendly to little ones, too.</span></p>
+        <div class="badges"><span>🐾 <span class="ja">ワンちゃんOK</span><span class="en">Dogs welcome</span></span><span>☀ <span class="ja">テラス席</span><span class="en">Terrace</span></span><span>🚭 <span class="ja">禁煙</span><span class="en">Non-smoking</span></span><span>👶 <span class="ja">お子さま歓迎</span><span class="en">Kid-friendly</span></span></div>
+      </div>
+      <svg class="dogpic" viewBox="0 0 220 180" aria-hidden="true">
+        <ellipse cx="110" cy="160" rx="80" ry="10" fill="#dccaa8"/>
+        <path d="M60 150c0-40 20-66 54-66s52 26 52 66z" fill="#c8955d" stroke="#5a3e2b" stroke-width="3"/>
+        <circle cx="112" cy="70" r="36" fill="#d9a86c" stroke="#5a3e2b" stroke-width="3"/>
+        <path d="M80 52c-14-4-20 16-12 30 6-2 10-12 12-30zM144 52c14-4 20 16 12 30-6-2-10-12-12-30z" fill="#a8743f" stroke="#5a3e2b" stroke-width="3" stroke-linejoin="round"/>
+        <circle cx="100" cy="68" r="4" fill="#2f261f"/><circle cx="124" cy="68" r="4" fill="#2f261f"/>
+        <ellipse cx="112" cy="82" rx="7" ry="5" fill="#2f261f"/><path d="M112 87v6M104 94c4 4 12 4 16 0" stroke="#2f261f" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+        <path d="M166 128c18-6 26-26 20-36" fill="none" stroke="#5a3e2b" stroke-width="3" stroke-linecap="round"/>
+      </svg>
+    </div>
+  </section>
+
+  <section id="visit" class="visit">
+    <div class="wrap">
+      <div>
+        <h2><span class="ja">お店への行き方</span><span class="en">Find us</span></h2>
+        <p><span class="ja">江古田駅南口から、旭丘文化通りを歩いて2〜3分。</span><span class="en">2–3 minutes' walk from Ekoda Station (south exit) along Asahigaoka Bunka-dori.</span></p>
+        <dl>
+          <dt><span class="ja">住所</span><span class="en">Address</span></dt><dd><span class="ja">〒176-0005 東京都練馬区旭丘1-56-13-101 ウイステリアガーデン</span><span class="en">Wisteria Garden 101, 1-56-13 Asahigaoka, Nerima-ku, Tokyo</span></dd>
+          <dt><span class="ja">営業時間</span><span class="en">Hours</span></dt><dd><span class="ja">11:00〜18:00（定休日：月曜日）</span><span class="en">11:00–18:00 (closed Mondays)</span></dd>
+          <dt><span class="ja">電話</span><span class="en">Phone</span></dt><dd><a href="tel:07015310789">070-1531-0789</a></dd>
+          <dt>Instagram</dt><dd><a href="https://www.instagram.com/cafeearthekoda/" target="_blank" rel="noopener">@cafeearthekoda</a></dd>
+        </dl>
+      </div>
+      <div class="map"><iframe loading="lazy" title="Map" src="https://www.google.com/maps?q=Cafe%20Earth%20%E7%B7%B4%E9%A6%AC%E5%8C%BA%E6%97%AD%E4%B8%981-56-13&output=embed"></iframe></div>
+    </div>
+  </section>
+</main>
+<footer><div class="hand">Cafe earth</div>© Cafe earth · Ekoda, Tokyo</footer>
+
+<script>
+const btn = document.getElementById('langBtn');
+btn.addEventListener('click', () => { const l = document.body.dataset.lang === 'ja' ? 'en' : 'ja'; document.body.dataset.lang = l; document.documentElement.lang = l; btn.textContent = l === 'ja' ? 'EN' : '日本語'; });
+// count up "20+" when the story scrolls into view
+const yrs = document.getElementById('yrs');
+new IntersectionObserver((es, o) => { if (es[0].isIntersecting) { let n = 0; const t = setInterval(() => { yrs.textContent = ++n; if (n >= 20) { clearInterval(t); yrs.textContent = '20+'; } }, 45); o.disconnect(); } }, { threshold: .5 }).observe(yrs);
+// paw-print trail across the dog section
+const paw = '<svg viewBox="0 0 24 24" fill="currentColor"><ellipse cx="12" cy="16" rx="5" ry="4.2"/><circle cx="5.5" cy="10" r="2.3"/><circle cx="9.5" cy="6.5" r="2.3"/><circle cx="14.5" cy="6.5" r="2.3"/><circle cx="18.5" cy="10" r="2.3"/></svg>';
+const box = document.getElementById('paws');
+new IntersectionObserver((es, o) => { if (!es[0].isIntersecting) return; o.disconnect();
+  for (let i = 0; i < 12; i++) { const el = document.createElement('div'); el.className = 'paw'; el.innerHTML = paw;
+    el.style.left = (4 + i * 8) + '%'; el.style.top = (70 - Math.sin(i / 2) * 18 + (i % 2) * 8) + '%';
+    el.style.transform = `rotate(${70 + (i % 2) * 20}deg)`; el.style.animationDelay = (i * .15) + 's'; box.appendChild(el); } }, { threshold: .3 }).observe(box);
+</script>
+</body>
+</html>
