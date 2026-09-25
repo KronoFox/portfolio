@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Cafe and Bar なまけもの | 十条</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@500&family=Zen+Maru+Gothic:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root { --leaf: #e7eddf; --leaf2: #d5e0c6; --forest: #22321e; --moss: #5d7340; --bark: #8a6a4f; --white: #fbfcf8; --mute: #5f6d59; --line: #c7d4b8; }
+:focus-visible { outline: 3px solid var(--bark); outline-offset: 3px; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: "Zen Maru Gothic", sans-serif; background: var(--leaf); color: var(--forest); line-height: 1.9; overflow-x: hidden; }
+a { color: inherit; }
+.wrap { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+[data-lang="en"] .ja, [data-lang="ja"] .en { display: none !important; }
+.proposal { background: var(--forest); color: #c9d6bd; font-size: .75rem; text-align: center; padding: 6px 16px; }
+header { position: sticky; top: 0; z-index: 20; background: rgba(231,237,223,.95); border-bottom: 1px solid var(--line); }
+.nav { display: flex; justify-content: space-between; align-items: center; height: 60px; gap: 12px; }
+.logo { text-decoration: none; font-family: "Kiwi Maru", serif; font-size: 1.2rem; }
+.logo small { font-family: "Zen Maru Gothic"; font-size: .7rem; color: var(--mute); margin-right: 6px; }
+.nav ul { display: flex; gap: 22px; list-style: none; font-size: .86rem; }
+.nav ul a { text-decoration: none; }
+.lang { border: 2px solid var(--forest); background: transparent; color: var(--forest); padding: 0 12px; font: 700 .78rem "Zen Maru Gothic"; cursor: pointer; border-radius: 99px; }
+/* branch the sloth hangs from */
+.branch { height: 14px; background: var(--bark); border-radius: 0 0 99px 99px; margin: 0 -20px; }
+.hero { padding: 36px 0 66px; }
+.hero .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 44px; align-items: center; }
+.new { display: inline-block; background: var(--white); border: 2px solid var(--forest); border-radius: 99px; padding: 2px 14px; font-size: .8rem; font-weight: 700; }
+.hero h1 { font-family: "Kiwi Maru", serif; font-weight: 500; font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.45; margin: 16px 0 14px; text-wrap: balance; }
+.hero p { color: var(--mute); max-width: 440px; margin-bottom: 20px; }
+.price { display: inline-flex; align-items: baseline; gap: 8px; background: var(--forest); color: var(--white); border-radius: 18px; padding: 10px 20px; }
+.price b { font-family: "Kiwi Maru"; font-size: 1.8rem; font-variant-numeric: tabular-nums; }
+.status { display: flex; align-items: center; gap: 8px; font-size: .86rem; color: var(--mute); margin-top: 16px; }
+.dot { width: 9px; height: 9px; border-radius: 50%; background: #a9b59e; }
+.dot.on { background: var(--moss); box-shadow: 0 0 0 4px rgba(93,115,64,.25); }
+.photo { justify-self: center; width: min(380px, 100%); }
+.photo img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; display: block; border-radius: 180px 180px 24px 24px; border: 3px solid var(--forest); }
+.photo figcaption { font-size: .7rem; color: var(--mute); text-align: center; margin-top: 10px; }
+section { padding: 78px 0; }
+.kick { font-weight: 700; letter-spacing: .15em; font-size: .78rem; color: var(--bark); }
+.h2 { font-family: "Kiwi Maru", serif; font-weight: 500; font-size: clamp(1.5rem, 3.6vw, 2.1rem); line-height: 1.5; margin: 6px 0 12px; text-wrap: balance; }
+.lead { color: var(--mute); max-width: 600px; }
+/* lazy meter */
+.lazy { background: var(--white); border-radius: 36px; margin: 0 16px; }
+.lazy .g { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 22px; align-items: center; }
+.meter label { display: flex; justify-content: space-between; font-size: .82rem; color: var(--mute); }
+input[type="range"] { width: 100%; accent-color: var(--moss); height: 28px; }
+.plan { background: var(--leaf); border-radius: 24px; padding: 22px; }
+.plan .ic { font-family: "Kiwi Maru"; font-size: 1.3rem; }
+.plan p { color: var(--mute); margin-top: 6px; }
+.calc { margin-top: 26px; display: flex; flex-wrap: wrap; gap: 14px 24px; align-items: center; }
+.step { display: inline-flex; align-items: center; border: 2px solid var(--forest); border-radius: 99px; overflow: hidden; background: var(--white); }
+.step button { background: transparent; border: 0; width: 38px; height: 34px; font-size: 1.1rem; cursor: pointer; color: var(--forest); }
+.step output { min-width: 4.5em; text-align: center; font-weight: 700; font-variant-numeric: tabular-nums; }
+.total { font-family: "Kiwi Maru"; font-size: 1.4rem; font-variant-numeric: tabular-nums; }
+.small { font-size: .78rem; color: var(--mute); width: 100%; }
+/* how to find */
+.find ol { list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 20px; }
+.find li { background: var(--white); border-radius: 22px; padding: 18px; border: 2px solid var(--line); }
+.find li b { display: block; font-family: "Kiwi Maru"; font-weight: 500; font-size: 1.05rem; }
+.find li span { color: var(--mute); font-size: .9rem; }
+/* visit */
+.visit .g { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; margin-top: 12px; }
+.visit dl { display: grid; grid-template-columns: 92px 1fr; gap: 10px 14px; }
+.visit dt { color: var(--mute); font-size: .88rem; }
+.rate { font-size: .78rem; color: var(--mute); margin-top: 14px; }
+.map { min-height: 320px; border-radius: 24px; overflow: hidden; border: 2px solid var(--line); }
+.map iframe { width: 100%; height: 100%; min-height: 320px; border: 0; display: block; }
+footer { text-align: center; padding: 24px 16px 32px; font-size: .75rem; color: var(--mute); }
+@media (max-width: 820px) {
+  .nav ul { display: none; }
+  .hero .wrap, .lazy .g, .visit .g { grid-template-columns: 1fr; }
+  .find ol { grid-template-columns: 1fr; }
+  .lazy { margin: 0; border-radius: 0; }
+}
+</style>
+</head>
+<body data-lang="ja">
+<div class="proposal"><span class="ja">※ ご提案用のサンプル（モックアップ）です・検索エンジン非表示</span><span class="en">Proposal mockup · hidden from search engines</span></div>
+<header><div class="wrap nav">
+  <a class="logo" href="#"><small>Cafe and Bar</small>なまけもの</a>
+  <ul><li><a href="#lazy"><span class="ja">今夜のなまけ方</span><span class="en">Tonight</span></a></li><li><a href="#find"><span class="ja">行き方</span><span class="en">Directions</span></a></li><li><a href="#visit"><span class="ja">アクセス</span><span class="en">Visit</span></a></li></ul>
+  <button class="lang" id="langBtn">EN</button>
+</div></header>
+<div class="wrap"><div class="branch" aria-hidden="true"></div></div>
+
+<main>
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <span class="new"><span class="ja">十条・2024年8月オープン</span><span class="en">Jujo · opened Aug 2024</span></span>
+        <h1><span class="ja">今夜は、<br>ゆっくりなまけよう。</span><span class="en">Tonight,<br>take it slow.</span></h1>
+        <p><span class="ja">お酒、漫画、コーヒー、テーブルゲーム。店長や常連さんとおしゃべりするのも、ひとりで漫画を読みふけるのも自由です。</span><span class="en">Drinks, manga, coffee and table games. Chat with the manager and regulars, or lose yourself in a manga — your call.</span></p>
+        <div class="price"><span class="ja">飲み放題 1時間</span><span class="en">Free-flow, 1 hr</span><b>¥1,650</b></div>
+        <div class="status"><i class="dot" id="dot"></i><span id="stat"></span></div>
+      </div>
+      <figure class="photo"><img src="hero.jpg" alt=""><figcaption><span class="ja">※写真はイメージです（公開時はお店の写真に差し替えます）</span><span class="en">Sample photo — to be replaced with the bar’s own.</span></figcaption></figure>
+    </div>
+  </div>
+
+  <section id="lazy" class="lazy">
+    <div class="wrap">
+      <div class="kick">HOW LAZY TONIGHT?</div>
+      <h2 class="h2"><span class="ja">今夜の「なまけ度」は？</span><span class="en">How lazy are you feeling?</span></h2>
+      <p class="lead"><span class="ja">スライダーを動かすと、今夜の過ごし方をおすすめします。飲み放題の目安も計算できます。</span><span class="en">Move the slider for a suggestion, and estimate your free-flow total.</span></p>
+      <div class="g">
+        <div class="meter">
+          <input type="range" id="lz" min="0" max="100" value="70" aria-label="laziness">
+          <label><span><span class="ja">しゃべりたい</span><span class="en">chatty</span></span><span><span class="ja">ぐでーん</span><span class="en">melted</span></span></label>
+        </div>
+        <div class="plan" aria-live="polite"><div class="ic" id="pt"></div><p id="pp"></p></div>
+      </div>
+      <div class="calc">
+        <div class="step"><button id="hm" aria-label="-">−</button><output id="hrs"></output><button id="hp" aria-label="+">＋</button></div>
+        <div class="step"><button id="pm" aria-label="-">−</button><output id="ppl"></output><button id="pp2" aria-label="+">＋</button></div>
+        <div class="total" id="total" aria-live="polite"></div>
+        <p class="small"><span class="ja">※ 1時間1,650円からの目安です。延長料金などは店頭でご確認ください。20歳未満の飲酒はできません。</span><span class="en">Estimate based on ¥1,650 per hour — ask in the bar about extensions. No alcohol under 20.</span></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="find" class="find">
+    <div class="wrap">
+      <div class="kick">FINDING US</div>
+      <h2 class="h2"><span class="ja">十条駅から徒歩4分</span><span class="en">4 minutes from Jujo Station</span></h2>
+      <ol>
+        <li><b><span class="ja">十条銀座へ</span><span class="en">Into Jujo Ginza</span></b><span><span class="ja">十条駅から十条銀座商店街を歩きます。</span><span class="en">Walk from Jujo Station into the Jujo Ginza arcade.</span></span></li>
+        <li><b><span class="ja">途中で路地へ</span><span class="en">Turn into the alley</span></b><span><span class="ja">商店街の途中で、横の路地に入ります。</span><span class="en">Partway along, turn into a side alley.</span></span></li>
+        <li><b><span class="ja">さがり藤さんのお隣</span><span class="en">Next to Sagarifuji</span></b><span><span class="ja">焼き鳥の名店「さがり藤」さんの隣、小瀬荘102です。</span><span class="en">Next door to the famous yakitori shop Sagarifuji — Kose-so #102.</span></span></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="visit" class="visit" style="padding-top:0">
+    <div class="wrap">
+      <div class="kick">ACCESS</div>
+      <h2 class="h2"><span class="ja">北区・十条仲原</span><span class="en">Jujo-Nakahara, Kita-ku</span></h2>
+      <div class="g">
+        <div>
+          <dl>
+            <dt><span class="ja">住所</span><span class="en">Address</span></dt><dd><span class="ja">東京都北区十条仲原1-4-2 小瀬荘102</span><span class="en">Kose-so #102, 1-4-2 Jujo-Nakahara, Kita-ku, Tokyo</span></dd>
+            <dt><span class="ja">営業時間</span><span class="en">Hours</span></dt><dd><span class="ja">18:00〜翌2:00（月・火定休）</span><span class="en">18:00–2:00 (closed Mon & Tue)</span></dd>
+            <dt>TEL</dt><dd>070-8941-1917</dd>
+            <dt>Instagram</dt><dd><a href="https://www.instagram.com/jujo_namakemono/" target="_blank" rel="noopener">@jujo_namakemono</a></dd>
+          </dl>
+          <p class="rate"><span class="ja">Googleマップ ★4.9</span><span class="en">Google Maps ★4.9</span></p>
+        </div>
+        <div class="map"><iframe loading="lazy" title="Map" src="https://www.google.com/maps?q=Cafe%20and%20Bar%20%E3%81%AA%E3%81%BE%E3%81%91%E3%82%82%E3%81%AE%20%E5%8D%81%E6%9D%A1%E4%BB%B2%E5%8E%9F&output=embed"></iframe></div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>© Cafe and Bar なまけもの · Jujo, Tokyo · Photos: Unsplash (sample images)</footer>
+<script>
+const $ = (s) => document.querySelector(s);
+const L = () => document.body.dataset.lang;
+const jst = () => { const d = new Date(); return new Date(d.getTime() + (d.getTimezoneOffset() + 540) * 60000); };
+const PLANS = [
+  [0, ['カウンターでおしゃべり', 'Chat at the counter'], ['店長や常連さんとの会話をつまみに。はじめての方でも気さくに話せます。', 'Conversation with the manager and regulars is the best snack. Easy even on your first visit.']],
+  [35, ['テーブルゲームで遊ぶ', 'Play a table game'], ['友だちと、ボードゲームやカードゲームで盛り上がる夜に。', 'A night of board and card games with friends.']],
+  [70, ['漫画をじっくり読む', 'Settle in with manga'], ['飲み放題のお酒片手に、ひとりのペースで。漫画は最近また増えました。', 'Drink in hand, at your own pace. The manga shelf keeps growing.']]
+];
+let hrs = 2, ppl = 1;
+function render() { const ja = L() === 'ja', v = +$('#lz').value;
+  const p = [...PLANS].reverse().find(x => v >= x[0]);
+  $('#pt').textContent = ja ? p[1][0] : p[1][1]; $('#pp').textContent = ja ? p[2][0] : p[2][1];
+  $('#hrs').textContent = ja ? `${hrs}時間` : `${hrs} hr`; $('#ppl').textContent = ja ? `${ppl}名` : `${ppl} ppl`;
+  $('#total').textContent = (ja ? '目安 ' : 'About ') + `¥${(1650 * hrs * ppl).toLocaleString()}`;
+  const t = jst(), d = t.getDay(), h = t.getHours() + t.getMinutes() / 60;
+  const openDay = (x) => x !== 1 && x !== 2;
+  const open = (openDay(d) && h >= 18) || (h < 2 && openDay((d + 6) % 7));
+  $('#dot').classList.toggle('on', open);
+  $('#stat').textContent = open ? (ja ? 'ただいま営業中（〜翌2:00）' : 'Open now (until 2:00)') : !openDay(d) ? (ja ? '本日は定休日（月・火）' : 'Closed today (Mon & Tue)') : (ja ? '本日18:00オープン' : 'Opens today at 18:00'); }
+$('#lz').addEventListener('input', render);
+$('#hm').onclick = () => { hrs = Math.max(1, hrs - 1); render(); }; $('#hp').onclick = () => { hrs = Math.min(8, hrs + 1); render(); };
+$('#pm').onclick = () => { ppl = Math.max(1, ppl - 1); render(); }; $('#pp2').onclick = () => { ppl = Math.min(12, ppl + 1); render(); };
+render(); setInterval(render, 60000);
+$('#langBtn').addEventListener('click', () => { const l = L() === 'ja' ? 'en' : 'ja'; document.body.dataset.lang = l; document.documentElement.lang = l; $('#langBtn').textContent = l === 'ja' ? 'EN' : '日本語'; render(); });
+</script>
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Bar imitation | 川越 MIX BAR</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=RocknRoll+One&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root { --bg: #0d0a10; --bg2: #17121c; --pink: #ff4fa3; --gator: #43d98a; --text: #f4eef6; --mute: #a79fae; --line: #2e2635; }
+:focus-visible { outline: 3px solid var(--gator); outline-offset: 3px; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; color-scheme: dark; }
+body { font-family: "Zen Kaku Gothic New", sans-serif; background: var(--bg); color: var(--text); line-height: 1.9; overflow-x: hidden; }
+a { color: inherit; }
+.wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
+.nw { white-space: nowrap; }
+[data-lang="en"] .ja, [data-lang="ja"] .en { display: none !important; }
+.proposal { background: #000; color: var(--mute); font-size: .75rem; text-align: center; padding: 6px 16px; }
+header { position: sticky; top: 0; z-index: 20; background: rgba(13,10,16,.94); border-bottom: 1px solid var(--line); }
+.nav { display: flex; justify-content: space-between; align-items: center; height: 60px; gap: 12px; }
+.logo { text-decoration: none; font-family: "RocknRoll One", sans-serif; font-size: 1.25rem; color: var(--pink); text-shadow: 0 0 12px rgba(255,79,163,.6); }
+.nav ul { display: flex; gap: 22px; list-style: none; font-size: .86rem; }
+.nav ul a { text-decoration: none; color: var(--mute); }
+.lang { border: 1px solid var(--pink); background: transparent; color: var(--pink); padding: 1px 12px; font: 700 .78rem "Zen Kaku Gothic New"; cursor: pointer; border-radius: 99px; }
+.hero { padding: 52px 0 72px; }
+.hero .wrap { display: grid; grid-template-columns: 1.05fr .95fr; gap: 44px; align-items: center; }
+.pill { display: inline-block; border: 1px solid var(--gator); color: var(--gator); border-radius: 99px; padding: 2px 14px; font-size: .8rem; font-weight: 700; }
+.hero h1 { font-family: "RocknRoll One", sans-serif; font-weight: 400; font-size: clamp(2rem, 5vw, 3.3rem); line-height: 1.4; margin: 16px 0 16px; text-wrap: balance; }
+.hero h1 .neon { color: var(--pink); text-shadow: 0 0 6px rgba(255,79,163,.9), 0 0 24px rgba(255,79,163,.5); }
+.hero p { color: var(--mute); max-width: 460px; margin-bottom: 22px; }
+.btns { display: flex; gap: 12px; flex-wrap: wrap; }
+.btn { display: inline-block; text-decoration: none; background: var(--pink); color: #1a0010; padding: 12px 24px; font-weight: 700; border-radius: 99px; }
+.btn.ghost { background: transparent; color: var(--text); box-shadow: inset 0 0 0 1px var(--line); }
+.photo { justify-self: center; width: min(400px, 100%); }
+.photo img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; display: block; border-radius: 24px; box-shadow: 0 0 0 1px var(--line), 0 0 60px rgba(255,79,163,.25); }
+.photo figcaption { font-size: .7rem; color: var(--mute); text-align: center; margin-top: 12px; }
+section { padding: 82px 0; }
+.kick { font-family: "RocknRoll One"; letter-spacing: .12em; font-size: .85rem; color: var(--gator); }
+.h2 { font-family: "RocknRoll One"; font-weight: 400; font-size: clamp(1.45rem, 3.4vw, 2.1rem); line-height: 1.5; margin: 6px 0 12px; text-wrap: balance; }
+.lead { color: var(--mute); max-width: 600px; }
+/* tonight */
+.tonight { background: var(--bg2); border-block: 1px solid var(--line); }
+.week { display: grid; grid-template-columns: repeat(7, 1fr); gap: 8px; margin-top: 22px; }
+.day { border: 1px solid var(--line); border-radius: 14px; padding: 12px 8px; text-align: center; font-size: .82rem; }
+.day b { display: block; font-family: "RocknRoll One"; font-weight: 400; font-size: 1rem; }
+.day.off { opacity: .45; }
+.day.today { border-color: var(--pink); box-shadow: 0 0 18px rgba(255,79,163,.35); }
+.now { margin-top: 18px; display: flex; align-items: center; gap: 10px; font-weight: 700; }
+.dot { width: 10px; height: 10px; border-radius: 50%; background: #5b5263; }
+.dot.on { background: var(--gator); box-shadow: 0 0 10px var(--gator); }
+/* party room */
+.party .g { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 24px; align-items: start; }
+.field { margin-bottom: 18px; }
+.field > span { display: block; font-size: .78rem; color: var(--mute); letter-spacing: .12em; margin-bottom: 8px; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chips button { background: transparent; border: 1px solid var(--line); color: var(--text); padding: 6px 16px; border-radius: 99px; cursor: pointer; font: 500 .9rem "Zen Kaku Gothic New"; }
+.chips button[aria-pressed="true"] { background: var(--pink); border-color: var(--pink); color: #1a0010; }
+.step { display: inline-flex; align-items: center; gap: 0; border: 1px solid var(--line); border-radius: 99px; overflow: hidden; }
+.step button { background: transparent; border: 0; color: var(--text); width: 40px; height: 36px; font-size: 1.1rem; cursor: pointer; }
+.step output { min-width: 4.5em; text-align: center; font-weight: 700; font-variant-numeric: tabular-nums; }
+input[type="date"] { font: 500 1rem "Zen Kaku Gothic New"; padding: 7px 12px; border: 1px solid var(--line); border-radius: 10px; background: var(--bg2); color: var(--text); }
+.warn { margin-top: 8px; font-size: .86rem; font-weight: 700; }
+.warn.ng { color: #ff8a8a; } .warn.ok { color: var(--gator); }
+.mail { border: 1px solid var(--pink); border-radius: 20px; padding: 22px; background: linear-gradient(180deg, rgba(255,79,163,.08), transparent); }
+.mail h3 { font-family: "RocknRoll One"; font-weight: 400; color: var(--pink); font-size: .95rem; letter-spacing: .1em; margin-bottom: 8px; }
+.mail p { white-space: pre-line; }
+.mail .est { margin-top: 12px; padding-top: 12px; border-top: 1px dashed var(--line); font-size: .88rem; color: var(--mute); }
+.mail .est b { color: var(--text); font-variant-numeric: tabular-nums; }
+/* about */
+.about .g { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 18px; }
+.about .c { border: 1px solid var(--line); border-radius: 18px; padding: 20px; }
+.about .c b { font-family: "RocknRoll One"; font-weight: 400; display: block; margin-bottom: 4px; }
+.about .c span { color: var(--mute); font-size: .92rem; }
+/* visit */
+.visit .g { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; margin-top: 12px; }
+.visit dl { display: grid; grid-template-columns: 92px 1fr; gap: 10px 14px; }
+.visit dt { color: var(--mute); font-size: .88rem; }
+.rate { font-size: .78rem; color: var(--mute); margin-top: 14px; }
+.map { min-height: 320px; border-radius: 18px; overflow: hidden; border: 1px solid var(--line); }
+.map iframe { width: 100%; height: 100%; min-height: 320px; border: 0; display: block; filter: invert(.9) hue-rotate(180deg) saturate(.6); }
+footer { text-align: center; padding: 24px 16px 32px; font-size: .75rem; color: var(--mute); border-top: 1px solid var(--line); }
+@media (max-width: 820px) {
+  .nav ul { display: none; }
+  .hero .wrap, .party .g, .visit .g { grid-template-columns: 1fr; }
+  .about .g { grid-template-columns: 1fr; }
+  .week { grid-template-columns: repeat(4, 1fr); }
+}
+</style>
+</head>
+<body data-lang="ja">
+<div class="proposal"><span class="ja">※ ご提案用のサンプル（モックアップ）です・検索エンジン非表示</span><span class="en">Proposal mockup · hidden from search engines</span></div>
+<header><div class="wrap nav">
+  <a class="logo" href="#">Bar imitation</a>
+  <ul><li><a href="#tonight"><span class="ja">営業日</span><span class="en">Hours</span></a></li><li><a href="#party"><span class="ja">貸切</span><span class="en">Private room</span></a></li><li><a href="#visit"><span class="ja">アクセス</span><span class="en">Visit</span></a></li></ul>
+  <button class="lang" id="langBtn">EN</button>
+</div></header>
+
+<main>
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <span class="pill">KAWAGOE · MIX BAR</span>
+        <h1><span class="ja">誰でも、<br><span class="neon">自分らしく。</span></span><span class="en">Come as<br><span class="neon">you are.</span></span></h1>
+        <p><span class="ja">川越・南台のMIX BAR。オーナー真奈佳とチーママ ヤコがお迎えします。飲み放題は3,500円から。知らない人とも仲良くなれる、和気あいあいとしたお店です。</span><span class="en">A mix bar in Minamidai, Kawagoe, hosted by owner Manaka and deputy mama Yako. All-you-can-drink from ¥3,500 — a friendly room where strangers become friends.</span></p>
+        <div class="btns"><a class="btn" href="#party"><span class="ja">2F貸切を相談</span><span class="en">Book the 2F room</span></a><a class="btn ghost" href="tel:07013671195">070-1367-1195</a></div>
+      </div>
+      <figure class="photo"><img src="hero.jpg" alt=""><figcaption><span class="ja">※写真はイメージです（公開時はお店の写真に差し替えます）</span><span class="en">Sample photo — to be replaced with the bar’s own.</span></figcaption></figure>
+    </div>
+  </div>
+
+  <section id="tonight" class="tonight">
+    <div class="wrap">
+      <div class="kick">THIS WEEK</div>
+      <h2 class="h2"><span class="ja">金・土は始発まで。</span><span class="en">Fridays and Saturdays, till the first train.</span></h2>
+      <div class="week" id="week"></div>
+      <div class="now"><i class="dot" id="dot"></i><span id="stat"></span></div>
+    </div>
+  </section>
+
+  <section id="party" class="party">
+    <div class="wrap">
+      <div class="kick">2F PARTY ROOM</div>
+      <h2 class="h2"><span class="ja">2階のパーティールーム、貸切できます。</span><span class="en">Book the second-floor party room.</span></h2>
+      <p class="lead"><span class="ja">誕生日会や送別会に。日にち・人数・用途を選ぶと、メールでそのまま送れる相談文ができます。</span><span class="en">For birthdays and farewells. Choose a date, group size and occasion to get an inquiry you can email as-is.</span></p>
+      <div class="g">
+        <div>
+          <div class="field"><span><span class="ja">希望日</span><span class="en">DATE</span></span><input type="date" id="date"><div class="warn" id="warn" aria-live="polite"></div></div>
+          <div class="field"><span><span class="ja">人数</span><span class="en">GROUP SIZE</span></span><div class="step"><button id="minus" aria-label="-">−</button><output id="ppl"></output><button id="plus" aria-label="+">＋</button></div></div>
+          <div class="field"><span><span class="ja">用途</span><span class="en">OCCASION</span></span><div class="chips" id="occ"></div></div>
+        </div>
+        <div class="mail" aria-live="polite"><h3>MAIL</h3><p id="msg"></p><div class="est" id="est"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" style="padding-top:0">
+    <div class="wrap">
+      <div class="kick">ABOUT</div>
+      <h2 class="h2"><span class="ja">イミテーションのこと</span><span class="en">About imitation</span></h2>
+      <div class="g">
+        <div class="c"><b><span class="ja">飲み放題 3,500円〜</span><span class="en">Free-flow from ¥3,500</span></b><span><span class="ja">お財布を気にせず、ゆっくりどうぞ。</span><span class="en">Relax without watching the tab.</span></span></div>
+        <div class="c"><b><span class="ja">お料理もおいしい</span><span class="en">Good food, too</span></b><span><span class="ja">クチコミでも好評のお料理があります。</span><span class="en">Our food gets great reviews.</span></span></div>
+        <div class="c"><b><span class="ja">ダーツ導入しました</span><span class="en">Now with darts</span></b><span><span class="ja">はじめての方同士でも盛り上がれます。</span><span class="en">An easy way to break the ice.</span></span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="visit" class="visit" style="padding-top:0">
+    <div class="wrap">
+      <div class="kick">ACCESS</div>
+      <h2 class="h2"><span class="ja">川越市・南台</span><span class="en">Minamidai, Kawagoe</span></h2>
+      <div class="g">
+        <div>
+          <dl>
+            <dt><span class="ja">住所</span><span class="en">Address</span></dt><dd><span class="ja">〒350-1165 埼玉県川越市南台2-5-37</span><span class="en">2-5-37 Minamidai, Kawagoe, Saitama</span></dd>
+            <dt><span class="ja">営業</span><span class="en">Hours</span></dt><dd><span class="ja">水・木 19:00〜 / 金・土 19:00〜始発 / 日 16:00〜24:00（月・火定休）</span><span class="en">Wed–Thu from 19:00 / Fri–Sat 19:00 till first train / Sun 16:00–24:00 (closed Mon & Tue)</span></dd>
+            <dt>TEL</dt><dd>070-1367-1195</dd>
+            <dt>Mail</dt><dd>barimitation@gmail.com</dd>
+            <dt>Instagram</dt><dd><a href="https://www.instagram.com/bar_imitation/" target="_blank" rel="noopener">@bar_imitation</a></dd>
+          </dl>
+          <p class="rate"><span class="ja">Googleマップ ★4.6</span><span class="en">Google Maps ★4.6</span></p>
+        </div>
+        <div class="map"><iframe loading="lazy" title="Map" src="https://www.google.com/maps?q=Bar%20imitation%20%E5%B7%9D%E8%B6%8A%E5%B8%82%E5%8D%97%E5%8F%B02-5-37&output=embed"></iframe></div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>© Bar imitation · Kawagoe, Saitama · Photos: Unsplash (sample images)</footer>
+<script>
+const $ = (s) => document.querySelector(s);
+const L = () => document.body.dataset.lang;
+const jst = () => { const d = new Date(); return new Date(d.getTime() + (d.getTimezoneOffset() + 540) * 60000); };
+const WD = [['日', 'Sun'], ['月', 'Mon'], ['火', 'Tue'], ['水', 'Wed'], ['木', 'Thu'], ['金', 'Fri'], ['土', 'Sat']];
+// [open hour, close label ja, close label en, close hour for status (null = late)]
+const H = { 0: [16, '24:00', '24:00', 24], 3: [19, '〜', 'late', null], 4: [19, '〜', 'late', null], 5: [19, '始発', '1st train', null], 6: [19, '始発', '1st train', null] };
+const OCC = [['誕生日会', 'a birthday'], ['送別会・歓迎会', 'a farewell / welcome'], ['女子会・飲み会', 'a night out'], ['その他', 'something else']];
+let ppl = 8, occ = 0;
+(() => { const t = jst(); t.setDate(t.getDate() + ((5 - t.getDay() + 7) % 7 || 7)); $('#date').value = `${t.getFullYear()}-${String(t.getMonth() + 1).padStart(2, '0')}-${String(t.getDate()).padStart(2, '0')}`; })();
+function render() { const ja = L() === 'ja', t = jst(), d = t.getDay(), h = t.getHours() + t.getMinutes() / 60;
+  $('#week').innerHTML = [3, 4, 5, 6, 0, 1, 2].map(i => { const x = H[i]; return `<div class="day ${x ? '' : 'off'} ${i === d ? 'today' : ''}"><b>${ja ? WD[i][0] : WD[i][1]}</b>${x ? `${x[0]}:00<br>〜${ja ? x[1].replace('〜', '') || '' : x[2]}` : (ja ? '定休' : 'closed')}</div>`; }).join('');
+  const today = H[d], prev = H[(d + 6) % 7];
+  const lateFromPrev = prev && prev[3] === null && h < 5 && (d === 6 || d === 0); // Fri/Sat nights run to first train
+  const open = lateFromPrev || (today && h >= today[0] && (today[3] === null || h < today[3]));
+  $('#dot').classList.toggle('on', !!open);
+  $('#stat').textContent = open ? (ja ? 'ただいま営業中' : 'Open now') : today ? (ja ? `本日は${today[0]}:00から` : `Opens today at ${today[0]}:00`) : (ja ? '本日は定休日（月・火）' : 'Closed today (Mon & Tue)');
+  $('#occ').innerHTML = OCC.map((o, i) => `<button aria-pressed="${occ === i}" data-i="${i}">${ja ? o[0] : o[1]}</button>`).join('');
+  $('#occ').querySelectorAll('button').forEach(b => b.onclick = () => { occ = +b.dataset.i; render(); });
+  $('#ppl').textContent = ja ? `${ppl}名` : `${ppl} ppl`;
+  const v = $('#date').value; let dt = ja ? '（未定）' : '(TBD)';
+  if (v) { const [y, m, dd] = v.split('-').map(Number), wd = new Date(y, m - 1, dd).getDay(); dt = ja ? `${m}月${dd}日（${WD[wd][0]}）` : `${WD[wd][1]} ${m}/${dd}`;
+    const bad = wd === 1 || wd === 2; $('#warn').className = 'warn ' + (bad ? 'ng' : 'ok'); $('#warn').textContent = bad ? (ja ? '月・火は定休日です。貸切の可否はご相談ください。' : 'Mon & Tue are days off — ask us about private bookings.') : (ja ? '営業日です。' : 'We’re open that day.'); }
+  $('#msg').textContent = ja
+    ? `Bar imitation さま\n2Fパーティールームの貸切について相談させてください。\n希望日：${dt}\n人数：${ppl}名\n用途：${OCC[occ][0]}\n時間やお料理はご相談させてください。`
+    : `Hello Bar imitation,\nI’d like to ask about booking the 2F party room.\nDate: ${dt}\nGroup: ${ppl}\nFor: ${OCC[occ][1]}\nHappy to discuss time and food.`;
+  $('#est').innerHTML = ja ? `飲み放題 3,500円〜 × ${ppl}名 ＝ <b>${(3500 * ppl).toLocaleString()}円〜</b>（目安・貸切料金はお店にご確認ください）` : `Free-flow from ¥3,500 × ${ppl} = <b>from ¥${(3500 * ppl).toLocaleString()}</b> (estimate — ask about room fees)`; }
+$('#minus').onclick = () => { ppl = Math.max(2, ppl - 1); render(); };
+$('#plus').onclick = () => { ppl = Math.min(40, ppl + 1); render(); };
+$('#date').addEventListener('change', render);
+render(); setInterval(render, 60000);
+$('#langBtn').addEventListener('click', () => { const l = L() === 'ja' ? 'en' : 'ja'; document.body.dataset.lang = l; document.documentElement.lang = l; $('#langBtn').textContent = l === 'ja' ? 'EN' : '日本語'; render(); });
+</script>
+</body>
+</html>

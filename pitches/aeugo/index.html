@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>AEUGO | 柏の古着屋</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root { --indigo: #1b2a47; --indigo2: #24375c; --paper: #f1efe9; --red: #d2382c; --ink: #15161a; --mute: #6a6d75; --line: #d6d3ca; --white: #fff; }
+:focus-visible { outline: 3px solid var(--red); outline-offset: 3px; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: "Zen Kaku Gothic New", sans-serif; background: var(--paper); color: var(--ink); line-height: 1.85; overflow-x: hidden; }
+a { color: inherit; }
+.wrap { max-width: 1060px; margin: 0 auto; padding: 0 20px; }
+[data-lang="en"] .ja, [data-lang="ja"] .en { display: none !important; }
+.proposal { background: var(--ink); color: #b9bac0; font-size: .75rem; text-align: center; padding: 6px 16px; }
+header { position: sticky; top: 0; z-index: 20; background: var(--indigo); color: var(--white); }
+.nav { display: flex; justify-content: space-between; align-items: center; height: 58px; gap: 12px; }
+.logo { text-decoration: none; font-family: "Anton", sans-serif; font-size: 1.6rem; letter-spacing: .06em; }
+.nav ul { display: flex; gap: 22px; list-style: none; font-size: .86rem; font-weight: 700; }
+.nav ul a { text-decoration: none; }
+.lang { border: 2px solid var(--white); background: transparent; color: var(--white); padding: 0 12px; font: 700 .78rem "Zen Kaku Gothic New"; cursor: pointer; }
+.hero { background: var(--indigo); color: var(--white); padding: 40px 0 64px; overflow: hidden; }
+.hero .wrap { display: grid; grid-template-columns: 1.1fr .9fr; gap: 40px; align-items: center; }
+.big { font-family: "Anton", sans-serif; font-size: clamp(3.4rem, 11vw, 7rem); line-height: .95; letter-spacing: .01em; }
+.big em { font-style: normal; color: var(--red); }
+.hero h1 { font-weight: 900; font-size: clamp(1.3rem, 3vw, 1.8rem); margin: 18px 0 10px; line-height: 1.5; text-wrap: balance; }
+.hero p { color: #c5ccdc; max-width: 460px; margin-bottom: 20px; }
+.status { display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-size: .88rem; border: 2px solid var(--white); padding: 4px 14px; }
+.dot { width: 9px; height: 9px; border-radius: 50%; background: #8b93a6; }
+.dot.on { background: #56d38a; }
+.photo { position: relative; justify-self: center; width: min(420px, 100%); }
+.photo img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; display: block; border: 6px solid var(--white); }
+.tag { position: absolute; right: -8px; top: 22px; background: var(--red); color: var(--white); font-family: "Anton"; letter-spacing: .08em; padding: 6px 16px 6px 22px; clip-path: polygon(12px 0, 100% 0, 100% 100%, 12px 100%, 0 50%); }
+.photo figcaption { font-size: .7rem; color: #aab3c6; margin-top: 10px; }
+section { padding: 76px 0; }
+.kick { font-family: "Anton"; letter-spacing: .12em; font-size: 1rem; color: var(--red); }
+.h2 { font-weight: 900; font-size: clamp(1.45rem, 3.4vw, 2.05rem); line-height: 1.5; margin: 4px 0 12px; text-wrap: balance; }
+.lead { color: var(--mute); max-width: 620px; }
+/* search memo */
+.memo .g { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 24px; align-items: start; }
+.field { margin-bottom: 18px; }
+.field > span { display: block; font-size: .78rem; font-weight: 700; color: var(--mute); letter-spacing: .1em; margin-bottom: 8px; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chips button { background: var(--white); border: 2px solid var(--ink); color: var(--ink); padding: 5px 14px; cursor: pointer; font: 700 .9rem "Zen Kaku Gothic New"; }
+.chips button[aria-pressed="true"] { background: var(--ink); color: var(--white); }
+.range { display: grid; grid-template-columns: 5.5em 1fr 4.2em; gap: 10px; align-items: center; margin-bottom: 8px; font-size: .92rem; }
+.range output { font-family: "Anton"; font-size: 1.15rem; text-align: right; font-variant-numeric: tabular-nums; }
+input[type="range"] { width: 100%; accent-color: var(--red); }
+.hint { font-size: .78rem; color: var(--mute); }
+.dm { background: var(--white); border: 2px solid var(--ink); box-shadow: 8px 8px 0 var(--indigo); padding: 22px; }
+.dm h3 { font-family: "Anton"; letter-spacing: .1em; font-weight: 400; font-size: 1rem; margin-bottom: 8px; }
+.dm p { white-space: pre-line; }
+.copy { margin-top: 14px; background: var(--red); color: var(--white); border: 0; padding: 9px 18px; font: 700 .88rem "Zen Kaku Gothic New"; cursor: pointer; }
+/* shipping meter */
+.ship { background: var(--white); border-block: 2px solid var(--ink); }
+.ship .g { display: grid; grid-template-columns: .9fr 1.1fr; gap: 40px; align-items: center; margin-top: 18px; }
+.yen { display: flex; align-items: center; gap: 8px; font-family: "Anton"; font-size: 1.4rem; }
+.yen input { font: 400 1.4rem "Anton"; width: 8em; padding: 6px 10px; border: 2px solid var(--ink); background: var(--paper); color: var(--ink); font-variant-numeric: tabular-nums; }
+.meter { height: 26px; border: 2px solid var(--ink); background: var(--paper); position: relative; }
+.meter i { position: absolute; inset: 0 auto 0 0; background: repeating-linear-gradient(135deg, var(--red) 0 10px, #e0584d 10px 20px); transition: width .3s; }
+.meter-note { margin-top: 10px; font-weight: 700; }
+/* visit */
+.visit .g { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; margin-top: 12px; }
+.visit dl { display: grid; grid-template-columns: 92px 1fr; gap: 10px 14px; }
+.visit dt { color: var(--mute); font-size: .88rem; }
+.rate { font-size: .78rem; color: var(--mute); margin-top: 14px; }
+.map { min-height: 320px; border: 2px solid var(--ink); }
+.map iframe { width: 100%; height: 100%; min-height: 320px; border: 0; display: block; }
+footer { background: var(--indigo); color: #aab3c6; text-align: center; padding: 24px 16px 32px; font-size: .75rem; }
+@media (max-width: 820px) {
+  .nav ul { display: none; }
+  .hero .wrap, .memo .g, .ship .g, .visit .g { grid-template-columns: 1fr; }
+  .tag { right: 8px; }
+}
+</style>
+</head>
+<body data-lang="ja">
+<div class="proposal"><span class="ja">※ ご提案用のサンプル（モックアップ）です・検索エンジン非表示</span><span class="en">Proposal mockup · hidden from search engines</span></div>
+<header><div class="wrap nav">
+  <a class="logo" href="#">AEUGO</a>
+  <ul><li><a href="#memo"><span class="ja">DMで探す</span><span class="en">Ask by DM</span></a></li><li><a href="#ship"><span class="ja">通販</span><span class="en">Mail order</span></a></li><li><a href="#visit"><span class="ja">アクセス</span><span class="en">Visit</span></a></li></ul>
+  <button class="lang" id="langBtn">EN</button>
+</div></header>
+
+<main>
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <div class="big">USED<br>CLOTHING<br><em>KASHIWA</em></div>
+        <h1><span class="ja">柏・千代田の古着屋。<br>ちょうどいい一着を、毎日入荷。</span><span class="en">A used-clothing shop in Chiyoda, Kashiwa — new picks every day.</span></h1>
+        <p><span class="ja">アメカジ、ストリート、デニム、Tシャツ。定番の中から「ちょっとだけ違う」古着を選んでいます。気になる商品はDM・電話でお問い合わせください。</span><span class="en">American casual, street, denim and tees — standards with a small twist. Ask about anything by DM or phone.</span></p>
+        <div class="status"><i class="dot" id="dot"></i><span id="stat"></span></div>
+      </div>
+      <figure class="photo"><img src="hero.jpg" alt=""><span class="tag">NEW ARRIVALS</span><figcaption><span class="ja">※写真はイメージです（公開時はお店の写真に差し替えます）</span><span class="en">Sample photo — to be replaced with the shop’s own.</span></figcaption></figure>
+    </div>
+  </div>
+
+  <section id="memo" class="memo">
+    <div class="wrap">
+      <div class="kick">FIND IT FOR ME</div>
+      <h2 class="h2"><span class="ja">探している一着を、DMで伝える。</span><span class="en">Tell us what you’re hunting for.</span></h2>
+      <p class="lead"><span class="ja">古着はサイズ表記より「実寸」が大事。手持ちのお気に入りを平置きで測って入力すると、DMにそのまま送れるメモができます。</span><span class="en">With vintage, real measurements matter more than tag sizes. Measure a favorite piece lying flat and you’ll get a note ready to send by DM.</span></p>
+      <div class="g">
+        <div>
+          <div class="field"><span><span class="ja">アイテム</span><span class="en">ITEM</span></span><div class="chips" id="item"></div></div>
+          <div class="field"><span><span class="ja">実寸（平置き）</span><span class="en">MEASUREMENTS (FLAT)</span></span>
+            <div class="range"><label for="w"><span class="ja">身幅</span><span class="en">Chest</span></label><input type="range" id="w" min="40" max="75" value="56"><output id="wo"></output></div>
+            <div class="range"><label for="l"><span class="ja">着丈</span><span class="en">Length</span></label><input type="range" id="l" min="55" max="85" value="70"><output id="lo"></output></div>
+            <p class="hint"><span class="ja">※ デニムの場合は ウエスト・股下 として使ってください。</span><span class="en">For denim, use these as waist and inseam.</span></p>
+          </div>
+          <div class="field"><span><span class="ja">ご予算</span><span class="en">BUDGET</span></span><div class="chips" id="bud"></div></div>
+        </div>
+        <div class="dm" aria-live="polite"><h3>DM NOTE</h3><p id="note"></p><button class="copy" id="copy"><span class="ja">文面をコピー</span><span class="en">Copy note</span></button></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="ship" class="ship">
+    <div class="wrap">
+      <div class="kick">MAIL ORDER</div>
+      <h2 class="h2"><span class="ja">¥11,000（税込）以上で送料無料</span><span class="en">Free shipping from ¥11,000 (tax incl.)</span></h2>
+      <p class="lead"><span class="ja">通販・お取り置きはDMまたはBASEショップから。合計金額を入れると、送料無料まであといくらかわかります。</span><span class="en">Order by DM or through our BASE shop. Enter your total to see how far you are from free shipping.</span></p>
+      <div class="g">
+        <label class="yen" for="amt">¥ <input type="number" id="amt" min="0" step="100" value="7800" inputmode="numeric"></label>
+        <div><div class="meter"><i id="bar"></i></div><p class="meter-note" id="mnote" aria-live="polite"></p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="visit" class="visit">
+    <div class="wrap">
+      <div class="kick">ACCESS</div>
+      <h2 class="h2"><span class="ja">柏市・千代田</span><span class="en">Chiyoda, Kashiwa</span></h2>
+      <div class="g">
+        <div>
+          <dl>
+            <dt><span class="ja">住所</span><span class="en">Address</span></dt><dd><span class="ja">〒277-0025 千葉県柏市千代田1-2-52 鈴木ビル1F</span><span class="en">Suzuki Bldg 1F, 1-2-52 Chiyoda, Kashiwa, Chiba</span></dd>
+            <dt><span class="ja">営業時間</span><span class="en">Hours</span></dt><dd><span class="ja">13:00〜19:00（定休日なし）</span><span class="en">13:00–19:00 (open every day)</span></dd>
+            <dt>TEL</dt><dd>04-7168-7771</dd>
+            <dt>Mail</dt><dd>aeugo.kashiwa@gmail.com</dd>
+            <dt>Shop</dt><dd><a href="https://aeugo.base.ec/" target="_blank" rel="noopener">aeugo.base.ec</a></dd>
+            <dt>Instagram</dt><dd><a href="https://www.instagram.com/aeugo/" target="_blank" rel="noopener">@aeugo</a></dd>
+          </dl>
+          <p class="rate"><span class="ja">Googleマップ ★4.2</span><span class="en">Google Maps ★4.2</span></p>
+        </div>
+        <div class="map"><iframe loading="lazy" title="Map" src="https://www.google.com/maps?q=AEUGO%20%E6%9F%8F%E5%B8%82%E5%8D%83%E4%BB%A3%E7%94%B01-2-52&output=embed"></iframe></div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>© AEUGO · Kashiwa, Chiba · Photos: Unsplash (sample images)</footer>
+<script>
+const $ = (s) => document.querySelector(s);
+const L = () => document.body.dataset.lang;
+const jst = () => { const d = new Date(); return new Date(d.getTime() + (d.getTimezoneOffset() + 540) * 60000); };
+const ITEM = [['Tシャツ', 'T-shirt'], ['スウェット', 'Sweatshirt'], ['シャツ', 'Shirt'], ['ジャケット', 'Jacket'], ['デニム', 'Denim'], ['バンダナ', 'Bandana']];
+const BUD = [['〜3,000円', 'up to ¥3,000'], ['〜6,000円', 'up to ¥6,000'], ['〜10,000円', 'up to ¥10,000'], ['相談', 'flexible']];
+let item = 0, bud = 1;
+const FREE = 11000;
+function render() { const ja = L() === 'ja';
+  [['#item', ITEM, 'i'], ['#bud', BUD, 'b']].forEach(([sel, arr, k]) => { $(sel).innerHTML = arr.map((o, i) => `<button aria-pressed="${(k === 'i' ? item : bud) === i}" data-i="${i}">${ja ? o[0] : o[1]}</button>`).join('');
+    $(sel).querySelectorAll('button').forEach(b => b.onclick = () => { k === 'i' ? item = +b.dataset.i : bud = +b.dataset.i; render(); }); });
+  const w = +$('#w').value, l = +$('#l').value, den = item === 4, band = item === 5;
+  $('#wo').textContent = w + 'cm'; $('#lo').textContent = l + 'cm';
+  const size = band ? '' : den ? (ja ? `ウエスト${w}cm・股下${l}cmくらい` : `waist about ${w}cm, inseam about ${l}cm`) : (ja ? `身幅${w}cm・着丈${l}cmくらい` : `about ${w}cm chest, ${l}cm length`);
+  $('#note').textContent = ja
+    ? `こんにちは！${ITEM[item][0]}を探しています。\n${size ? 'サイズ：' + size + '\n' : ''}予算：${BUD[bud][0]}\n入荷していたら教えてください。`
+    : `Hi! I’m looking for a ${ITEM[item][1].toLowerCase()}.\n${size ? 'Size: ' + size + '\n' : ''}Budget: ${BUD[bud][1]}\nPlease let me know if something comes in.`;
+  const amt = Math.max(0, +$('#amt').value || 0), pct = Math.min(100, amt / FREE * 100);
+  $('#bar').style.width = pct + '%';
+  $('#mnote').textContent = amt >= FREE ? (ja ? '送料無料です！' : 'Free shipping!') : (ja ? `あと ¥${(FREE - amt).toLocaleString()} で送料無料` : `¥${(FREE - amt).toLocaleString()} more for free shipping`);
+  const t = jst(), h = t.getHours() + t.getMinutes() / 60, open = h >= 13 && h < 19;
+  $('#dot').classList.toggle('on', open);
+  $('#stat').textContent = open ? (ja ? 'ただいま営業中（〜19:00）' : 'Open now (until 19:00)') : (ja ? '営業時間外（13:00〜19:00）' : 'Closed now (13:00–19:00)'); }
+['#w', '#l', '#amt'].forEach(s => $(s).addEventListener('input', render));
+$('#copy').addEventListener('click', () => { const b = $('#copy');
+  (navigator.clipboard ? navigator.clipboard.writeText($('#note').textContent) : Promise.reject()).then(() => { b.innerHTML = '<span class="ja">コピーしました</span><span class="en">Copied</span>'; }).catch(() => { const r = document.createRange(); r.selectNodeContents($('#note')); getSelection().removeAllRanges(); getSelection().addRange(r); }); });
+render(); setInterval(render, 60000);
+$('#langBtn').addEventListener('click', () => { const l = L() === 'ja' ? 'en' : 'ja'; document.body.dataset.lang = l; document.documentElement.lang = l; $('#langBtn').textContent = l === 'ja' ? 'EN' : '日本語'; render(); });
+</script>
+</body>
+</html>

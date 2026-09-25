@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>R by Naoya Watanuki | 南区根岸</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;1,6..96,500&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root { --paper: #f6f6f3; --ink: #1a1a18; --olive: #5b6639; --olive2: #e4e7d8; --mute: #6c6d66; --line: #d9dad2; --white: #fff; }
+:focus-visible { outline: 3px solid var(--olive); outline-offset: 3px; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: "Zen Kaku Gothic New", sans-serif; background: var(--paper); color: var(--ink); line-height: 1.9; overflow-x: hidden; }
+a { color: inherit; }
+.wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
+[data-lang="en"] .ja, [data-lang="ja"] .en { display: none !important; }
+.proposal { background: var(--ink); color: #bdbdb4; font-size: .75rem; text-align: center; padding: 6px 16px; }
+header { position: sticky; top: 0; z-index: 20; background: rgba(246,246,243,.95); border-bottom: 1px solid var(--line); }
+.nav { display: flex; justify-content: space-between; align-items: center; height: 60px; gap: 12px; }
+.logo { text-decoration: none; font-family: "Bodoni Moda", serif; font-size: 1.1rem; letter-spacing: .04em; }
+.logo i { font-style: italic; font-size: 1.6rem; margin-right: 6px; }
+.nav ul { display: flex; gap: 22px; list-style: none; font-size: .86rem; }
+.nav ul a { text-decoration: none; }
+.lang { border: 1px solid var(--ink); background: transparent; color: var(--ink); padding: 1px 12px; font: 700 .78rem "Zen Kaku Gothic New"; cursor: pointer; }
+.hero { padding: 48px 0 70px; }
+.hero .wrap { display: grid; grid-template-columns: 1.05fr .95fr; gap: 44px; align-items: center; }
+.mono { font-family: "Bodoni Moda", serif; font-style: italic; font-size: clamp(6rem, 18vw, 11rem); line-height: .8; color: var(--olive); }
+.hero h1 { font-family: "Zen Kaku Gothic New"; font-weight: 700; font-size: clamp(1.7rem, 4vw, 2.6rem); line-height: 1.5; margin: 18px 0 14px; text-wrap: balance; }
+.hero p { color: var(--mute); max-width: 460px; margin-bottom: 20px; }
+.btns { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+.btn { display: inline-block; text-decoration: none; background: var(--ink); color: var(--white); padding: 11px 24px; font-weight: 700; }
+.status { display: inline-flex; align-items: center; gap: 8px; font-size: .86rem; color: var(--mute); }
+.dot { width: 9px; height: 9px; border-radius: 50%; background: #b7b8ae; }
+.dot.on { background: var(--olive); box-shadow: 0 0 0 4px rgba(91,102,57,.2); }
+.photo { justify-self: center; width: min(400px, 100%); }
+.photo img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; display: block; }
+.photo figcaption { font-size: .7rem; color: var(--mute); margin-top: 10px; }
+section { padding: 80px 0; }
+.kick { font-family: "Bodoni Moda", serif; font-style: italic; font-size: 1.05rem; color: var(--olive); }
+.h2 { font-weight: 700; font-size: clamp(1.45rem, 3.4vw, 2.05rem); line-height: 1.5; margin: 4px 0 12px; text-wrap: balance; }
+.lead { color: var(--mute); max-width: 600px; }
+/* image card */
+.card { background: var(--white); border-block: 1px solid var(--line); }
+.card .g { display: grid; grid-template-columns: 1fr 1fr; gap: 44px; margin-top: 24px; align-items: start; }
+.field { margin-bottom: 18px; }
+.field > span { display: block; font-size: .78rem; color: var(--mute); letter-spacing: .12em; margin-bottom: 8px; }
+.sw { display: flex; flex-wrap: wrap; gap: 10px; }
+.sw button { width: 38px; height: 38px; border-radius: 50%; border: 1px solid rgba(0,0,0,.15); cursor: pointer; position: relative; }
+.sw button[aria-pressed="true"]::after { content: ""; position: absolute; inset: -5px; border-radius: 50%; border: 2px solid var(--ink); }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chips button { background: transparent; border: 1px solid var(--line); color: var(--ink); padding: 6px 16px; cursor: pointer; font: 500 .9rem "Zen Kaku Gothic New"; }
+.chips button[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); color: var(--white); }
+.img { border: 1px solid var(--ink); padding: 26px 24px 22px; background: var(--paper); }
+.img .t { font-family: "Bodoni Moda", serif; font-style: italic; color: var(--olive); }
+.bq { position: relative; height: 170px; margin: 12px auto 8px; width: 220px; }
+.bq i { position: absolute; border-radius: 50%; width: 92px; height: 92px; border: 1px solid rgba(0,0,0,.08); transition: background .3s; }
+.bq i:nth-child(1) { left: 20px; top: 26px; } .bq i:nth-child(2) { left: 66px; top: 0; } .bq i:nth-child(3) { left: 108px; top: 30px; }
+.bq b { position: absolute; left: 96px; top: 104px; width: 28px; height: 66px; background: var(--olive); clip-path: polygon(30% 0, 70% 0, 100% 100%, 0 100%); }
+.img p { font-weight: 500; }
+.img small { display: block; color: var(--mute); font-size: .78rem; margin-top: 10px; }
+/* notes */
+.notes .g { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--ink); margin-top: 18px; }
+.n { padding: 20px 20px 0 0; }
+.n + .n { padding-left: 20px; border-left: 1px solid var(--line); }
+.n b { display: block; font-size: 1.05rem; margin-bottom: 4px; }
+.n span { color: var(--mute); font-size: .92rem; }
+/* visit */
+.visit .g { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; margin-top: 12px; }
+.visit dl { display: grid; grid-template-columns: 92px 1fr; gap: 10px 14px; }
+.visit dt { color: var(--mute); font-size: .88rem; }
+.rate { font-size: .78rem; color: var(--mute); margin-top: 14px; }
+.map { min-height: 320px; border: 1px solid var(--line); }
+.map iframe { width: 100%; height: 100%; min-height: 320px; border: 0; display: block; filter: grayscale(.3); }
+footer { text-align: center; padding: 24px 16px 32px; font-size: .75rem; color: var(--mute); border-top: 1px solid var(--line); }
+@media (max-width: 820px) {
+  .nav ul { display: none; }
+  .hero .wrap, .card .g, .visit .g { grid-template-columns: 1fr; }
+  .notes .g { grid-template-columns: 1fr; }
+  .n + .n { padding-left: 0; border-left: 0; border-top: 1px solid var(--line); }
+}
+</style>
+</head>
+<body data-lang="ja">
+<div class="proposal"><span class="ja">※ ご提案用のサンプル（モックアップ）です・検索エンジン非表示</span><span class="en">Proposal mockup · hidden from search engines</span></div>
+<header><div class="wrap nav">
+  <a class="logo" href="#"><i>R</i>by Naoya Watanuki</a>
+  <ul><li><a href="#card"><span class="ja">花束のイメージ</span><span class="en">Bouquet image</span></a></li><li><a href="#visit"><span class="ja">アクセス</span><span class="en">Visit</span></a></li></ul>
+  <button class="lang" id="langBtn">EN</button>
+</div></header>
+
+<main>
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <div class="mono" aria-hidden="true">R</div>
+        <h1><span class="ja">根岸の街角の、<br>花屋です。</span><span class="en">A florist on a street corner in Negishi.</span></h1>
+        <p><span class="ja">さいたま市南区根岸。予約なしの花束づくりも、記念日や撮影のお花のご相談も、ひとつずつ丁寧にお仕立てします。</span><span class="en">In Negishi, Minami-ku, Saitama. Walk in for a bouquet, or talk to us about flowers for anniversaries and photo shoots — each one made with care.</span></p>
+        <div class="btns"><a class="btn" href="tel:0487897136">048-789-7136</a><span class="status"><i class="dot" id="dot"></i><span id="stat"></span></span></div>
+      </div>
+      <figure class="photo"><img src="hero.jpg" alt=""><figcaption><span class="ja">※写真はイメージです（公開時はお店の写真に差し替えます）</span><span class="en">Sample photo — to be replaced with the shop’s own.</span></figcaption></figure>
+    </div>
+  </div>
+
+  <section id="card" class="card">
+    <div class="wrap">
+      <div class="kick">Your image</div>
+      <h2 class="h2"><span class="ja">「こんな感じ」を、色で伝える。</span><span class="en">Say “something like this” with color.</span></h2>
+      <p class="lead"><span class="ja">色を3つまでと雰囲気を選ぶと、花束のイメージカードができます。店頭でお見せいただくか、メールでお送りください。</span><span class="en">Pick up to three colors and a mood to make an image card. Show it in the shop or send it by email.</span></p>
+      <div class="g">
+        <div>
+          <div class="field"><span><span class="ja">色（3つまで）</span><span class="en">COLORS (UP TO 3)</span></span><div class="sw" id="sw"></div></div>
+          <div class="field"><span><span class="ja">雰囲気</span><span class="en">MOOD</span></span><div class="chips" id="mood"></div></div>
+          <div class="field"><span><span class="ja">用途</span><span class="en">FOR</span></span><div class="chips" id="use"></div></div>
+        </div>
+        <div class="img" aria-live="polite">
+          <div class="t">bouquet image</div>
+          <div class="bq" aria-hidden="true"><i id="b0"></i><i id="b1"></i><i id="b2"></i><b></b></div>
+          <p id="memo"></p>
+          <small>radford24141@gmail.com</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="notes">
+    <div class="wrap">
+      <div class="kick">Notes</div>
+      <h2 class="h2"><span class="ja">お店のこと</span><span class="en">About the shop</span></h2>
+      <div class="g">
+        <div class="n"><b><span class="ja">予約なしでも</span><span class="en">Walk-ins welcome</span></b><span><span class="ja">その場で花束をお作りします。お時間に余裕をもってどうぞ。</span><span class="en">We’ll make a bouquet on the spot — just allow a little time.</span></span></div>
+        <div class="n"><b><span class="ja">記念日・撮影の花</span><span class="en">Anniversaries & shoots</span></b><span><span class="ja">結婚の記念撮影など、特別な日のお花もご相談ください。</span><span class="en">Ask us about flowers for wedding photos and special days.</span></span></div>
+        <div class="n"><b><span class="ja">水曜定休</span><span class="en">Closed Wednesdays</span></b><span><span class="ja">祝日の場合は営業し、翌平日がお休みです。</span><span class="en">If Wednesday is a holiday we open, and close the next weekday.</span></span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="visit" class="visit" style="padding-top:0">
+    <div class="wrap">
+      <div class="kick">Access</div>
+      <h2 class="h2"><span class="ja">さいたま市南区・根岸</span><span class="en">Negishi, Minami-ku, Saitama</span></h2>
+      <div class="g">
+        <div>
+          <dl>
+            <dt><span class="ja">住所</span><span class="en">Address</span></dt><dd><span class="ja">〒336-0024 さいたま市南区根岸1-19-26 グランド・ソレーユ根岸台1F</span><span class="en">Grand Soleil Negishidai 1F, 1-19-26 Negishi, Minami-ku, Saitama</span></dd>
+            <dt><span class="ja">営業時間</span><span class="en">Hours</span></dt><dd><span class="ja">平日 11:00〜19:00 / 土日祝 11:00〜18:00</span><span class="en">Weekdays 11–19 / Weekends & holidays 11–18</span></dd>
+            <dt><span class="ja">定休日</span><span class="en">Closed</span></dt><dd><span class="ja">水曜日（祝日の場合は翌平日）</span><span class="en">Wednesday (next weekday if it’s a holiday)</span></dd>
+            <dt>TEL</dt><dd>048-789-7136</dd>
+            <dt>Mail</dt><dd>radford24141@gmail.com</dd>
+            <dt>Instagram</dt><dd><a href="https://www.instagram.com/r_by_naoyawatanuki/" target="_blank" rel="noopener">@r_by_naoyawatanuki</a></dd>
+          </dl>
+          <p class="rate"><span class="ja">Googleマップ ★4.3</span><span class="en">Google Maps ★4.3</span></p>
+        </div>
+        <div class="map"><iframe loading="lazy" title="Map" src="https://www.google.com/maps?q=R%20by%20Naoya%20Watanuki%20%E3%81%95%E3%81%84%E3%81%9F%E3%81%BE%E5%B8%82%E5%8D%97%E5%8C%BA%E6%A0%B9%E5%B2%B81-19-26&output=embed"></iframe></div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>© R by Naoya Watanuki · Saitama · Photos: Unsplash (sample images)</footer>
+<script>
+const $ = (s) => document.querySelector(s);
+const L = () => document.body.dataset.lang;
+const jst = () => { const d = new Date(); return new Date(d.getTime() + (d.getTimezoneOffset() + 540) * 60000); };
+const HOL = new Set(['2026-01-01','2026-01-12','2026-02-11','2026-02-23','2026-03-20','2026-04-29','2026-05-03','2026-05-04','2026-05-05','2026-05-06','2026-07-20','2026-08-11','2026-09-21','2026-09-22','2026-09-23','2026-10-12','2026-11-03','2026-11-23','2027-01-01','2027-01-11','2027-02-11','2027-02-23','2027-03-21','2027-03-22','2027-04-29','2027-05-03','2027-05-04','2027-05-05','2027-07-19','2027-08-11','2027-09-20','2027-09-23','2027-10-11','2027-11-03','2027-11-23']);
+const key = (d) => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+const isHol = (d) => HOL.has(key(d));
+function closedOn(d) { // Wednesday off; if Wed is a holiday, the next non-holiday weekday is off instead
+  if (d.getDay() === 3 && !isHol(d)) return true;
+  for (let back = 1; back <= 3; back++) { const p = new Date(d); p.setDate(p.getDate() - back);
+    if (p.getDay() === 3 && isHol(p)) { // find first non-holiday weekday after p
+      const q = new Date(p); do { q.setDate(q.getDate() + 1); } while (isHol(q) || q.getDay() === 0 || q.getDay() === 6);
+      return key(q) === key(d); } }
+  return false; }
+const COL = [['白', 'white', '#f5f3ee'], ['クリーム', 'cream', '#efe2c0'], ['ピンク', 'pink', '#eeb4c3'], ['赤', 'red', '#b8323f'], ['オレンジ', 'orange', '#e9965a'], ['黄', 'yellow', '#f0d35c'], ['紫', 'purple', '#8a6bb0'], ['青', 'blue', '#7fa3cf'], ['グリーン', 'green', '#8aa35a']];
+const MOOD = [['ナチュラル', 'natural'], ['華やか', 'glamorous'], ['シック', 'chic'], ['かわいい', 'sweet']];
+const USE = [['贈り物', 'a gift'], ['記念日', 'an anniversary'], ['撮影・ウェディング', 'a photo shoot / wedding'], ['自宅用', 'my home']];
+let picked = [0, 8], mood = 0, use = 0;
+function render() { const ja = L() === 'ja';
+  $('#sw').innerHTML = COL.map((c, i) => `<button aria-label="${ja ? c[0] : c[1]}" title="${ja ? c[0] : c[1]}" aria-pressed="${picked.includes(i)}" data-i="${i}" style="background:${c[2]}"></button>`).join('');
+  $('#sw').querySelectorAll('button').forEach(b => b.onclick = () => { const i = +b.dataset.i; if (picked.includes(i)) picked = picked.filter(x => x !== i); else { picked.push(i); if (picked.length > 3) picked.shift(); } render(); });
+  [['#mood', MOOD, 'm'], ['#use', USE, 'u']].forEach(([sel, arr, k]) => { $(sel).innerHTML = arr.map((o, i) => `<button aria-pressed="${(k === 'm' ? mood : use) === i}" data-i="${i}">${ja ? o[0] : o[1]}</button>`).join('');
+    $(sel).querySelectorAll('button').forEach(b => b.onclick = () => { k === 'm' ? mood = +b.dataset.i : use = +b.dataset.i; render(); }); });
+  const cols = picked.length ? picked : [0];
+  [0, 1, 2].forEach(i => $('#b' + i).style.background = COL[cols[i % cols.length]][2]);
+  const names = cols.map(i => ja ? COL[i][0] : COL[i][1]);
+  $('#memo').textContent = ja ? `${USE[use][0]}用に、${names.join('・')}の色で、${MOOD[mood][0]}な雰囲気の花束をお願いします。` : `A ${MOOD[mood][1]} bouquet in ${names.join(', ')}, for ${USE[use][1]}.`;
+  const t = jst(), h = t.getHours() + t.getMinutes() / 60, wkend = t.getDay() === 0 || t.getDay() === 6 || isHol(t), close = wkend ? 18 : 19, off = closedOn(t), open = !off && h >= 11 && h < close;
+  $('#dot').classList.toggle('on', open);
+  $('#stat').textContent = off ? (ja ? '本日は定休日' : 'Closed today') : open ? (ja ? `ただいま営業中（〜${close}:00）` : `Open now (until ${close}:00)`) : (ja ? `営業時間外（本日 11:00〜${close}:00）` : `Closed now (today 11:00–${close}:00)`); }
+render(); setInterval(render, 60000);
+$('#langBtn').addEventListener('click', () => { const l = L() === 'ja' ? 'en' : 'ja'; document.body.dataset.lang = l; document.documentElement.lang = l; $('#langBtn').textContent = l === 'ja' ? 'EN' : '日本語'; render(); });
+</script>
+</body>
+</html>

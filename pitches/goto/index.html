@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>goto | 大宮のセレクト雑貨店</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Antique&family=IBM+Plex+Sans+JP:wght@400;500;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root { --white: #fbfbfa; --ink: #1c1d1f; --blue: #2c5fd6; --blue2: #e6ecfb; --mute: #6d6f74; --line: #dcdcd8; }
+:focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: "IBM Plex Sans JP", sans-serif; background: var(--white); color: var(--ink); line-height: 1.9; overflow-x: hidden; }
+a { color: inherit; }
+.wrap { max-width: 1020px; margin: 0 auto; padding: 0 20px; }
+[data-lang="en"] .ja, [data-lang="ja"] .en { display: none !important; }
+.proposal { background: var(--ink); color: #bbbcc0; font-size: .75rem; text-align: center; padding: 6px 16px; }
+header { position: sticky; top: 0; z-index: 20; background: rgba(251,251,250,.96); border-bottom: 1px solid var(--ink); }
+.nav { display: flex; justify-content: space-between; align-items: center; height: 58px; gap: 12px; }
+.logo { text-decoration: none; font-family: "Zen Antique", serif; font-size: 1.6rem; letter-spacing: .05em; }
+.nav ul { display: flex; gap: 22px; list-style: none; font-size: .86rem; }
+.nav ul a { text-decoration: none; }
+.lang { border: 1px solid var(--ink); background: transparent; color: var(--ink); padding: 1px 12px; font: 500 .78rem "IBM Plex Mono"; cursor: pointer; }
+.issue { font-family: "IBM Plex Mono"; font-size: .75rem; color: var(--mute); letter-spacing: .08em; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; border-bottom: 1px solid var(--line); padding: 10px 0; }
+.hero { padding: 36px 0 66px; }
+.hero .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 44px; align-items: end; }
+.hero h1 { font-family: "Zen Antique", serif; font-weight: 400; font-size: clamp(2.2rem, 6vw, 4rem); line-height: 1.3; margin: 18px 0 16px; text-wrap: balance; }
+.hero h1 b { font-weight: 400; color: var(--blue); }
+.hero p { color: var(--mute); max-width: 440px; margin-bottom: 18px; }
+.status { display: inline-flex; align-items: center; gap: 8px; font-size: .86rem; font-family: "IBM Plex Mono"; }
+.dot { width: 9px; height: 9px; border-radius: 50%; background: #b8bac0; }
+.dot.on { background: var(--blue); }
+.photo img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; display: block; }
+.photo figcaption { font-size: .7rem; color: var(--mute); margin-top: 8px; font-family: "IBM Plex Mono"; }
+section { padding: 76px 0; }
+.kick { font-family: "IBM Plex Mono"; font-size: .78rem; letter-spacing: .12em; color: var(--blue); }
+.h2 { font-family: "Zen Antique", serif; font-weight: 400; font-size: clamp(1.55rem, 3.6vw, 2.2rem); line-height: 1.45; margin: 6px 0 12px; text-wrap: balance; }
+.lead { color: var(--mute); max-width: 600px; }
+/* series */
+.series .g { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border-top: 1px solid var(--ink); border-bottom: 1px solid var(--ink); margin-top: 20px; }
+.s { padding: 22px 20px 20px 0; }
+.s + .s { padding-left: 20px; border-left: 1px solid var(--line); }
+.s .no { font-family: "IBM Plex Mono"; font-size: .75rem; color: var(--mute); }
+.s b { font-family: "Zen Antique", serif; font-weight: 400; font-size: 1.35rem; display: block; margin: 4px 0; }
+.s span { color: var(--mute); font-size: .9rem; }
+/* gift memo */
+.gift { background: var(--blue2); }
+.gift .g { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 24px; align-items: start; }
+.field { margin-bottom: 18px; }
+.field > span { display: block; font-family: "IBM Plex Mono"; font-size: .74rem; letter-spacing: .1em; color: var(--mute); margin-bottom: 8px; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chips button { background: var(--white); border: 1px solid var(--ink); color: var(--ink); padding: 5px 14px; cursor: pointer; font: 500 .9rem "IBM Plex Sans JP"; }
+.chips button[aria-pressed="true"] { background: var(--blue); border-color: var(--blue); color: var(--white); }
+.slip { background: var(--white); padding: 24px 22px; border: 1px solid var(--ink); position: relative; }
+.slip::before { content: "GIFT NOTE"; position: absolute; top: -10px; left: 16px; background: var(--blue); color: var(--white); font: 500 .7rem "IBM Plex Mono"; letter-spacing: .12em; padding: 1px 10px; }
+.slip p { white-space: pre-line; }
+.slip small { display: block; margin-top: 12px; color: var(--mute); font-size: .78rem; }
+/* visit */
+.visit .g { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; margin-top: 12px; }
+.visit dl { display: grid; grid-template-columns: 92px 1fr; gap: 10px 14px; }
+.visit dt { color: var(--mute); font-size: .88rem; }
+.route { list-style: none; margin-top: 16px; display: grid; gap: 6px; counter-reset: r; }
+.route li { counter-increment: r; padding-left: 2.2em; position: relative; }
+.route li::before { content: counter(r, decimal-leading-zero); position: absolute; left: 0; font-family: "IBM Plex Mono"; color: var(--blue); }
+.map { min-height: 320px; border: 1px solid var(--ink); }
+.map iframe { width: 100%; height: 100%; min-height: 320px; border: 0; display: block; filter: grayscale(.6); }
+footer { text-align: center; padding: 24px 16px 32px; font-size: .75rem; color: var(--mute); border-top: 1px solid var(--line); font-family: "IBM Plex Mono"; }
+@media (max-width: 820px) {
+  .nav ul { display: none; }
+  .hero .wrap, .gift .g, .visit .g { grid-template-columns: 1fr; }
+  .series .g { grid-template-columns: 1fr; }
+  .s + .s { padding-left: 0; border-left: 0; border-top: 1px solid var(--line); }
+}
+</style>
+</head>
+<body data-lang="ja">
+<div class="proposal"><span class="ja">※ ご提案用のサンプル（モックアップ）です・検索エンジン非表示</span><span class="en">Proposal mockup · hidden from search engines</span></div>
+<header><div class="wrap nav">
+  <a class="logo" href="#">goto</a>
+  <ul><li><a href="#series"><span class="ja">考える</span><span class="en">Series</span></a></li><li><a href="#gift"><span class="ja">贈りもの</span><span class="en">Gifts</span></a></li><li><a href="#visit"><span class="ja">アクセス</span><span class="en">Visit</span></a></li></ul>
+  <button class="lang" id="langBtn">EN</button>
+</div></header>
+
+<main>
+  <div class="wrap issue"><span>SELECT ZAKKA · OMIYA</span><span>一の宮通り / ICHINOMIYA-DORI</span><span id="today"></span></div>
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <h1><span class="ja">ちいさな店の、<br><b>ちょっと</b>面白い道具。</span><span class="en">Small shop,<br><b>slightly</b> curious things.</span></h1>
+        <p><span class="ja">大宮・一の宮通りのセレクト雑貨店。センスのいい雑貨が、狭い店内にぎゅっと並んでいます。近くのおすすめスポットも、店主に聞いてみてください。</span><span class="en">A select goods shop on Ichinomiya-dori in Omiya — a small room packed with well-chosen things. Ask the owner about good spots nearby, too.</span></p>
+        <div class="status"><i class="dot" id="dot"></i><span id="stat"></span></div>
+      </div>
+      <figure class="photo"><img src="hero.jpg" alt=""><figcaption><span class="ja">※写真はイメージです（公開時はお店の写真に差し替えます）</span><span class="en">Sample photo — to be replaced with the shop’s own.</span></figcaption></figure>
+    </div>
+  </div>
+
+  <section id="series" class="series" style="padding-top:0">
+    <div class="wrap">
+      <div class="kick">SERIES — 考える</div>
+      <h2 class="h2"><span class="ja">ひとつの道具を、じっくり考える。</span><span class="en">Thinking hard about one thing at a time.</span></h2>
+      <p class="lead"><span class="ja">Instagramの特集「〇〇を考える」を、ホームページでも読めるようにまとめます。</span><span class="en">The “thinking about…” features from our Instagram, collected here to read.</span></p>
+      <div class="g">
+        <div class="s"><span class="no">No.01</span><b><span class="ja">カゴを考える</span><span class="en">On baskets</span></b><span><span class="ja">編み方、大きさ、使いみち。</span><span class="en">Weaves, sizes, and uses.</span></span></div>
+        <div class="s"><span class="no">No.02</span><b><span class="ja">ネジ君を考える</span><span class="en">On Neji-kun</span></b><span><span class="ja">Instagramの特集から。</span><span class="en">From our Instagram features.</span></span></div>
+        <div class="s"><span class="no">No.03</span><b><span class="ja">次の「考える」</span><span class="en">Next up</span></b><span><span class="ja">特集はInstagramで更新中。</span><span class="en">New features land on Instagram first.</span></span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gift" class="gift">
+    <div class="wrap">
+      <div class="kick">GIFT NOTE</div>
+      <h2 class="h2"><span class="ja">贈りもの選び、お手伝いします。</span><span class="en">Let us help you pick a gift.</span></h2>
+      <p class="lead"><span class="ja">誰に・いくらくらいで・どんな場面か。選ぶだけで、来店時に見せたり、メールで送ったりできるメモができます。</span><span class="en">Who, roughly how much, and what for — pick and you’ll get a note to show in the shop or send by email.</span></p>
+      <div class="g">
+        <div>
+          <div class="field"><span><span class="ja">誰に</span><span class="en">FOR</span></span><div class="chips" id="who"></div></div>
+          <div class="field"><span><span class="ja">ご予算</span><span class="en">BUDGET</span></span><div class="chips" id="bud"></div></div>
+          <div class="field"><span><span class="ja">場面</span><span class="en">OCCASION</span></span><div class="chips" id="occ"></div></div>
+        </div>
+        <div class="slip" aria-live="polite"><p id="note"></p><small>goto20180506@gmail.com</small></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="visit" class="visit">
+    <div class="wrap">
+      <div class="kick">ACCESS</div>
+      <h2 class="h2"><span class="ja">大宮・大門町、一の宮通り</span><span class="en">Ichinomiya-dori, Omiya</span></h2>
+      <div class="g">
+        <div>
+          <dl>
+            <dt><span class="ja">住所</span><span class="en">Address</span></dt><dd><span class="ja">〒330-0846 さいたま市大宮区大門町3-207</span><span class="en">3-207 Daimon-cho, Omiya-ku, Saitama</span></dd>
+            <dt><span class="ja">営業時間</span><span class="en">Hours</span></dt><dd><span class="ja">11:00〜19:00（月曜定休）</span><span class="en">11:00–19:00 (closed Mondays)</span></dd>
+            <dt>TEL</dt><dd>048-708-2482</dd>
+            <dt>Mail</dt><dd>goto20180506@gmail.com</dd>
+            <dt>Shop</dt><dd><a href="https://goto20180506.base.shop/" target="_blank" rel="noopener">BASE</a></dd>
+            <dt>Instagram</dt><dd><a href="https://www.instagram.com/goto20180506/" target="_blank" rel="noopener">@goto20180506</a></dd>
+          </dl>
+          <ol class="route">
+            <li><span class="ja">大宮駅 東口を出て、一の宮通りへ</span><span class="en">Leave Omiya Station by the East Exit toward Ichinomiya-dori</span></li>
+            <li><span class="ja">大西屋酒店さんのお隣が goto です</span><span class="en">goto is right next to Ōnishiya liquor store</span></li>
+          </ol>
+        </div>
+        <div class="map"><iframe loading="lazy" title="Map" src="https://www.google.com/maps?q=goto%20%E3%81%95%E3%81%84%E3%81%9F%E3%81%BE%E5%B8%82%E5%A4%A7%E5%AE%AE%E5%8C%BA%E5%A4%A7%E9%96%80%E7%94%BA3-207&output=embed"></iframe></div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>© goto · Omiya, Saitama · Photos: Unsplash (sample images)</footer>
+<script>
+const $ = (s) => document.querySelector(s);
+const L = () => document.body.dataset.lang;
+const jst = () => { const d = new Date(); return new Date(d.getTime() + (d.getTimezoneOffset() + 540) * 60000); };
+const WHO = [['友人', 'a friend'], ['家族', 'family'], ['職場の人', 'a coworker'], ['自分', 'myself']];
+const BUD = [['〜1,000円', 'under ¥1,000'], ['〜3,000円', 'under ¥3,000'], ['〜5,000円', 'under ¥5,000'], ['それ以上', 'more']];
+const OCC = [['誕生日', 'a birthday'], ['お礼', 'a thank-you'], ['新生活', 'a new home / job'], ['なんとなく', 'no reason']];
+const st = { who: 0, bud: 1, occ: 0 };
+function render() { const ja = L() === 'ja';
+  [['#who', WHO, 'who'], ['#bud', BUD, 'bud'], ['#occ', OCC, 'occ']].forEach(([sel, arr, k]) => { $(sel).innerHTML = arr.map((o, i) => `<button aria-pressed="${st[k] === i}" data-i="${i}">${ja ? o[0] : o[1]}</button>`).join('');
+    $(sel).querySelectorAll('button').forEach(b => b.onclick = () => { st[k] = +b.dataset.i; render(); }); });
+  $('#note').textContent = ja
+    ? `${WHO[st.who][0]}への${OCC[st.occ][0]}の贈りものを探しています。\nご予算は${BUD[st.bud][0]}くらいです。\nおすすめがあれば教えてください。`
+    : `I’m looking for a gift for ${WHO[st.who][1]} — ${OCC[st.occ][1]}.\nBudget: ${BUD[st.bud][1]}.\nAny recommendations?`;
+  const t = jst(), h = t.getHours() + t.getMinutes() / 60, off = t.getDay() === 1, open = !off && h >= 11 && h < 19;
+  $('#today').textContent = `${t.getFullYear()}.${String(t.getMonth() + 1).padStart(2, '0')}.${String(t.getDate()).padStart(2, '0')}`;
+  $('#dot').classList.toggle('on', open);
+  $('#stat').textContent = off ? (ja ? '本日は定休日（月曜）' : 'Closed today (Mondays)') : open ? (ja ? 'OPEN — 19:00まで' : 'OPEN — until 19:00') : (ja ? 'CLOSED — 11:00〜19:00' : 'CLOSED — 11:00–19:00'); }
+render(); setInterval(render, 60000);
+$('#langBtn').addEventListener('click', () => { const l = L() === 'ja' ? 'en' : 'ja'; document.body.dataset.lang = l; document.documentElement.lang = l; $('#langBtn').textContent = l === 'ja' ? 'EN' : '日本語'; render(); });
+</script>
+</body>
+</html>
