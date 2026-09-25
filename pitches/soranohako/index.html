@@ -41,7 +41,7 @@ header { position: sticky; top: 0; z-index: 20; background: rgba(255,255,255,.95
 .dot.on { background: var(--sun); box-shadow: 0 0 0 4px rgba(242,201,76,.3); }
 /* box photo */
 .box { justify-self: center; width: min(400px, 100%); position: relative; padding-top: 22px; }
-.box .lid { position: absolute; top: 0; left: -10px; right: -10px; height: 30px; background: var(--white); border: 2px solid var(--navy); border-radius: 6px; transform: rotate(-3deg); transform-origin: left bottom; box-shadow: 0 6px 0 var(--sky); }
+.box .lid { position: absolute; top: 0; left: -10px; right: -10px; height: 30px; background: var(--navy); border: 2px solid var(--navy); border-radius: 6px; transform: rotate(-3deg); transform-origin: left bottom; box-shadow: 0 6px 0 var(--sky); }
 .box img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; display: block; border: 2px solid var(--navy); border-top: 0; border-radius: 0 0 6px 6px; }
 .box figcaption { font-size: .7rem; color: var(--mute); text-align: center; margin-top: 10px; }
 section { padding: 78px 0; }
@@ -156,9 +156,9 @@ const off = (d) => d.getDay() === 0 || d.getDay() === 6;
 const today = jst(); today.setHours(0, 0, 0, 0);
 const start = new Date(today); start.setDate(start.getDate() - ((start.getDay() + 6) % 7)); // Monday of this week
 const cells = Array.from({ length: 14 }, (_, i) => { const d = new Date(start); d.setDate(d.getDate() + i); return d; });
-let need = cells.findIndex(d => d > today && d.getDay() === 0); if (need < 0) need = 13;
 function pickFor(i) { // latest open day on or before the needed day, not before today
   for (let j = i; j >= 0; j--) { if (!off(cells[j]) && cells[j] >= today) return j; } return -1; }
+let need = cells.findIndex((d, i) => d > today && d.getDay() === 0 && pickFor(i) >= 0); if (need < 0) need = 13;
 function render() { const ja = L() === 'ja', p = pickFor(need);
   const hd = [1, 2, 3, 4, 5, 6, 0].map(d => `<div class="hd">${ja ? WD[d][0] : WD[d][1]}</div>`).join('');
   $('#days').innerHTML = hd + cells.map((d, i) => { const past = d < today; const cls = [off(d) ? 'off' : '', i === p && i !== need ? 'pick' : '', i === need ? 'need' : ''].join(' ');
