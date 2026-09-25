@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>GOODIES FLOWER | 我孫子</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;800&family=Zen+Maru+Gothic:wght@500;700;900&display=swap" rel="stylesheet">
+<style>
+:root { --em: #0d7a61; --em2: #0a5f4b; --pink: #f6c6d2; --pink2: #fbe4ea; --white: #ffffff; --ink: #183029; --mute: #5b6f69; --line: #d5e6e0; }
+:focus-visible { outline: 3px solid var(--em); outline-offset: 3px; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: "Zen Maru Gothic", sans-serif; background: var(--white); color: var(--ink); line-height: 1.9; overflow-x: hidden; }
+a { color: inherit; }
+.wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
+.nw { white-space: nowrap; }
+[data-lang="en"] .ja, [data-lang="ja"] .en { display: none !important; }
+.proposal { background: var(--em2); color: #cfe9e0; font-size: .75rem; text-align: center; padding: 6px 16px; }
+header { position: sticky; top: 0; z-index: 20; background: var(--em); color: var(--white); }
+.nav { display: flex; justify-content: space-between; align-items: center; height: 58px; gap: 12px; }
+.logo { text-decoration: none; font-family: "Outfit"; font-weight: 800; letter-spacing: .14em; font-size: 1.05rem; }
+.nav ul { display: flex; gap: 22px; list-style: none; font-size: .86rem; font-weight: 700; }
+.nav ul a { text-decoration: none; }
+.lang { border: 2px solid var(--white); background: transparent; color: var(--white); padding: 0 12px; font: 700 .78rem "Zen Maru Gothic"; cursor: pointer; border-radius: 99px; }
+/* awning */
+.awning { height: 34px; background: repeating-linear-gradient(90deg, var(--em) 0 40px, var(--white) 40px 80px); position: relative; }
+.awning::after { content: ""; position: absolute; left: 0; right: 0; bottom: -14px; height: 14px; background: radial-gradient(circle at 20px 0, var(--em) 19px, transparent 20px) 0 0 / 80px 14px repeat-x, radial-gradient(circle at 60px 0, var(--white) 19px, transparent 20px) 0 0 / 80px 14px repeat-x; }
+.hero { padding: 56px 0 70px; background: var(--pink2); }
+.hero .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 44px; align-items: center; }
+.pill { display: inline-block; background: var(--white); color: var(--em); font-weight: 700; font-size: .8rem; padding: 3px 14px; border-radius: 99px; }
+.hero h1 { font-family: "Zen Maru Gothic"; font-weight: 900; font-size: clamp(1.9rem, 4.6vw, 3rem); line-height: 1.45; margin: 14px 0 14px; color: var(--em2); text-wrap: balance; }
+.hero p { color: var(--mute); max-width: 440px; margin-bottom: 22px; }
+.btns { display: flex; gap: 12px; flex-wrap: wrap; }
+.btn { display: inline-block; text-decoration: none; background: var(--em); color: var(--white); padding: 12px 24px; font-weight: 700; border-radius: 99px; }
+.btn.ghost { background: var(--white); color: var(--em); }
+.status { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--mute); margin-top: 16px; }
+.dot { width: 9px; height: 9px; border-radius: 50%; background: #b8c6c1; }
+.dot.on { background: var(--em); box-shadow: 0 0 0 4px rgba(13,122,97,.2); }
+.photo { justify-self: center; width: min(420px, 100%); }
+.photo .frame { background: var(--em); padding: 14px; border-radius: 22px 22px 8px 8px; }
+.photo img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; display: block; border-radius: 12px 12px 4px 4px; }
+.photo figcaption { font-size: .7rem; color: var(--mute); text-align: center; margin-top: 10px; }
+section { padding: 78px 0; }
+.kick { font-family: "Outfit"; font-weight: 800; letter-spacing: .2em; font-size: .78rem; color: var(--em); }
+.h2 { font-weight: 900; font-size: clamp(1.45rem, 3.4vw, 2.05rem); line-height: 1.5; margin: 6px 0 12px; color: var(--em2); text-wrap: balance; }
+.lead { color: var(--mute); max-width: 600px; }
+/* stand planner */
+.stand .g { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; margin-top: 24px; align-items: start; }
+.field { margin-bottom: 18px; }
+.field > span { display: block; font-size: .8rem; color: var(--mute); font-weight: 700; margin-bottom: 8px; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chips button { background: var(--white); border: 2px solid var(--line); color: var(--ink); padding: 6px 16px; border-radius: 99px; cursor: pointer; font: 700 .9rem "Zen Maru Gothic"; }
+.chips button[aria-pressed="true"] { background: var(--em); border-color: var(--em); color: var(--white); }
+input[type="date"], input[type="text"] { font: 500 1rem "Zen Maru Gothic"; padding: 8px 12px; border: 2px solid var(--line); border-radius: 10px; width: 100%; max-width: 280px; color: var(--ink); background: var(--white); }
+.warn { margin-top: 8px; font-size: .88rem; font-weight: 700; padding: 6px 12px; border-radius: 10px; }
+.warn.ng { background: #fde8e8; color: #a3302f; }
+.warn.ok { background: #e3f3ee; color: var(--em2); }
+.ticket { background: var(--pink2); border-radius: 18px; padding: 24px; position: relative; }
+.ticket h3 { font-family: "Outfit"; font-weight: 800; letter-spacing: .15em; font-size: .85rem; color: var(--em); margin-bottom: 10px; }
+.ticket p { white-space: pre-line; font-weight: 500; }
+.ticket small { display: block; margin-top: 12px; color: var(--mute); font-size: .78rem; }
+.copy { margin-top: 14px; background: var(--em); color: var(--white); border: 0; padding: 9px 20px; border-radius: 99px; font: 700 .88rem "Zen Maru Gothic"; cursor: pointer; }
+/* offer */
+.offer { background: var(--em); color: var(--white); }
+.offer .kick, .offer .h2 { color: var(--white); }
+.offer .g { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 18px; }
+.offer .c { background: rgba(255,255,255,.1); border-radius: 16px; padding: 20px; }
+.offer .c b { display: block; font-size: 1.1rem; margin-bottom: 4px; }
+.offer .c span { font-size: .9rem; opacity: .85; }
+/* visit */
+.visit .g { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; margin-top: 12px; }
+.visit dl { display: grid; grid-template-columns: 92px 1fr; gap: 10px 14px; }
+.visit dt { color: var(--mute); font-size: .88rem; }
+.rate { font-size: .78rem; color: var(--mute); margin-top: 14px; }
+.map { min-height: 320px; border-radius: 18px; overflow: hidden; border: 2px solid var(--line); }
+.map iframe { width: 100%; height: 100%; min-height: 320px; border: 0; display: block; }
+footer { text-align: center; padding: 24px 16px 32px; font-size: .75rem; color: var(--mute); }
+@media (max-width: 820px) {
+  .nav ul { display: none; }
+  .hero .wrap, .stand .g, .visit .g { grid-template-columns: 1fr; }
+  .offer .g { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body data-lang="ja">
+<div class="proposal"><span class="ja">※ ご提案用のサンプル（モックアップ）です・検索エンジン非表示</span><span class="en">Proposal mockup · hidden from search engines</span></div>
+<header><div class="wrap nav">
+  <a class="logo" href="#">GOODIES FLOWER</a>
+  <ul><li><a href="#stand"><span class="ja">スタンド花</span><span class="en">Stand flowers</span></a></li><li><a href="#offer"><span class="ja">できること</span><span class="en">What we do</span></a></li><li><a href="#visit"><span class="ja">アクセス</span><span class="en">Visit</span></a></li></ul>
+  <button class="lang" id="langBtn">EN</button>
+</div></header>
+<div class="awning" aria-hidden="true"></div>
+
+<main>
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <span class="pill"><span class="ja">我孫子・手賀沼ふれあいライン沿い</span><span class="en">Abiko · on the Teganuma Fureai Line</span></span>
+        <h1><span class="ja">エメラルドグリーンの、<br>小さなお花屋さん。</span><span class="en">The little emerald-green flower shop.</span></h1>
+        <p><span class="ja">ウェルシアの向かい、緑の外壁が目印です。花束やアレンジメントはもちろん、スタンド花の配達も。ご予約は公式LINEからお気軽にどうぞ。</span><span class="en">Look for the green front across from Welcia. Bouquets, arrangements and stand-flower delivery — book easily through our LINE account.</span></p>
+        <div class="btns"><a class="btn" href="https://page.line.me/545bhwcx" target="_blank" rel="noopener"><span class="ja">LINEで予約・相談</span><span class="en">Book on LINE</span></a><a class="btn ghost" href="tel:07047294349">070-4729-4349</a></div>
+        <div class="status"><i class="dot" id="dot"></i><span id="stat"></span></div>
+      </div>
+      <figure class="photo"><div class="frame"><img src="hero.jpg" alt=""></div><figcaption><span class="ja">※写真はイメージです（公開時はお店の写真に差し替えます）</span><span class="en">Sample photo — to be replaced with the shop’s own.</span></figcaption></figure>
+    </div>
+  </div>
+
+  <section id="stand" class="stand">
+    <div class="wrap">
+      <div class="kick">STAND FLOWERS</div>
+      <h2 class="h2"><span class="ja">スタンド花のご相談メモ</span><span class="en">Plan a stand-flower order</span></h2>
+      <p class="lead"><span class="ja">用途とお届け日を選ぶと、LINEにそのまま送れる文面ができます。水・木の定休日にかかる場合もお知らせします。</span><span class="en">Pick the occasion and date to get a message you can paste into LINE. We’ll flag it if the date falls on our Wednesday/Thursday days off.</span></p>
+      <div class="g">
+        <div>
+          <div class="field"><span><span class="ja">用途</span><span class="en">Occasion</span></span><div class="chips" id="occ"></div></div>
+          <div class="field"><span><span class="ja">お届け日</span><span class="en">Delivery date</span></span><input type="date" id="date"><div class="warn" id="warn" aria-live="polite"></div></div>
+          <div class="field"><span><span class="ja">立札のお名前（任意）</span><span class="en">Name for the card (optional)</span></span><input type="text" id="name" placeholder="例）○○一同"></div>
+        </div>
+        <div class="ticket"><h3>LINE MESSAGE</h3><p id="msg"></p><button class="copy" id="copy"><span class="ja">文面をコピー</span><span class="en">Copy message</span></button><small><span class="ja">※ 色やご予算のご希望もLINEでご相談ください。</span><span class="en">Tell us colors and budget on LINE too.</span></small></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="offer" class="offer">
+    <div class="wrap">
+      <div class="kick">WHAT WE DO</div>
+      <h2 class="h2"><span class="ja">お店でできること</span><span class="en">What we can do for you</span></h2>
+      <div class="g">
+        <div class="c"><b><span class="ja">花束・アレンジ</span><span class="en">Bouquets & arrangements</span></b><span><span class="ja">プチギフトから、お祝いの花束まで。</span><span class="en">From small gifts to celebration bouquets.</span></span></div>
+        <div class="c"><b><span class="ja">配送・スタンド花</span><span class="en">Delivery & stands</span></b><span><span class="ja">開店祝いや発表会へのお届けに。</span><span class="en">For openings, recitals and events.</span></span></div>
+        <div class="c"><b><span class="ja">ワークショップ</span><span class="en">Workshops</span></b><span><span class="ja">日程はInstagramのハイライトでお知らせします。</span><span class="en">Dates are posted in our Instagram highlights.</span></span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="visit" class="visit">
+    <div class="wrap">
+      <div class="kick">ACCESS</div>
+      <h2 class="h2"><span class="ja">我孫子市・緑</span><span class="en">Midori, Abiko</span></h2>
+      <div class="g">
+        <div>
+          <dl>
+            <dt><span class="ja">住所</span><span class="en">Address</span></dt><dd><span class="ja">〒270-1153 千葉県我孫子市緑2-11-48（ウェルシア向かい）</span><span class="en">2-11-48 Midori, Abiko, Chiba (across from Welcia)</span></dd>
+            <dt><span class="ja">営業時間</span><span class="en">Hours</span></dt><dd><span class="ja">11:00〜17:00（水・木定休）</span><span class="en">11:00–17:00 (closed Wed & Thu)</span></dd>
+            <dt>TEL</dt><dd>070-4729-4349</dd>
+            <dt><span class="ja">駐車場</span><span class="en">Parking</span></dt><dd><span class="ja">なし（詳しくはInstagramのハイライトへ）</span><span class="en">None — see our Instagram highlight</span></dd>
+            <dt>Instagram</dt><dd><a href="https://www.instagram.com/goodiesflower/" target="_blank" rel="noopener">@goodiesflower</a></dd>
+          </dl>
+          <p class="rate"><span class="ja">Googleマップ ★4.5</span><span class="en">Google Maps ★4.5</span></p>
+        </div>
+        <div class="map"><iframe loading="lazy" title="Map" src="https://www.google.com/maps?q=GOODIES%20FLOWER%20%E6%88%91%E5%AD%AB%E5%AD%90%E5%B8%82%E7%B7%912-11-48&output=embed"></iframe></div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>© GOODIES FLOWER · Abiko, Chiba · Photos: Unsplash (sample images)</footer>
+<script>
+const $ = (s) => document.querySelector(s);
+const L = () => document.body.dataset.lang;
+const jst = () => { const d = new Date(); return new Date(d.getTime() + (d.getTimezoneOffset() + 540) * 60000); };
+const OCC = [['開店・開業祝い', 'a shop opening'], ['発表会・公演', 'a recital or show'], ['楽屋花', 'backstage flowers'], ['その他のお祝い', 'another celebration']];
+const WD = [['日', 'Sun'], ['月', 'Mon'], ['火', 'Tue'], ['水', 'Wed'], ['木', 'Thu'], ['金', 'Fri'], ['土', 'Sat']];
+let occ = 0;
+// default date: next Saturday (JST)
+(() => { const t = jst(); t.setDate(t.getDate() + ((6 - t.getDay() + 7) % 7 || 7)); $('#date').value = `${t.getFullYear()}-${String(t.getMonth() + 1).padStart(2, '0')}-${String(t.getDate()).padStart(2, '0')}`; })();
+function render() { const ja = L() === 'ja';
+  $('#occ').innerHTML = OCC.map((o, i) => `<button aria-pressed="${occ === i}" data-i="${i}">${ja ? o[0] : o[1]}</button>`).join('');
+  $('#occ').querySelectorAll('button').forEach(b => b.onclick = () => { occ = +b.dataset.i; render(); });
+  $('#name').placeholder = ja ? '例）○○一同' : 'e.g. From the team at …';
+  const v = $('#date').value, name = $('#name').value.trim();
+  let dateTxt = ja ? '（日付未定）' : '(date TBD)', warn = '', cls = '';
+  if (v) { const [y, m, d] = v.split('-').map(Number); const wd = new Date(y, m - 1, d).getDay();
+    dateTxt = ja ? `${m}月${d}日（${WD[wd][0]}）` : `${WD[wd][1]}, ${m}/${d}`;
+    if (wd === 3 || wd === 4) { cls = 'ng'; warn = ja ? 'この日は定休日（水・木）です。前日までのお届けなど、LINEでご相談ください。' : 'That’s one of our days off (Wed/Thu). Message us on LINE — we can often deliver the day before.'; }
+    else { cls = 'ok'; warn = ja ? '営業日です。お早めのご予約がおすすめです。' : 'We’re open that day — booking early is best.'; } }
+  $('#warn').className = 'warn ' + cls; $('#warn').textContent = warn;
+  $('#msg').textContent = ja
+    ? `こんにちは。スタンド花の注文を相談させてください。\n用途：${OCC[occ][0]}\nお届け日：${dateTxt}\n${name ? '立札：' + name + '\n' : ''}お届け先・ご予算は改めてお伝えします。`
+    : `Hello! I’d like to ask about stand flowers.\nFor: ${OCC[occ][1]}\nDelivery: ${dateTxt}\n${name ? 'Card: ' + name + '\n' : ''}I’ll send the address and budget separately.`;
+  const t = jst(), dd = t.getDay(), h = t.getHours() + t.getMinutes() / 60, closedDay = dd === 3 || dd === 4, open = !closedDay && h >= 11 && h < 17;
+  $('#dot').classList.toggle('on', open);
+  $('#stat').textContent = closedDay ? (ja ? '本日は定休日（水・木）' : 'Closed today (Wed & Thu)') : open ? (ja ? 'ただいま営業中（〜17:00）' : 'Open now (until 17:00)') : (ja ? '営業時間外（11:00〜17:00）' : 'Closed now (11:00–17:00)'); }
+$('#date').addEventListener('change', render); $('#name').addEventListener('input', render);
+$('#copy').addEventListener('click', () => { const txt = $('#msg').textContent, b = $('#copy');
+  (navigator.clipboard ? navigator.clipboard.writeText(txt) : Promise.reject()).then(() => { b.innerHTML = '<span class="ja">コピーしました</span><span class="en">Copied</span>'; }).catch(() => { const r = document.createRange(); r.selectNodeContents($('#msg')); getSelection().removeAllRanges(); getSelection().addRange(r); }); });
+render(); setInterval(render, 60000);
+$('#langBtn').addEventListener('click', () => { const l = L() === 'ja' ? 'en' : 'ja'; document.body.dataset.lang = l; document.documentElement.lang = l; $('#langBtn').textContent = l === 'ja' ? 'EN' : '日本語'; render(); });
+</script>
+</body>
+</html>

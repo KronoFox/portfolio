@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>フラワーショップ 空の箱 | 美しが丘西</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Klee+One:wght@600&family=Sora:wght@400;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root { --sky: #d6e8f5; --sky2: #eef6fb; --navy: #1f3148; --blue: #3f74a8; --sun: #f2c94c; --white: #ffffff; --mute: #5f7187; --line: #c9dbe9; --off: #e7edf2; }
+:focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: "Zen Kaku Gothic New", sans-serif; background: var(--white); color: var(--navy); line-height: 1.9; overflow-x: hidden; }
+a { color: inherit; }
+.wrap { max-width: 1020px; margin: 0 auto; padding: 0 20px; }
+.nw { white-space: nowrap; }
+[data-lang="en"] .ja, [data-lang="ja"] .en { display: none !important; }
+.proposal { background: var(--navy); color: #c4d3e2; font-size: .75rem; text-align: center; padding: 6px 16px; }
+header { position: sticky; top: 0; z-index: 20; background: rgba(255,255,255,.95); border-bottom: 1px solid var(--line); }
+.nav { display: flex; justify-content: space-between; align-items: center; height: 60px; gap: 12px; }
+.logo { text-decoration: none; display: flex; align-items: center; gap: 10px; font-family: "Klee One", cursive; font-size: 1.25rem; }
+.logo i { width: 22px; height: 22px; border: 2px solid var(--navy); border-radius: 3px; background: linear-gradient(var(--sky), var(--white)); position: relative; }
+.logo i::before { content: ""; position: absolute; left: -4px; right: -4px; top: -6px; height: 5px; border: 2px solid var(--navy); border-radius: 2px; background: var(--white); }
+.nav ul { display: flex; gap: 22px; list-style: none; font-size: .86rem; }
+.nav ul a { text-decoration: none; }
+.lang { border: 1px solid var(--navy); background: transparent; color: var(--navy); padding: 1px 12px; font: 700 .78rem "Zen Kaku Gothic New"; cursor: pointer; border-radius: 99px; }
+.hero { background: linear-gradient(180deg, var(--sky) 0%, var(--sky2) 60%, var(--white) 100%); padding: 54px 0 70px; }
+.hero .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 44px; align-items: center; }
+.wk { display: inline-flex; gap: 4px; font-family: "Sora"; font-weight: 700; font-size: .72rem; letter-spacing: .08em; }
+.wk span { padding: 2px 8px; border-radius: 99px; background: var(--navy); color: var(--white); }
+.wk span.off { background: transparent; color: var(--mute); text-decoration: line-through; }
+.hero h1 { font-family: "Klee One", cursive; font-weight: 600; font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.45; margin: 16px 0 14px; text-wrap: balance; }
+.hero p { color: var(--mute); max-width: 440px; margin-bottom: 22px; }
+.btns { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+.btn { display: inline-block; text-decoration: none; background: var(--navy); color: var(--white); padding: 11px 24px; font-weight: 700; border-radius: 99px; }
+.status { display: inline-flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--mute); }
+.dot { width: 9px; height: 9px; border-radius: 50%; background: #b9c6d2; }
+.dot.on { background: var(--sun); box-shadow: 0 0 0 4px rgba(242,201,76,.3); }
+/* box photo */
+.box { justify-self: center; width: min(400px, 100%); position: relative; padding-top: 22px; }
+.box .lid { position: absolute; top: 0; left: -10px; right: -10px; height: 30px; background: var(--white); border: 2px solid var(--navy); border-radius: 6px; transform: rotate(-3deg); transform-origin: left bottom; box-shadow: 0 6px 0 var(--sky); }
+.box img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; display: block; border: 2px solid var(--navy); border-top: 0; border-radius: 0 0 6px 6px; }
+.box figcaption { font-size: .7rem; color: var(--mute); text-align: center; margin-top: 10px; }
+section { padding: 78px 0; }
+.kick { font-family: "Sora"; font-weight: 600; letter-spacing: .2em; font-size: .78rem; color: var(--blue); }
+.h2 { font-family: "Klee One", cursive; font-weight: 600; font-size: clamp(1.5rem, 3.6vw, 2.1rem); line-height: 1.5; margin: 6px 0 12px; text-wrap: balance; }
+.lead { color: var(--mute); max-width: 600px; }
+/* planner */
+.plan { background: var(--sky2); }
+.days { display: grid; grid-template-columns: repeat(7, 1fr); gap: 6px; margin-top: 22px; max-width: 640px; }
+.days .hd { text-align: center; font-family: "Sora"; font-size: .72rem; color: var(--mute); }
+.days button { aspect-ratio: 1 / 1; border: 2px solid var(--line); background: var(--white); border-radius: 10px; font: 600 1rem "Sora"; color: var(--navy); cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: center; line-height: 1.1; font-variant-numeric: tabular-nums; }
+.days button small { font: 500 .6rem "Zen Kaku Gothic New"; color: var(--mute); }
+.days button.off { background: var(--off); color: var(--mute); border-style: dashed; }
+.days button.pick { background: var(--sun); border-color: var(--navy); }
+.days button.need { background: var(--navy); color: var(--white); border-color: var(--navy); }
+.days button.need small { color: #c4d3e2; }
+.legend { display: flex; flex-wrap: wrap; gap: 14px; font-size: .78rem; color: var(--mute); margin-top: 10px; }
+.legend i { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 6px; vertical-align: -1px; }
+.answer { margin-top: 22px; background: var(--white); border: 2px solid var(--navy); border-radius: 14px; padding: 20px 22px; max-width: 640px; }
+.answer b { font-family: "Klee One", cursive; font-size: 1.15rem; display: block; margin-bottom: 4px; }
+.answer p { color: var(--mute); }
+/* about */
+.about .g { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 18px; }
+.about .c { border: 2px solid var(--line); border-radius: 14px; padding: 20px; }
+.about .c b { font-family: "Klee One", cursive; font-size: 1.1rem; display: block; margin-bottom: 4px; }
+.about .c span { color: var(--mute); font-size: .92rem; }
+/* visit */
+.visit .g { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; margin-top: 12px; }
+.visit dl { display: grid; grid-template-columns: 92px 1fr; gap: 10px 14px; }
+.visit dt { color: var(--mute); font-size: .88rem; }
+.map { min-height: 320px; border-radius: 14px; overflow: hidden; border: 2px solid var(--line); }
+.map iframe { width: 100%; height: 100%; min-height: 320px; border: 0; display: block; }
+footer { text-align: center; padding: 24px 16px 32px; font-size: .75rem; color: var(--mute); border-top: 1px solid var(--line); }
+@media (max-width: 820px) {
+  .nav ul { display: none; }
+  .hero .wrap, .visit .g { grid-template-columns: 1fr; }
+  .about .g { grid-template-columns: 1fr; }
+}
+@media (max-width: 420px) { .days { gap: 4px; } .days button { font-size: .88rem; border-radius: 8px; } }
+</style>
+</head>
+<body data-lang="ja">
+<div class="proposal"><span class="ja">※ ご提案用のサンプル（モックアップ）です・検索エンジン非表示</span><span class="en">Proposal mockup · hidden from search engines</span></div>
+<header><div class="wrap nav">
+  <a class="logo" href="#"><i aria-hidden="true"></i>空の箱</a>
+  <ul><li><a href="#plan"><span class="ja">受け取り日</span><span class="en">Pick-up day</span></a></li><li><a href="#about"><span class="ja">お店のこと</span><span class="en">About</span></a></li><li><a href="#visit"><span class="ja">アクセス</span><span class="en">Visit</span></a></li></ul>
+  <button class="lang" id="langBtn">EN</button>
+</div></header>
+
+<main>
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <div class="wk" aria-label="open Monday to Friday"><span>MON</span><span>TUE</span><span>WED</span><span>THU</span><span>FRI</span><span class="off">SAT</span><span class="off">SUN</span></div>
+        <h1><span class="ja">平日だけひらく、<br>空の箱。</span><span class="en">A box of sky,<br>open on weekdays.</span></h1>
+        <p><span class="ja">横浜市青葉区・美しが丘西の小さなフラワーショップです。営業は月曜〜金曜の11時から18時まで。花束やアレンジのご相談は、お電話・メールでお気軽にどうぞ。</span><span class="en">A small flower shop in Utsukushigaoka-nishi, Aoba-ku, Yokohama — open Monday to Friday, 11:00–18:00. Call or email us about bouquets and arrangements.</span></p>
+        <div class="btns"><a class="btn" href="tel:0459025530">045-902-5530</a><span class="status"><i class="dot" id="dot"></i><span id="stat"></span></span></div>
+      </div>
+      <figure class="box"><div class="lid" aria-hidden="true"></div><img src="hero.jpg" alt=""><figcaption><span class="ja">※写真はイメージです（公開時はお店の写真に差し替えます）</span><span class="en">Sample photo — to be replaced with the shop’s own.</span></figcaption></figure>
+    </div>
+  </div>
+
+  <section id="plan" class="plan">
+    <div class="wrap">
+      <div class="kick">PICK-UP PLANNER</div>
+      <h2 class="h2"><span class="ja">お花が必要な日は、いつですか？</span><span class="en">When do you need the flowers?</span></h2>
+      <p class="lead"><span class="ja">土日は定休日なので、週末に贈るお花は金曜日までのお受け取りがおすすめです。お花が必要な日をタップしてください。</span><span class="en">We’re closed on weekends, so for a weekend gift we suggest picking up by Friday. Tap the day you need the flowers.</span></p>
+      <div class="days" id="days"></div>
+      <div class="legend"><span><i style="background:var(--navy)"></i><span class="ja">必要な日</span><span class="en">Needed</span></span><span><i style="background:var(--sun);border:1px solid var(--navy)"></i><span class="ja">おすすめの受け取り日</span><span class="en">Suggested pick-up</span></span><span><i style="background:var(--off);border:1px dashed var(--mute)"></i><span class="ja">定休日</span><span class="en">Closed</span></span></div>
+      <div class="answer" aria-live="polite"><b id="ansT"></b><p id="ansP"></p></div>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="wrap">
+      <div class="kick">ABOUT</div>
+      <h2 class="h2"><span class="ja">空の箱のこと</span><span class="en">About the shop</span></h2>
+      <div class="g">
+        <div class="c"><b><span class="ja">平日11時〜18時</span><span class="en">Weekdays 11–18</span></b><span><span class="ja">土日はお休み。お仕事帰りの受け取りも。</span><span class="en">Closed weekends — pick up on your way home from work.</span></span></div>
+        <div class="c"><b><span class="ja">メールでも相談OK</span><span class="en">Email welcome</span></b><span><span class="ja">info.soranohako@gmail.com まで、お気軽にお問い合わせください。</span><span class="en">Write to info.soranohako@gmail.com anytime.</span></span></div>
+        <div class="c"><b><span class="ja">入荷はInstagramで</span><span class="en">New arrivals on Instagram</span></b><span><span class="ja">店頭のお花や作品を、Instagramでお知らせしています。</span><span class="en">See what’s in the shop on our Instagram.</span></span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="visit" class="visit" style="padding-top:0">
+    <div class="wrap">
+      <div class="kick">ACCESS</div>
+      <h2 class="h2"><span class="ja">横浜市青葉区・美しが丘西</span><span class="en">Utsukushigaoka-nishi, Aoba-ku</span></h2>
+      <div class="g">
+        <div>
+          <dl>
+            <dt><span class="ja">住所</span><span class="en">Address</span></dt><dd><span class="ja">神奈川県横浜市青葉区美しが丘西3丁目（番地は公開時に掲載）</span><span class="en">Utsukushigaoka-nishi 3-chome, Aoba-ku, Yokohama</span></dd>
+            <dt><span class="ja">営業時間</span><span class="en">Hours</span></dt><dd><span class="ja">11:00〜18:00（土・日定休）</span><span class="en">11:00–18:00 (closed Sat & Sun)</span></dd>
+            <dt>TEL</dt><dd>045-902-5530</dd>
+            <dt>Mail</dt><dd>info.soranohako@gmail.com</dd>
+            <dt>Instagram</dt><dd><a href="https://www.instagram.com/soranohako/" target="_blank" rel="noopener">@soranohako</a></dd>
+          </dl>
+        </div>
+        <div class="map"><iframe loading="lazy" title="Map" src="https://www.google.com/maps?q=%E6%A8%AA%E6%B5%9C%E5%B8%82%E9%9D%92%E8%91%89%E5%8C%BA%E7%BE%8E%E3%81%97%E3%81%8C%E4%B8%98%E8%A5%BF3%E4%B8%81%E7%9B%AE&output=embed"></iframe></div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>© フラワーショップ 空の箱 · Aoba-ku, Yokohama · Photos: Unsplash (sample images)</footer>
+<script>
+const $ = (s) => document.querySelector(s);
+const L = () => document.body.dataset.lang;
+const jst = () => { const d = new Date(); return new Date(d.getTime() + (d.getTimezoneOffset() + 540) * 60000); };
+const WD = [['日', 'Sun'], ['月', 'Mon'], ['火', 'Tue'], ['水', 'Wed'], ['木', 'Thu'], ['金', 'Fri'], ['土', 'Sat']];
+const off = (d) => d.getDay() === 0 || d.getDay() === 6;
+const today = jst(); today.setHours(0, 0, 0, 0);
+const start = new Date(today); start.setDate(start.getDate() - ((start.getDay() + 6) % 7)); // Monday of this week
+const cells = Array.from({ length: 14 }, (_, i) => { const d = new Date(start); d.setDate(d.getDate() + i); return d; });
+let need = cells.findIndex(d => d > today && d.getDay() === 0); if (need < 0) need = 13;
+function pickFor(i) { // latest open day on or before the needed day, not before today
+  for (let j = i; j >= 0; j--) { if (!off(cells[j]) && cells[j] >= today) return j; } return -1; }
+function render() { const ja = L() === 'ja', p = pickFor(need);
+  const hd = [1, 2, 3, 4, 5, 6, 0].map(d => `<div class="hd">${ja ? WD[d][0] : WD[d][1]}</div>`).join('');
+  $('#days').innerHTML = hd + cells.map((d, i) => { const past = d < today; const cls = [off(d) ? 'off' : '', i === p && i !== need ? 'pick' : '', i === need ? 'need' : ''].join(' ');
+    return `<button class="${cls}" data-i="${i}" ${past ? 'disabled style="opacity:.35;cursor:default"' : ''} aria-label="${d.getMonth() + 1}/${d.getDate()}">${d.getDate()}<small>${off(d) ? (ja ? '定休' : 'closed') : (i === p ? (ja ? '受取' : 'pick up') : '')}</small></button>`; }).join('');
+  $('#days').querySelectorAll('button:not([disabled])').forEach(b => b.onclick = () => { need = +b.dataset.i; render(); });
+  const n = cells[need], f = (d) => ja ? `${d.getMonth() + 1}月${d.getDate()}日（${WD[d.getDay()][0]}）` : `${WD[d.getDay()][1]} ${d.getMonth() + 1}/${d.getDate()}`;
+  if (p < 0) { $('#ansT').textContent = ja ? 'ご相談ください' : 'Please get in touch'; $('#ansP').textContent = ja ? 'その日までに営業日がありません。お電話でご相談ください。' : 'There’s no open day before then — please call us.'; }
+  else if (p === need) { $('#ansT').textContent = ja ? `${f(n)}にそのまま受け取れます` : `Pick up on ${f(n)}`; $('#ansP').textContent = ja ? '営業日です。11:00〜18:00の間にお越しください。ご予約はお電話・メールで。' : 'We’re open that day, 11:00–18:00. Book by phone or email.'; }
+  else { $('#ansT').textContent = ja ? `${f(cells[p])}までに受け取り` : `Pick up by ${f(cells[p])}`; $('#ansP').textContent = ja ? `${f(n)}は定休日です。その前の営業日（18:00まで）にお受け取りください。お渡しする日を伝えていただければ、お花の状態もご相談できます。` : `${f(n)} is a closed day, so collect on the last open day before (until 18:00). Tell us when you’ll give them and we can talk about the flowers.`; }
+  const t = jst(), h = t.getHours() + t.getMinutes() / 60, isOff = t.getDay() === 0 || t.getDay() === 6, open = !isOff && h >= 11 && h < 18;
+  $('#dot').classList.toggle('on', open);
+  $('#stat').textContent = isOff ? (ja ? '本日は定休日（土・日）' : 'Closed today (weekend)') : open ? (ja ? 'ただいま営業中（〜18:00）' : 'Open now (until 18:00)') : (ja ? '営業時間外（平日11:00〜18:00）' : 'Closed now (weekdays 11–18)'); }
+render(); setInterval(render, 60000);
+$('#langBtn').addEventListener('click', () => { const l = L() === 'ja' ? 'en' : 'ja'; document.body.dataset.lang = l; document.documentElement.lang = l; $('#langBtn').textContent = l === 'ja' ? 'EN' : '日本語'; render(); });
+</script>
+</body>
+</html>

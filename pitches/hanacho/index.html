@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>花朝 はなちょう | 船橋・海神</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kaisei+Opti:wght@700&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Josefin+Sans:wght@600&display=swap" rel="stylesheet">
+<style>
+:root { --green: #1d4b3c; --green2: #2c6b56; --sky: #e4f0f4; --sun: #f0b43c; --white: #ffffff; --ink: #1d2623; --mute: #5e6b67; --line: #cfdcd8; }
+:focus-visible { outline: 3px solid var(--sun); outline-offset: 3px; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: "Zen Kaku Gothic New", sans-serif; background: var(--white); color: var(--ink); line-height: 1.9; overflow-x: hidden; }
+a { color: inherit; }
+.wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
+.nw { white-space: nowrap; }
+[data-lang="en"] .ja, [data-lang="ja"] .en { display: none !important; }
+.proposal { background: var(--green); color: #cfe3dc; font-size: .75rem; text-align: center; padding: 6px 16px; }
+header { position: sticky; top: 0; z-index: 20; background: rgba(255,255,255,.96); border-bottom: 1px solid var(--line); }
+.nav { display: flex; justify-content: space-between; align-items: center; height: 60px; gap: 12px; }
+.logo { text-decoration: none; display: flex; align-items: baseline; gap: 10px; }
+.logo b { font-family: "Kaisei Opti", serif; font-size: 1.45rem; color: var(--green); }
+.logo small { font-family: "Josefin Sans"; font-size: .72rem; letter-spacing: .2em; color: var(--mute); }
+.nav ul { display: flex; gap: 22px; list-style: none; font-size: .86rem; }
+.nav ul a { text-decoration: none; }
+.lang { border: 1px solid var(--green); background: transparent; color: var(--green); padding: 1px 12px; font: 700 .78rem "Zen Kaku Gothic New"; cursor: pointer; border-radius: 4px; }
+.hero { background: linear-gradient(180deg, var(--sky), var(--white)); padding: 50px 0 66px; }
+.hero .wrap { display: grid; grid-template-columns: auto 1fr .9fr; gap: 36px; align-items: center; }
+.sign { writing-mode: vertical-rl; background: var(--green); color: var(--white); font-family: "Kaisei Opti", serif; font-size: 2.6rem; letter-spacing: .3em; padding: 26px 16px; border: 6px double #d9e7e1; line-height: 1; box-shadow: 0 12px 26px rgba(29,75,60,.25); }
+.sign small { font-size: .78rem; letter-spacing: .15em; margin-top: 18px; font-family: "Zen Kaku Gothic New"; }
+.since { font-family: "Josefin Sans"; letter-spacing: .22em; font-size: .8rem; color: var(--green2); }
+.hero h1 { font-family: "Kaisei Opti", serif; font-size: clamp(1.9rem, 4.4vw, 2.9rem); line-height: 1.5; margin: 10px 0 14px; color: var(--green); text-wrap: balance; }
+.hero p { color: var(--mute); max-width: 440px; margin-bottom: 20px; }
+.btns { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+.btn { display: inline-block; text-decoration: none; background: var(--green); color: var(--white); padding: 11px 24px; font-weight: 700; border-radius: 4px; }
+.status { display: inline-flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--mute); }
+.dot { width: 9px; height: 9px; border-radius: 50%; background: #b5bfbc; }
+.dot.on { background: var(--sun); box-shadow: 0 0 0 4px rgba(240,180,60,.25); }
+.photo { width: min(380px, 100%); justify-self: center; }
+.photo img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; display: block; border-radius: 4px; }
+.photo figcaption { font-size: .7rem; color: var(--mute); text-align: center; margin-top: 10px; }
+section { padding: 78px 0; }
+.kick { font-family: "Josefin Sans"; letter-spacing: .22em; font-size: .8rem; color: var(--green2); }
+.h2 { font-family: "Kaisei Opti", serif; font-size: clamp(1.45rem, 3.4vw, 2.05rem); line-height: 1.5; margin: 6px 0 12px; color: var(--green); text-wrap: balance; }
+.lead { color: var(--mute); max-width: 600px; }
+/* guide */
+.guide { background: var(--sky); }
+.tabs { display: flex; flex-wrap: wrap; gap: 0; margin-top: 24px; border-bottom: 2px solid var(--green); }
+.tabs button { background: transparent; border: 0; padding: 10px 18px; font: 700 .95rem "Zen Kaku Gothic New"; color: var(--green); cursor: pointer; border-radius: 6px 6px 0 0; }
+.tabs button[aria-selected="true"] { background: var(--green); color: var(--white); }
+.panel { background: var(--white); display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
+.panel > div { padding: 26px 26px 24px; }
+.panel > div + div { border-left: 1px solid var(--line); }
+.panel h3 { font-family: "Kaisei Opti", serif; color: var(--green); font-size: 1.15rem; margin-bottom: 8px; }
+.panel ul { list-style: none; display: grid; gap: 6px; }
+.panel li label { display: flex; gap: 10px; align-items: flex-start; cursor: pointer; }
+.panel li input { margin-top: 7px; accent-color: var(--green); }
+.note { background: var(--sky); border-left: 4px solid var(--sun); padding: 14px 16px; font-size: .95rem; white-space: pre-line; min-height: 7em; }
+.hint { font-size: .78rem; color: var(--mute); margin-top: 8px; }
+/* lessons */
+.les .g { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 20px; }
+.les .c { border-top: 3px solid var(--green); padding-top: 14px; }
+.les .c b { font-family: "Kaisei Opti", serif; font-size: 1.1rem; display: block; color: var(--green); }
+.les .c span { color: var(--mute); font-size: .9rem; }
+/* visit */
+.visit .g { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; margin-top: 12px; }
+.visit dl { display: grid; grid-template-columns: 92px 1fr; gap: 10px 14px; }
+.visit dt { color: var(--mute); font-size: .88rem; }
+.rate { font-size: .78rem; color: var(--mute); margin-top: 14px; }
+.map { min-height: 320px; border: 1px solid var(--line); border-radius: 4px; overflow: hidden; }
+.map iframe { width: 100%; height: 100%; min-height: 320px; border: 0; display: block; }
+footer { background: var(--green); color: #cfe3dc; text-align: center; padding: 24px 16px 32px; font-size: .75rem; }
+@media (max-width: 860px) {
+  .nav ul { display: none; }
+  .hero .wrap { grid-template-columns: auto 1fr; }
+  .photo { grid-column: 1 / -1; }
+  .panel, .visit .g { grid-template-columns: 1fr; }
+  .panel > div + div { border-left: 0; border-top: 1px solid var(--line); }
+  .les .g { grid-template-columns: 1fr; }
+}
+@media (max-width: 480px) { .sign { font-size: 1.9rem; padding: 18px 10px; } .hero .wrap { gap: 18px; } }
+</style>
+</head>
+<body data-lang="ja">
+<div class="proposal"><span class="ja">※ ご提案用のサンプル（モックアップ）です・検索エンジン非表示</span><span class="en">Proposal mockup · hidden from search engines</span></div>
+<header><div class="wrap nav">
+  <a class="logo" href="#"><b>花朝</b><small>HANACHO</small></a>
+  <ul><li><a href="#guide"><span class="ja">ご注文の前に</span><span class="en">Ordering</span></a></li><li><a href="#lessons"><span class="ja">レッスン</span><span class="en">Lessons</span></a></li><li><a href="#visit"><span class="ja">アクセス</span><span class="en">Visit</span></a></li></ul>
+  <button class="lang" id="langBtn">EN</button>
+</div></header>
+
+<main>
+  <div class="hero">
+    <div class="wrap">
+      <div class="sign" aria-hidden="true">花朝<small>創業 昭和二十七年</small></div>
+      <div>
+        <div class="since">FUNABASHI · SINCE 1952</div>
+        <h1><span class="ja">昭和27年から、<br>船橋の朝に花を。</span><span class="en">Flowers for Funabashi mornings, since 1952.</span></h1>
+        <p><span class="ja">2026年7月で創業74年。お誕生日のお祝いから、イベント、供花まで。朝8時30分から開いている、船橋駅から1駅の町の花屋です。</span><span class="en">74 years in July 2026. Birthday bouquets, event flowers and funeral arrangements — a neighborhood florist one stop from Funabashi Station, open from 8:30 a.m.</span></p>
+        <div class="btns"><a class="btn" href="tel:0474315374">047-431-5374</a><span class="status"><i class="dot" id="dot"></i><span id="stat"></span></span></div>
+      </div>
+      <figure class="photo"><img src="hero.jpg" alt=""><figcaption><span class="ja">※写真はイメージです（公開時はお店の写真に差し替えます）</span><span class="en">Sample photo — to be replaced with the shop’s own.</span></figcaption></figure>
+    </div>
+  </div>
+
+  <section id="guide" class="guide">
+    <div class="wrap">
+      <div class="kick">BEFORE YOU ORDER</div>
+      <h2 class="h2"><span class="ja">ご注文の前に、決めておくとスムーズなこと</span><span class="en">What to decide before you call</span></h2>
+      <p class="lead"><span class="ja">用途を選んで、決まっていることにチェック。お電話でそのまま読み上げられるメモができます。</span><span class="en">Pick the occasion and tick what you already know — you’ll get a note you can read out on the phone.</span></p>
+      <div class="tabs" role="tablist" id="tabs"></div>
+      <div class="panel">
+        <div><h3 id="ptitle"></h3><ul id="checks"></ul></div>
+        <div><h3><span class="ja">お電話用メモ</span><span class="en">Phone note</span></h3><div class="note" id="note" aria-live="polite"></div><p class="hint"><span class="ja">※ 花束は細かいご要望もお聞きします。地方発送も承ります。</span><span class="en">We’re happy to take detailed requests, and we ship nationwide.</span></p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="lessons" class="les">
+    <div class="wrap">
+      <div class="kick">SEASONAL LESSONS</div>
+      <h2 class="h2"><span class="ja">季節のレッスン</span><span class="en">Seasonal lessons</span></h2>
+      <p class="lead"><span class="ja">これまでに開いてきたレッスンです。日程はInstagramでお知らせします。</span><span class="en">Lessons we’ve run before — dates are announced on Instagram.</span></p>
+      <div class="g">
+        <div class="c"><b><span class="ja">春のアレンジ</span><span class="en">Spring arrangement</span></b><span><span class="ja">季節の花でつくるアレンジメント。</span><span class="en">An arrangement with spring flowers.</span></span></div>
+        <div class="c"><b><span class="ja">スワッグ</span><span class="en">Swag</span></b><span><span class="ja">吊るして飾る、束ねるだけの花飾り。</span><span class="en">A hanging bundle of flowers and greens.</span></span></div>
+        <div class="c"><b><span class="ja">クリスマス</span><span class="en">Christmas</span></b><span><span class="ja">リースなど、冬のレッスン。</span><span class="en">Wreaths and other winter pieces.</span></span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="visit" class="visit" style="padding-top:0">
+    <div class="wrap">
+      <div class="kick">ACCESS</div>
+      <h2 class="h2"><span class="ja">船橋市・海神</span><span class="en">Kaijin, Funabashi</span></h2>
+      <div class="g">
+        <div>
+          <dl>
+            <dt><span class="ja">住所</span><span class="en">Address</span></dt><dd><span class="ja">〒273-0021 千葉県船橋市海神4-11-7</span><span class="en">4-11-7 Kaijin, Funabashi, Chiba</span></dd>
+            <dt><span class="ja">営業時間</span><span class="en">Hours</span></dt><dd><span class="ja">8:30〜19:00（定休日はお店に確認して掲載）</span><span class="en">8:30–19:00 (days off to be confirmed)</span></dd>
+            <dt>TEL / FAX</dt><dd>047-431-5374</dd>
+            <dt>Instagram</dt><dd><a href="https://www.instagram.com/hanacho1952/" target="_blank" rel="noopener">@hanacho1952</a></dd>
+            <dt><span class="ja">駐車場</span><span class="en">Parking</span></dt><dd><span class="ja">詳しくはInstagramのハイライト「駐車場のこと」へ</span><span class="en">See the “parking” highlight on Instagram</span></dd>
+          </dl>
+          <p class="rate"><span class="ja">Googleマップ ★4.3</span><span class="en">Google Maps ★4.3</span></p>
+        </div>
+        <div class="map"><iframe loading="lazy" title="Map" src="https://www.google.com/maps?q=%E8%8A%B1%E6%9C%9D%20%E8%88%B9%E6%A9%8B%E5%B8%82%E6%B5%B7%E7%A5%9E4-11-7&output=embed"></iframe></div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>© 花朝 Hanacho · Funabashi, Chiba · Photos: Unsplash (sample images)</footer>
+<script>
+const $ = (s) => document.querySelector(s);
+const L = () => document.body.dataset.lang;
+const jst = () => { const d = new Date(); return new Date(d.getTime() + (d.getTimezoneOffset() + 540) * 60000); };
+const P = [
+  { t: ['お誕生日・記念日', 'Birthdays'], items: [['お渡しする日・時間', 'Pick-up date and time'], ['花束かアレンジメントか', 'Bouquet or arrangement'], ['ご予算', 'Budget'], ['お好きな色・苦手な花', 'Favorite colors / flowers to avoid'], ['メッセージカードの有無', 'Message card?']] },
+  { t: ['お祝い・イベント', 'Events'], items: [['お届け先と日時', 'Delivery address and time'], ['会場・開始時間', 'Venue and start time'], ['ご予算', 'Budget'], ['立札（名札）のお名前', 'Name on the card/stand'], ['お祝いの内容（開店・発表会など）', 'Occasion (opening, recital…)']] },
+  { t: ['供花・お供え', 'Funeral'], items: [['斎場・お寺の名前と日時', 'Hall/temple name and date'], ['名札のお名前（連名の場合も）', 'Name(s) for the name card'], ['ご予算', 'Budget'], ['ご宗派・色の指定', 'Religion / color requests'], ['お届けか、ご来店か', 'Delivery or pick-up']] },
+  { t: ['地方発送', 'Shipping'], items: [['お届け先の住所・お名前', 'Recipient name and address'], ['到着希望日', 'Preferred arrival date'], ['ご予算（送料別）', 'Budget (shipping extra)'], ['お届けの目的', 'What it’s for'], ['メッセージカードの有無', 'Message card?']] }
+];
+let cur = 0; const done = P.map(() => new Set());
+function render() { const ja = L() === 'ja', p = P[cur];
+  $('#tabs').innerHTML = P.map((q, i) => `<button role="tab" aria-selected="${i === cur}" data-i="${i}">${ja ? q.t[0] : q.t[1]}</button>`).join('');
+  $('#tabs').querySelectorAll('button').forEach(b => b.onclick = () => { cur = +b.dataset.i; render(); });
+  $('#ptitle').textContent = ja ? `「${p.t[0]}」で伝えること` : `For: ${p.t[1]}`;
+  $('#checks').innerHTML = p.items.map((it, i) => `<li><label><input type="checkbox" data-i="${i}" ${done[cur].has(i) ? 'checked' : ''}><span>${ja ? it[0] : it[1]}</span></label></li>`).join('');
+  $('#checks').querySelectorAll('input').forEach(c => c.onchange = () => { const i = +c.dataset.i; c.checked ? done[cur].add(i) : done[cur].delete(i); note(); });
+  note(); status(); }
+function note() { const ja = L() === 'ja', p = P[cur];
+  const ok = p.items.filter((_, i) => done[cur].has(i)), todo = p.items.filter((_, i) => !done[cur].has(i));
+  $('#note').textContent = ja
+    ? `「${p.t[0]}」でお花をお願いしたいです。\n${ok.length ? '決まっていること：' + ok.map(x => x[0]).join('、') : ''}${todo.length ? '\nまだ決まっていないこと：' + todo.map(x => x[0]).join('、') + '（ご相談させてください）' : '\n全部決まっています。'}`
+    : `I’d like to order flowers — ${p.t[1].toLowerCase()}.\n${ok.length ? 'Decided: ' + ok.map(x => x[1]).join(', ') : ''}${todo.length ? '\nStill deciding: ' + todo.map(x => x[1]).join(', ') + ' (would love your advice)' : '\nEverything is decided.'}`; }
+function status() { const ja = L() === 'ja', t = jst(), h = t.getHours() + t.getMinutes() / 60, open = h >= 8.5 && h < 19;
+  $('#dot').classList.toggle('on', open);
+  $('#stat').textContent = open ? (ja ? 'ただいま営業時間内（定休日を除く）' : 'Within opening hours (except days off)') : (ja ? '営業時間外（8:30〜19:00）' : 'Closed now (8:30–19:00)'); }
+render(); setInterval(status, 60000);
+$('#langBtn').addEventListener('click', () => { const l = L() === 'ja' ? 'en' : 'ja'; document.body.dataset.lang = l; document.documentElement.lang = l; $('#langBtn').textContent = l === 'ja' ? 'EN' : '日本語'; render(); });
+</script>
+</body>
+</html>

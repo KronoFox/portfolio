@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Bar Opal | 六角橋・白楽</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Italiana&family=Zen+Old+Mincho:wght@600;900&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root { --ink: #0e0e12; --ink2: #17171d; --line: #2c2c36; --text: #ecebf0; --mute: #9b99a8; --fire: linear-gradient(115deg, #8fe0cf 0%, #a9a2f2 30%, #f2b3c6 58%, #f4dd9c 82%, #8fe0cf 100%); --accent: #b9b0f5; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: "Zen Kaku Gothic New", sans-serif; background: var(--ink); color: var(--text); line-height: 1.9; overflow-x: hidden; }
+a { color: inherit; }
+.wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
+.nw { white-space: nowrap; }
+[data-lang="en"] .ja, [data-lang="ja"] .en { display: none !important; }
+.proposal { background: #07070a; color: var(--mute); font-size: .75rem; text-align: center; padding: 6px 16px; }
+header { position: sticky; top: 0; z-index: 20; background: rgba(14,14,18,.94); border-bottom: 1px solid var(--line); }
+.nav { display: flex; justify-content: space-between; align-items: center; height: 60px; gap: 12px; }
+.logo { text-decoration: none; font-family: "Italiana", serif; font-size: 1.5rem; letter-spacing: .12em; }
+.nav ul { display: flex; gap: 22px; list-style: none; font-size: .86rem; }
+.nav ul a { text-decoration: none; color: var(--mute); }
+.nav ul a:hover { color: var(--text); }
+.lang { border: 1px solid var(--line); background: transparent; color: var(--text); padding: 2px 12px; font: 700 .78rem "Zen Kaku Gothic New"; cursor: pointer; border-radius: 99px; }
+.hero { padding: 56px 0 72px; }
+.hero .wrap { display: grid; grid-template-columns: 1.05fr .95fr; gap: 48px; align-items: center; }
+.status { display: inline-flex; align-items: center; gap: 8px; font-size: .82rem; color: var(--mute); border: 1px solid var(--line); border-radius: 99px; padding: 3px 14px; }
+.dot { width: 8px; height: 8px; border-radius: 50%; background: #555; }
+.dot.on { background: #8fe0cf; box-shadow: 0 0 10px #8fe0cf; }
+.hero h1 { font-family: "Zen Old Mincho", serif; font-weight: 900; font-size: clamp(2rem, 5vw, 3.3rem); line-height: 1.45; margin: 18px 0 18px; text-wrap: balance; }
+.hero h1 .shine { background: var(--fire); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.hero p { color: var(--mute); max-width: 460px; margin-bottom: 24px; }
+.btns { display: flex; gap: 12px; flex-wrap: wrap; }
+.btn { display: inline-block; text-decoration: none; padding: 12px 24px; font-weight: 700; border-radius: 99px; background: var(--text); color: var(--ink); }
+.btn.ghost { background: transparent; color: var(--text); box-shadow: inset 0 0 0 1px var(--line); }
+.photo { justify-self: center; width: min(420px, 100%); position: relative; }
+.photo img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; display: block; border-radius: 200px 200px 6px 6px; }
+.photo::after { content: ""; position: absolute; inset: -10px -10px 30px -10px; border-radius: 210px 210px 10px 10px; border: 1px solid transparent; background: var(--fire) border-box; -webkit-mask: linear-gradient(#000 0 0) padding-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude; opacity: .7; pointer-events: none; }
+.photo figcaption { font-size: .7rem; color: var(--mute); text-align: center; margin-top: 14px; }
+section { padding: 84px 0; }
+.kick { font-family: "Italiana", serif; letter-spacing: .25em; font-size: .95rem; color: var(--accent); }
+.h2 { font-family: "Zen Old Mincho", serif; font-weight: 900; font-size: clamp(1.5rem, 3.6vw, 2.2rem); line-height: 1.5; margin: 6px 0 14px; text-wrap: balance; }
+.lead { color: var(--mute); max-width: 560px; }
+/* opal picker */
+.pick { background: var(--ink2); border-block: 1px solid var(--line); }
+.pick .g { display: grid; grid-template-columns: 300px 1fr; gap: 48px; align-items: center; margin-top: 28px; }
+.stone { width: 100%; max-width: 300px; aspect-ratio: 3 / 4; border-radius: 50%; justify-self: center; background: radial-gradient(circle at 32% 28%, rgba(255,255,255,.85), transparent 18%), var(--g, var(--fire)); background-size: 100% 100%, 220% 220%; animation: play 9s ease-in-out infinite alternate; box-shadow: inset -18px -24px 50px rgba(0,0,0,.35), 0 24px 60px rgba(0,0,0,.5); transition: background .6s; }
+@keyframes play { from { background-position: 0 0, 0% 30%; } to { background-position: 0 0, 100% 70%; } }
+@media (prefers-reduced-motion: reduce) { .stone { animation: none; } }
+.row { margin-top: 18px; }
+.row > span { display: block; font-size: .78rem; color: var(--mute); letter-spacing: .15em; margin-bottom: 8px; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chips button { background: transparent; border: 1px solid var(--line); color: var(--text); padding: 7px 16px; border-radius: 99px; cursor: pointer; font: 500 .92rem "Zen Kaku Gothic New"; display: inline-flex; align-items: center; gap: 8px; }
+.chips button i { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
+.chips button[aria-pressed="true"] { background: var(--text); color: var(--ink); border-color: var(--text); }
+.memo { margin-top: 26px; border-left: 2px solid var(--accent); padding: 4px 0 4px 18px; }
+.memo p { font-family: "Zen Old Mincho", serif; font-weight: 600; font-size: 1.15rem; line-height: 1.8; }
+.memo small { color: var(--mute); font-size: .78rem; }
+/* about */
+.about .g { display: grid; grid-template-columns: 1fr 1fr 1fr; border-top: 1px solid var(--line); margin-top: 18px; }
+.n { padding: 22px 22px 0 0; }
+.n + .n { padding-left: 22px; border-left: 1px solid var(--line); }
+.n b { font-family: "Zen Old Mincho", serif; font-size: 1.12rem; display: block; margin-bottom: 4px; }
+.n span { color: var(--mute); font-size: .92rem; }
+/* route */
+.route ol { list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 22px; counter-reset: s; }
+.route li { border: 1px solid var(--line); border-radius: 14px; padding: 18px 18px 16px; }
+.route li b { display: block; font-family: "Zen Old Mincho", serif; font-size: 1.05rem; margin-bottom: 4px; }
+.route li span { color: var(--mute); font-size: .9rem; }
+.route li .st { font-family: "Italiana", serif; letter-spacing: .15em; color: var(--accent); font-size: .85rem; }
+/* visit */
+.visit .g { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; margin-top: 16px; }
+.visit dl { display: grid; grid-template-columns: 92px 1fr; gap: 10px 14px; }
+.visit dt { color: var(--mute); font-size: .88rem; }
+.hours { width: 100%; border-collapse: collapse; font-size: .9rem; font-variant-numeric: tabular-nums; }
+.hours td { padding: 3px 0; border-bottom: 1px dashed var(--line); }
+.hours td:last-child { text-align: right; }
+.hours tr.today td { color: var(--accent); font-weight: 700; }
+.rate { font-size: .78rem; color: var(--mute); margin-top: 14px; }
+.map { min-height: 320px; border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
+.map iframe { width: 100%; height: 100%; min-height: 320px; border: 0; display: block; filter: invert(.9) hue-rotate(180deg) saturate(.5); }
+footer { text-align: center; padding: 24px 16px 32px; font-size: .75rem; color: var(--mute); border-top: 1px solid var(--line); }
+@media (max-width: 820px) {
+  .nav ul { display: none; }
+  .hero .wrap, .pick .g, .visit .g { grid-template-columns: 1fr; }
+  .stone { max-width: 220px; }
+  .about .g, .route ol { grid-template-columns: 1fr; }
+  .n + .n { padding-left: 0; border-left: 0; border-top: 1px solid var(--line); }
+}
+</style>
+</head>
+<body data-lang="ja">
+<div class="proposal"><span class="ja">※ ご提案用のサンプル（モックアップ）です・検索エンジン非表示</span><span class="en">Proposal mockup · hidden from search engines</span></div>
+<header><div class="wrap nav">
+  <a class="logo" href="#">Bar Opal</a>
+  <ul><li><a href="#pick"><span class="ja">おまかせ</span><span class="en">Omakase</span></a></li><li><a href="#route"><span class="ja">道順</span><span class="en">Directions</span></a></li><li><a href="#visit"><span class="ja">アクセス</span><span class="en">Visit</span></a></li></ul>
+  <button class="lang" id="langBtn">EN</button>
+</div></header>
+
+<main>
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <div class="status"><i class="dot" id="dot"></i><span id="stat"></span></div>
+        <h1><span class="ja">六角橋の、<br><span class="shine">大人の止まり木。</span></span><span class="en">A grown-up perch<br><span class="shine">in Rokkakubashi.</span></span></h1>
+        <p><span class="ja">50代の熟練バーテンダーがお迎えする、落ち着いた大人のための、堅すぎないオールドスタイルバー。六角橋交差点のすぐそば、ビルの2階です。</span><span class="en">An old-style bar that isn’t stiff — a quiet place for grown-ups, run by a bartender with decades behind the counter. Upstairs, right by the Rokkakubashi crossing.</span></p>
+        <div class="btns"><a class="btn" href="#pick"><span class="ja">今夜の一杯を選ぶ</span><span class="en">Choose tonight’s glass</span></a><a class="btn ghost" href="tel:0455947597">045-594-7597</a></div>
+      </div>
+      <figure class="photo"><img src="hero.jpg" alt=""><figcaption><span class="ja">※写真はイメージです（公開時はお店の写真に差し替えます）</span><span class="en">Sample photo — to be replaced with the bar’s own.</span></figcaption></figure>
+    </div>
+  </div>
+
+  <section id="pick" class="pick">
+    <div class="wrap">
+      <div class="kick">PLAY OF COLOR</div>
+      <h2 class="h2"><span class="ja">オパールの色で、おまかせを。</span><span class="en">Order by the colors of an opal.</span></h2>
+      <p class="lead"><span class="ja">カクテルの名前を知らなくても大丈夫。今夜の気分に近い「色」を選ぶと、バーテンダーに伝えられるひとことができます。</span><span class="en">No need to know cocktail names. Pick the color closest to your mood and you’ll get a line to hand to the bartender.</span></p>
+      <div class="g">
+        <div class="stone" id="stone" role="img" aria-label="opal"></div>
+        <div>
+          <div class="row"><span><span class="ja">今夜の色</span><span class="en">TONIGHT’S COLOR</span></span><div class="chips" id="c0"></div></div>
+          <div class="row"><span><span class="ja">強さ</span><span class="en">STRENGTH</span></span><div class="chips" id="c1"></div></div>
+          <div class="memo" aria-live="polite"><p id="memo"></p><small><span class="ja">※ 画面をそのままカウンターでお見せください。</span><span class="en">Just show this screen at the counter.</span></small></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about">
+    <div class="wrap">
+      <div class="kick">THE BAR</div>
+      <h2 class="h2"><span class="ja">バー オパールのこと</span><span class="en">About Bar Opal</span></h2>
+      <div class="g">
+        <div class="n"><b><span class="ja">ふんわりオーダーで大丈夫</span><span class="en">Vague orders welcome</span></b><span><span class="ja">「さっぱりしたもの」くらいの注文でも、おまかせで一杯に仕上げます。</span><span class="en">Even “something refreshing” is enough — the bartender takes it from there.</span></span></div>
+        <div class="n"><b><span class="ja">バーがはじめての方も</span><span class="en">New to bars?</span></b><span><span class="ja">話しやすいお二人がカウンターに。お酒にこだわる方にも、はじめての方にも。</span><span class="en">Two easy-going hosts behind the counter — for regulars and first-timers alike.</span></span></div>
+        <div class="n"><b><span class="ja">オールドスタイル</span><span class="en">Old style, not stiff</span></b><span><span class="ja">落ち着いた大人の空間。でも、かしこまらずにどうぞ。</span><span class="en">A calm room for grown-ups — no dress code, no pressure.</span></span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="route" class="route" style="padding-top:0">
+    <div class="wrap">
+      <div class="kick">FROM HAKURAKU STATION</div>
+      <h2 class="h2"><span class="ja">白楽駅からの道順</span><span class="en">Walking from Hakuraku Station</span></h2>
+      <ol>
+        <li><span class="st">STEP 1</span><b><span class="ja">白楽駅を出る</span><span class="en">Leave Hakuraku Sta.</span></b><span><span class="ja">東急東横線・白楽駅から六角橋商店街へ。</span><span class="en">Tokyu Toyoko Line — head into the Rokkakubashi shopping street.</span></span></li>
+        <li><span class="st">STEP 2</span><b><span class="ja">商店街を抜ける</span><span class="en">Walk through the arcade</span></b><span><span class="ja">商店街をまっすぐ抜けると、大きな交差点に出ます。</span><span class="en">Go straight through to the big intersection.</span></span></li>
+        <li><span class="st">STEP 3</span><b><span class="ja">交差点を渡ってすぐ</span><span class="en">Cross — you’re there</span></b><span><span class="ja">六角橋交差点を渡った先、クレインビルの2階です。</span><span class="en">Just across the Rokkakubashi crossing, 2F of the Crane Building.</span></span></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="visit" class="visit" style="padding-top:0">
+    <div class="wrap">
+      <div class="kick">ACCESS</div>
+      <h2 class="h2"><span class="ja">横浜市神奈川区・六角橋</span><span class="en">Rokkakubashi, Yokohama</span></h2>
+      <div class="g">
+        <div>
+          <dl>
+            <dt><span class="ja">住所</span><span class="en">Address</span></dt><dd><span class="ja">〒221-0802 横浜市神奈川区六角橋2-14-2 クレインビル2F</span><span class="en">Crane Bldg 2F, 2-14-2 Rokkakubashi, Kanagawa-ku, Yokohama</span></dd>
+            <dt>TEL</dt><dd>045-594-7597</dd>
+            <dt>Instagram</dt><dd><a href="https://www.instagram.com/baropal2019/" target="_blank" rel="noopener">@baropal2019</a></dd>
+            <dt><span class="ja">営業時間</span><span class="en">Hours</span></dt>
+            <dd><table class="hours" id="hours"></table></dd>
+          </dl>
+          <p class="rate"><span class="ja">Googleマップ ★4.7</span><span class="en">Google Maps ★4.7</span></p>
+        </div>
+        <div class="map"><iframe loading="lazy" title="Map" src="https://www.google.com/maps?q=%E3%83%90%E3%83%BC%20%E3%82%AA%E3%83%91%E3%83%BC%E3%83%AB%20%E5%85%AD%E8%A7%92%E6%A9%8B2-14-2&output=embed"></iframe></div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>© Bar Opal · Rokkakubashi, Yokohama · Photos: Unsplash (sample images)</footer>
+<script>
+const $ = (s) => document.querySelector(s);
+const L = () => document.body.dataset.lang;
+const jst = () => { const d = new Date(); return new Date(d.getTime() + (d.getTimezoneOffset() + 540) * 60000); };
+// [open, close] in hours; close > 24 means after midnight. index 0 = Sunday
+const H = [null, [18, 26], [18, 26], [18, 26], [18, 26], [18, 26], [18, 25]];
+const DAYS = [['日曜', 'Sun'], ['月曜', 'Mon'], ['火曜', 'Tue'], ['水曜', 'Wed'], ['木曜', 'Thu'], ['金曜', 'Fri'], ['土曜', 'Sat']];
+const fmt = (h) => (h % 24) + ':00';
+function isOpen(t) { const d = t.getDay(), h = t.getHours() + t.getMinutes() / 60;
+  const today = H[d]; if (today && h >= today[0]) return true;
+  const prev = H[(d + 6) % 7]; return !!(prev && prev[1] > 24 && h < prev[1] - 24); }
+const COLORS = [
+  { k: ['翠', 'Green'], c: '#8fe0cf', g: 'linear-gradient(115deg,#5fd0b6,#bff3e6,#8fe0cf,#3aa58c)', t: ['さっぱり・ハーブ系', 'fresh and herbal'] },
+  { k: ['蒼', 'Blue'], c: '#8fb4f2', g: 'linear-gradient(115deg,#6f97ee,#c9d8ff,#8fb4f2,#4b6fc4)', t: ['キリッと辛口', 'crisp and dry'] },
+  { k: ['紅', 'Rose'], c: '#f2b3c6', g: 'linear-gradient(115deg,#ee8fae,#ffd9e4,#f2b3c6,#c45f80)', t: ['果実味・やや甘め', 'fruity, a little sweet'] },
+  { k: ['金', 'Gold'], c: '#f4dd9c', g: 'linear-gradient(115deg,#e8c56a,#fff0c4,#f4dd9c,#b88d2c)', t: ['ウイスキーなど、じっくり', 'slow sipping, whisky-style'] },
+  { k: ['遊色', 'All colors'], c: '#a9a2f2', g: '', t: ['まったくのおまかせ', 'completely up to you'] }
+];
+const STR = [['軽め', 'light'], ['ふつう', 'medium'], ['しっかり', 'strong']];
+const st = [4, 1];
+function render() { const ja = L() === 'ja';
+  $('#c0').innerHTML = COLORS.map((o, i) => `<button aria-pressed="${st[0] === i}" data-i="${i}"><i style="background:${o.g || 'var(--fire)'}"></i>${ja ? o.k[0] : o.k[1]}</button>`).join('');
+  $('#c1').innerHTML = STR.map((o, i) => `<button aria-pressed="${st[1] === i}" data-i="${i}">${ja ? o[0] : o[1]}</button>`).join('');
+  [0, 1].forEach(k => $('#c' + k).querySelectorAll('button').forEach(b => b.onclick = () => { st[k] = +b.dataset.i; render(); }));
+  const c = COLORS[st[0]], s = STR[st[1]];
+  $('#stone').style.setProperty('--g', c.g || 'var(--fire)');
+  $('#memo').textContent = ja ? `今夜はオパールの「${c.k[0]}」な気分です。${c.t[0]}、強さは${s[0]}で、おまかせの一杯をお願いします。` : `I’m feeling the “${c.k[1].toLowerCase()}” of the opal tonight — ${c.t[1]}, ${s[1]} strength. Bartender’s choice, please.`;
+  const t = jst(), open = isOpen(t);
+  $('#dot').classList.toggle('on', open);
+  $('#stat').textContent = open ? (ja ? 'ただいま営業中' : 'Open now') : (ja ? `ただいま準備中（${t.getDay() === 0 ? '日曜定休' : '18:00から'}）` : `Closed now (${t.getDay() === 0 ? 'closed Sundays' : 'opens 18:00'})`);
+  $('#hours').innerHTML = [1, 2, 3, 4, 5, 6, 0].map(d => `<tr class="${d === t.getDay() ? 'today' : ''}"><td>${ja ? DAYS[d][0] : DAYS[d][1]}</td><td>${H[d] ? fmt(H[d][0]) + '–' + fmt(H[d][1]) : (ja ? '定休日' : 'Closed')}</td></tr>`).join(''); }
+render(); setInterval(render, 60000);
+$('#langBtn').addEventListener('click', () => { const l = L() === 'ja' ? 'en' : 'ja'; document.body.dataset.lang = l; document.documentElement.lang = l; $('#langBtn').textContent = l === 'ja' ? 'EN' : '日本語'; render(); });
+</script>
+</body>
+</html>
